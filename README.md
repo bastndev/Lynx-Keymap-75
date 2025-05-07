@@ -1,4 +1,4 @@
-![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap/refs/heads/main/assets/images/technologies.png)
+![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/technologies.png)
 
 <p align="center">
     <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap.jpg?style=for-the-badge&colorA=009945&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>&nbsp;
@@ -61,21 +61,21 @@
 >
 > ```ts
 > exports.BACKTICK_EQUIVALENTS = [
->   { Backquote: "`" }, // English, US
->   { Backquote: "º" }, // Spanish (Spain)
+>   { Backquote: '`' }, // English, US
+>   { Backquote: 'º' }, // Spanish (Spain)
 >   { Backquote: "'" }, // French, German
->   { Backquote: "²" }, // French
->   { Backquote: "^" }, // German, Swiss
->   { Backquote: "ё" }, // Russian
->   { Backquote: "~" }, // Portuguese, Italian
->   { Backquote: "半角/全角" }, // Japanese
->   { Backquote: "|" }, // Spanish (Latin America)
->   { Backquote: "¬" }, // UK, Latin America
->   { Backquote: "¨" }, // German, Swedish
->   { Backquote: "´" }, // Portuguese (Latin America)
->   { Backquote: "₺" }, // Turkish
->   { Backquote: "₤" }, // Italian
->   { Backquote: "" }, // And MORE...
+>   { Backquote: '²' }, // French
+>   { Backquote: '^' }, // German, Swiss
+>   { Backquote: 'ё' }, // Russian
+>   { Backquote: '~' }, // Portuguese, Italian
+>   { Backquote: '半角/全角' }, // Japanese
+>   { Backquote: '|' }, // Spanish (Latin America)
+>   { Backquote: '¬' }, // UK, Latin America
+>   { Backquote: '¨' }, // German, Swedish
+>   { Backquote: '´' }, // Portuguese (Latin America)
+>   { Backquote: '₺' }, // Turkish
+>   { Backquote: '₤' }, // Italian
+>   { Backquote: '' }, // And MORE...
 > ];
 > ```
 
