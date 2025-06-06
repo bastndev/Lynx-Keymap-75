@@ -1,9 +1,10 @@
 ![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/technologies.png)
 
 <p align="center">
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>&nbsp;
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Rating" alt="Rating"></a>&nbsp;
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/installs-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Installs" alt="Installs"></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Rating" alt="Rating"></a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/installs-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Installs" alt="Installs"></a>
+    <a href="https://github.com/sponsors/bastndev"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/main/assets/images/sponsor.png" width="30px" alt="Sponsor Github"></a>
 </p>
 
 </br>
@@ -97,9 +98,9 @@ ext install bastndev.lynx-keymap
 
 Here is the project link if you want to collaborate: [[>\_ ] code](https://github.com/bastndev/Lynx-keymap).
 
-| [![bastndev](https://github.com/bastndev.png?size=100)](https://github.com/bastndev) |
-| :----------------------------------------------------------------------------------: |
-|                   **[Gohit Bastian](https://github.com/bastndev)**                   |
+| [![bastndev.com](https://github.com/bastndev.png?size=100)](https://bastndev.com) |
+| :-------------------------------------------------------------------------------: |
+|                 **[Gohit Bastian](https://github.com/bastndev)**                  |
 
 ## About Me
 
