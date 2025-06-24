@@ -44,8 +44,8 @@
 | show markdown preview      | ⌥ + M           | Alt + M            | Alt + M            |
 | close active editor        | Ctrl + End      | Ctrl + End         | Ctrl + End         |
 | -                          | -               | -                  | -                  |
-| toggle inline suggest      | ⌘ + /           | Cmd + /            | Cmd + /            |
-| block comment              | ⌥ + /           | Alt + /            | Alt + /            |
+| comment line               | ⌘ + /           | Cmd + /            | Cmd + /            |
+| comment block              | ⌥ + /           | Alt + /            | Alt + /            |
 | -                          | -               | -                  | -                  |
 | deactivate & activate (AI) | ⌥ + CAPSLOCK    | Alt + CAPSLOCK     | Alt + CAPSLOCK     |
 | Finish project ❌          | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
