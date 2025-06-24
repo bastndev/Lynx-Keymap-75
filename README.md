@@ -1,4 +1,4 @@
-![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/ids.png)
+[![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/ids.png)](https://github.com/bastndev/Lynx-Keymap-75?tab=readme-ov-file)
 
 <p align="center">
     <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>
@@ -29,10 +29,9 @@
 | git pull                   | ⌥ + Escape      | Alt + Escape       | Alt + Escape       |
 | -                          | -               | -                  | -                  |
 | toggle debug console       | ⌥ + Q           | Alt + Q            | Alt + Q            |
-| toggle terminal            | Page Down       | Page Down          | Page Down          |
-| new terminal               | ⌥ + W           | Alt + W            | Alt + W            |
+| terminal                   | ⌥ + W           | Alt + W            | Alt + W            |
 | open gitlens               | ⌥ + E           | Alt + E            | Alt + E            |
-| close panel                | ⌥ + E           | Alt + E            | Alt + E            |
+| toggle Panel               | Page Down       | Page Down          | Page Down          |
 | -                          | -               | -                  | -                  |
 | start debugging            | Insert          | Insert             | Insert             |
 | restart debugging          | ⌥ + Insert      | Alt + Insert       | Alt + Insert       |
