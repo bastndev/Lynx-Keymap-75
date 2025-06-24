@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode, Cursor AI, Windsurf & Trae AI. + (Firebase Studio) & (+ AI). ",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -52,6 +52,7 @@
     "onCommand:lynx-keymap.openAIChat",
     "onCommand:lynx-keymap.createNewAISession",
     "onCommand:lynx-keymap.showAIHistory",
+    "onCommand:lynx-keymap.attachAIContext",
     "onCommand:lynx-keymap.toggleInlineSuggest"
   ],
   "main": "./src/extension.js",
@@ -60,24 +61,22 @@
       {
         "command": "lynx-keymap.generateAICommit",
         "title": "Generate AI Commit Message"
-      },
-      {
+      },{
         "command": "lynx-keymap.executeAIPopup",
         "title": "Open AI Chat Interface"
-      },
-      {
+      },{
         "command": "lynx-keymap.openAIChat",
         "title": "Open AI Chat"
-      },
-      {
+      },{
         "command": "lynx-keymap.createNewAISession",
         "title": "Create New AI Session"
-      },
-      {
+      },{
         "command": "lynx-keymap.showAIHistory",
         "title": "Show AI Chat History"
-      },
-      {
+      },{
+        "command": "lynx-keymap.attachAIContext",
+        "title": "Attach Context to AI Chat"
+      },{
         "command": "lynx-keymap.toggleInlineSuggest",
         "title": "Toggle Inline Suggestions (AI Autocomplete)"
       }
@@ -87,155 +86,165 @@
         "key": "ctrl+1",
         "mac": "cmd+1",
         "command": "workbench.view.explorer"
-      },
-      {
+      },{
         "key": "ctrl+2",
         "mac": "cmd+2",
         "command": "workbench.view.scm"
-      },
-      {
+      },{
         "key": "ctrl+3",
         "mac": "cmd+3",
         "command": "workbench.view.extensions"
       },
+      
+
+      
       {
         "key": "alt+c",
         "mac": "alt+c",
         "command": "explorer.newFile"
-      },
-      {
+      },{
         "key": "alt+v",
         "mac": "alt+v",
         "command": "explorer.newFolder"
-      },
-      {
+      },{
         "key": "ctrl+shift+tab",
-        "mac": "ctrl+shift+tab",
+        "mac": "cmd+shift+tab",
         "command": "workbench.action.toggleSidebarVisibility"
       },
+
+
       {
-        "key": "ctrl+alt+1",
-        "mac": "cmd+alt+1",
+        "key": "alt+1",
+        "mac": "alt+1",
         "command": "git.stageAll",
         "when": "scmProvider == git"
-      },
-      {
-        "key": "ctrl+alt+2",
-        "mac": "ctrl+alt+2",
+      },{
+        "key": "alt+2",
+        "mac": "alt+2",
         "command": "lynx-keymap.generateAICommit"
-      },
-      {
-        "key": "ctrl+alt+3",
-        "mac": "cmd+alt+3",
+      },{
+        "key": "alt+3",
+        "mac": "alt+3",
         "command": "git.unstageAll",
         "when": "scmProvider == git"
       },
+
       {
-        "key": "ctrl+enter",
-        "mac": "cmd+enter",
+        "key": "alt+enter",
+        "mac": "alt+enter",
         "command": "git.commit",
         "when": "scmProvider == git && sideBarFocus"
-      },
-      {
+      },{
         "key": "ctrl+alt+enter",
         "mac": "cmd+alt+enter",
         "command": "git.push",
         "when": "scmProvider == git"
       },
+
+
+
       {
         "key": "alt+f",
         "mac": "alt+f",
         "command": "editor.action.formatDocument"
-      },
-      {
-        "key": "pagedown",
-        "mac": "pagedown",
-        "command": "workbench.action.togglePanel"
-      },
-      {
-        "key": "pagedown",
-        "mac": "pagedown",
-        "command": "workbench.action.terminal.toggleTerminal"
-      },
-      {
-        "key": "ctrl+pagedown",
-        "mac": "cmd+pagedown",
+      },{
+        "key": "alt+q",
+        "mac": "alt+q",
         "command": "workbench.debug.action.toggleRepl"
-      },
-      {
-        "key": "alt+pagedown",
-        "mac": "alt+pagedown",
+      },{
+        "key": "alt+w",
+        "mac": "alt+w",
+        "command": "workbench.action.terminal.toggleTerminal"
+      },{
+        "key": "alt+e",
+        "mac": "alt+e",
         "command": "gitlens.showGraph"
+      },{
+        "key": "alt+e",
+        "mac": "alt+e",
+        "command": "workbench.action.closePanel"
       },
+
+
+
       {
         "key": "ctrl+[Backquote]",
         "mac": "cmd+[Backquote]",
         "command": "lynx-keymap.executeAIPopup"
-      },
-      {
+      },{
         "key": "ctrl+tab",
         "mac": "cmd+tab",
         "command": "lynx-keymap.openAIChat"
       },
+
+      
       {
-        "key": "ctrl+alt+[Backquote]",
-        "mac": "cmd+alt+[Backquote]",
+        "key": "alt+a",
+        "mac": "alt+a",
         "command": "lynx-keymap.createNewAISession"
-      },
-      {
-        "key": "ctrl+shift+[Backquote]",
-        "mac": "cmd+shift+[Backquote]",
+      },{
+        "key": "alt+s",
+        "mac": "alt+s",
         "command": "lynx-keymap.showAIHistory"
+      },{
+        "key": "alt+d",
+        "mac": "alt+d",
+        "command": "lynx-keymap.attachAIContext"
       },
+
+
       {
-        "key": "ctrl+alt+end",
-        "mac": "cmd+alt+end",
-        "command": "lynx-keymap.toggleInlineSuggest"
-      },
-      {
-        "key": "ctrl+alt+backspace",
-        "mac": "cmd+alt+backspace",
+        "key": "ctrl+enter",
+        "mac": "cmd+enter",
+        "command": "-github.copilot.generate"
+      },{
+        "key": "alt+enter",
+        "mac": "alt+enter",
         "command": "inlineChat.close",
         "when": "inlineChatFocused"
       },
+
+
       {
-        "key": "insert",
-        "mac": "insert",
+        "key": "alt+p",
+        "mac": "alt+p",
         "command": "workbench.action.debug.start"
-      },
-      {
-        "key": "ctrl+insert",
-        "mac": "ctrl+insert",
+      },{
+        "key": "alt+o",
+        "mac": "alt+o",
         "command": "workbench.action.debug.restart"
-      },
-      {
-        "key": "end",
-        "mac": "end",
+      },{
+        "key": "alt+i",
+        "mac": "alt+i",
         "command": "workbench.action.debug.stop"
       },
+
+
+
       {
-        "key": "pageup",
-        "mac": "pageup",
+        "key": "alt+l",
+        "mac": "alt+l",
         "command": "git.viewChanges"
-      },
-      {
-        "key": "ctrl+pageup",
-        "mac": "cmd+pageup",
+      },{
+        "key": "alt+m",
+        "mac": "alt+m",
         "command": "markdown.showPreviewToSide"
-      },
-      {
-        "key": "alt+pageup",
-        "mac": "alt+pageup",
+      },{
+        "key": "ctrl+alt+m",
+        "mac": "cmd+alt+m",
         "command": "workbench.action.closeActiveEditor"
       },
+
+
+
       {
-        "key": "shift+escape",
-        "mac": "shift+escape",
+        "key": "alt+capslock",
+        "mac": "alt+capslock",
+        "command": "lynx-keymap.toggleInlineSuggest"
+      },{
+        "key": "ctrl+delete",
+        "mac": "cmd+delete",
         "command": "workbench.action.closeFolder"
-      },
-      {
-        "key": "ctrl+enter",
-        "command": "-github.copilot.generate"
       }
     ]
   }
