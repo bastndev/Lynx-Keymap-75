@@ -29,10 +29,9 @@
 | git pull                   | ⌥ + Escape      | Alt + Escape       | Alt + Escape       |
 | -                          | -               | -                  | -                  |
 | toggle debug console       | ⌥ + Q           | Alt + Q            | Alt + Q            |
-| toggle terminal            | Page Down       | Page Down          | Page Down          |
-| new terminal               | ⌥ + W           | Alt + W            | Alt + W            |
+| terminal                   | ⌥ + W           | Alt + W            | Alt + W            |
 | open gitlens               | ⌥ + E           | Alt + E            | Alt + E            |
-| close panel                | ⌥ + E           | Alt + E            | Alt + E            |
+| toggle Panel               | Page Down       | Page Down          | Page Down          |
 | -                          | -               | -                  | -                  |
 | start debugging            | Insert          | Insert             | Insert             |
 | restart debugging          | ⌥ + Insert      | Alt + Insert       | Alt + Insert       |
