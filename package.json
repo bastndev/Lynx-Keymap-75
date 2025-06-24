@@ -157,21 +157,17 @@
         "mac": "alt+q",
         "command": "workbench.debug.action.toggleRepl"
       },{
-        "key": "pagedown",
-        "mac": "pagedown",
-        "command": "workbench.action.terminal.toggleTerminal"
-      },{
         "key": "alt+w",
         "mac": "alt+w",
-        "command": "workbench.action.terminal.new"
+        "command": "workbench.action.terminal.toggleTerminal"
       },{
         "key": "alt+e",
         "mac": "alt+e",
         "command": "gitlens.showGraph"
       },{
-        "key": "alt+e",
-        "mac": "alt+e",
-        "command": "workbench.action.closePanel"
+        "key": "pagedown",
+        "mac": "pagedown",
+        "command": "workbench.action.togglePanel"
       },
 
 
