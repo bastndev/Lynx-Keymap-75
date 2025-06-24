@@ -247,6 +247,18 @@
 
 
       {
+        "key": "cmd+/",
+        "mac": "cmd+/",
+        "command": "lynx-keymap.toggleInlineSuggest"
+      },{
+        "key": "alt+/",
+        "mac": "alt+/",
+        "command": "editor.action.blockComment"
+      },
+
+
+
+      {
         "key": "alt+capslock",
         "mac": "alt+capslock",
         "command": "lynx-keymap.toggleInlineSuggest"
