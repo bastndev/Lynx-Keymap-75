@@ -9,50 +9,60 @@
 
 </br>
 
-### ► How to Use Standard Keybindings
+### ► Lynx Keymap — Standard Keybindings
 
 | Command                    | 🍎 macOS        | 🟦 Windows         | 🐧 Linux           |
 | :------------------------- | :-------------- | :----------------- | :----------------- |
-| Open Explorer              | ⌘ + 1           | Ctrl + 1           | Ctrl + 1           |
-| Open Source Control (SCM)  | ⌘ + 2           | Ctrl + 2           | Ctrl + 2           |
-| Open Extensions View       | ⌘ + 3           | Ctrl + 3           | Ctrl + 3           |
-| Toggle Sidebar Visibility  | ⌘ + Shift + Tab | Ctrl + Shift + Tab | Ctrl + Shift + Tab |
+| open explorer              | ⌘ + 1           | Ctrl + 1           | Ctrl + 1           |
+| open source control (scm)  | ⌘ + 2           | Ctrl + 2           | Ctrl + 2           |
+| open extensions view       | ⌘ + 3           | Ctrl + 3           | Ctrl + 3           |
+| toggle sidebar visibility  | ⌘ + Shift + Tab | Ctrl + Shift + Tab | Ctrl + Shift + Tab |
 | -                          | -               | -                  | -                  |
-| New File                   | ⌥ + C           | Alt + C            | Alt + C            |
-| New Folder                 | ⌥ + V           | Alt + V            | Alt + V            |
-| Close Active Editor        | ⌥ + PageUp      | Alt + PageUp       | Alt + PageUp       |
-| Finish Project             | Shift + Esc     | Shift + Esc        | Shift + Esc        |
+| new file                   | ⌥ + C           | Alt + C            | Alt + C            |
+| new folder                 | ⌥ + V           | Alt + V            | Alt + V            |
 | -                          | -               | -                  | -                  |
-| Stage All Changes          | ⌘ + ⌥ + 1       | Ctrl + Alt + 1     | Ctrl + Alt + 1     |
-| Generate AI Commit Message | ⌘ + ⌥ + 2       | Ctrl + Alt + 2     | Ctrl + Alt + 2     |
-| Unstage All Changes        | ⌘ + ⌥ + 3       | Ctrl + Alt + 3     | Ctrl + Alt + 3     |
-| Git Commit                 | ⌘ + Enter       | Ctrl + Enter       | Ctrl + Enter       |
-| Git Push                   | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
-| View Git Changes           | PageUp          | PageUp             | PageUp             |
+| stage all changes          | ⌥ + 1           | Alt + 1            | Alt + 1            |
+| generate ai commit message | ⌥ + 2           | Alt + 2            | Alt + 2            |
+| unstage all changes        | ⌥ + 3           | Alt + 3            | Alt + 3            |
+| git commit                 | ⌥ + Enter       | Alt + Enter        | Alt + Enter        |
+| git push                   | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
+| git pull                   | ⌥ + Escape      | Alt + Escape       | Alt + Escape       |
 | -                          | -               | -                  | -                  |
-| Format Document            | ⌥ + F           | Alt + F            | Alt + F            |
-| Toggle Bottom Panel        | PageDown        | PageDown           | PageDown           |
-| Markdown Preview to Side   | ⌘ + PageUp      | Ctrl + PageUp      | Ctrl + PageUp      |
-| Open/close Terminal        | PageDown        | PageDown           | PageDown           |
-| Open/close D'console       | ⌘ + PageDown    | Ctrl + PageDown    | Ctrl + PageDown    |
-| Open GitLens               | ⌥ + PageDown    | Alt + PageDown     | Alt +PageDown      |
+| toggle debug console       | ⌥ + Q           | Alt + Q            | Alt + Q            |
+| toggle terminal            | Page Down       | Page Down          | Page Down          |
+| new terminal               | ⌥ + W           | Alt + W            | Alt + W            |
+| open gitlens               | ⌥ + E           | Alt + E            | Alt + E            |
+| close panel                | ⌥ + E           | Alt + E            | Alt + E            |
 | -                          | -               | -                  | -                  |
-| Start Debugging            | Insert          | Insert             | Insert             |
-| Restart Debugging          | ⌘ + Insert      | Ctrl + Insert      | Ctrl + Insert      |
-| Stop Debugging             | End             | End                | End                |
+| start debugging            | Insert          | Insert             | Insert             |
+| restart debugging          | ⌥ + Insert      | Alt + Insert       | Alt + Insert       |
+| stop debugging             | End             | End                | End                |
+| -                          | -               | -                  | -                  |
+| format document            | ⌥ + F           | Alt + F            | Alt + F            |
+| view git changes           | Page Up         | Page Up            | Page Up            |
+| -                          | -               | -                  | -                  |
+| show markdown preview      | ⌥ + M           | Alt + M            | Alt + M            |
+| close active editor        | Ctrl + End      | Ctrl + End         | Ctrl + End         |
+| -                          | -               | -                  | -                  |
+| toggle inline suggest      | ⌘ + /           | Cmd + /            | Cmd + /            |
+| block comment              | ⌥ + /           | Alt + /            | Alt + /            |
+| -                          | -               | -                  | -                  |
+| deactivate & activate (AI) | ⌥ + CAPSLOCK    | Alt + CAPSLOCK     | Alt + CAPSLOCK     |
+| Finish project ❌          | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
 
-### ► AI Features Keybindings
+### ► [AI] Commands Easy (Lynx Keymap)
 
-| Command                         | 🍎 macOS            | 🟦 Windows                 | 🐧 Linux                   |
-| :------------------------------ | :------------------ | :------------------------- | :------------------------- |
-| AI Chat Interface (Popup/Modal) | ⌘ + `Backquote`     | Ctrl + `Backquote`         | Ctrl + `Backquote`         |
-| AI Chat (Panel/View)            | ⌘ + Tab             | Ctrl + Tab                 | Ctrl + Tab                 |
-| Create New AI Session           | ⌘ + ⌥ + `Backquote` | Ctrl + Alt + `Backquote`   | Ctrl + Alt + `Backquote`   |
-| Show AI Chat History            | ⌘ + ⇧ + `Backquote` | Ctrl + Shift + `Backquote` | Ctrl + Shift + `Backquote` |
-| Toggle Inline Suggestions (AI)  | ⌘ + ⌥ + End         | Ctrl + Alt + End           | Ctrl + Alt + End           |
-| Close Inline Chat               | ⌘ + ⌥ + `Backspace` | Ctrl + Alt + `Backspace`   | Ctrl + Alt + `Backspace`   |
-| -                               | -                   | -                          | -                          |
-| Generate AI Commit Message      | ⌘ + ⌥ + 2           | Ctrl + Alt + 2             | Ctrl + Alt + 2             |
+| command                           | 🍎 macos     | 🟦 windows     | 🐧 linux       |
+| :-------------------------------- | :----------- | :------------- | :------------- |
+| (AI) chat interface (popup/modal) | ⌘ + `        | Ctrl + `       | Ctrl + `       |
+| (AI) chat (panel/view)            | ⌘ + Tab      | Ctrl + Tab     | Ctrl + Tab     |
+| create new (AI) session           | ⌥ + A        | Alt + A        | Alt + A        |
+| show (AI) chat history            | ⌥ + S        | Alt + S        | Alt + S        |
+| attach (AI) context               | ⌥ + D        | Alt + D        | Alt + D        |
+| deactivate & activate (AI)        | ⌥ + CAPSLOCK | Alt + CAPSLOCK | Alt + CAPSLOCK |
+| -                                 | -            | -              | -              |
+| accept (AI) generated code ✅     | ⌘ + Enter    | Ctrl + Enter   | Ctrl + Enter   |
+| reject (AI) generated code 🚫     | ⌥ + Enter    | Alt + Enter    | Alt + Enter    |
 
 </br>
 
@@ -91,16 +101,16 @@ Launch _Quick Open_
 Paste the following command and press `Enter`:
 
 ```
-ext install bastndev.lynx-keymap
+ext install bastndev.lynx-keymap-75
 ```
 
 ## Contributors
 
 Here is the project link if you want to collaborate: [[>\_ ] code](https://github.com/bastndev/Lynx-Keymap-75).
 
-| [![bastndev.com](https://github.com/bastndev.png?size=100)](https://bastndev.com) |
-| :-------------------------------------------------------------------------------: |
-|                 **[Gohit Bastian](https://github.com/bastndev)**                  |
+| [![bastndev](https://github.com/bastndev.png?size=100)](https://www.bastndev.com/) |
+| :--------------------------------------------------------------------------------: |
+|                  **[Gohit Bastian](https://github.com/bastndev)**                  |
 
 ## About Me
 
@@ -110,11 +120,11 @@ Here is the project link if you want to collaborate: [[>\_ ] code](https://githu
 
 </br>
 
-| Icon                                                                                                                                                | Name                                                                                                   | Description                                                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-js-snippets/0.2.0/1745166683713/Microsoft.VisualStudio.Services.Icons.Default) | [Lynx-js Snippets .tsx](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-js-snippets) | A powerful collection of Lynx.js snippets (for TypeScript & React) that speeds up common coding patterns.                                       |
-| ![](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)       | [Lynx Theme](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-theme)                  | A sleek, customizable theme for VS Code with built‑in support for Cursor‑AI, Windsurf & Trae‑AI integrations.                                   |
-| ![](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynxjs-pack/0.1.8/1745206864969/Microsoft.VisualStudio.Services.Icons.Default)      | [LynxJS Pack](https://marketplace.visualstudio.com/items?itemName=bastndev.lynxjs-pack)                | An all‑in‑one toolkit for LynxJS mobile/web development—bundles keymap, snippets & AI tools like Cursor AI, Windsurf, Trae AI, Firebase Studio. |
+| Icon                                                                                                                                           | Name                                                                                             | Description                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](https://raw.githubusercontent.com/bastndev/Lynx-Keymap/refs/heads/main/assets/images/icon2.png)                                            | [Lynx Keymap + AI 75%](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap) | An all‑in‑one toolkit for LynxJS mobile/web development—bundles keymap, snippets & AI tools like Cursor AI, Windsurf, Trae AI, Firebase Studio. |
+| ![](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)  | [Lynx Theme](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-theme)            | A sleek, customizable VS Code theme with built‑in support for Cursor‑AI, Windsurf & Trae‑AI integrations.                                       |
+| ![](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynxjs-pack/0.1.8/1745206864969/Microsoft.VisualStudio.Services.Icons.Default) | [LynxJS Pack](https://marketplace.visualstudio.com/items?itemName=bastndev.lynxjs-pack)          | An all‑in‑one toolkit for LynxJS mobile/web development—bundles keymap, snippets & AI tools like Cursor AI, Windsurf, Trae AI, Firebase Studio. |
 
-**Enjoy 🎉 your new keybindings! Suggestions or feedback? [Open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues) or contribute.**
+**Enjoy 🎉 your new keybindings! Suggestions or feedback? [Open an issue](https://github.com/bastndev/Lynx-Keymap/issues) or contribute.**
 [MORE](https://marketplace.visualstudio.com/publishers/bastndev)
