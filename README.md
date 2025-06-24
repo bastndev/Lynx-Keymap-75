@@ -1,4 +1,4 @@
-![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/technologies.png)
+![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/ids.png)
 
 <p align="center">
     <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>
@@ -44,8 +44,8 @@
 | show markdown preview      | ⌥ + M           | Alt + M            | Alt + M            |
 | close active editor        | Ctrl + End      | Ctrl + End         | Ctrl + End         |
 | -                          | -               | -                  | -                  |
-| toggle inline suggest      | ⌘ + /           | Cmd + /            | Cmd + /            |
-| block comment              | ⌥ + /           | Alt + /            | Alt + /            |
+| comment line               | ⌘ + /           | Cmd + /            | Cmd + /            |
+| comment block              | ⌥ + /           | Alt + /            | Alt + /            |
 | -                          | -               | -                  | -                  |
 | deactivate & activate (AI) | ⌥ + CAPSLOCK    | Alt + CAPSLOCK     | Alt + CAPSLOCK     |
 | Finish project ❌          | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
