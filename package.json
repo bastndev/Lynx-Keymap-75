@@ -152,9 +152,13 @@
         "mac": "alt+q",
         "command": "workbench.debug.action.toggleRepl"
       },{
+        "key": "pagedown",
+        "mac": "pagedown",
+        "command": "workbench.action.terminal.toggleTerminal"
+      },{
         "key": "alt+w",
         "mac": "alt+w",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "command": "workbench.action.terminal.new"
       },{
         "key": "alt+e",
         "mac": "alt+e",
@@ -206,32 +210,32 @@
 
 
       {
-        "key": "alt+p",
-        "mac": "alt+p",
+        "key": "insert",
+        "mac": "insert",
         "command": "workbench.action.debug.start"
       },{
-        "key": "alt+o",
-        "mac": "alt+o",
+        "key": "alt+insert",
+        "mac": "alt+insert",
         "command": "workbench.action.debug.restart"
       },{
-        "key": "alt+i",
-        "mac": "alt+i",
+        "key": "end",
+        "mac": "end",
         "command": "workbench.action.debug.stop"
       },
 
 
 
       {
-        "key": "alt+l",
-        "mac": "alt+l",
+        "key": "pageup",
+        "mac": "pageup",
         "command": "git.viewChanges"
       },{
         "key": "alt+m",
         "mac": "alt+m",
         "command": "markdown.showPreviewToSide"
       },{
-        "key": "ctrl+alt+m",
-        "mac": "cmd+alt+m",
+        "key": "ctrl+end",
+        "mac": "ctrl+end",
         "command": "workbench.action.closeActiveEditor"
       },
 
