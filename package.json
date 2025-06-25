@@ -231,8 +231,8 @@
         "mac": "pageup",
         "command": "git.viewChanges"
       },{
-        "key": "alt+m",
-        "mac": "alt+m",
+        "key": "ctrl+pageup",
+        "mac": "cmd+pageup",
         "command": "markdown.showPreviewToSide"
       },{
         "key": "ctrl+end",

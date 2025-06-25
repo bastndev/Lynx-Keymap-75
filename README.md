@@ -39,7 +39,7 @@
 | stop debugging             | End             | End                | End                |
 | -                          | -               | -                  | -                  |
 | view git changes           | Page Up         | Page Up            | Page Up            |
-| show markdown preview      | ⌥ + M           | Alt + M            | Alt + M            |
+| show markdown preview      | ⌘ + Page Up     | ctrl + Page Up     | ctrl + Page Up     |
 | close active editor        | ⌘ + End         | Ctrl + End         | Ctrl + End         |
 | -                          | -               | -                  | -                  |
 | comment line               | ⌘ + /           | Ctrl + /           | Ctrl + /           |
