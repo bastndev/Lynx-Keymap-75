@@ -241,17 +241,6 @@
       },
 
 
-
-      {
-        "key": "ctrl+/",
-        "mac": "cmd+/",
-        "command": "lynx-keymap.toggleInlineSuggest"
-      },{
-        "key": "alt+/",
-        "mac": "alt+/",
-        "command": "editor.action.blockComment"
-      },
-
       
       {
         "key": "alt+shift+audiovolumeup",
@@ -263,6 +252,17 @@
         "mac": "alt+shift+audiovolumedown",
         "command": "workbench.action.zoomOut",
         "when": "editorTextFocus || !inputFocus"
+      },
+
+
+      {
+        "key": "ctrl+/",
+        "mac": "cmd+/",
+        "command": "editor.action.commentLine"
+      },{
+        "key": "alt+/",
+        "mac": "alt+/",
+        "command": "editor.action.blockComment"
       },
        
 
