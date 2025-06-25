@@ -8,7 +8,6 @@
 </p>
 
 </br>
-
 ### ► Lynx Keymap — Standard Keybindings
 
 | Command                    | 🍎 macOS        | 🟦 Windows         | 🐧 Linux           |
@@ -22,11 +21,13 @@
 | new folder                 | ⌥ + V           | Alt + V            | Alt + V            |
 | -                          | -               | -                  | -                  |
 | stage all changes          | ⌥ + 1           | Alt + 1            | Alt + 1            |
-| generate ai commit message | ⌥ + 2           | Alt + 2            | Alt + 2            |
+| generate ai commit message | ⌘ + ⌥ + 2       | Ctrl + Alt + 2     | Ctrl + Alt + 2     |
 | unstage all changes        | ⌥ + 3           | Alt + 3            | Alt + 3            |
 | git commit                 | ⌥ + Enter       | Alt + Enter        | Alt + Enter        |
 | git push                   | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
 | git pull                   | ⌥ + Escape      | Alt + Escape       | Alt + Escape       |
+| -                          | -               | -                  | -                  |
+| format document            | ⌥ + F           | Alt + F            | Alt + F            |
 | -                          | -               | -                  | -                  |
 | toggle debug console       | ⌥ + Q           | Alt + Q            | Alt + Q            |
 | terminal                   | ⌥ + W           | Alt + W            | Alt + W            |
@@ -34,34 +35,36 @@
 | toggle Panel               | Page Down       | Page Down          | Page Down          |
 | -                          | -               | -                  | -                  |
 | start debugging            | Insert          | Insert             | Insert             |
-| restart debugging          | ⌥ + Insert      | Alt + Insert       | Alt + Insert       |
+| restart debugging          | ⌘ + Insert      | Ctrl + Insert      | Ctrl + Insert      |
 | stop debugging             | End             | End                | End                |
 | -                          | -               | -                  | -                  |
-| format document            | ⌥ + F           | Alt + F            | Alt + F            |
 | view git changes           | Page Up         | Page Up            | Page Up            |
-| -                          | -               | -                  | -                  |
 | show markdown preview      | ⌥ + M           | Alt + M            | Alt + M            |
-| close active editor        | Ctrl + End      | Ctrl + End         | Ctrl + End         |
+| close active editor        | ⌘ + End         | Ctrl + End         | Ctrl + End         |
 | -                          | -               | -                  | -                  |
-| comment line               | ⌘ + /           | Cmd + /            | Cmd + /            |
+| comment line               | ⌘ + /           | Ctrl + /           | Ctrl + /           |
 | comment block              | ⌥ + /           | Alt + /            | Alt + /            |
 | -                          | -               | -                  | -                  |
-| deactivate & activate (AI) | ⌥ + CAPSLOCK    | Alt + CAPSLOCK     | Alt + CAPSLOCK     |
+| zoom in                    | ⌥ + ⇧ + Vol+    | Alt + ⇧ + Vol+     | Alt + ⇧ + Vol+     |
+| zoom out                   | ⌥ + ⇧ + Vol-    | Alt + ⇧ + Vol-     | Alt + ⇧ + Vol-     |
+| -                          | -               | -                  | -                  |
+| toggle inline suggest      | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
 | Finish project ❌          | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
+
+---
 
 ### ► [AI] Commands Easy (Lynx Keymap)
 
-| command                           | 🍎 macos     | 🟦 windows     | 🐧 linux       |
-| :-------------------------------- | :----------- | :------------- | :------------- |
-| (AI) chat interface (popup/modal) | ⌘ + `        | Ctrl + `       | Ctrl + `       |
-| (AI) chat (panel/view)            | ⌘ + Tab      | Ctrl + Tab     | Ctrl + Tab     |
-| create new (AI) session           | ⌥ + A        | Alt + A        | Alt + A        |
-| show (AI) chat history            | ⌥ + S        | Alt + S        | Alt + S        |
-| attach (AI) context               | ⌥ + D        | Alt + D        | Alt + D        |
-| deactivate & activate (AI)        | ⌥ + CAPSLOCK | Alt + CAPSLOCK | Alt + CAPSLOCK |
-| -                                 | -            | -              | -              |
-| accept (AI) generated code ✅     | ⌘ + Enter    | Ctrl + Enter   | Ctrl + Enter   |
-| reject (AI) generated code 🚫     | ⌥ + Enter    | Alt + Enter    | Alt + Enter    |
+| Command                           | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
+| :-------------------------------- | :-------- | :----------- | :----------- |
+| (AI) chat interface (popup/modal) | ⌘ + `     | Ctrl + `     | Ctrl + `     |
+| (AI) chat (panel/view)            | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
+| create new (AI) session           | ⌥ + A     | Alt + A      | Alt + A      |
+| show (AI) chat history            | ⌥ + S     | Alt + S      | Alt + S      |
+| attach (AI) context               | ⌥ + D     | Alt + D      | Alt + D      |
+| -                                 | -         | -            | -            |
+| accept (AI) generated code ✅     | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
+| reject (AI) generated code 🚫     | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
 
 </br>
 
