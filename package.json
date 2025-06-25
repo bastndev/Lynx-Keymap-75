@@ -96,7 +96,6 @@
         "command": "workbench.view.extensions"
       },
       
-
       
       {
         "key": "alt+c",
@@ -210,13 +209,14 @@
       },
 
 
+
       {
         "key": "insert",
         "mac": "insert",
         "command": "workbench.action.debug.start"
       },{
         "key": "ctrl+insert",
-        "mac": "ctrl+insert",
+        "mac": "cmd+insert",
         "command": "workbench.action.debug.restart"
       },{
         "key": "end",
@@ -236,14 +236,14 @@
         "command": "markdown.showPreviewToSide"
       },{
         "key": "ctrl+end",
-        "mac": "ctrl+end",
+        "mac": "cmd+end",
         "command": "workbench.action.closeActiveEditor"
       },
 
 
 
       {
-        "key": "cmd+/",
+        "key": "ctrl+/",
         "mac": "cmd+/",
         "command": "lynx-keymap.toggleInlineSuggest"
       },{
@@ -267,8 +267,8 @@
        
 
       {
-        "key": "alt+capslock",
-        "mac": "alt+capslock",
+        "key": "ctrl+escape",
+        "mac": "cmd+escape",
         "command": "lynx-keymap.toggleInlineSuggest"
       },{
         "key": "ctrl+delete",
