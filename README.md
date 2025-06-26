@@ -8,54 +8,53 @@
 </p>
 
 </br>
+
 ### ► Lynx Keymap — Standard Keybindings
 
-| Command                    | 🍎 macOS        | 🟦 Windows         | 🐧 Linux           |
-| :------------------------- | :-------------- | :----------------- | :----------------- |
-| open explorer              | ⌘ + 1           | Ctrl + 1           | Ctrl + 1           |
-| open source control (scm)  | ⌘ + 2           | Ctrl + 2           | Ctrl + 2           |
-| open extensions view       | ⌘ + 3           | Ctrl + 3           | Ctrl + 3           |
-| toggle sidebar visibility  | ⌘ + Shift + Tab | Ctrl + Shift + Tab | Ctrl + Shift + Tab |
-| -                          | -               | -                  | -                  |
-| new file                   | ⌥ + C           | Alt + C            | Alt + C            |
-| new folder                 | ⌥ + V           | Alt + V            | Alt + V            |
-| -                          | -               | -                  | -                  |
-| stage all changes          | ⌥ + 1           | Alt + 1            | Alt + 1            |
-| generate ai commit message | ⌥ + 2           | Alt + 2            | Alt + 2            |
-| unstage all changes        | ⌥ + 3           | Alt + 3            | Alt + 3            |
-| git commit                 | ⌥ + Enter       | Alt + Enter        | Alt + Enter        |
-| git push                   | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
-| git pull                   | ⌥ + Escape      | Alt + Escape       | Alt + Escape       |
-| -                          | -               | -                  | -                  |
-| format document            | ⌥ + F           | Alt + F            | Alt + F            |
-| -                          | -               | -                  | -                  |
-| toggle debug console       | ⌥ + Q           | Alt + Q            | Alt + Q            |
-| terminal                   | ⌥ + W           | Alt + W            | Alt + W            |
-| open gitlens               | ⌥ + E           | Alt + E            | Alt + E            |
-| toggle Panel               | Page Down       | Page Down          | Page Down          |
-| -                          | -               | -                  | -                  |
-| start debugging            | Insert          | Insert             | Insert             |
-| restart debugging          | ⌘ + Insert      | Ctrl + Insert      | Ctrl + Insert      |
-| stop debugging             | End             | End                | End                |
-| -                          | -               | -                  | -                  |
-| view git changes           | Page Up         | Page Up            | Page Up            |
-| show markdown preview      | ⌘ + Page Up     | ctrl + Page Up     | ctrl + Page Up     |
-| close active editor        | ⌘ + End         | Ctrl + End         | Ctrl + End         |
-| -                          | -               | -                  | -                  |
-| open settings              | ⌘ + J           | Ctrl + J           | Ctrl + J           |
-| open settings (JSON)       | ⌥ + J           | Alt + J            | Alt + J            |
-| -                          | -               | -                  | -                  |
-| comment line               | ⌘ + /           | Ctrl + /           | Ctrl + /           |
-| comment block              | ⌥ + /           | Alt + /            | Alt + /            |
-| -                          | -               | -                  | -                  |
-| zoom in                    | ⌥ + ⇧ + Vol+    | Alt + ⇧ + Vol+     | Alt + ⇧ + Vol+     |
-| zoom out                   | ⌥ + ⇧ + Vol-    | Alt + ⇧ + Vol-     | Alt + ⇧ + Vol-     |
-| -                          | -               | -                  | -                  |
-| toggle inline suggest      | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
-| Delete txt paragraph       | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
-| Finish project ❌          | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
-
----
+| Command                      | 🍎 macOS        | 🟦 Windows         | 🐧 Linux           |
+| :--------------------------- | :-------------- | :----------------- | :----------------- |
+| open explorer                | ⌘ + 1           | Ctrl + 1           | Ctrl + 1           |
+| open source control (scm)    | ⌘ + 2           | Ctrl + 2           | Ctrl + 2           |
+| open extensions              | ⌘ + 3           | Ctrl + 3           | Ctrl + 3           |
+| close & open sidebar         | ⌘ + Shift + Tab | Ctrl + Shift + Tab | Ctrl + Shift + Tab |
+| -                            | -               | -                  | -                  |
+| new file                     | ⌥ + C           | Alt + C            | Alt + C            |
+| new folder                   | ⌥ + V           | Alt + V            | Alt + V            |
+| -                            | -               | -                  | -                  |
+| select all changes files     | ⌥ + 1           | Alt + 1            | Alt + 1            |
+| generate commit message (AI) | ⌥ + 2           | Alt + 2            | Alt + 2            |
+| unstage all changes files    | ⌥ + 3           | Alt + 3            | Alt + 3            |
+| git commit                   | ⌥ + Enter       | Alt + Enter        | Alt + Enter        |
+| git push                     | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
+| git pull                     | ⌥ + ESC         | Alt + ESC          | Alt + ESC          |
+| -                            | -               | -                  | -                  |
+| open & close debug console   | ⌥ + Q           | Alt + Q            | Alt + Q            |
+| open & close terminal        | ⌥ + W           | Alt + W            | Alt + W            |
+| open gitlens                 | ⌥ + E           | Alt + E            | Alt + E            |
+| close panel                  | Page Down       | Page Down          | Page Down          |
+| -                            | -               | -                  | -                  |
+| start debugging              | Insert          | Insert             | Insert             |
+| restart debugging            | ⌘ + Insert      | Ctrl + Insert      | Ctrl + Insert      |
+| stop debugging               | End             | End                | End                |
+| -                            | -               | -                  | -                  |
+| format document              | ⌥ + F           | Alt + F            | Alt + F            |
+| -                            | -               | -                  | -                  |
+| view git changes             | Page Up         | Page Up            | Page Up            |
+| show markdown preview        | ⌘ + Page Up     | ctrl + Page Up     | ctrl + Page Up     |
+| close active editor          | ⌘ + End         | Ctrl + End         | Ctrl + End         |
+| -                            | -               | -                  | -                  |
+| open settings                | ⌘ + J           | Ctrl + J           | Ctrl + J           |
+| open settings (JSON)         | ⌥ + J           | Alt + J            | Alt + J            |
+| -                            | -               | -                  | -                  |
+| comment line                 | ⌘ + /           | Ctrl + /           | Ctrl + /           |
+| comment block                | ⌥ + /           | Alt + /            | Alt + /            |
+| -                            | -               | -                  | -                  |
+| zoom in                      | ⌥ + ⇧ + VOL+    | Alt + ⇧ + VOL+     | Alt + ⇧ + VOL+     |
+| zoom out                     | ⌥ + ⇧ + vol-    | Alt + ⇧ + vol-     | Alt + ⇧ + vol-     |
+| -                            | -               | -                  | -                  |
+| toggle inline suggest        | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
+| Delete txt paragraph         | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
+| Finish project ❌            | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
 
 ### ► [AI] Commands Easy (Lynx Keymap)
 
