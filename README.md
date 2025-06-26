@@ -49,6 +49,7 @@
 | zoom out                   | ⌥ + ⇧ + Vol-    | Alt + ⇧ + Vol-     | Alt + ⇧ + Vol-     |
 | -                          | -               | -                  | -                  |
 | toggle inline suggest      | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
+| Delete txt paragraph         | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
 | Finish project ❌          | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
 
 ---
