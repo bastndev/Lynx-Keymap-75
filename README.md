@@ -49,8 +49,8 @@
 | comment line                 | ⌘ + /           | Ctrl + /           | Ctrl + /           |
 | comment block                | ⌥ + /           | Alt + /            | Alt + /            |
 | -                            | -               | -                  | -                  |
-| zoom in                      | ⌥ + ⇧ + VOL+    | Alt + ⇧ + VOL+     | Alt + ⇧ + VOL+     |
-| zoom out                     | ⌥ + ⇧ + vol-    | Alt + ⇧ + vol-     | Alt + ⇧ + vol-     |
+| zoom in                      | ⌥ + ⇧ + VOL⊕    | Alt + ⇧ + VOL⊕     | Alt + ⇧ + VOL⊕     |
+| zoom out                     | ⌥ + ⇧ + vol⊖    | Alt + ⇧ + vol⊖     | Alt + ⇧ + vol⊖     |
 | -                            | -               | -                  | -                  |
 | toggle inline suggest        | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
 | Delete txt paragraph         | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
