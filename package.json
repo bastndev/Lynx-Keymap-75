@@ -256,6 +256,22 @@
       },
 
 
+
+      {
+        "key": "ctrl+j",
+        "mac": "cmd+j",
+        "command": "workbench.action.openSettings"
+      },{
+        "key": "ctrl+,",
+        "mac": "cmd+,",
+        "command": ""
+      },{
+        "key": "alt+j",
+        "mac": "alt+j",
+        "command": "workbench.action.openSettingsJson"
+      },
+
+
       {
         "key": "ctrl+/",
         "mac": "cmd+/",
@@ -265,8 +281,8 @@
         "mac": "alt+/",
         "command": "editor.action.blockComment"
       },
-       
 
+      
       {
         "key": "ctrl+escape",
         "mac": "cmd+escape",

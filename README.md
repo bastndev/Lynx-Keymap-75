@@ -42,6 +42,9 @@
 | show markdown preview      | ⌘ + Page Up     | ctrl + Page Up     | ctrl + Page Up     |
 | close active editor        | ⌘ + End         | Ctrl + End         | Ctrl + End         |
 | -                          | -               | -                  | -                  |
+| open settings              | ⌘ + J           | Ctrl + J           | Ctrl + J           |
+| open settings (JSON)       | ⌥ + J           | Alt + J            | Alt + J            |
+| -                          | -               | -                  | -                  |
 | comment line               | ⌘ + /           | Ctrl + /           | Ctrl + /           |
 | comment block              | ⌥ + /           | Alt + /            | Alt + /            |
 | -                          | -               | -                  | -                  |
@@ -49,7 +52,7 @@
 | zoom out                   | ⌥ + ⇧ + Vol-    | Alt + ⇧ + Vol-     | Alt + ⇧ + Vol-     |
 | -                          | -               | -                  | -                  |
 | toggle inline suggest      | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
-| Delete txt paragraph         | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
+| Delete txt paragraph       | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
 | Finish project ❌          | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
 
 ---
