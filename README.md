@@ -37,11 +37,11 @@
 | restart debugging            | ⌘ + Insert      | Ctrl + Insert      | Ctrl + Insert      |
 | stop debugging               | End             | End                | End                |
 | -                            | -               | -                  | -                  |
-| format document              | ⌥ + F           | Alt + F            | Alt + F            |
+| view git changes             | ⌘ + End         | Ctrl + End         | Ctrl + End         |
+| show markdown preview        | Page Up         | Page Up            | Page Up            |
 | -                            | -               | -                  | -                  |
-| view git changes             | Page Up         | Page Up            | Page Up            |
-| show markdown preview        | ⌘ + Page Up     | ctrl + Page Up     | ctrl + Page Up     |
-| close active editor          | ⌘ + End         | Ctrl + End         | Ctrl + End         |
+| format document              | ⌥ + F           | Alt + F            | Alt + F            |
+| close tab                    | ⌘ + W           | ctrl + W           | ctrl + W           |
 | -                            | -               | -                  | -                  |
 | open settings                | ⌘ + J           | Ctrl + J           | Ctrl + J           |
 | open settings (JSON)         | ⌥ + J           | Alt + J            | Alt + J            |
@@ -127,7 +127,7 @@ Here is the project link if you want to collaborate: [[>\_ ] code](https://githu
 
 | Icon                                                                                                                                                                                                                              | Name                                                     | Description                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<img src="https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/0.9.6/1750900982281/Microsoft.VisualStudio.Services.Icons.Default">](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap) | [Lynx Keymap](https://github.com/bastndev/Lynx-Keymap)   | An all‑in‑one toolkit for LynxJS mobile/web development—bundles keymap, snippets & AI tools like Cursor AI, Windsurf, Trae AI, Firebase Studio. |
+| [<img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap/refs/heads/main/assets/images/logo.png">](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap)                                             | [Lynx Keymap](https://github.com/bastndev/Lynx-Keymap)   | An all‑in‑one toolkit for LynxJS mobile/web development—bundles keymap, snippets & AI tools like Cursor AI, Windsurf, Trae AI, Firebase Studio. |
 | [<img src="https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default">](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-theme)   | [Lynx Theme](https://github.com/bastndev/Lynx-Theme)     | A sleek, customizable VS Code theme with built‑in support for Cursor‑AI, Windsurf & Trae‑AI integrations.                                       |
 | [<img src="https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynxjs-pack/0.1.8/1745206864969/Microsoft.VisualStudio.Services.Icons.Default">](https://marketplace.visualstudio.com/items?itemName=bastndev.lynxjs-pack) | [LynxJS Pack](https://github.com/bastndev/LynxJs-Packge) | An all‑in‑one toolkit for LynxJS mobile/web development—bundles keymap, snippets & AI tools like Cursor AI, Windsurf, Trae AI, Firebase Studio. |
 
