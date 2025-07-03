@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode, Cursor AI, Windsurf & Trae AI. + (Firebase Studio) & (+ AI). ",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -197,6 +197,17 @@
         "command": "lynx-keymap.attachAIContext"
       },
 
+
+      {
+        "key": "alt+z",
+        "mac": "alt+z",
+        "command": "workbench.action.chat.toggleAgentMode"
+      },{
+        "key": "alt+x",
+        "mac": "alt+x",
+        "command": "workbench.action.chat.openModelPicker"
+      },
+      
 
       {
         "key": "ctrl+enter",
