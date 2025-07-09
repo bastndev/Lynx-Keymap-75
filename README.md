@@ -58,19 +58,19 @@
 
 ### ► [AI] Commands Easy (Lynx Keymap)
 
-| Command                           | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
-| :-------------------------------- | :-------- | :----------- | :----------- |
-| (AI) chat interface (popup/modal) | ⌘ + `     | Ctrl + `     | Ctrl + `     |
-| (AI) chat (panel/view)            | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
-| create new (AI) session           | ⌥ + A     | Alt + A      | Alt + A      |
-| show (AI) chat history            | ⌥ + S     | Alt + S      | Alt + S      |
-| attach (AI) context               | ⌥ + D     | Alt + D      | Alt + D      |
-| -                                 | -         | -            | -            |
-| accept (AI) generated code ✅     | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
-| reject (AI) generated code 🚫     | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
-| -                                 | -         | -            | -            |
-| 🆕 agent select (AI)              | ⌥ + Z     | Alt + Z      | Alt + Z      |
-| 🆕 pick model (AI)                | ⌥ + X     | Alt + X      | Alt + X      |
+| Command                            | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
+| :--------------------------------- | :-------- | :----------- | :----------- |
+| (AI) chat interface (popup/modal)  | ⌘ + `     | Ctrl + `     | Ctrl + `     |
+| (AI) chat (panel/view)             | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
+| create new (AI) session            | ⌥ + A     | Alt + A      | Alt + A      |
+| show (AI) chat history             | ⌥ + S     | Alt + S      | Alt + S      |
+| attach (AI) context                | ⌥ + D     | Alt + D      | Alt + D      |
+| -                                  | -         | -            | -            |
+| accept (AI) generated code ✅      | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
+| reject (AI) generated code 🚫      | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
+| -                                  | -         | -            | -            |
+| agent select (AI) 🔁 `only-VScode` | ⌥ + Z     | Alt + Z      | Alt + Z      |
+| pick model (AI) `only-VScode`      | ⌥ + X     | Alt + X      | Alt + X      |
 
 </br>
 
@@ -122,9 +122,9 @@ Here is the project link if you want to collaborate: [[>\_ ] code](https://githu
 
 ## About Me
 
-- 🐦 [X](https://twitter.com/bastndev) - For questions and discussions.
-- 💬 [Discord](https://discord.com/invite/bgzvzP6aZH) - For community interaction.
-- ▶️ [Youtube](https://www.youtube.com/@bastndev) - For content about Lynx and programming.
+- [🐦 X](https://twitter.com/bastndev) - For questions and discussions.
+- 🔴 [Youtube](https://www.youtube.com/@bastndev?sub_confirmation=1) - Code, Software and development insights.
+- 💼 [Linkedin](https://www.linkedin.com/in/bastndev) - Professional networking and career updates.
 
 </br>
 
