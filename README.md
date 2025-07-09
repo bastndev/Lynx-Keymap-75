@@ -1,9 +1,9 @@
 [![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/ids.png)](https://github.com/bastndev/Lynx-Keymap-75?tab=readme-ov-file)
 
 <p align="center">
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Rating" alt="Rating"></a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/installs-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Installs" alt="Installs"></a>
+    <a href="https://open-vsx.org/extension/bastndev/lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>
+    <a href="https://open-vsx.org/extension/bastndev/lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Rating" alt="Rating"></a>
+    <a href="https://open-vsx.org/extension/bastndev/lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/installs-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Installs" alt="Installs"></a>
     <a href="https://github.com/sponsors/bastndev"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/main/assets/images/sponsor.png" width="30px" alt="Sponsor Github"></a>
 </p>
 
@@ -58,19 +58,19 @@
 
 ### ► [AI] Commands Easy (Lynx Keymap)
 
-| Command                           | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
-| :-------------------------------- | :-------- | :----------- | :----------- |
-| (AI) chat interface (popup/modal) | ⌘ + `     | Ctrl + `     | Ctrl + `     |
-| (AI) chat (panel/view)            | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
-| create new (AI) session           | ⌥ + A     | Alt + A      | Alt + A      |
-| show (AI) chat history            | ⌥ + S     | Alt + S      | Alt + S      |
-| attach (AI) context               | ⌥ + D     | Alt + D      | Alt + D      |
-| -                                 | -         | -            | -            |
-| accept (AI) generated code ✅     | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
-| reject (AI) generated code 🚫     | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
-| -                                 | -         | -            | -            |
-| 🆕 agent select (AI)              | ⌥ + Z     | Alt + Z      | Alt + Z      |
-| 🆕 pick model (AI)                | ⌥ + X     | Alt + X      | Alt + X      |
+| Command                            | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
+| :--------------------------------- | :-------- | :----------- | :----------- |
+| (AI) chat interface (popup/modal)  | ⌘ + `     | Ctrl + `     | Ctrl + `     |
+| (AI) chat (panel/view)             | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
+| create new (AI) session            | ⌥ + A     | Alt + A      | Alt + A      |
+| show (AI) chat history             | ⌥ + S     | Alt + S      | Alt + S      |
+| attach (AI) context                | ⌥ + D     | Alt + D      | Alt + D      |
+| -                                  | -         | -            | -            |
+| accept (AI) generated code ✅      | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
+| reject (AI) generated code 🚫      | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
+| -                                  | -         | -            | -            |
+| agent select (AI) 🔁 `only-VScode` | ⌥ + Z     | Alt + Z      | Alt + Z      |
+| pick model (AI) `only-VScode`      | ⌥ + X     | Alt + X      | Alt + X      |
 
 </br>
 
@@ -122,9 +122,9 @@ Here is the project link if you want to collaborate: [[>\_ ] code](https://githu
 
 ## About Me
 
-- 🐦 [X](https://twitter.com/bastndev) - For questions and discussions.
-- 💬 [Discord](https://discord.com/invite/bgzvzP6aZH) - For community interaction.
-- ▶️ [Youtube](https://www.youtube.com/@bastndev) - For content about Lynx and programming.
+- [🐦 X](https://twitter.com/bastndev) - For questions and discussions.
+- 🔴 [Youtube](https://www.youtube.com/@bastndev?sub_confirmation=1) - Code, Software and development insights.
+- 💼 [Linkedin](https://www.linkedin.com/in/bastndev) - Professional networking and career updates.
 
 </br>
 
