@@ -26,7 +26,7 @@
 | unstage all changes files    | ⌥ + 3           | Alt + 3            | Alt + 3            |
 | git commit                   | ⌥ + Enter       | Alt + Enter        | Alt + Enter        |
 | git push                     | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
-| git pull                     | ⌥ + ESC         | Alt + ESC          | Alt + ESC          |
+| git pull                     | ⌥ + Esc         | Alt + Esc          | Alt + Esc          |
 | -                            | -               | -                  | -                  |
 | format document              | ⌥ + F           | Alt + F            | Alt + F            |
 | format selection             | ⌘ + ⌥ + F       | Ctrl + Alt + F     | Ctrl + Alt + F     |
@@ -58,7 +58,7 @@
 | insert cursor above          | ⌘ + ↑           | Ctrl + ↑           | Ctrl + ↑           |
 | insert cursor below          | ⌘ + ↓           | Ctrl + ↓           | Ctrl + ↓           |
 | -                            | -               | -                  | -                  |
-| toggle inline suggest        | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
+| toggle inline suggest        | ⌘ + Esc         | Ctrl + Esc         | Ctrl + Esc         |
 | Delete txt paragraph         | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
 | Finish project ❌            | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
 
