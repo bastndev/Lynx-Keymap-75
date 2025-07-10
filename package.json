@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode, Cursor AI, Windsurf & Trae AI. + (Firebase Studio) & (+ AI). ",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -153,6 +153,18 @@
         "mac": "alt+f",
         "command": "editor.action.formatDocument"
       },{
+        "key": "ctrl+alt+f",
+        "mac": "cmd+alt+f",
+        "command": "editor.action.formatSelection.multiple"
+      },{
+        "key": "shift+alt+f",
+        "mac": "shift+alt+f",
+        "command": "editor.action.organizeImports"
+      },
+      
+      
+      
+      {
         "key": "alt+q",
         "mac": "alt+q",
         "command": "workbench.debug.action.toggleRepl"
@@ -287,6 +299,26 @@
         "mac": "alt+/",
         "command": "editor.action.blockComment"
       },
+
+
+      {
+        "key": "alt+shift+up",
+        "mac": "alt+shift+up",
+        "command": "editor.action.copyLinesUpAction"
+      },{
+        "key": "alt+shift+down",
+        "mac": "alt+shift+down",
+        "command": "editor.action.copyLinesDownAction"
+      },{
+        "key": "ctrl+up",
+        "mac": "cmd+up",
+        "command": "editor.action.insertCursorAbove"
+      },{
+        "key": "ctrl+down",
+        "mac": "cmd+down",
+        "command": "editor.action.insertCursorBelow"
+      },
+
 
       
       {
