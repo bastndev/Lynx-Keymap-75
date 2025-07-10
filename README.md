@@ -28,6 +28,10 @@
 | git push                     | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
 | git pull                     | ⌥ + ESC         | Alt + ESC          | Alt + ESC          |
 | -                            | -               | -                  | -                  |
+| format document              | ⌥ + F           | Alt + F            | Alt + F            |
+| format selection             | ⌘ + ⌥ + F       | Ctrl + Alt + F     | Ctrl + Alt + F     |
+| organize imports             | ⌥ + Shift + F   | Shift + Alt + F    | Shift + Alt + F    |
+| -                            | -               | -                  | -                  |
 | open & close debug console   | ⌥ + Q           | Alt + Q            | Alt + Q            |
 | open & close terminal        | ⌥ + W           | Alt + W            | Alt + W            |
 | open gitlens                 | ⌥ + E           | Alt + E            | Alt + E            |
@@ -40,9 +44,6 @@
 | view git changes             | ⌘ + End         | Ctrl + End         | Ctrl + End         |
 | show markdown preview        | Page Up         | Page Up            | Page Up            |
 | -                            | -               | -                  | -                  |
-| format document              | ⌥ + F           | Alt + F            | Alt + F            |
-| close tab                    | ⌘ + W           | ctrl + W           | ctrl + W           |
-| -                            | -               | -                  | -                  |
 | open settings                | ⌘ + J           | Ctrl + J           | Ctrl + J           |
 | open settings (JSON)         | ⌥ + J           | Alt + J            | Alt + J            |
 | -                            | -               | -                  | -                  |
@@ -52,25 +53,30 @@
 | zoom in                      | ⌥ + ⇧ + VOL⊕    | Alt + ⇧ + VOL⊕     | Alt + ⇧ + VOL⊕     |
 | zoom out                     | ⌥ + ⇧ + vol⊖    | Alt + ⇧ + vol⊖     | Alt + ⇧ + vol⊖     |
 | -                            | -               | -                  | -                  |
+| copy lines up                | ⌥ + Shift + ↑   | Alt + Shift + ↑    | Alt + Shift + ↑    |
+| copy lines down              | ⌥ + Shift + ↓   | Alt + Shift + ↓    | Alt + Shift + ↓    |
+| insert cursor above          | ⌘ + ↑           | Ctrl + ↑           | Ctrl + ↑           |
+| insert cursor below          | ⌘ + ↓           | Ctrl + ↓           | Ctrl + ↓           |
+| -                            | -               | -                  | -                  |
 | toggle inline suggest        | ⌘ + Escape      | Ctrl + Escape      | Ctrl + Escape      |
 | Delete txt paragraph         | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
 | Finish project ❌            | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
 
 ### ► [AI] Commands Easy (Lynx Keymap)
 
-| Command                            | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
-| :--------------------------------- | :-------- | :----------- | :----------- |
-| (AI) chat interface (popup/modal)  | ⌘ + `     | Ctrl + `     | Ctrl + `     |
-| (AI) chat (panel/view)             | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
-| create new (AI) session            | ⌥ + A     | Alt + A      | Alt + A      |
-| show (AI) chat history             | ⌥ + S     | Alt + S      | Alt + S      |
-| attach (AI) context                | ⌥ + D     | Alt + D      | Alt + D      |
-| -                                  | -         | -            | -            |
-| accept (AI) generated code ✅      | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
-| reject (AI) generated code 🚫      | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
-| -                                  | -         | -            | -            |
-| agent select (AI) 🔁 `only-VScode` | ⌥ + Z     | Alt + Z      | Alt + Z      |
-| pick model (AI) `only-VScode`      | ⌥ + X     | Alt + X      | Alt + X      |
+| Command                           | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
+| :-------------------------------- | :-------- | :----------- | :----------- |
+| (AI) chat interface (popup/modal) | ⌘ + `     | Ctrl + `     | Ctrl + `     |
+| (AI) chat (panel/view)            | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
+| create new (AI) session           | ⌥ + A     | Alt + A      | Alt + A      |
+| show (AI) chat history            | ⌥ + S     | Alt + S      | Alt + S      |
+| attach (AI) context               | ⌥ + D     | Alt + D      | Alt + D      |
+| -                                 | -         | -            | -            |
+| accept (AI) generated code ✅     | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
+| reject (AI) generated code 🚫     | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
+| -                                 | -         | -            | -            |
+| ask, agent, edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ   | ⌥ + Z     | Alt + Z      | Alt + Z      |
+| pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ       | ⌥ + X     | Alt + X      | Alt + X      |
 
 </br>
 
