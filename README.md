@@ -9,7 +9,7 @@
 
 </br>
 
-### ► Lynx Keymap — Standard Keybindings
+### ► Lynx Keymap 75% — Standard Keybindings
 
 | Command                      | 🍎 macOS        | 🟦 Windows         | 🐧 Linux           |
 | :--------------------------- | :-------------- | :----------------- | :----------------- |
