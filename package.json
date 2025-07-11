@@ -79,7 +79,14 @@
       },{
         "command": "lynx-keymap.toggleInlineSuggest",
         "title": "Toggle Inline Suggestions (AI Autocomplete)"
-      }
+      },
+      {
+        "command": "lynx-keymap.cycleIconColor",
+        "title": "Cycle Icon Color (Red → Blue → Default)"
+      },{
+  "command": "lynx-keymap.executeColorAndAgentMacro",
+  "title": "Execute Color Change + Agent Mode Toggle Macro"
+}
     ],
     "keybindings": [
       {
@@ -211,15 +218,28 @@
 
 
       {
-        "key": "alt+z",
-        "mac": "alt+z",
-        "command": "workbench.action.chat.toggleAgentMode"
-      },{
-        "key": "alt+x",
-        "mac": "alt+x",
+        "key": "alt+n",
+        "mac": "alt+n",
         "command": "workbench.action.chat.openModelPicker"
+      },{
+  "key": "alt+z",
+  "mac": "alt+z",
+  "command": "lynx-keymap.executeColorAndAgentMacro"
+},
+
+
+      {
+        "key": "ctrl+alt+12",
+        "mac": "cmd+alt+12",
+        "command": "workbench.action.chat.toggleAgentMode"
       },
-      
+      {
+        "key": "ctrl+alt+11",
+        "mac": "ctrl+alt+11",
+        "command": "lynx-keymap.cycleIconColor"
+      },
+
+
 
       {
         "key": "ctrl+enter",

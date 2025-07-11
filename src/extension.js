@@ -1,9 +1,15 @@
 const vscode = require('vscode');
+const ColorManager = require('./color-manager');
+const MacroManager = require('./macros');
 
 function activate(context) {
     console.log('Congratulations, your extension "lynx-keymap" is now active!');
     
-    // Command for AI commit generation  [alt+1]
+    // Inicializar managers
+    const colorManager = new ColorManager();
+    const macroManager = new MacroManager();
+    
+    // Command for AI commit generation  [alt+2]
     let commitDisposable = vscode.commands.registerCommand('lynx-keymap.generateAICommit', async function () {
         const commitCommands = [
             'windsurf.generateCommitMessage',               // 0: Windsurf
@@ -75,7 +81,7 @@ function activate(context) {
         await executeFirstAvailableCommand(attachContextCommands, 'No AI context attachment available');
     });
 
-    // New command to toggle inline suggestions
+    // Command to toggle inline suggestions  [ctrl+escape]
     let toggleSuggestDisposable = vscode.commands.registerCommand('lynx-keymap.toggleInlineSuggest', async () => {
         const config = vscode.workspace.getConfiguration();
         const currentValue = config.get('editor.inlineSuggest.enabled', true);
@@ -90,6 +96,16 @@ function activate(context) {
         }
     });
 
+    // Command to cycle icon colors  [ctrl+alt+11]
+    let cycleIconColorDisposable = vscode.commands.registerCommand('lynx-keymap.cycleIconColor', async () => {
+        await colorManager.cycleIconColor();
+    });
+
+    // NEW: Macro command to execute color change + agent mode toggle  [alt+z]
+    let colorAndAgentMacroDisposable = vscode.commands.registerCommand('lynx-keymap.executeColorAndAgentMacro', async () => {
+        await macroManager.executeColorAndAgentMacro();
+    });
+
     // Add all disposables to the subscriptions
     context.subscriptions.push(
         commitDisposable,
@@ -98,7 +114,9 @@ function activate(context) {
         newSessionDisposable,
         historyDisposable,
         attachContextDisposable,
-        toggleSuggestDisposable
+        toggleSuggestDisposable,
+        cycleIconColorDisposable,
+        colorAndAgentMacroDisposable
     );
 }
 
