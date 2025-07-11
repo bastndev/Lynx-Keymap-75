@@ -96,7 +96,7 @@ function activate(context) {
         }
     });
 
-    // Command to cycle icon colors  [ctrl+alt+11]
+    // Command to cycle icon colors  [ctrl+shift+alt+11]
     let cycleIconColorDisposable = vscode.commands.registerCommand('lynx-keymap.cycleIconColor', async () => {
         await colorManager.cycleIconColor();
     });

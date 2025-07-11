@@ -219,12 +219,12 @@
 
 
       {
-        "key": "ctrl+alt+11",
-        "mac": "ctrl+alt+11",
+        "key": "ctrl+shift+alt+11",
+        "mac": "ctrl+shift+alt+11",
         "command": "lynx-keymap.cycleIconColor"
       },{
-        "key": "ctrl+alt+12",
-        "mac": "cmd+alt+12",
+        "key": "ctrl+shift+alt+12",
+        "mac": "cmd+shift+alt+12",
         "command": "workbench.action.chat.toggleAgentMode"
       },
 
