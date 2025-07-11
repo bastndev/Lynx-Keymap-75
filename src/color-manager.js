@@ -3,9 +3,9 @@ const vscode = require('vscode');
 class ColorManager {
     constructor() {
         this.colors = [
-            '#0085c3ff', 
-            '#02e14a', 
-            '#e8e8e8'  
+            '#008dfa', // Blue
+            '#07cc4cff', // Green
+            null  // Default (uses theme's default icon color)
         ];
         this.currentColorIndex = 2; // Start with default color
     }
