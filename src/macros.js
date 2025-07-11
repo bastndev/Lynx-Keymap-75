@@ -42,7 +42,7 @@ class MacroManager {
         const sequence = [
             {
                 command: 'workbench.action.chat.toggleAgentMode',
-                delay: 500
+                delay: 10
             },
             {
                 command: 'lynx-keymap.cycleIconColor'
@@ -57,8 +57,8 @@ class MacroManager {
      */
     async executeCustomMacro() {
         const sequence = [
-            { command: 'workbench.view.explorer', delay: 500 },
-            { command: 'workbench.view.scm', delay: 500 },
+            { command: 'workbench.view.explorer', delay: 10 },
+            { command: 'workbench.view.scm', delay: 10 },
             { command: 'workbench.view.extensions' }
         ];
 

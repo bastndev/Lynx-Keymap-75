@@ -3,7 +3,7 @@ const vscode = require('vscode');
 class ColorManager {
     constructor() {
         this.colors = [
-            '#4444ff', 
+            '#0085c3ff', 
             '#02e14a', 
             '#e8e8e8'  
         ];
