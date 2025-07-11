@@ -29,10 +29,6 @@ class ColorManager {
                 }, 
                 vscode.ConfigurationTarget.Global
             );
-
-            const colorNames = ['Red', 'Blue', 'Default'];
-            const colorName = colorNames[this.currentColorIndex];
-            vscode.window.showInformationMessage(`Icon color changed to: ${colorName} (${newColor})`);
             
         } catch (error) {
             console.error('Error changing icon color:', error);
@@ -57,8 +53,6 @@ class ColorManager {
                 customizations, 
                 vscode.ConfigurationTarget.Global
             );
-            
-            vscode.window.showInformationMessage('Icon color reset to default');
             
         } catch (error) {
             console.error('Error resetting icon color:', error);
