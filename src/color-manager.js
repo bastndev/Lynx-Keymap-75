@@ -1,81 +1,82 @@
 const vscode = require('vscode');
 
 class ColorManager {
-    constructor() {
-        this.colors = [
-            '#008dfa', // Blue
-            '#07cc4cff', // Green
-            null  // Default (uses theme's default icon color)
-        ];
-        this.currentColorIndex = 2; // Start with default color
-    }
+  constructor() {
+    this.colors = [
+      '#008dfa',    // Blue
+      '#07cc4cff',  // Green
+      null,           // Default (color theme)
+    ];
+    this.currentColorIndex = 2; // Start with default color
+  }
 
-    /**
-     * Cycles through available colors
-     * @returns {Promise<void>}
-     */
-    async cycleIconColor() {
-        try {
-            this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
-            const newColor = this.colors[this.currentColorIndex];
-            
-            const config = vscode.workspace.getConfiguration();
-            
-            await config.update(
-                'workbench.colorCustomizations', 
-                {
-                    ...config.get('workbench.colorCustomizations', {}),
-                    'icon.foreground': newColor
-                }, 
-                vscode.ConfigurationTarget.Global
-            );
-            
-        } catch (error) {
-            console.error('Error changing icon color:', error);
-            vscode.window.showErrorMessage('Failed to change icon color. Please try again.');
-        }
-    }
+  /**
+   * Cycles through available colors
+   * @returns {Promise<void>}
+   */
+  async cycleIconColor() {
+    try {
+      this.currentColorIndex =
+        (this.currentColorIndex + 1) % this.colors.length;
+      const newColor = this.colors[this.currentColorIndex];
 
-    /**
-     * Resets color to default value
-     * @returns {Promise<void>}
-     */
-    async resetToDefault() {
-        try {
-            this.currentColorIndex = 2;
-            const config = vscode.workspace.getConfiguration();
-            const customizations = config.get('workbench.colorCustomizations', {});
-            
-            delete customizations['icon.foreground'];
-            
-            await config.update(
-                'workbench.colorCustomizations', 
-                customizations, 
-                vscode.ConfigurationTarget.Global
-            );
-            
-        } catch (error) {
-            console.error('Error resetting icon color:', error);
-            vscode.window.showErrorMessage('Failed to reset icon color.');
-        }
-    }
+      const config = vscode.workspace.getConfiguration();
 
-    /**
-     * Gets current color
-     * @returns {string} Current hex color
-     */
-    getCurrentColor() {
-        return this.colors[this.currentColorIndex];
+      await config.update(
+        'workbench.colorCustomizations',
+        {
+          ...config.get('workbench.colorCustomizations', {}),
+          'icon.foreground': newColor,
+        },
+        vscode.ConfigurationTarget.Global
+      );
+    } catch (error) {
+      console.error('Error changing icon color:', error);
+      vscode.window.showErrorMessage(
+        'Failed to change icon color. Please try again.'
+      );
     }
+  }
 
-    /**
-     * Gets current color name
-     * @returns {string} Current color name
-     */
-    getCurrentColorName() {
-        const colorNames = ['Red', 'Blue', 'Default'];
-        return colorNames[this.currentColorIndex];
+  /**
+   * Resets color to default value
+   * @returns {Promise<void>}
+   */
+  async resetToDefault() {
+    try {
+      this.currentColorIndex = 2;
+      const config = vscode.workspace.getConfiguration();
+      const customizations = config.get('workbench.colorCustomizations', {});
+
+      delete customizations['icon.foreground'];
+
+      await config.update(
+        'workbench.colorCustomizations',
+        customizations,
+        vscode.ConfigurationTarget.Global
+      );
+    } catch (error) {
+      console.error('Error resetting icon color:', error);
+      vscode.window.showErrorMessage('Failed to reset icon color.');
     }
+  }
+
+  /**
+   * Gets current color
+   * @returns {string} Current hex color
+   */
+  getCurrentColor() {
+    return this.colors[this.currentColorIndex];
+  }
+
+  /**
+   * Gets current color name
+   * @returns {string} Current color name
+   */
+  getCurrentColorName() {
+    const colorNames = ['Red', 'Blue', 'Default'];
+    return colorNames[this.currentColorIndex];
+  }
 }
 
 module.exports = ColorManager;
