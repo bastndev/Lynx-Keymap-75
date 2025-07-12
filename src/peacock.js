@@ -6,9 +6,9 @@ const STATE_MEMENTO_KEY = 'lynx-keymap.colorModeActive';
 const CURRENT_COLOR_KEY = 'lynx-keymap.currentColor';
 
 const COLORS = {
-  GREEN: '#2f9e44',
-  BLUE: '#1c7ed6',
-  ORANGE: '#fd7e14',
+  BLUE: '#0070bb',
+  GREEN: '#1e5739',
+  ORANGE: '#b85609',
   WHITE: '#ffffff',
 };
 
@@ -93,7 +93,8 @@ class PeacockManager {
     const color = COLORS[colorKey];
 
     const colorCustomizations = {
-      'statusBar.background': color,
+      'commandCenter.background': color,
+      'titleBar.inactiveForeground': color,
       'statusBar.foreground': COLORS.WHITE,
       'statusBarItem.remoteBackground': color,
     };
