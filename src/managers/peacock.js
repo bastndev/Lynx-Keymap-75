@@ -79,12 +79,29 @@ class PeacockManager {
   }
 
   /**
-   * Gets a random color key
+   * Gets a random color key, avoiding the last used color to prevent repetition
+   * This works across activate/deactivate cycles
    */
   getRandomColor() {
-    const randomIndex = Math.floor(Math.random() * this.colorKeys.length);
-    const colorKey = this.colorKeys[randomIndex];
-    this.logger.debug(`Selected random color: ${colorKey}`);
+    // Get the last used color (persists even when mode is deactivated)
+    const lastUsedColor = this.context.workspaceState.get(STATE_KEYS.LAST_USED_COLOR);
+    
+    // If there's only one color or no previous color, return any random color
+    if (this.colorKeys.length <= 1 || !lastUsedColor) {
+      const randomIndex = Math.floor(Math.random() * this.colorKeys.length);
+      const colorKey = this.colorKeys[randomIndex];
+      this.logger.debug(`Selected random color: ${colorKey} (no previous restriction)`);
+      return colorKey;
+    }
+    
+    // Filter out the last used color to avoid repetition
+    const availableColors = this.colorKeys.filter(key => key !== lastUsedColor);
+    
+    // Select random color from remaining options
+    const randomIndex = Math.floor(Math.random() * availableColors.length);
+    const colorKey = availableColors[randomIndex];
+    
+    this.logger.debug(`Selected random color: ${colorKey} (avoiding last used: ${lastUsedColor})`);
     return colorKey;
   }
 
@@ -106,6 +123,7 @@ class PeacockManager {
 
       await this.updateWorkspaceColors(colorCustomizations, true, 'activate');
       await this.context.workspaceState.update(STATE_KEYS.CURRENT_COLOR, colorKey);
+      await this.context.workspaceState.update(STATE_KEYS.LAST_USED_COLOR, colorKey);
 
       const duration = this.logger.endPerformance('activate-color-mode');
       this.logger.info(`Activated ${colorKey} color mode in ${duration}ms`);
@@ -189,6 +207,7 @@ class PeacockManager {
     return {
       isActive: this.context.workspaceState.get(STATE_KEYS.COLOR_MODE_ACTIVE, false),
       currentColor: this.context.workspaceState.get(STATE_KEYS.CURRENT_COLOR, null),
+      lastUsedColor: this.context.workspaceState.get(STATE_KEYS.LAST_USED_COLOR, null),
       availableColors: this.colorKeys,
       isInitialized: this.isInitialized,
     };

@@ -83,6 +83,7 @@ const CONFIG_KEYS = {
 const STATE_KEYS = {
   COLOR_MODE_ACTIVE: 'lynx-keymap.colorModeActive',
   CURRENT_COLOR: 'lynx-keymap.currentColor',
+  LAST_USED_COLOR: 'lynx-keymap.lastUsedColor',
   MANAGERS_CACHE: 'lynx-keymap.managersCache',
 };
 
