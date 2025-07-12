@@ -9,6 +9,16 @@
 
 </br>
 
+## New 🧪 (experimental) keymaps
+
+| Command                               | 🍎 macOS   | 🟦 Windows   | 🐧 Linux     |
+| :------------------------------------ | :--------- | :----------- | :----------- |
+| 🧪 ask, agent, edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ    | ⌥ + Z      | Alt + Z      | Alt + Z      |
+| 🧪 bottom color change 🟦 🟩 🔲       | ⌥ + Insert | Alt + Insert | Alt + Insert |
+| -                                     | -          | -            | -            |
+| pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ           | ⌥ + X      | Alt + X      | Alt + X      |
+| maximized & minimize (AI) ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ | ⇧ + Esc    | Shift + Esc  | Shift + Esc  |
+
 ### ► Lynx Keymap 75% — Standard Keybindings
 
 | Command                      | 🍎 macOS        | 🟦 Windows         | 🐧 Linux           |
@@ -24,9 +34,9 @@
 | select all changes files     | ⌥ + 1           | Alt + 1            | Alt + 1            |
 | generate commit message (AI) | ⌥ + 2           | Alt + 2            | Alt + 2            |
 | unstage all changes files    | ⌥ + 3           | Alt + 3            | Alt + 3            |
+| git pull                     | ⌥ + 4           | Alt + 4            | Alt + 4            |
 | git commit                   | ⌥ + Enter       | Alt + Enter        | Alt + Enter        |
 | git push                     | ⌘ + ⌥ + Enter   | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
-| git pull                     | ⌥ + Esc         | Alt + Esc          | Alt + Esc          |
 | -                            | -               | -                  | -                  |
 | format document              | ⌥ + F           | Alt + F            | Alt + F            |
 | format selection             | ⌘ + ⌥ + F       | Ctrl + Alt + F     | Ctrl + Alt + F     |
@@ -35,10 +45,11 @@
 | open & close debug console   | ⌥ + Q           | Alt + Q            | Alt + Q            |
 | open & close terminal        | ⌥ + W           | Alt + W            | Alt + W            |
 | open gitlens                 | ⌥ + E           | Alt + E            | Alt + E            |
-| close panel                  | Page Down       | Page Down          | Page Down          |
+| close & open panel           | Page Down       | Page Down          | Page Down          |
 | -                            | -               | -                  | -                  |
 | start debugging              | Insert          | Insert             | Insert             |
 | restart debugging            | ⌘ + Insert      | Ctrl + Insert      | Ctrl + Insert      |
+| bottom color change          | ⌥ + Insert      | Alt + Insert       | Alt + Insert       |
 | stop debugging               | End             | End                | End                |
 | -                            | -               | -                  | -                  |
 | view git changes             | ⌘ + End         | Ctrl + End         | Ctrl + End         |
@@ -58,25 +69,26 @@
 | insert cursor above          | ⌘ + ↑           | Ctrl + ↑           | Ctrl + ↑           |
 | insert cursor below          | ⌘ + ↓           | Ctrl + ↓           | Ctrl + ↓           |
 | -                            | -               | -                  | -                  |
-| toggle inline suggest        | ⌘ + Esc         | Ctrl + Esc         | Ctrl + Esc         |
+| toggle inline suggest        | ⌥ + Esc         | Alt + Esc          | Alt + Esc          |
 | Delete txt paragraph         | ⌘ + Backspace   | ctrl + Backspace   | ctrl + Backspace   |
 | Finish project ❌            | ⌘ + Delete      | Ctrl + Delete      | Ctrl + Delete      |
 
 ### ► [AI] Commands Easy (Lynx Keymap)
 
-| Command                           | 🍎 macOS  | 🟦 Windows   | 🐧 Linux     |
-| :-------------------------------- | :-------- | :----------- | :----------- |
-| (AI) chat interface (popup/modal) | ⌘ + `     | Ctrl + `     | Ctrl + `     |
-| (AI) chat (panel/view)            | ⌘ + Tab   | Ctrl + Tab   | Ctrl + Tab   |
-| create new (AI) session           | ⌥ + A     | Alt + A      | Alt + A      |
-| show (AI) chat history            | ⌥ + S     | Alt + S      | Alt + S      |
-| attach (AI) context               | ⌥ + D     | Alt + D      | Alt + D      |
-| -                                 | -         | -            | -            |
-| accept (AI) generated code ✅     | ⌘ + Enter | Ctrl + Enter | Ctrl + Enter |
-| reject (AI) generated code 🚫     | ⌥ + Enter | Alt + Enter  | Alt + Enter  |
-| -                                 | -         | -            | -            |
-| ask, agent, edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ   | ⌥ + Z     | Alt + Z      | Alt + Z      |
-| pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ       | ⌥ + X     | Alt + X      | Alt + X      |
+| Command                               | 🍎 macOS  | 🟦 Windows  | 🐧 Linux    |
+| :------------------------------------ | :-------- | :---------- | :---------- |
+| (AI) chat interface (popup/modal)     | ⌘ + `     | Ctrl + `    | Ctrl + `    |
+| (AI) chat (panel/view)                | ⌘ + Tab   | Ctrl + Tab  | Ctrl + Tab  |
+| create new (AI) session               | ⌥ + A     | Alt + A     | Alt + A     |
+| show (AI) chat history                | ⌥ + S     | Alt + S     | Alt + S     |
+| attach (AI) context                   | ⌥ + D     | Alt + D     | Alt + D     |
+| -                                     | -         | -           | -           |
+| reject (AI) generated code 🚫         | ⌥ + Enter | Alt + Enter | Alt + Enter |
+| toggle maximized auxiliary bar        | ⇧ + Esc   | Shift + Esc | Shift + Esc |
+| -                                     | -         | -           | -           |
+| ask, agent, edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ       | ⌥ + Z     | Alt + Z     | Alt + Z     |
+| pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ           | ⌥ + X     | Alt + X     | Alt + X     |
+| maximized & minimize (AI) ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ | ⇧ + Esc   | Shift + Esc | Shift + Esc |
 
 </br>
 
