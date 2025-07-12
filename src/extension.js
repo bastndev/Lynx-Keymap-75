@@ -32,7 +32,7 @@ function activate(context) {
     }
   );
 
-  // Command for AI Popup [ctrl+`] and equivalents - managed in package.json
+  // Command for AI Popup [ctrl+`]
   let popupDisposable = vscode.commands.registerCommand(
     'lynx-keymap.executeAIPopup',
     async function () {
@@ -65,7 +65,7 @@ function activate(context) {
     }
   );
 
-  // Command to create a new AI session [alt+a] and equivalents - managed in package.json
+  // Command to create a new AI session [alt+a]
   let newSessionDisposable = vscode.commands.registerCommand(
     'lynx-keymap.createNewAISession',
     async function () {
@@ -80,7 +80,7 @@ function activate(context) {
     }
   );
 
-  // Command to show AI history [alt+s] and equivalents - managed in package.json
+  // Command to show AI history [alt+s]
   let historyDisposable = vscode.commands.registerCommand(
     'lynx-keymap.showAIHistory',
     async function () {
@@ -111,9 +111,9 @@ function activate(context) {
   );
 
   // EDITOR COMMANDS - VSCode editor behavior modifications
-  // ============================================================================
+  // ======================================================
 
-  // Command to toggle inline suggestions [ctrl+escape]
+  // Command to toggle inline suggestions [alt+escape]
   let toggleSuggestDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleInlineSuggest',
     async () => {
@@ -150,7 +150,7 @@ function activate(context) {
     }
   );
 
-  // Command to toggle green mode [alt+n]
+  // Command to toggle green mode [alt+insert]
   let toggleGreenModeDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleGreenMode',
     async () => {
