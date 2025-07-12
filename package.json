@@ -9,7 +9,11 @@
     "vscode": "^1.43.0"
   },
   "categories": [
-    "Keymaps"
+    "Keymaps",
+    "Programming Languages",
+    "AI",
+    "Debuggers",
+    "Chat"
   ],
   "keywords": [
     "keybindings",
