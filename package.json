@@ -241,8 +241,15 @@
         "key": "alt+z",
         "mac": "alt+z",
         "command": "lynx-keymap.executeColorAndAgentMacro"
+      },{
+        "key": "shift+escape",
+        "mac": "shift+escape",
+        "command": "workbench.action.maximizeAuxiliaryBar"
+      },{
+        "key": "ctrl+escape",
+        "mac": "cmd+escape",
+        "command": "workbench.action.restoreAuxiliaryBar"
       },
-
 
 
       {
@@ -352,10 +359,11 @@
 
       
       {
-        "key": "ctrl+escape",
-        "mac": "cmd+escape",
-        "command": "lynx-keymap.toggleInlineSuggest"
-      },{
+      "key": "alt+escape",
+      "mac": "alt+escape",
+      "command": "lynx-keymap.toggleInlineSuggest"
+      },
+      {
         "key": "ctrl+backspace",
         "mac": "cmd+backspace",
         "command": "deleteWordLeft"
