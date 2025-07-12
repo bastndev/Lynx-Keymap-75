@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode, Cursor AI, Windsurf & Trae AI. + (Firebase Studio) & (+ AI). ",
-  "version": "0.5.2",
+  "version": "0.6.1",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -139,6 +139,11 @@
         "mac": "alt+3",
         "command": "git.unstageAll",
         "when": "scmProvider == git"
+      },{
+        "key": "alt+4",
+        "mac": "alt+4",
+        "command": "git.pull",
+        "when": "scmProvider == git"
       },
 
       {
@@ -150,11 +155,6 @@
         "key": "ctrl+alt+enter",
         "mac": "cmd+alt+enter",
         "command": "git.push",
-        "when": "scmProvider == git"
-      },{
-        "key": "alt+escape",
-        "mac": "alt+escape",
-        "command": "git.pull",
         "when": "scmProvider == git"
       },
 
@@ -241,9 +241,11 @@
         "key": "alt+z",
         "mac": "alt+z",
         "command": "lynx-keymap.executeColorAndAgentMacro"
+      },{
+        "key": "shift+escape",
+        "mac": "shift+escape",
+        "command": "workbench.action.toggleMaximizedAuxiliaryBar"
       },
-
-
 
       {
         "key": "ctrl+enter",
@@ -262,8 +264,8 @@
         "mac": "alt+insert",
         "command": "lynx-keymap.toggleGreenMode"
       },{
-        "key": "cmd+alt+insert",
-        "mac": "cmd+alt+insert",
+        "key": "insert",
+        "mac": "insert",
         "command": "workbench.action.debug.start"
       },
       
@@ -352,10 +354,11 @@
 
       
       {
-        "key": "ctrl+escape",
-        "mac": "cmd+escape",
-        "command": "lynx-keymap.toggleInlineSuggest"
-      },{
+      "key": "alt+escape",
+      "mac": "alt+escape",
+      "command": "lynx-keymap.toggleInlineSuggest"
+      },
+      {
         "key": "ctrl+backspace",
         "mac": "cmd+backspace",
         "command": "deleteWordLeft"
