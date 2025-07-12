@@ -53,7 +53,8 @@
     "onCommand:lynx-keymap.createNewAISession",
     "onCommand:lynx-keymap.showAIHistory",
     "onCommand:lynx-keymap.attachAIContext",
-    "onCommand:lynx-keymap.toggleInlineSuggest"
+    "onCommand:lynx-keymap.toggleInlineSuggest",
+    "onCommand:lynx-keymap.toggleGreenMode"
   ],
   "main": "./src/extension.js",
   "contributes": {
@@ -86,6 +87,10 @@
       },{
         "command": "lynx-keymap.executeColorAndAgentMacro",
         "title": "Execute Color Change + Agent Mode Toggle Macro"
+      },
+      {
+        "command": "lynx-keymap.toggleGreenMode",
+        "title": "Toggle Lynx Green Mode"
       }
     ],
     "keybindings": [
@@ -219,13 +224,13 @@
 
 
       {
-        "key": "ctrl+shift+alt+11",
-        "mac": "ctrl+shift+alt+11",
-        "command": "lynx-keymap.cycleIconColor"
-      },{
         "key": "ctrl+shift+alt+12",
         "mac": "cmd+shift+alt+12",
         "command": "workbench.action.chat.toggleAgentMode"
+      },{
+        "key": "ctrl+shift+alt+11",
+        "mac": "ctrl+shift+alt+11",
+        "command": "lynx-keymap.cycleIconColor"
       },
 
       {
@@ -252,12 +257,18 @@
       },
 
 
-
       {
-        "key": "insert",
-        "mac": "insert",
-        "command": "workbench.action.debug.start"
+        "key": "alt+insert",
+        "mac": "alt+insert",
+        "command": "lynx-keymap.toggleGreenMode"
       },{
+        "key": "cmd+alt+insert",
+        "mac": "cmd+alt+insert",
+        "command": "workbench.action.debug.start"
+      },
+      
+      
+      {
         "key": "ctrl+insert",
         "mac": "cmd+insert",
         "command": "workbench.action.debug.restart"
