@@ -1,19 +1,58 @@
 const vscode = require('vscode');
 
+// Constants
 const PEACOCK_SECTION = 'workbench.colorCustomizations';
-const STATE_MEMENTO_KEY = 'lynx-keymap.greenModeActive';
+const STATE_MEMENTO_KEY = 'lynx-keymap.colorModeActive';
+const CURRENT_COLOR_KEY = 'lynx-keymap.currentColor';
 
 const COLORS = {
   GREEN: '#2f9e44',
+  BLUE: '#1c7ed6',
+  ORANGE: '#fd7e14',
   WHITE: '#ffffff',
+};
+
+const COLOR_NAMES = {
+  GREEN: 'GREEN',
+  BLUE: 'BLUE',
+  ORANGE: 'ORANGE',
 };
 
 class PeacockManager {
   constructor(context) {
     this.context = context;
     this.isInitialized = false;
+    this.colorKeys = ['GREEN', 'BLUE', 'ORANGE'];
     this.initializeCleanState();
   }
+
+  // Public Methods
+
+  /**
+   * Toggles color mode with random color selection
+   */
+  async toggleColorMode() {
+    if (!this.isInitialized) {
+      await this.initializeCleanState();
+    }
+
+    const isActive = this.context.workspaceState.get(STATE_MEMENTO_KEY, false);
+
+    if (isActive) {
+      await this.deactivateColorMode();
+    } else {
+      await this.activateRandomColorMode();
+    }
+  }
+
+  /**
+   * Legacy method for backward compatibility
+   */
+  async toggleGreenMode() {
+    await this.toggleColorMode();
+  }
+
+  // Private Methods
 
   /**
    * Initializes clean state every time VSCode is opened
@@ -21,6 +60,7 @@ class PeacockManager {
   async initializeCleanState() {
     try {
       await this.context.workspaceState.update(STATE_MEMENTO_KEY, false);
+      await this.context.workspaceState.update(CURRENT_COLOR_KEY, null);
 
       const config = vscode.workspace.getConfiguration();
       await config.update(
@@ -30,7 +70,7 @@ class PeacockManager {
       );
 
       this.isInitialized = true;
-      console.log('Lynx Green Mode: State initialized cleanly');
+      console.log('Lynx Color Mode: State initialized cleanly');
     } catch (error) {
       console.error('Error initializing clean state:', error);
       this.isInitialized = true;
@@ -38,44 +78,45 @@ class PeacockManager {
   }
 
   /**
-   * Toggles green mode. Activates if deactivated, deactivates if activated.
+   * Gets a random color key
    */
-  async toggleGreenMode() {
-    if (!this.isInitialized) {
-      await this.initializeCleanState();
-    }
-
-    const isActive = this.context.workspaceState.get(STATE_MEMENTO_KEY, false);
-
-    if (isActive) {
-      await this.deactivateGreenMode();
-    } else {
-      await this.activateGreenMode();
-    }
+  getRandomColor() {
+    const randomIndex = Math.floor(Math.random() * this.colorKeys.length);
+    return this.colorKeys[randomIndex];
   }
 
   /**
-   * Applies green colors to workspace configuration.
+   * Applies random color to workspace configuration
    */
-  async activateGreenMode() {
+  async activateRandomColorMode() {
+    const colorKey = this.getRandomColor();
+    const color = COLORS[colorKey];
+
     const colorCustomizations = {
-      'statusBar.background': COLORS.GREEN,
+      'statusBar.background': color,
       'statusBar.foreground': COLORS.WHITE,
-      'statusBarItem.remoteBackground': COLORS.GREEN,
+      'statusBarItem.remoteBackground': color,
     };
 
     await this.updateWorkspaceColors(colorCustomizations, true, 'activate');
+    await this.context.workspaceState.update(CURRENT_COLOR_KEY, colorKey);
+
+    vscode.window.showInformationMessage(
+      `🎨 LYNX COLOR MODE: ${COLOR_NAMES[colorKey]} ACTIVATED`
+    );
   }
 
   /**
-   * Clears workspace colors, returning to original state.
+   * Clears workspace colors, returning to original state
    */
-  async deactivateGreenMode() {
+  async deactivateColorMode() {
     await this.updateWorkspaceColors(undefined, false, 'deactivate');
+    await this.context.workspaceState.update(CURRENT_COLOR_KEY, null);
+    vscode.window.showInformationMessage('🔴 LYNX COLOR MODE: DEACTIVATED');
   }
 
   /**
-   * Helper method to update workspace colors and state.
+   * Helper method to update workspace colors and state
    */
   async updateWorkspaceColors(colorCustomizations, stateValue, action) {
     try {
@@ -87,11 +128,11 @@ class PeacockManager {
       );
       await this.context.workspaceState.update(STATE_MEMENTO_KEY, stateValue);
     } catch (error) {
-      console.error(`Failed to ${action} green mode:`, error);
+      console.error(`Failed to ${action} color mode:`, error);
       vscode.window.showErrorMessage(
         `Could not ${
           action === 'activate' ? 'apply' : 'remove'
-        } Lynx Green Mode.`
+        } Lynx Color Mode.`
       );
     }
   }
