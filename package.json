@@ -139,6 +139,11 @@
         "mac": "alt+3",
         "command": "git.unstageAll",
         "when": "scmProvider == git"
+      },{
+        "key": "alt+4",
+        "mac": "alt+4",
+        "command": "git.pull",
+        "when": "scmProvider == git"
       },
 
       {
@@ -150,11 +155,6 @@
         "key": "ctrl+alt+enter",
         "mac": "cmd+alt+enter",
         "command": "git.push",
-        "when": "scmProvider == git"
-      },{
-        "key": "alt+escape",
-        "mac": "alt+escape",
-        "command": "git.pull",
         "when": "scmProvider == git"
       },
 
