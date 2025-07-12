@@ -224,13 +224,13 @@
 
 
       {
-        "key": "ctrl+shift+alt+11",
-        "mac": "ctrl+shift+alt+11",
-        "command": "lynx-keymap.cycleIconColor"
-      },{
         "key": "ctrl+shift+alt+12",
         "mac": "cmd+shift+alt+12",
         "command": "workbench.action.chat.toggleAgentMode"
+      },{
+        "key": "ctrl+shift+alt+11",
+        "mac": "ctrl+shift+alt+11",
+        "command": "lynx-keymap.cycleIconColor"
       },
 
       {
