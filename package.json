@@ -53,7 +53,8 @@
     "onCommand:lynx-keymap.createNewAISession",
     "onCommand:lynx-keymap.showAIHistory",
     "onCommand:lynx-keymap.attachAIContext",
-    "onCommand:lynx-keymap.toggleInlineSuggest"
+    "onCommand:lynx-keymap.toggleInlineSuggest",
+    "onCommand:lynx-keymap.toggleGreenMode"
   ],
   "main": "./src/extension.js",
   "contributes": {
@@ -86,6 +87,10 @@
       },{
         "command": "lynx-keymap.executeColorAndAgentMacro",
         "title": "Execute Color Change + Agent Mode Toggle Macro"
+      },
+      {
+        "command": "lynx-keymap.toggleGreenMode",
+        "title": "Toggle Lynx Green Mode"
       }
     ],
     "keybindings": [
@@ -252,7 +257,11 @@
       },
 
 
-
+      {
+        "key": "alt+n",
+        "mac": "alt+n",
+        "command": "lynx-keymap.toggleGreenMode"
+      },
       {
         "key": "insert",
         "mac": "insert",
