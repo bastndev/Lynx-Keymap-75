@@ -1,5 +1,5 @@
 const vscode = require('vscode');
-const ColorManager = require('./managers/color-manager');
+const ColorManager = require('./managers/icon-colors');
 const MacroManager = require('./managers/macros');
 const PeacockManager = require('./managers/peacock');
 
