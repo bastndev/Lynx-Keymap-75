@@ -9,7 +9,11 @@
     "vscode": "^1.43.0"
   },
   "categories": [
-    "Keymaps"
+    "Keymaps",
+    "Programming Languages",
+    "AI",
+    "Debuggers",
+    "Chat"
   ],
   "keywords": [
     "keybindings",
@@ -47,14 +51,7 @@
     "url": "https://www.bastndev.com"
   },
   "activationEvents": [
-    "onCommand:lynx-keymap.generateAICommit",
-    "onCommand:lynx-keymap.executeAIPopup",
-    "onCommand:lynx-keymap.openAIChat",
-    "onCommand:lynx-keymap.createNewAISession",
-    "onCommand:lynx-keymap.showAIHistory",
-    "onCommand:lynx-keymap.attachAIContext",
-    "onCommand:lynx-keymap.toggleInlineSuggest",
-    "onCommand:lynx-keymap.toggleGreenMode"
+    "onStartupFinished"
   ],
   "main": "./src/extension.js",
   "contributes": {
