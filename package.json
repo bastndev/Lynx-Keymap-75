@@ -258,12 +258,12 @@
 
 
       {
-        "key": "alt+n",
-        "mac": "alt+n",
+        "key": "alt+insert",
+        "mac": "alt+insert",
         "command": "lynx-keymap.toggleGreenMode"
       },{
-        "key": "alt+m",
-        "mac": "alt+m",
+        "key": "cmd+alt+insert",
+        "mac": "cmd+alt+insert",
         "command": "workbench.action.debug.start"
       },
       

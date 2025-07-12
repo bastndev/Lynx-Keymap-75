@@ -9,6 +9,8 @@ const COLORS = {
   BLUE: '#0070bb',
   GREEN: '#1e5739',
   ORANGE: '#b85609',
+  LEMON: '#6c8a01ff',
+  RED: '#8b1538',
   WHITE: '#ffffff',
 };
 
@@ -16,13 +18,15 @@ const COLOR_NAMES = {
   GREEN: 'GREEN',
   BLUE: 'BLUE',
   ORANGE: 'ORANGE',
+  LEMON: 'LEMON',
+  RED: 'RED',
 };
 
 class PeacockManager {
   constructor(context) {
     this.context = context;
     this.isInitialized = false;
-    this.colorKeys = ['GREEN', 'BLUE', 'ORANGE'];
+    this.colorKeys = ['GREEN', 'BLUE', 'ORANGE', 'LEMON', 'RED'];
     this.initializeCleanState();
   }
 
