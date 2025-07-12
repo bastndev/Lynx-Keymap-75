@@ -97,8 +97,7 @@ class PeacockManager {
     const color = COLORS[colorKey];
 
     const colorCustomizations = {
-      'commandCenter.background': color,
-      'titleBar.inactiveForeground': color,
+      'statusBar.background': color,
       'statusBar.foreground': COLORS.WHITE,
       'statusBarItem.remoteBackground': color,
     };
