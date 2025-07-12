@@ -104,10 +104,6 @@ class PeacockManager {
 
     await this.updateWorkspaceColors(colorCustomizations, true, 'activate');
     await this.context.workspaceState.update(CURRENT_COLOR_KEY, colorKey);
-
-    vscode.window.showInformationMessage(
-      `🎨 LYNX COLOR MODE: ${COLOR_NAMES[colorKey]} ACTIVATED`
-    );
   }
 
   /**
@@ -116,7 +112,6 @@ class PeacockManager {
   async deactivateColorMode() {
     await this.updateWorkspaceColors(undefined, false, 'deactivate');
     await this.context.workspaceState.update(CURRENT_COLOR_KEY, null);
-    vscode.window.showInformationMessage('🔴 LYNX COLOR MODE: DEACTIVATED');
   }
 
   /**
@@ -133,11 +128,6 @@ class PeacockManager {
       await this.context.workspaceState.update(STATE_MEMENTO_KEY, stateValue);
     } catch (error) {
       console.error(`Failed to ${action} color mode:`, error);
-      vscode.window.showErrorMessage(
-        `Could not ${
-          action === 'activate' ? 'apply' : 'remove'
-        } Lynx Color Mode.`
-      );
     }
   }
 }
