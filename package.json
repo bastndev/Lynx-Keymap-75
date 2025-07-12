@@ -244,13 +244,8 @@
       },{
         "key": "shift+escape",
         "mac": "shift+escape",
-        "command": "workbench.action.maximizeAuxiliaryBar"
-      },{
-        "key": "ctrl+escape",
-        "mac": "cmd+escape",
-        "command": "workbench.action.restoreAuxiliaryBar"
+        "command": "workbench.action.toggleMaximizedAuxiliaryBar"
       },
-
 
       {
         "key": "ctrl+enter",
