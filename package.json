@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode, Cursor AI, Windsurf & Trae AI. + (Firebase Studio) & (+ AI). ",
-  "version": "0.8.2",
+  "version": "0.8.7",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -115,8 +115,8 @@
         "mac": "alt+v",
         "command": "explorer.newFolder"
       },{
-        "key": "ctrl+shift+tab",
-        "mac": "cmd+shift+tab",
+        "key": "ctrl+tab",
+        "mac": "cmd+tab",
         "command": "workbench.action.toggleSidebarVisibility"
       },
 
@@ -198,8 +198,8 @@
         "mac": "cmd+[Backquote]",
         "command": "lynx-keymap.executeAIPopup"
       },{
-        "key": "ctrl+tab",
-        "mac": "cmd+tab",
+        "key": "shift+tab",
+        "mac": "shift+tab",
         "command": "lynx-keymap.openAIChat"
       },
 
@@ -257,17 +257,10 @@
 
 
       {
-        "key": "alt+insert",
-        "mac": "alt+insert",
-        "command": "lynx-keymap.toggleGreenMode"
-      },{
         "key": "insert",
         "mac": "insert",
         "command": "workbench.action.debug.start"
-      },
-      
-      
-      {
+      },{
         "key": "ctrl+insert",
         "mac": "cmd+insert",
         "command": "workbench.action.debug.restart"
@@ -275,6 +268,10 @@
         "key": "end",
         "mac": "end",
         "command": "workbench.action.debug.stop"
+      },{
+        "key": "alt+insert",
+        "mac": "alt+insert",
+        "command": "lynx-keymap.toggleGreenMode"
       },
 
 
@@ -351,11 +348,10 @@
 
       
       {
-      "key": "alt+escape",
-      "mac": "alt+escape",
-      "command": "lynx-keymap.toggleInlineSuggest"
-      },
-      {
+        "key": "alt+escape",
+        "mac": "alt+escape",
+        "command": "lynx-keymap.toggleInlineSuggest"
+      },{
         "key": "ctrl+backspace",
         "mac": "cmd+backspace",
         "command": "deleteWordLeft"
