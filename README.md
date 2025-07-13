@@ -51,8 +51,8 @@
 | -                            | -               | -                    | -                    |
 | start debugging              | `Insert`        | `Insert`             | `Insert`             |
 | restart debugging            | `⌘ + Insert`    | `Ctrl + Insert`      | `Ctrl + Insert`      |
-| bottom color change          | `⌥ + Insert`    | `Alt + Insert`       | `Alt + Insert`       |
 | stop debugging               | `End`           | `End`                | `End`                |
+| bottom color change          | `⌥ + Insert`    | `Alt + Insert`       | `Alt + Insert`       |
 | -                            | -               | -                    | -                    |
 | view git changes             | `⌘ + End`       | `Ctrl + End`         | `Ctrl + End`         |
 | show markdown preview        | `Page Up`       | `Page Up`            | `Page Up`            |
