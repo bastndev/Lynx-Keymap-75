@@ -190,3 +190,85 @@ The implemented improvements have transformed the extension from a monolithic sy
 
 The extension is now prepared to grow and handle much more complex functionalities while maintaining optimal performance.
 
+
+---
+
+## ⌨️ **Standard Keybindings**
+
+<details>
+<summary><strong>🏠 Workspace Navigation</strong></summary>
+
+| Command             | 🍎 macOS        | 🟦 Windows         | 🐧 Linux           |
+| ------------------- | --------------- | ------------------ | ------------------ |
+| Open Explorer       | ⌘ + 1           | Ctrl + 1           | Ctrl + 1           |
+| Open Source Control | ⌘ + 2           | Ctrl + 2           | Ctrl + 2           |
+| Open Extensions     | ⌘ + 3           | Ctrl + 3           | Ctrl + 3           |
+| Toggle Sidebar      | ⌘ + Shift + Tab | Ctrl + Shift + Tab | Ctrl + Shift + Tab |
+
+</details>
+
+<details>
+<summary><strong>📁 File Management</strong></summary>
+
+| Command    | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| ---------- | -------- | ---------- | -------- |
+| New File   | ⌥ + C    | Alt + C    | Alt + C  |
+| New Folder | ⌥ + V    | Alt + V    | Alt + V  |
+
+</details>
+
+<details>
+<summary><strong>🔄 Git Operations</strong></summary>
+
+| Command             | 🍎 macOS      | 🟦 Windows         | 🐧 Linux           |
+| ------------------- | ------------- | ------------------ | ------------------ |
+| Stage All Changes   | ⌥ + 1         | Alt + 1            | Alt + 1            |
+| Generate AI Commit  | ⌥ + 2         | Alt + 2            | Alt + 2            |
+| Unstage All Changes | ⌥ + 3         | Alt + 3            | Alt + 3            |
+| Git Pull            | ⌥ + 4         | Alt + 4            | Alt + 4            |
+| Git Commit          | ⌥ + Enter     | Alt + Enter        | Alt + Enter        |
+| Git Push            | ⌘ + ⌥ + Enter | Ctrl + Alt + Enter | Ctrl + Alt + Enter |
+
+</details>
+
+<details>
+<summary><strong>🎨 Code Formatting</strong></summary>
+
+| Command          | 🍎 macOS      | 🟦 Windows      | 🐧 Linux        |
+| ---------------- | ------------- | --------------- | --------------- |
+| Format Document  | ⌥ + F         | Alt + F         | Alt + F         |
+| Format Selection | ⌘ + ⌥ + F     | Ctrl + Alt + F  | Ctrl + Alt + F  |
+| Organize Imports | ⌥ + Shift + F | Shift + Alt + F | Shift + Alt + F |
+
+</details>
+
+<details>
+<summary><strong>🐛 Debugging & Development</strong></summary>
+
+| Command               | 🍎 macOS   | 🟦 Windows    | 🐧 Linux      |
+| --------------------- | ---------- | ------------- | ------------- |
+| Toggle Debug Console  | ⌥ + Q      | Alt + Q       | Alt + Q       |
+| Toggle Terminal       | ⌥ + W      | Alt + W       | Alt + W       |
+| Open GitLens          | ⌥ + E      | Alt + E       | Alt + E       |
+| Toggle Panel          | Page Down  | Page Down     | Page Down     |
+| **Start Debugging**   | Insert     | Insert        | Insert        |
+| **Restart Debugging** | ⌘ + Insert | Ctrl + Insert | Ctrl + Insert |
+| **Stop Debugging**    | End        | End           | End           |
+
+</details>
+
+<details>
+<summary><strong>⚙️ Editor Shortcuts</strong></summary>
+
+| Command            | 🍎 macOS | 🟦 Windows | 🐧 Linux   |
+| ------------------ | -------- | ---------- | ---------- |
+| View Git Changes   | ⌘ + End  | Ctrl + End | Ctrl + End |
+| Markdown Preview   | Page Up  | Page Up    | Page Up    |
+| Open Settings      | ⌘ + J    | Ctrl + J   | Ctrl + J   |
+| Open Settings JSON | ⌥ + J    | Alt + J    | Alt + J    |
+| Comment Line       | ⌘ + /    | Ctrl + /   | Ctrl + /   |
+| Comment Block      | ⌥ + /    | Alt + /    | Alt + /    |
+
+</details>
+
+---
