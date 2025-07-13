@@ -257,17 +257,10 @@
 
 
       {
-        "key": "alt+insert",
-        "mac": "alt+insert",
-        "command": "lynx-keymap.toggleGreenMode"
-      },{
         "key": "insert",
         "mac": "insert",
         "command": "workbench.action.debug.start"
-      },
-      
-      
-      {
+      },{
         "key": "ctrl+insert",
         "mac": "cmd+insert",
         "command": "workbench.action.debug.restart"
@@ -275,6 +268,10 @@
         "key": "end",
         "mac": "end",
         "command": "workbench.action.debug.stop"
+      },{
+        "key": "alt+insert",
+        "mac": "alt+insert",
+        "command": "lynx-keymap.toggleGreenMode"
       },
 
 
@@ -351,11 +348,10 @@
 
       
       {
-      "key": "alt+escape",
-      "mac": "alt+escape",
-      "command": "lynx-keymap.toggleInlineSuggest"
-      },
-      {
+        "key": "alt+escape",
+        "mac": "alt+escape",
+        "command": "lynx-keymap.toggleInlineSuggest"
+      },{
         "key": "ctrl+backspace",
         "mac": "cmd+backspace",
         "command": "deleteWordLeft"
