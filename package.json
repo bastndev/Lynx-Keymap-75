@@ -2,8 +2,9 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode, Cursor AI, Windsurf & Trae AI. + (Firebase Studio) & (+ AI). 雨 ",
-  "version": "0.9.3",
+  "version": "0.9.56",
   "publisher": "bastndev",
+  "readme": "README.md",
   "license": "MIT",
   "engines": {
     "vscode": "^1.43.0"
