@@ -63,8 +63,8 @@
 | comment line                 | `⌘ +` /         | `Ctrl +` /           | `Ctrl +` /           |
 | comment block                | `⌥ +` /         | `Alt +` /            | `Alt +` /            |
 | -                            | -               | -                    | -                    |
-| zoom in                      | `⌥ + ⇧ +` +     | `Alt + ⇧ +` +        | `Alt + ⇧ +` +        |
-| zoom out                     | `⌥ + ⇧ +` -     | `Alt + ⇧ +` -        | `Alt + ⇧ +` -        |
+| zoom in ( 🛞 right )          | `⌥ + ⇧ +` +     | `Alt + ⇧ +` +        | `Alt + ⇧ +` +        |
+| zoom out ( left 🛞 )          | `⌥ + ⇧ +` -     | `Alt + ⇧ +` -        | `Alt + ⇧ +` -        |
 | -                            | -               | -                    | -                    |
 | copy lines up                | `⌥ + Shift +` ↑ | `Alt + Shift +` ↑    | `Alt + Shift +` ↑    |
 | copy lines down              | `⌥ + Shift +` ↓ | `Alt + Shift +` ↓    | `Alt + Shift +` ↓    |
