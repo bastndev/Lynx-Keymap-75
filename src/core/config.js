@@ -40,6 +40,8 @@ const AI_COMMANDS = {
     'aichat.prompt',                                      // Firebase Studio
   ],
 
+  // [Shift+Esc] --- Future
+
   // [Alt+A]
   NEW_SESSION: [
     'windsurf.prioritized.chat.openNewConversation',      // Windsurf
