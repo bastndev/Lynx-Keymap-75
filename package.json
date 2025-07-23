@@ -358,6 +358,13 @@
         "key": "ctrl+delete",
         "mac": "cmd+delete",
         "command": "workbench.action.closeFolder"
+      },
+
+
+      {
+        "key": "shift+t",
+        "mac": "shift+t",
+        "command": "workbench.action.selectTheme"
       }
     ]
   }
