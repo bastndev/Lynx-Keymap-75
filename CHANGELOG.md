@@ -1,4 +1,4 @@
-# Lynx Keymap 75% - Universal Keyboard Shortcuts
+# Lynx Keymap 75%
 
 🎯 **Optimized for 75% Keyboards** 🎯
 
