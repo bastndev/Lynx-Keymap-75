@@ -1,9 +1,9 @@
 ![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/banner.png)
 
 <p align="center">
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Rating" alt="Rating"></a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/installs-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Installs" alt="Installs"></a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Rating" alt="Rating"></a>&nbsp;
+    <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/installs-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=Installs" alt="Installs"></a>&nbsp;
     <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/main/assets/images/star.png" width="26px" alt="Github Star"></a>
 </p>
 
