@@ -362,8 +362,8 @@
 
 
       {
-        "key": "shift+t",
-        "mac": "shift+t",
+        "key": "shift+alt+t",
+        "mac": "shift+alt+t",
         "command": "workbench.action.selectTheme"
       }
     ]

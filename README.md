@@ -11,13 +11,14 @@
 
 ## New 🧪 (experimental) keymaps
 
-| Command                                 | 🍎 macOS    | 🟦 Windows       | 🐧 Linux         |
-| :-------------------------------------- | :---------- | :--------------- | :--------------- |
-| 🧪 ask, agent, edit 🔁 `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`    | `⌥ + Z`     | `Alt + Z`        | `Alt + Z`        |
-| 🧪 bottom color change 🟦 🟩 🔲         | `⌘ + ⌥ + P` | `Ctrl + Alt + P` | `Ctrl + Alt + P` |
-| -                                       | -           | -                | -                |
-| pick (AI) model `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`           | `⌥ + X`     | `Alt + X`        | `Alt + X`        |
-| maximized & minimize (AI) `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ` | `⇧ + Esc`   | `Shift + Esc`    | `Shift + Esc`    |
+| Command                                 | 🍎 macOS    | 🟦 Windows        | 🐧 Linux          |
+| :-------------------------------------- | :---------- | :---------------- | :---------------- |
+| 🧪 ask, agent, edit 🔁 `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`    | `⌥ + Z`     | `Alt + Z`         | `Alt + Z`         |
+| 🧪 bottom color change 🟦 🟩 🔲         | `⌘ + ⌥ + P` | `Ctrl + Alt + P`  | `Ctrl + Alt + P`  |
+| -                                       | -           | -                 | -                 |
+| pick (AI) model `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`           | `⌥ + X`     | `Alt + X`         | `Alt + X`         |
+| maximized & minimize (AI) `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ` | `⇧ + Esc`   | `Shift + Esc`     | `Shift + Esc`     |
+| select theme (VSCode & more)            | `⇧ + ⌥ + T` | `Shift + Alt + T` | `Shift + Alt + T` |
 
 </br>
 
