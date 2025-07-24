@@ -29,7 +29,7 @@ Discover more extensions at [bastndev.com/extensions](https://bastndev.com/exten
 
 Following semantic versioning principles for consistent and predictable releases.
 
-## [1.0.6] - 2025-07-23
+## [1.0.7] - 2025-07-24
 
 ### Added
 - **Professional Changelog**: Complete changelog documentation with version history
