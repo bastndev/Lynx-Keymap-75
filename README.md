@@ -1,4 +1,4 @@
-[![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/banner.png)](https://github.com/bastndev/Lynx-Keymap-75?tab=readme-ov-file)
+![Use Extension](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/assets/images/banner.png)
 
 <p align="center">
     <a href="https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap-75"><img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=CCCCCC&colorB=EEEEEE&color=000000&label=VERSION" alt="Version"></a>
