@@ -20,33 +20,6 @@ function activate(context) {
   // Register AI commands
   aiCommandsManagerInstance.registerCommands(context);
 
-  // [alt+escape] - VSCode editor behavior modifications
-  // ======================================================
-  let toggleSuggestDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.toggleInlineSuggest',
-    async () => {
-      const config = vscode.workspace.getConfiguration();
-      const currentValue = config.get('editor.inlineSuggest.enabled', true);
-      const newValue = !currentValue;
-
-      try {
-        await config.update(
-          'editor.inlineSuggest.enabled',
-          newValue,
-          vscode.ConfigurationTarget.Global
-        );
-        vscode.window.showInformationMessage(
-          `Inline Suggestions ${newValue ? 'Enabled' : 'Disabled'}.`
-        );
-      } catch (error) {
-        console.error("Error updating 'editor.inlineSuggest.enabled':", error);
-        vscode.window.showErrorMessage(
-          'Failed to toggle Inline Suggestions setting.'
-        );
-      }
-    }
-  );
-
   // [ctrl+shift+alt+11] - Color and appearance management
   // =========================================================
   let cycleIconColorDisposable = vscode.commands.registerCommand(
@@ -76,7 +49,6 @@ function activate(context) {
   // SUBSCRIPTION MANAGEMENT - Register all commands with VSCode
   // ===========================================================
   context.subscriptions.push(
-    toggleSuggestDisposable,
     cycleIconColorDisposable,
     colorAndAgentMacroDisposable,
     toggleGreenModeDisposable
@@ -90,7 +62,7 @@ async function deactivate() {
     console.log('Deactivating Lynx Green Mode on exit...');
     await peacockManagerInstance.deactivateGreenMode();
   }
-  
+    
   if (aiCommandsManagerInstance) {
     console.log('Disposing AI commands manager...');
     aiCommandsManagerInstance.dispose();

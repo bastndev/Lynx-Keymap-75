@@ -336,11 +336,6 @@
         "mac"    : "alt+enter",
         "command": "inlineChat.close",
         "when"   : "inlineChatFocused"
-      },
-      {
-        "key"    : "alt+escape",
-        "mac"    : "alt+escape",
-        "command": "lynx-keymap.toggleInlineSuggest"
       }
 
     ]
@@ -365,9 +360,6 @@
       },{
         "command": "lynx-keymap.attachAIContext",
         "title"  : "Attach Context to AI Chat"
-      },{
-        "command": "lynx-keymap.toggleInlineSuggest",
-        "title"  : "Toggle Inline Suggestions (AI Autocomplete)"
       },
       {
         "command": "lynx-keymap.cycleIconColor",
