@@ -1,18 +1,18 @@
 const vscode = require('vscode');
 const ColorManager = require('./editor-ui/icons/icon-painter');
 const MacroManager = require('./editor-ui/icons/macros');
-const PeacockManager = require('./editor-ui/status-bar');
+const StatusBarManager = require('./editor-ui/status-bar');
 const AICommandsManager = require('./keymaps/ai-command-mapper');
 
 // Global instances
-let peacockManagerInstance;
+let statusBarManagerInstance;
 let aiCommandsManagerInstance;
 
 function activate(context) {
   // Initialize managers
   const colorManager = new ColorManager();
   const macroManager = new MacroManager();
-  peacockManagerInstance = new PeacockManager(context);
+  statusBarManagerInstance = new StatusBarManager(context);
   aiCommandsManagerInstance = new AICommandsManager();
 
   // Register AI commands
@@ -21,7 +21,7 @@ function activate(context) {
   // Status bar - [alt+insert]
   let toggleGreenModeDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleGreenMode',
-    () => peacockManagerInstance.toggleGreenMode()
+    () => statusBarManagerInstance.toggleGreenMode()
   );
 
   // Icon painter [Alt+z]
@@ -45,8 +45,8 @@ function activate(context) {
 }
 
 async function deactivate() {
-  if (peacockManagerInstance) {
-    await peacockManagerInstance.deactivateGreenMode();
+  if (statusBarManagerInstance) {
+    await statusBarManagerInstance.deactivateGreenMode();
   }
   if (aiCommandsManagerInstance) {
     aiCommandsManagerInstance.dispose();

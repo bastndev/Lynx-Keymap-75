@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 
 // Constants
-const PEACOCK_SECTION = 'workbench.colorCustomizations';
+const COLOR_CUSTOMIZATIONS_SECTION = 'workbench.colorCustomizations';
 const STATE_MEMENTO_KEY = 'lynx-keymap.colorModeActive';
 const CURRENT_COLOR_KEY = 'lynx-keymap.currentColor';
 
@@ -22,7 +22,7 @@ const COLOR_NAMES = {
   RED: 'RED',
 };
 
-class PeacockManager {
+class StatusBarManager {
   constructor(context) {
     this.context = context;
     this.isInitialized = false;
@@ -68,7 +68,7 @@ class PeacockManager {
 
       const config = vscode.workspace.getConfiguration();
       await config.update(
-        PEACOCK_SECTION,
+        COLOR_CUSTOMIZATIONS_SECTION,
         undefined,
         vscode.ConfigurationTarget.Workspace
       );
@@ -121,7 +121,7 @@ class PeacockManager {
     try {
       const config = vscode.workspace.getConfiguration();
       await config.update(
-        PEACOCK_SECTION,
+        COLOR_CUSTOMIZATIONS_SECTION,
         colorCustomizations,
         vscode.ConfigurationTarget.Workspace
       );
@@ -132,4 +132,4 @@ class PeacockManager {
   }
 }
 
-module.exports = PeacockManager;
+module.exports = StatusBarManager;
