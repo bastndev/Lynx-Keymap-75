@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 const ColorManager = require('./editor-ui/icons/icon-painter');
 const MacroManager = require('./editor-ui/icons/macros');
-const PeacockManager = require('./editor-ui/status-bars');
+const PeacockManager = require('./editor-ui/status-bar');
 const AICommandsManager = require('./keymaps/ai-command-mapper');
 
 // Global instance for peacock manager to handle deactivation
@@ -16,20 +16,11 @@ function activate(context) {
   const macroManager = new MacroManager();
   peacockManagerInstance = new PeacockManager(context);
   aiCommandsManagerInstance = new AICommandsManager();
-
-  // Register AI commands
+  
+  // Register AI commands 
   aiCommandsManagerInstance.registerCommands(context);
 
-  // [ctrl+shift+alt+11] - Color and appearance management
-  // =========================================================
-  let cycleIconColorDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.cycleIconColor',
-    async () => {
-      await colorManager.cycleIconColor();
-    }
-  );
-
-  // Command to toggle green mode [alt+insert]
+  // Status bar - [alt+insert]
   let toggleGreenModeDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleGreenMode',
     async () => {
@@ -37,8 +28,15 @@ function activate(context) {
     }
   );
 
-  // [alt+z] - Complex multi-action commands
-  // ==============================================
+    // Icon painter [Alt+z] 
+  let cycleIconColorDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.cycleIconColor',
+    async () => {
+      await colorManager.cycleIconColor();
+    }
+  );
+  
+  // Icon painter (Macros)
   let colorAndAgentMacroDisposable = vscode.commands.registerCommand(
     'lynx-keymap.executeColorAndAgentMacro',
     async () => {
