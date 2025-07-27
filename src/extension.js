@@ -4,70 +4,56 @@ const MacroManager = require('./editor-ui/icons/macros');
 const PeacockManager = require('./editor-ui/status-bar');
 const AICommandsManager = require('./keymaps/ai-command-mapper');
 
-// Global instance for peacock manager to handle deactivation
+// Global instances
 let peacockManagerInstance;
 let aiCommandsManagerInstance;
 
 function activate(context) {
-  console.log('Congratulations, your extension "lynx-keymap" is now active!');
-
   // Initialize managers
   const colorManager = new ColorManager();
   const macroManager = new MacroManager();
   peacockManagerInstance = new PeacockManager(context);
   aiCommandsManagerInstance = new AICommandsManager();
-  
-  // Register AI commands 
+
+  // Register AI commands
   aiCommandsManagerInstance.registerCommands(context);
 
   // Status bar - [alt+insert]
   let toggleGreenModeDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleGreenMode',
-    async () => {
-      await peacockManagerInstance.toggleGreenMode();
-    }
+    () => peacockManagerInstance.toggleGreenMode()
   );
 
-    // Icon painter [Alt+z] 
+  // Icon painter [Alt+z]
   let cycleIconColorDisposable = vscode.commands.registerCommand(
     'lynx-keymap.cycleIconColor',
-    async () => {
-      await colorManager.cycleIconColor();
-    }
+    () => colorManager.cycleIconColor()
   );
-  
+
   // Icon painter (Macros)
   let colorAndAgentMacroDisposable = vscode.commands.registerCommand(
     'lynx-keymap.executeColorAndAgentMacro',
-    async () => {
-      await macroManager.executeColorAndAgentMacro();
-    }
+    () => macroManager.executeColorAndAgentMacro()
   );
 
-  // SUBSCRIPTION MANAGEMENT - Register all commands with VSCode
-  // ===========================================================
+  // Register commands with VSCode
   context.subscriptions.push(
+    toggleGreenModeDisposable,
     cycleIconColorDisposable,
-    colorAndAgentMacroDisposable,
-    toggleGreenModeDisposable
+    colorAndAgentMacroDisposable
   );
 }
 
-// EXTENSION LIFECYCLE
-// ===================
 async function deactivate() {
   if (peacockManagerInstance) {
-    console.log('Deactivating Lynx Green Mode on exit...');
     await peacockManagerInstance.deactivateGreenMode();
   }
-    
   if (aiCommandsManagerInstance) {
-    console.log('Disposing AI commands manager...');
     aiCommandsManagerInstance.dispose();
   }
 }
 
 module.exports = {
   activate,
-  deactivate,
+  deactivate
 };
