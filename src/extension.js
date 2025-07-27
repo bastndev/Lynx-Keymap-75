@@ -2,7 +2,7 @@ const vscode = require('vscode');
 const ColorManager = require('./editor-ui/icons/icon-painter');
 const MacroManager = require('./editor-ui/icons/macros');
 const StatusBarManager = require('./editor-ui/status-bar');
-const AICommandsManager = require('./keymaps/ai-commands-mapper');
+const AICommandsManager = require('./keymaps/ai-commands-manager');
 
 // Global instances
 let statusBarManagerInstance;
@@ -55,5 +55,5 @@ async function deactivate() {
 
 module.exports = {
   activate,
-  deactivate
+  deactivate,
 };
