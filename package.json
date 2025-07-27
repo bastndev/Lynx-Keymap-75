@@ -234,6 +234,10 @@
         "key"    : "shift+alt+t",
         "mac"    : "shift+alt+t",
         "command": "workbench.action.selectTheme"
+      },{
+        "key"    : "shift+alt+r",
+        "mac"    : "shift+alt+r",
+        "command": "workbench.action.reloadWindow"
       },
 
       {
