@@ -1,8 +1,8 @@
 const vscode = require('vscode');
-const ColorManager = require('./managers/icon-colors');
-const MacroManager = require('./managers/macros');
-const PeacockManager = require('./managers/peacock');
-const AICommandsManager = require('./managers/ai-commands');
+const ColorManager = require('./editor-ui/icons/icon-painter');
+const MacroManager = require('./editor-ui/icons/macros');
+const PeacockManager = require('./editor-ui/status-bars');
+const AICommandsManager = require('./keymaps/ai-command-mapper');
 
 // Global instance for peacock manager to handle deactivation
 let peacockManagerInstance;
