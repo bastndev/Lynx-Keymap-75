@@ -7,7 +7,7 @@ class AICommandsManager {
 
   // Register all AI-related commands
   registerCommands(context) {
-    // Command for AI commit generation [alt+2]
+    // Command for AI commit generation MARK: [Alt+2]
     let commitDisposable = vscode.commands.registerCommand(
       'lynx-keymap.generateAICommit',
       async function () {
@@ -22,7 +22,7 @@ class AICommandsManager {
       }.bind(this)
     );
 
-    // Command for AI Popup [ctrl+`]
+    // Command for AI Popup MARK: [Ctrl+`]
     let popupDisposable = vscode.commands.registerCommand(
       'lynx-keymap.executeAIPopup',
       async function () {
@@ -37,7 +37,7 @@ class AICommandsManager {
       }.bind(this)
     );
 
-    // Command to open AI chat [ctrl+tab]
+    // Command to open AI chat MARK: [Ctrl+tab]
     let chatDisposable = vscode.commands.registerCommand(
       'lynx-keymap.openAIChat',
       async function () {
@@ -52,7 +52,7 @@ class AICommandsManager {
       }.bind(this)
     );
 
-    // Command to create a new AI session [alt+a]
+    // Command to create a new AI session MARK: [Alt+A]
     let newSessionDisposable = vscode.commands.registerCommand(
       'lynx-keymap.createNewAISession',
       async function () {
@@ -67,7 +67,7 @@ class AICommandsManager {
       }.bind(this)
     );
 
-    // Command to show AI history [alt+s]
+    // Command to show AI history MARK: [Alt+S]
     let historyDisposable = vscode.commands.registerCommand(
       'lynx-keymap.showAIHistory',
       async function () {
@@ -82,7 +82,7 @@ class AICommandsManager {
       }.bind(this)
     );
 
-    // Command for AI attach context [alt+d]
+    // Command for AI attach context [MARK: Alt+D]
     let attachContextDisposable = vscode.commands.registerCommand(
       'lynx-keymap.attachAIContext',
       async function () {
