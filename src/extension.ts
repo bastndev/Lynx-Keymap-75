@@ -1,14 +1,14 @@
-const vscode = require('vscode');
-const ColorManager = require('./editor-ui/icons/icon-painter');
-const MacroManager = require('./editor-ui/icons/macros');
-const StatusBarManager = require('./editor-ui/status-bar');
-const AICommandsManager = require('./keymaps/ai-commands-manager');
+import * as vscode from 'vscode';
+import ColorManager from './editor-ui/icons/icon-painter';
+import MacroManager from './editor-ui/icons/macros';
+import StatusBarManager from './editor-ui/status-bar';
+import AICommandsManager from './keymaps/ai-commands-manager';
 
 // Global instances
-let statusBarManagerInstance;
-let aiCommandsManagerInstance;
+let statusBarManagerInstance: StatusBarManager | undefined;
+let aiCommandsManagerInstance: AICommandsManager | undefined;
 
-function activate(context) {
+export function activate(context: vscode.ExtensionContext): void {
   // Initialize managers
   const colorManager = new ColorManager();
   const macroManager = new MacroManager();
@@ -18,20 +18,20 @@ function activate(context) {
   // Register AI commands
   aiCommandsManagerInstance.registerCommands(context);
 
-  // Status bar - [alt+insert]
-  let toggleGreenModeDisposable = vscode.commands.registerCommand(
+  // Status bar - [alt+
+  const toggleGreenModeDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleGreenMode',
-    () => statusBarManagerInstance.toggleGreenMode()
+    () => statusBarManagerInstance?.toggleGreenMode()
   );
 
   // Icon painter [Alt+z]
-  let cycleIconColorDisposable = vscode.commands.registerCommand(
+  const cycleIconColorDisposable = vscode.commands.registerCommand(
     'lynx-keymap.cycleIconColor',
     () => colorManager.cycleIconColor()
   );
 
   // Icon painter (Macros)
-  let colorAndAgentMacroDisposable = vscode.commands.registerCommand(
+  const colorAndAgentMacroDisposable = vscode.commands.registerCommand(
     'lynx-keymap.executeColorAndAgentMacro',
     () => macroManager.executeColorAndAgentMacro()
   );
@@ -44,7 +44,7 @@ function activate(context) {
   );
 }
 
-async function deactivate() {
+export async function deactivate(): Promise<void> {
   if (statusBarManagerInstance) {
     await statusBarManagerInstance.deactivateGreenMode();
   }
@@ -52,8 +52,3 @@ async function deactivate() {
     aiCommandsManagerInstance.dispose();
   }
 }
-
-module.exports = {
-  activate,
-  deactivate,
-};

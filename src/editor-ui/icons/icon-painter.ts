@@ -1,31 +1,33 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
-class ColorManager {
-  constructor() {
-    this.colors = [
-      '#008dfa',    // Blue
-      '#07cc4cff',  // Green
-      null,           // Default (color theme)
-    ];
-    this.currentColorIndex = 2; // Start with default color
-  }
+interface WorkbenchColorCustomizations {
+  'icon.foreground'?: string | null;
+  [key: string]: any;
+}
+
+export default class ColorManager {
+  private colors: (string | null)[] = [
+    '#008dfa',    // Blue
+    '#07cc4cff',  // Green
+    null,         // Default (color theme)
+  ];
+  private currentColorIndex: number = 2; // Start with default color
 
   /**
    * Cycles through available colors
-   * @returns {Promise<void>}
    */
-  async cycleIconColor() {
+  public async cycleIconColor(): Promise<void> {
     try {
-      this.currentColorIndex =
-        (this.currentColorIndex + 1) % this.colors.length;
+      this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
       const newColor = this.colors[this.currentColorIndex];
 
       const config = vscode.workspace.getConfiguration();
+      const currentCustomizations = config.get<WorkbenchColorCustomizations>('workbench.colorCustomizations', {});
 
       await config.update(
         'workbench.colorCustomizations',
         {
-          ...config.get('workbench.colorCustomizations', {}),
+          ...currentCustomizations,
           'icon.foreground': newColor,
         },
         vscode.ConfigurationTarget.Global
@@ -40,13 +42,12 @@ class ColorManager {
 
   /**
    * Resets color to default value
-   * @returns {Promise<void>}
    */
-  async resetToDefault() {
+  public async resetToDefault(): Promise<void> {
     try {
       this.currentColorIndex = 2;
       const config = vscode.workspace.getConfiguration();
-      const customizations = config.get('workbench.colorCustomizations', {});
+      const customizations = config.get<WorkbenchColorCustomizations>('workbench.colorCustomizations', {});
 
       delete customizations['icon.foreground'];
 
@@ -63,20 +64,16 @@ class ColorManager {
 
   /**
    * Gets current color
-   * @returns {string} Current hex color
    */
-  getCurrentColor() {
+  public getCurrentColor(): string | null {
     return this.colors[this.currentColorIndex];
   }
 
   /**
    * Gets current color name
-   * @returns {string} Current color name
    */
-  getCurrentColorName() {
-    const colorNames = ['Red', 'Blue', 'Default'];
+  public getCurrentColorName(): string {
+    const colorNames = ['Blue', 'Green', 'Default'];
     return colorNames[this.currentColorIndex];
   }
 }
-
-module.exports = ColorManager;

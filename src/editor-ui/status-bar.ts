@@ -1,11 +1,34 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
 // Constants
 const COLOR_CUSTOMIZATIONS_SECTION = 'workbench.colorCustomizations';
 const STATE_MEMENTO_KEY = 'lynx-keymap.colorModeActive';
 const CURRENT_COLOR_KEY = 'lynx-keymap.currentColor';
 
-const COLORS = {
+interface Colors {
+  readonly BLUE: string;
+  readonly GREEN: string;
+  readonly ORANGE: string;
+  readonly LEMON: string;
+  readonly RED: string;
+  readonly WHITE: string;
+}
+
+interface ColorNames {
+  readonly GREEN: string;
+  readonly BLUE: string;
+  readonly ORANGE: string;
+  readonly LEMON: string;
+  readonly RED: string;
+}
+
+interface ColorCustomizations {
+  'statusBar.background'?: string;
+  'statusBar.foreground'?: string;
+  'statusBarItem.remoteBackground'?: string;
+}
+
+const COLORS: Colors = {
   BLUE: '#0070bb',
   GREEN: '#1e5739',
   ORANGE: '#b85609',
@@ -14,7 +37,7 @@ const COLORS = {
   WHITE: '#ffffff',
 };
 
-const COLOR_NAMES = {
+const COLOR_NAMES: ColorNames = {
   GREEN: 'GREEN',
   BLUE: 'BLUE',
   ORANGE: 'ORANGE',
@@ -22,11 +45,15 @@ const COLOR_NAMES = {
   RED: 'RED',
 };
 
-class StatusBarManager {
-  constructor(context) {
+type ColorKey = keyof typeof COLOR_NAMES;
+
+export default class StatusBarManager {
+  private context: vscode.ExtensionContext;
+  private isInitialized: boolean = false;
+  private colorKeys: ColorKey[] = ['GREEN', 'BLUE', 'ORANGE', 'LEMON', 'RED'];
+
+  constructor(context: vscode.ExtensionContext) {
     this.context = context;
-    this.isInitialized = false;
-    this.colorKeys = ['GREEN', 'BLUE', 'ORANGE', 'LEMON', 'RED'];
     this.initializeCleanState();
   }
 
@@ -35,7 +62,7 @@ class StatusBarManager {
   /**
    * Toggles color mode with random color selection
    */
-  async toggleColorMode() {
+  public async toggleColorMode(): Promise<void> {
     if (!this.isInitialized) {
       await this.initializeCleanState();
     }
@@ -52,8 +79,15 @@ class StatusBarManager {
   /**
    * Legacy method for backward compatibility
    */
-  async toggleGreenMode() {
+  public async toggleGreenMode(): Promise<void> {
     await this.toggleColorMode();
+  }
+
+  /**
+   * Deactivates color mode (public for cleanup)
+   */
+  public async deactivateGreenMode(): Promise<void> {
+    await this.deactivateColorMode();
   }
 
   // Private Methods
@@ -61,7 +95,7 @@ class StatusBarManager {
   /**
    * Initializes clean state every time VSCode is opened
    */
-  async initializeCleanState() {
+  private async initializeCleanState(): Promise<void> {
     try {
       await this.context.workspaceState.update(STATE_MEMENTO_KEY, false);
       await this.context.workspaceState.update(CURRENT_COLOR_KEY, null);
@@ -84,7 +118,7 @@ class StatusBarManager {
   /**
    * Gets a random color key
    */
-  getRandomColor() {
+  private getRandomColor(): ColorKey {
     const randomIndex = Math.floor(Math.random() * this.colorKeys.length);
     return this.colorKeys[randomIndex];
   }
@@ -92,11 +126,11 @@ class StatusBarManager {
   /**
    * Applies random color to workspace configuration
    */
-  async activateRandomColorMode() {
+  private async activateRandomColorMode(): Promise<void> {
     const colorKey = this.getRandomColor();
     const color = COLORS[colorKey];
 
-    const colorCustomizations = {
+    const colorCustomizations: ColorCustomizations = {
       'statusBar.background': color,
       'statusBar.foreground': COLORS.WHITE,
       'statusBarItem.remoteBackground': color,
@@ -109,7 +143,7 @@ class StatusBarManager {
   /**
    * Clears workspace colors, returning to original state
    */
-  async deactivateColorMode() {
+  private async deactivateColorMode(): Promise<void> {
     await this.updateWorkspaceColors(undefined, false, 'deactivate');
     await this.context.workspaceState.update(CURRENT_COLOR_KEY, null);
   }
@@ -117,7 +151,11 @@ class StatusBarManager {
   /**
    * Helper method to update workspace colors and state
    */
-  async updateWorkspaceColors(colorCustomizations, stateValue, action) {
+  private async updateWorkspaceColors(
+    colorCustomizations: ColorCustomizations | undefined,
+    stateValue: boolean,
+    action: string
+  ): Promise<void> {
     try {
       const config = vscode.workspace.getConfiguration();
       await config.update(
@@ -131,5 +169,3 @@ class StatusBarManager {
     }
   }
 }
-
-module.exports = StatusBarManager;

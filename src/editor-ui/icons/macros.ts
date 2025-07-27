@@ -1,15 +1,17 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
-class MacroManager {
-  constructor() {
-    this.isExecuting = false;
-  }
+interface CommandStep {
+  command: string;
+  delay?: number;
+}
+
+export default class MacroManager {
+  private isExecuting: boolean = false;
 
   /**
    * Executes a sequence of commands with delays
-   * @param {Array} commandSequence - Array of objects {command: string, delay?: number}
    */
-  async executeSequence(commandSequence) {
+  public async executeSequence(commandSequence: CommandStep[]): Promise<void> {
     if (this.isExecuting) {
       vscode.window.showWarningMessage(
         'Macro already executing, please wait...'
@@ -30,9 +32,8 @@ class MacroManager {
         }
       }
     } catch (error) {
-      vscode.window.showErrorMessage(
-        `Macro execution failed: ${error.message}`
-      );
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      vscode.window.showErrorMessage(`Macro execution failed: ${errorMessage}`);
     } finally {
       this.isExecuting = false;
     }
@@ -41,8 +42,8 @@ class MacroManager {
   /**
    * Toggle Agent Mode + Change icon color macro
    */
-  async executeColorAndAgentMacro() {
-    const sequence = [
+  public async executeColorAndAgentMacro(): Promise<void> {
+    const sequence: CommandStep[] = [
       {
         command: 'workbench.action.chat.toggleAgentMode',
         delay: 10,
@@ -58,8 +59,8 @@ class MacroManager {
   /**
    * Custom macro example
    */
-  async executeCustomMacro() {
-    const sequence = [
+  public async executeCustomMacro(): Promise<void> {
+    const sequence: CommandStep[] = [
       { command: 'workbench.view.explorer', delay: 10 },
       { command: 'workbench.view.scm', delay: 10 },
       { command: 'workbench.view.extensions' },
@@ -70,21 +71,18 @@ class MacroManager {
 
   /**
    * Creates a delay
-   * @param {number} ms - Milliseconds to wait
    */
-  delay(ms) {
+  private delay(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   /**
    * Cancels macro execution
    */
-  cancelExecution() {
+  public cancelExecution(): void {
     if (this.isExecuting) {
       this.isExecuting = false;
       vscode.window.showInformationMessage('Macro execution cancelled');
     }
   }
 }
-
-module.exports = MacroManager;

@@ -1,16 +1,14 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
-class AICommandsManager {
-  constructor() {
-    this.disposables = [];
-  }
+export default class AICommandsManager {
+  private disposables: vscode.Disposable[] = [];
 
   // Register all AI-related commands
-  registerCommands(context) {
+  public registerCommands(context: vscode.ExtensionContext): vscode.Disposable[] {
     // Command for AI commit generation MARK: [Alt+2]
-    let commitDisposable = vscode.commands.registerCommand(
+    const commitDisposable = vscode.commands.registerCommand(
       'lynx-keymap.generateAICommit',
-      async function () {
+      async () => {
         const commitCommands = [
           'windsurf.generateCommitMessage',                     // 0: Windsurf
           'github.copilot.git.generateCommitMessage',           // 1: Vscode
@@ -18,14 +16,14 @@ class AICommandsManager {
           'icube.gitGenerateCommitMessage',                     // 3: Trae-AI
           // Don't have a Firebase equivalent for this          // 4: Firebase.Studio
         ];
-        await this.executeFirstAvailableCommand(commitCommands,'No AI commit generators available');
-      }.bind(this)
+        await this.executeFirstAvailableCommand(commitCommands, 'No AI commit generators available');
+      }
     );
 
     // Command for AI Popup MARK: [Ctrl+`]
-    let popupDisposable = vscode.commands.registerCommand(
+    const popupDisposable = vscode.commands.registerCommand(
       'lynx-keymap.executeAIPopup',
-      async function () {
+      async () => {
         const popupCommands = [
           'windsurf.prioritized.command.open',                  // 0: Windsurf
           'inlineChat.start',                                   // 1: Vscode
@@ -33,14 +31,14 @@ class AICommandsManager {
           'icube.inlineChat.start',                             // 3: Trae-AI
           'workbench.action.terminal.chat.start',               // 4: Firebase.Studio
         ];
-        await this.executeFirstAvailableCommand(popupCommands,'No AI chat providers available');
-      }.bind(this)
+        await this.executeFirstAvailableCommand(popupCommands, 'No AI chat providers available');
+      }
     );
 
     // Command to open AI chat MARK: [Ctrl+tab]
-    let chatDisposable = vscode.commands.registerCommand(
+    const chatDisposable = vscode.commands.registerCommand(
       'lynx-keymap.openAIChat',
-      async function () {
+      async () => {
         const chatCommands = [
           'windsurf.prioritized.chat.open',                    // 0: Windsurf
           'workbench.panel.chat',                              // 1: Vscode
@@ -48,14 +46,14 @@ class AICommandsManager {
           'workbench.action.chat.icube.open',                  // 3: Trae-AI
           'aichat.prompt',                                     // 4: Firebase.Studio
         ];
-        await this.executeFirstAvailableCommand(chatCommands,'No AI chat providers available');
-      }.bind(this)
+        await this.executeFirstAvailableCommand(chatCommands, 'No AI chat providers available');
+      }
     );
 
     // Command to create a new AI session MARK: [Alt+A]
-    let newSessionDisposable = vscode.commands.registerCommand(
+    const newSessionDisposable = vscode.commands.registerCommand(
       'lynx-keymap.createNewAISession',
-      async function () {
+      async () => {
         const newSessionCommands = [
           'windsurf.prioritized.chat.openNewConversation',         // 0: Windsurf
           'workbench.action.chat.newEditSession',                  // 1: Vscode
@@ -63,14 +61,14 @@ class AICommandsManager {
           'workbench.action.icube.aiChatSidebar.createNewSession', // 3: Trae-AI
           // 'workbench.action.chat.newChat' NF-now                // 4: Firebase.Studio
         ];
-        await this.executeFirstAvailableCommand(newSessionCommands,'No AI providers available to create a new session');
-      }.bind(this)
+        await this.executeFirstAvailableCommand(newSessionCommands, 'No AI providers available to create a new session');
+      }
     );
 
     // Command to show AI history MARK: [Alt+S]
-    let historyDisposable = vscode.commands.registerCommand(
+    const historyDisposable = vscode.commands.registerCommand(
       'lynx-keymap.showAIHistory',
-      async function () {
+      async () => {
         const historyCommands = [
           // ---- ---- ---- ---- --- -- -                       // 0: Windsurf
           'workbench.action.chat.history',                      // 1: Vscode
@@ -78,14 +76,14 @@ class AICommandsManager {
           'workbench.action.icube.aiChatSidebar.showHistory',   // 3: Trae-AI
           // Firebase doesn't have a history NF-now             // 4: Firebase.Studio
         ];
-        await this.executeFirstAvailableCommand(historyCommands,'No AI history available');
-      }.bind(this)
+        await this.executeFirstAvailableCommand(historyCommands, 'No AI history available');
+      }
     );
 
     // Command for AI attach context [MARK: Alt+D]
-    let attachContextDisposable = vscode.commands.registerCommand(
+    const attachContextDisposable = vscode.commands.registerCommand(
       'lynx-keymap.attachAIContext',
-      async function () {
+      async () => {
         const attachContextCommands = [
           // ---- ---- ----- --- -- -                          // 0: Windsurf
           'workbench.action.chat.attachContext',               // 1: Vscode
@@ -97,7 +95,7 @@ class AICommandsManager {
           attachContextCommands,
           'No AI context attachment available'
         );
-      }.bind(this)
+      }
     );
 
     // Store all disposables
@@ -117,7 +115,7 @@ class AICommandsManager {
   }
 
   // Helper function to execute the first available command from a list
-  async executeFirstAvailableCommand(commands, errorMessage) {
+  private async executeFirstAvailableCommand(commands: string[], errorMessage: string): Promise<void> {
     const allCommands = await vscode.commands.getCommands(true);
     for (const cmd of commands) {
       if (allCommands.includes(cmd)) {
@@ -136,7 +134,7 @@ class AICommandsManager {
   }
 
   // Cleanup method
-  dispose() {
+  public dispose(): void {
     this.disposables.forEach((disposable) => {
       if (disposable && typeof disposable.dispose === 'function') {
         disposable.dispose();
@@ -145,5 +143,3 @@ class AICommandsManager {
     this.disposables = [];
   }
 }
-
-module.exports = AICommandsManager;
