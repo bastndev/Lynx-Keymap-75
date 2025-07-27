@@ -1,71 +1,103 @@
 const vscode = require('vscode');
-const { getCommandCache } = require('../core/command-cache');
-const { getLogger } = require('../core/logger');
-const { AI_COMMANDS, ERROR_MESSAGES } = require('../core/config');
 
 class AICommandsManager {
   constructor() {
     this.disposables = [];
-    this.commandCache = getCommandCache();
-    this.logger = getLogger();
   }
 
   // Register all AI-related commands
   registerCommands(context) {
-    this.logger.info('Registering AI commands');
-    
     // Command for AI commit generation [alt+2]
     let commitDisposable = vscode.commands.registerCommand(
       'lynx-keymap.generateAICommit',
-      () => this.commandCache.executeFirstAvailableCommand(
-        AI_COMMANDS.COMMIT,
-        ERROR_MESSAGES.NO_AI_COMMIT
-      )
+      async function () {
+        const commitCommands = [
+          'windsurf.generateCommitMessage',                     // 0: Windsurf
+          'github.copilot.git.generateCommitMessage',           // 1: Vscode
+          'cursor.generateGitCommitMessage',                    // 2: Cursor-AI
+          'icube.gitGenerateCommitMessage',                     // 3: Trae-AI
+          // Don't have a Firebase equivalent for this          // 4: Firebase.Studio
+        ];
+        await this.executeFirstAvailableCommand(commitCommands,'No AI commit generators available');
+      }.bind(this)
     );
 
     // Command for AI Popup [ctrl+`]
     let popupDisposable = vscode.commands.registerCommand(
       'lynx-keymap.executeAIPopup',
-      () => this.commandCache.executeFirstAvailableCommand(
-        AI_COMMANDS.POPUP,
-        ERROR_MESSAGES.NO_AI_CHAT
-      )
+      async function () {
+        const popupCommands = [
+          'windsurf.prioritized.command.open',                  // 0: Windsurf
+          'inlineChat.start',                                   // 1: Vscode
+          'aipopup.action.modal.generate',                      // 2: Cursor-AI
+          'icube.inlineChat.start',                             // 3: Trae-AI
+          'workbench.action.terminal.chat.start',               // 4: Firebase.Studio
+        ];
+        await this.executeFirstAvailableCommand(popupCommands,'No AI chat providers available');
+      }.bind(this)
     );
 
     // Command to open AI chat [ctrl+tab]
     let chatDisposable = vscode.commands.registerCommand(
       'lynx-keymap.openAIChat',
-      () => this.commandCache.executeFirstAvailableCommand(
-        AI_COMMANDS.CHAT,
-        ERROR_MESSAGES.NO_AI_CHAT
-      )
+      async function () {
+        const chatCommands = [
+          'windsurf.prioritized.chat.open',                    // 0: Windsurf
+          'workbench.panel.chat',                              // 1: Vscode
+          'aichat.newchataction',                              // 2: Cursor-AI
+          'workbench.action.chat.icube.open',                  // 3: Trae-AI
+          'aichat.prompt',                                     // 4: Firebase.Studio
+        ];
+        await this.executeFirstAvailableCommand(chatCommands,'No AI chat providers available');
+      }.bind(this)
     );
 
     // Command to create a new AI session [alt+a]
     let newSessionDisposable = vscode.commands.registerCommand(
       'lynx-keymap.createNewAISession',
-      () => this.commandCache.executeFirstAvailableCommand(
-        AI_COMMANDS.NEW_SESSION,
-        ERROR_MESSAGES.NO_AI_SESSION
-      )
+      async function () {
+        const newSessionCommands = [
+          'windsurf.prioritized.chat.openNewConversation',         // 0: Windsurf
+          'workbench.action.chat.newEditSession',                  // 1: Vscode
+          'composer.createNew',                                    // 2: Cursor-AI
+          'workbench.action.icube.aiChatSidebar.createNewSession', // 3: Trae-AI
+          // 'workbench.action.chat.newChat' NF-now                // 4: Firebase.Studio
+        ];
+        await this.executeFirstAvailableCommand(newSessionCommands,'No AI providers available to create a new session');
+      }.bind(this)
     );
 
     // Command to show AI history [alt+s]
     let historyDisposable = vscode.commands.registerCommand(
       'lynx-keymap.showAIHistory',
-      () => this.commandCache.executeFirstAvailableCommand(
-        AI_COMMANDS.HISTORY,
-        ERROR_MESSAGES.NO_AI_HISTORY
-      )
+      async function () {
+        const historyCommands = [
+          // ---- ---- ---- ---- --- -- -                       // 0: Windsurf
+          'workbench.action.chat.history',                      // 1: Vscode
+          'composer.showComposerHistory',                       // 2: Cursor-AI
+          'workbench.action.icube.aiChatSidebar.showHistory',   // 3: Trae-AI
+          // Firebase doesn't have a history NF-now             // 4: Firebase.Studio
+        ];
+        await this.executeFirstAvailableCommand(historyCommands,'No AI history available');
+      }.bind(this)
     );
 
     // Command for AI attach context [alt+d]
     let attachContextDisposable = vscode.commands.registerCommand(
       'lynx-keymap.attachAIContext',
-      () => this.commandCache.executeFirstAvailableCommand(
-        AI_COMMANDS.ATTACH_CONTEXT,
-        ERROR_MESSAGES.NO_AI_CONTEXT
-      )
+      async function () {
+        const attachContextCommands = [
+          // ---- ---- ----- --- -- -                          // 0: Windsurf
+          'workbench.action.chat.attachContext',               // 1: Vscode
+          'composer.openAddContextMenu',                       // 2: Cursor-AI
+          // ---- ---- --- --- -- -                            // 3: Trae-AI
+          // 'Workbench.action.openWorkspace' NF-now           // 4: Firebase.Studio
+        ];
+        await this.executeFirstAvailableCommand(
+          attachContextCommands,
+          'No AI context attachment available'
+        );
+      }.bind(this)
     );
 
     // Store all disposables
@@ -81,57 +113,36 @@ class AICommandsManager {
     // Add to context subscriptions
     context.subscriptions.push(...this.disposables);
 
-    this.logger.info(`Registered ${this.disposables.length} AI commands`);
     return this.disposables;
   }
 
-  /**
-   * Get available AI platforms based on installed commands
-   */
-  async getAvailableAIPlatforms() {
-    const platforms = {
-      windsurf: false,
-      vscode: false,
-      cursor: false,
-      trae: false,
-      firebase: false,
-    };
-
-    // Check for specific commands to determine platform availability
-    const platformChecks = [
-      { platform: 'windsurf', command: 'windsurf.generateCommitMessage' },
-      { platform: 'vscode', command: 'github.copilot.git.generateCommitMessage' },
-      { platform: 'cursor', command: 'cursor.generateGitCommitMessage' },
-      { platform: 'trae', command: 'icube.gitGenerateCommitMessage' },
-      { platform: 'firebase', command: 'workbench.action.terminal.chat.start' },
-    ];
-
-    for (const check of platformChecks) {
-      platforms[check.platform] = await this.commandCache.isCommandAvailable(check.command);
+  // Helper function to execute the first available command from a list
+  async executeFirstAvailableCommand(commands, errorMessage) {
+    const allCommands = await vscode.commands.getCommands(true);
+    for (const cmd of commands) {
+      if (allCommands.includes(cmd)) {
+        try {
+          await vscode.commands.executeCommand(cmd);
+          console.log(`Executed command: ${cmd}`);
+          return;
+        } catch (error) {
+          console.error(`Error executing command ${cmd}:`, error);
+        }
+      } else {
+        console.log(`Command not available: ${cmd}`);
+      }
     }
-
-    return platforms;
-  }
-
-  /**
-   * Get command cache statistics
-   */
-  getCacheStats() {
-    return this.commandCache.getCacheStats();
+    vscode.window.showWarningMessage(errorMessage);
   }
 
   // Cleanup method
   dispose() {
-    this.logger.info('Disposing AI commands manager');
-    
     this.disposables.forEach((disposable) => {
       if (disposable && typeof disposable.dispose === 'function') {
         disposable.dispose();
       }
     });
-    
     this.disposables = [];
-    this.logger.info('AI commands manager disposed');
   }
 }
 

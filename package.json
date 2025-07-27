@@ -337,7 +337,7 @@
         "command": "inlineChat.close",
         "when"   : "inlineChatFocused"
       },
-            {
+      {
         "key"    : "alt+escape",
         "mac"    : "alt+escape",
         "command": "lynx-keymap.toggleInlineSuggest"
