@@ -69,7 +69,7 @@
         "command": "workbench.view.extensions"
       },
       
-      
+
       {
         "key"    : "alt+c",
         "mac"    : "alt+c",
@@ -120,6 +120,15 @@
       },
 
 
+      
+
+
+
+
+
+
+
+
 
       {
         "key"    : "alt+f",
@@ -134,135 +143,6 @@
         "mac"    : "shift+alt+f",
         "command": "editor.action.organizeImports"
       },
-      
-      
-      
-      {
-        "key"    : "alt+q",
-        "mac"    : "alt+q",
-        "command": "workbench.debug.action.toggleRepl"
-      },{
-        "key"    : "alt+w",
-        "mac"    : "alt+w",
-        "command": "workbench.action.terminal.toggleTerminal"
-      },{
-        "key"    : "alt+e",
-        "mac"    : "alt+e",
-        "command": "gitlens.showGraph"
-      },{
-        "key"    : "pagedown",
-        "mac"    : "pagedown",
-        "command": "workbench.action.togglePanel"
-      },
-
-
-
-      {
-        "key"    : "ctrl+[Backquote]",
-        "mac"    : "cmd+[Backquote]",
-        "command": "lynx-keymap.executeAIPopup"
-      },{
-        "key"    : "shift+tab",
-        "mac"    : "shift+tab",
-        "command": "lynx-keymap.openAIChat"
-      },
-
-      
-      {
-        "key"    : "alt+a",
-        "mac"    : "alt+a",
-        "command": "lynx-keymap.createNewAISession"
-      },{
-        "key"    : "alt+s",
-        "mac"    : "alt+s",
-        "command": "lynx-keymap.showAIHistory"
-      },{
-        "key"    : "alt+d",
-        "mac"    : "alt+d",
-        "command": "lynx-keymap.attachAIContext"
-      },
-
-
-
-      {
-        "key"    : "ctrl+shift+alt+12",
-        "mac"    : "cmd+shift+alt+12",
-        "command": "workbench.action.chat.toggleAgentMode"
-      },{
-        "key"    : "ctrl+shift+alt+11",
-        "mac"    : "ctrl+shift+alt+11",
-        "command": "lynx-keymap.cycleIconColor"
-      },
-
-      {
-        "key"    : "alt+x",
-        "mac"    : "alt+x",
-        "command": "workbench.action.chat.openModelPicker"
-      },{
-        "key"    : "alt+z",
-        "mac"    : "alt+z",
-        "command": "lynx-keymap.executeColorAndAgentMacro"
-      },{
-        "key"    : "shift+escape",
-        "mac"    : "shift+escape",
-        "command": "workbench.action.toggleMaximizedAuxiliaryBar"
-      },
-
-      {
-        "key"    : "ctrl+enter",
-        "mac"    : "cmd+enter",
-        "command": "-github.copilot.generate"
-      },{
-        "key"    : "alt+enter",
-        "mac"    : "alt+enter",
-        "command": "inlineChat.close",
-        "when"   : "inlineChatFocused"
-      },
-
-
-      {
-        "key"    : "insert",
-        "mac"    : "insert",
-        "command": "workbench.action.debug.start"
-      },{
-        "key"    : "ctrl+insert",
-        "mac"    : "cmd+insert",
-        "command": "workbench.action.debug.restart"
-      },{
-        "key"    : "end",
-        "mac"    : "end",
-        "command": "workbench.action.debug.stop"
-      },{
-        "key"    : "alt+insert",
-        "mac"    : "alt+insert",
-        "command": "lynx-keymap.toggleGreenMode"
-      },
-
-
-
-      {
-        "key"    : "ctrl+end",
-        "mac"    : "cmd+end",
-        "command": "git.viewChanges"
-      },{
-        "key"    : "pageup",
-        "mac"    : "pageup",
-        "command": "markdown.showPreviewToSide"
-      },
-
-      
-      {
-        "key"    : "alt+shift+audiovolumeup",
-        "mac"    : "alt+shift+audiovolumeup",
-        "command": "workbench.action.zoomIn",
-        "when"   : "editorTextFocus || !inputFocus"
-      },{
-        "key"    : "alt+shift+audiovolumedown",
-        "mac"    : "alt+shift+audiovolumedown",
-        "command": "workbench.action.zoomOut",
-        "when"   : "editorTextFocus || !inputFocus"
-      },
-
 
 
       {
@@ -310,12 +190,37 @@
       },
 
 
+      {
+        "key"    : "insert",
+        "mac"    : "insert",
+        "command": "workbench.action.debug.start"
+      },{
+        "key"    : "ctrl+insert",
+        "mac"    : "cmd+insert",
+        "command": "workbench.action.debug.restart"
+      },{
+        "key"    : "end",
+        "mac"    : "end",
+        "command": "workbench.action.debug.stop"
+      },{
+        "key"    : "alt+insert",
+        "mac"    : "alt+insert",
+        "command": "lynx-keymap.toggleGreenMode"
+      },
+
+
+      {
+        "key"    : "ctrl+end",
+        "mac"    : "cmd+end",
+        "command": "git.viewChanges"
+      },{
+        "key"    : "pageup",
+        "mac"    : "pageup",
+        "command": "markdown.showPreviewToSide"
+      },
+
       
       {
-        "key"    : "alt+escape",
-        "mac"    : "alt+escape",
-        "command": "lynx-keymap.toggleInlineSuggest"
-      },{
         "key"    : "ctrl+backspace",
         "mac"    : "cmd+backspace",
         "command": "deleteWordLeft"
@@ -325,12 +230,119 @@
         "command": "workbench.action.closeFolder"
       },
 
-
       {
         "key"    : "shift+alt+t",
         "mac"    : "shift+alt+t",
         "command": "workbench.action.selectTheme"
+      },
+
+      {
+        "key"    : "alt+shift+audiovolumeup",
+        "mac"    : "alt+shift+audiovolumeup",
+        "command": "workbench.action.zoomIn",
+        "when"   : "editorTextFocus || !inputFocus"
+      },{
+        "key"    : "alt+shift+audiovolumedown",
+        "mac"    : "alt+shift+audiovolumedown",
+        "command": "workbench.action.zoomOut",
+        "when"   : "editorTextFocus || !inputFocus"
+      },
+
+
+      {
+        "key"    : "alt+q",
+        "mac"    : "alt+q",
+        "command": "workbench.debug.action.toggleRepl"
+      },{
+        "key"    : "alt+w",
+        "mac"    : "alt+w",
+        "command": "workbench.action.terminal.toggleTerminal"
+      },{
+        "key"    : "alt+e",
+        "mac"    : "alt+e",
+        "command": "gitlens.showGraph"
+      },{
+        "key"    : "pagedown",
+        "mac"    : "pagedown",
+        "command": "workbench.action.togglePanel"
+      },
+
+
+      
+
+
+
+
+
+
+
+
+
+      {
+        "key"    : "ctrl+[Backquote]",
+        "mac"    : "cmd+[Backquote]",
+        "command": "lynx-keymap.executeAIPopup"
+      },{
+        "key"    : "shift+tab",
+        "mac"    : "shift+tab",
+        "command": "lynx-keymap.openAIChat"
+      },{
+        "key"    : "shift+escape",
+        "mac"    : "shift+escape",
+        "command": "workbench.action.toggleMaximizedAuxiliaryBar"
+      },
+
+
+      {
+        "key"    : "alt+a",
+        "mac"    : "alt+a",
+        "command": "lynx-keymap.createNewAISession"
+      },{
+        "key"    : "alt+s",
+        "mac"    : "alt+s",
+        "command": "lynx-keymap.showAIHistory"
+      },{
+        "key"    : "alt+d",
+        "mac"    : "alt+d",
+        "command": "lynx-keymap.attachAIContext"
+      },      
+      
+      
+      {
+        "key"    : "ctrl+shift+alt+12",
+        "mac"    : "cmd+shift+alt+12",
+        "command": "workbench.action.chat.toggleAgentMode"
+      },{
+        "key"    : "ctrl+shift+alt+11",
+        "mac"    : "ctrl+shift+alt+11",
+        "command": "lynx-keymap.cycleIconColor"
+      },{
+        "key"    : "alt+x",
+        "mac"    : "alt+x",
+        "command": "workbench.action.chat.openModelPicker"
+      },{
+        "key"    : "alt+z",
+        "mac"    : "alt+z",
+        "command": "lynx-keymap.executeColorAndAgentMacro"
+      },
+
+
+      {
+        "key"    : "ctrl+enter",
+        "mac"    : "cmd+enter",
+        "command": "-github.copilot.generate"
+      },{
+        "key"    : "alt+enter",
+        "mac"    : "alt+enter",
+        "command": "inlineChat.close",
+        "when"   : "inlineChatFocused"
+      },
+            {
+        "key"    : "alt+escape",
+        "mac"    : "alt+escape",
+        "command": "lynx-keymap.toggleInlineSuggest"
       }
+
     ]
   },
 
