@@ -64,7 +64,7 @@
         "mac"    : "cmd+2",
         "command": "workbench.view.scm"
       },{
-        "key"    : "ctrl+3",
+        "key"    : "ctrl+n",
         "mac"    : "cmd+3",
         "command": "workbench.view.extensions"
       },
