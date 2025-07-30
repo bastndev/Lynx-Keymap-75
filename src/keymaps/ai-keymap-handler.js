@@ -1,5 +1,5 @@
 const vscode = require('vscode');
-const { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } = require('./ai-keymap-commands');
+const { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } = require('./ai-keymap-config');
 
 /**
  * Manages AI command registration and execution
@@ -36,7 +36,7 @@ class AICommandsManager {
   async executeFirstAvailableCommand(commands, errorMessage) {
     // Get available commands
     const allCommands = await vscode.commands.getCommands(true);
-    
+
     // Try each command until one succeeds
     for (const cmd of commands) {
       if (allCommands.includes(cmd)) {
@@ -51,7 +51,7 @@ class AICommandsManager {
         console.log(`Command not available: ${cmd}`);
       }
     }
-    
+
     // Show warning if no commands worked
     vscode.window.showWarningMessage(errorMessage);
   }
