@@ -120,7 +120,6 @@
       },
 
 
-      
 
 
 
@@ -131,17 +130,36 @@
 
 
       {
-        "key"    : "alt+f",
-        "mac"    : "alt+f",
-        "command": "editor.action.formatDocument"
+        "key"    : "alt+q",
+        "mac"    : "alt+q",
+        "command": "workbench.debug.action.toggleRepl"
       },{
-        "key"    : "ctrl+alt+f",
-        "mac"    : "cmd+alt+f",
-        "command": "editor.action.formatSelection.multiple"
+        "key"    : "alt+w",
+        "mac"    : "alt+w",
+        "command": "workbench.action.terminal.toggleTerminal"
       },{
-        "key"    : "shift+alt+f",
-        "mac"    : "shift+alt+f",
-        "command": "editor.action.organizeImports"
+        "key"    : "alt+e",
+        "mac"    : "alt+e",
+        "command": "gitlens.showGraph"
+      },{
+        "key"    : "pagedown",
+        "mac"    : "pagedown",
+        "command": "workbench.action.togglePanel"
+      },
+
+
+      {
+        "key"    : "shift+alt+t",
+        "mac"    : "shift+alt+t",
+        "command": "workbench.action.selectTheme"
+      },{
+        "key"    : "shift+alt+r",
+        "mac"    : "shift+alt+r",
+        "command": "workbench.action.reloadWindow"
+      },{
+        "key"    : "shift+alt+e",
+        "mac"    : "shift+alt+e",
+        "command": "expandLineSelection"
       },
 
 
@@ -157,6 +175,21 @@
         "key"    : "alt+j",
         "mac"    : "alt+j",
         "command": "workbench.action.openSettingsJson"
+      },
+
+
+      {
+        "key"    : "alt+f",
+        "mac"    : "alt+f",
+        "command": "editor.action.formatDocument"
+      },{
+        "key"    : "ctrl+alt+f",
+        "mac"    : "cmd+alt+f",
+        "command": "editor.action.formatSelection.multiple"
+      },{
+        "key"    : "shift+alt+f",
+        "mac"    : "shift+alt+f",
+        "command": "editor.action.organizeImports"
       },
 
 
@@ -226,20 +259,15 @@
         "command": "workbench.action.closeFolder"
       },
 
-      
-      {
-        "key"    : "shift+alt+t",
-        "mac"    : "shift+alt+t",
-        "command": "workbench.action.selectTheme"
-      },{
-        "key"    : "shift+alt+r",
-        "mac"    : "shift+alt+r",
-        "command": "workbench.action.reloadWindow"
-      },{
-        "key"    : "shift+alt+e",
-        "mac"    : "shift+alt+e",
-        "command": "expandLineSelection"
-      },
+
+
+
+
+
+
+
+
+
 
       {
         "key"    : "alt+shift+audiovolumeup",
@@ -254,26 +282,6 @@
       },
 
 
-      {
-        "key"    : "alt+q",
-        "mac"    : "alt+q",
-        "command": "workbench.debug.action.toggleRepl"
-      },{
-        "key"    : "alt+w",
-        "mac"    : "alt+w",
-        "command": "workbench.action.terminal.toggleTerminal"
-      },{
-        "key"    : "alt+e",
-        "mac"    : "alt+e",
-        "command": "gitlens.showGraph"
-      },{
-        "key"    : "pagedown",
-        "mac"    : "pagedown",
-        "command": "workbench.action.togglePanel"
-      },
-
-
-      
 
 
 
