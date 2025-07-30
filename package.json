@@ -228,11 +228,11 @@
         "mac"    : "insert",
         "command": "workbench.action.debug.start"
       },{
-        "key"    : "ctrl+insert",
+        "key"    : "alt+insert",
         "mac"    : "cmd+insert",
         "command": "workbench.action.debug.restart"
       },{
-        "key"    : "alt+insert",
+        "key"    : "ctrl+insert",
         "mac"    : "alt+insert",
         "command": "workbench.action.debug.stop"
       },
