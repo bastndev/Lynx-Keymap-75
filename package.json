@@ -258,6 +258,12 @@
         "mac"    : "cmd+backspace",
         "command": "deleteWordLeft"
       },{
+        "key"    : "alt+backspace",
+        "mac"    : "alt+backspace",
+        "command": "workbench.action.terminal.sendSequence",
+        "args"   : {"text": "\u0001\u000b"},
+        "when"   : "terminalFocus"
+      },     {
         "key"    : "ctrl+delete",
         "mac"    : "cmd+delete",
         "command": "workbench.action.closeFolder"
