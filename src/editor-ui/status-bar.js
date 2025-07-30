@@ -10,7 +10,7 @@ const COLORS = {
   BLUE: '#2b3c4a',
   GREEN: '#1e5739',
   ORANGE: '#4a3c2b',
-  LEMON: '#63741e',
+  LEMON: '#5a6b1a',
   RED: '#4a2b2f',
   WHITE: '#ffffff',
 };
