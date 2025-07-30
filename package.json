@@ -312,11 +312,7 @@
       },      
       
 
-        {
-        "key"    : "ctrl+shift+alt+12",
-        "mac"    : "cmd+shift+alt+12",
-        "command": "workbench.action.chat.toggleAgentMode"
-      },
+
       {
         "key"    : "alt+z",
         "mac"    : "alt+z",
