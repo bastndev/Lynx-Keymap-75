@@ -313,21 +313,13 @@
       
       
       {
-        "key"    : "ctrl+shift+alt+12",
-        "mac"    : "cmd+shift+alt+12",
-        "command": "workbench.action.chat.toggleAgentMode"
-      },{
-        "key"    : "ctrl+shift+alt+11",
-        "mac"    : "ctrl+shift+alt+11",
-        "command": "lynx-keymap.cycleIconColor"
+        "key"    : "alt+z",
+        "mac"    : "alt+z",
+        "command": "lynx-keymap.executeColorAndAgentMacro"
       },{
         "key"    : "alt+x",
         "mac"    : "alt+x",
         "command": "workbench.action.chat.openModelPicker"
-      },{
-        "key"    : "alt+z",
-        "mac"    : "alt+z",
-        "command": "lynx-keymap.executeColorAndAgentMacro"
       },
 
 
