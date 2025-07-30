@@ -342,7 +342,8 @@
       {
         "command": "lynx-keymap.generateAICommit",
         "title"  : "Generate AI Commit Message"
-      },{
+      },
+      {
         "command": "lynx-keymap.executeAIPopup",
         "title"  : "Open AI Chat Interface"
       },{
