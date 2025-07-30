@@ -37,9 +37,9 @@ class AICommandsManager {
       }.bind(this)
     );
 
-    // Command to open AI chat MARK: [Ctrl+tab]
+    // Command to open and close AI chat MARK: [Shift+Tab]
     let chatDisposable = vscode.commands.registerCommand(
-      'lynx-keymap.openAIChat',
+      'lynx-keymap.openAndCloseAIChat',
       async function () {
         const chatCommands = [
           'windsurf.prioritized.chat.open',                    // 0: Windsurf

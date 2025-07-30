@@ -289,7 +289,7 @@
       },{
         "key"    : "shift+tab",
         "mac"    : "shift+tab",
-        "command": "lynx-keymap.openAIChat"
+        "command": "lynx-keymap.openAndCloseAIChat"
       },{
         "key"    : "shift+escape",
         "mac"    : "shift+escape",
@@ -346,8 +346,8 @@
         "command": "lynx-keymap.executeAIPopup",
         "title"  : "Open AI Chat Interface"
       },{
-        "command": "lynx-keymap.openAIChat",
-        "title"  : "Open AI Chat"
+        "command": "lynx-keymap.openAndCloseAIChat",
+        "title"  : "Open and Close AI Chat"
       },{
         "command": "lynx-keymap.createNewAISession",
         "title"  : "Create New AI Session"
