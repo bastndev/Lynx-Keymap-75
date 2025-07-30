@@ -1,8 +1,9 @@
-// AI Commands Configuration
-// Add new AI providers and their commands here
+/* 
+  AI COMMANDS CONFIGURATION
+*/
 
 const AI_COMMANDS_CONFIG = {
-  // AI Commit Generation Commands [Alt+2]
+  // AI COMMIT GENERATION COMMANDS [Alt+2]
   commitCommands: [
     'windsurf.generateCommitMessage',                     // 0: Windsurf
     'github.copilot.git.generateCommitMessage',           // 1: Vscode
@@ -12,7 +13,7 @@ const AI_COMMANDS_CONFIG = {
     // Don't have a Firebase equivalent for this          // 4: Firebase.Studio
   ],
 
-  // AI Popup Commands [Ctrl+`]
+  // AI POPUP COMMANDS [Ctrl+`]
   popupCommands: [
     'windsurf.prioritized.command.open',                  // 0: Windsurf
     'inlineChat.start',                                   // 1: Vscode
@@ -22,7 +23,7 @@ const AI_COMMANDS_CONFIG = {
     // 'kiro.inlineChat.start',                           // 5: Kiro (example)
   ],
 
-  // AI Chat Commands [Shift+Tab]
+  // AI CHAT COMMANDS [Shift+Tab]
   chatCommands: [
     'windsurf.prioritized.chat.open',                     // 0: Windsurf
     'workbench.panel.chat',                               // 1: Vscode
@@ -32,7 +33,7 @@ const AI_COMMANDS_CONFIG = {
     // 'kiro.chat.open',                                  // 5: Kiro (example)
   ],
 
-  // New AI Session Commands [Alt+A]
+  // NEW AI SESSION COMMANDS [Alt+A]
   newSessionCommands: [
     'windsurf.prioritized.chat.openNewConversation',         // 0: Windsurf
     'workbench.action.chat.newEditSession',                  // 1: Vscode
@@ -42,7 +43,7 @@ const AI_COMMANDS_CONFIG = {
     // 'workbench.action.chat.newChat' NF-now                // 4: Firebase.Studio
   ],
 
-  // AI History Commands [Alt+S]
+  // AI HISTORY COMMANDS [Alt+S]
   historyCommands: [
     // ---- ---- ---- ---- --- -- -                       // 0: Windsurf
     'workbench.action.chat.history',                      // 1: Vscode
@@ -52,7 +53,7 @@ const AI_COMMANDS_CONFIG = {
     // Firebase doesn't have a history NF-now             // 4: Firebase.Studio
   ],
 
-  // AI Attach Context Commands [Alt+D]
+  // AI ATTACH CONTEXT COMMANDS [Alt+D]
   attachContextCommands: [
     // ---- ---- ----- --- -- -                          // 0: Windsurf
     'workbench.action.chat.attachContext',               // 1: Vscode
@@ -63,7 +64,7 @@ const AI_COMMANDS_CONFIG = {
   ],
 };
 
-// Keymap Configuration
+// KEYMAP CONFIGURATION
 // Add new keymaps here following the same pattern
 const KEYMAP_CONFIG = [
   {

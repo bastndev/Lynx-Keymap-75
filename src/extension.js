@@ -2,7 +2,7 @@ const vscode = require('vscode');
 const ColorManager = require('./editor-ui/icons/icon-painter');
 const MacroManager = require('./editor-ui/icons/macros');
 const StatusBarManager = require('./editor-ui/status-bar');
-const AICommandsManager = require('./keymaps/ai-commands-manager');
+const AICommandsManager = require('./keymaps/ai-keymap-handler');
 
 // Global instances
 let statusBarManagerInstance;

@@ -1,5 +1,5 @@
 const vscode = require('vscode');
-const { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } = require('./ai-commands-config');
+const { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } = require('./ai-keymap-commands');
 
 class AICommandsManager {
   constructor() {
