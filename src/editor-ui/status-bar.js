@@ -6,11 +6,11 @@ const STATE_MEMENTO_KEY = 'lynx-keymap.colorModeActive';
 const CURRENT_COLOR_KEY = 'lynx-keymap.currentColor';
 
 const COLORS = {
-  BLUE: '#0070bb',
+  BLUE: '#2b3c4a',
   GREEN: '#1e5739',
-  ORANGE: '#b85609',
-  LEMON: '#6c8a01ff',
-  RED: '#8b1538',
+  ORANGE: '#4a3c2b',
+  LEMON: '#63741e',
+  RED: '#4a2b2f',
   WHITE: '#ffffff',
 };
 
