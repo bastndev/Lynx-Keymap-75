@@ -9,8 +9,8 @@ const AI_COMMANDS_CONFIG = {
     'github.copilot.git.generateCommitMessage',           // 1: Vscode
     'cursor.generateGitCommitMessage',                    // 2: Cursor-AI
     'icube.gitGenerateCommitMessage',                     // 3: Trae-AI
-    // 'kiro.generateCommitMessage',                      // 5: Kiro (example)
     // Don't have a Firebase equivalent for this          // 4: Firebase.Studio
+    // 'kiro.generateCommitMessage',                      // 5: Kiro (example)
   ],
 
   // AI POPUP COMMANDS [Ctrl
@@ -39,8 +39,8 @@ const AI_COMMANDS_CONFIG = {
     'workbench.action.chat.newEditSession',                  // 1: Vscode
     'composer.createNew',                                    // 2: Cursor-AI
     'workbench.action.icube.aiChatSidebar.createNewSession', // 3: Trae-AI
-    // 'kiro.newSession',                                    // 5: Kiro (example)
     // 'workbench.action.chat.newChat' NF-now                // 4: Firebase.Studio
+    // 'kiro.newSession',                                    // 5: Kiro (example)
   ],
 
   // AI HISTORY COMMANDS [Alt+S]
@@ -49,8 +49,8 @@ const AI_COMMANDS_CONFIG = {
     'workbench.action.chat.history',                      // 1: Vscode
     'composer.showComposerHistory',                       // 2: Cursor-AI
     'workbench.action.icube.aiChatSidebar.showHistory',   // 3: Trae-AI
-    // 'kiro.showHistory',                                // 5: Kiro (example)
     // Firebase doesn't have a history NF-now             // 4: Firebase.Studio
+    // 'kiro.showHistory',                                // 5: Kiro (example)
   ],
 
   // AI ATTACH CONTEXT COMMANDS [Alt+D]
@@ -58,9 +58,9 @@ const AI_COMMANDS_CONFIG = {
     // ---- ---- ----- --- -- -                          // 0: Windsurf
     'workbench.action.chat.attachContext',               // 1: Vscode
     'composer.openAddContextMenu',                       // 2: Cursor-AI
-    // 'kiro.attachContext',                             // 5: Kiro (example)
     // ---- ---- --- --- -- -                            // 3: Trae-AI
     // 'Workbench.action.openWorkspace' NF-now           // 4: Firebase.Studio
+    // 'kiro.attachContext',                             // 5: Kiro (example)
   ],
 };
 
