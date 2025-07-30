@@ -19,9 +19,9 @@ function activate(context) {
   aiCommandsManagerInstance.registerCommands(context);
 
   // Status bar - [alt+insert]
-  let toggleGreenModeDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.toggleGreenMode',
-    () => statusBarManagerInstance.toggleGreenMode()
+  let toggleStatusBarColorDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.toggleStatusBarColor',
+    () => statusBarManagerInstance.toggleStatusBarColor()
   );
 
   // Icon painter [Alt+z]
@@ -38,7 +38,7 @@ function activate(context) {
 
   // Register commands with VSCode
   context.subscriptions.push(
-    toggleGreenModeDisposable,
+    toggleStatusBarColorDisposable,
     cycleIconColorDisposable,
     colorAndAgentMacroDisposable
   );
@@ -46,7 +46,7 @@ function activate(context) {
 
 async function deactivate() {
   if (statusBarManagerInstance) {
-    await statusBarManagerInstance.deactivateGreenMode();
+    await statusBarManagerInstance.deactivateColorMode();
   }
   if (aiCommandsManagerInstance) {
     aiCommandsManagerInstance.dispose();

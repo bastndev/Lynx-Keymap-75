@@ -205,7 +205,7 @@
       },{
         "key"    : "alt+insert",
         "mac"    : "alt+insert",
-        "command": "lynx-keymap.toggleGreenMode"
+        "command": "lynx-keymap.toggleStatusBarColor"
       },
 
 
@@ -311,7 +311,16 @@
         "command": "lynx-keymap.attachAIContext"
       },      
       
-      
+
+        {
+        "key"    : "ctrl+shift+alt+12",
+        "mac"    : "cmd+shift+alt+12",
+        "command": "workbench.action.chat.toggleAgentMode"
+      },{
+        "key"    : "ctrl+shift+alt+11",
+        "mac"    : "ctrl+shift+alt+11",
+        "command": "lynx-keymap.cycleIconColor"
+      },
       {
         "key"    : "alt+z",
         "mac"    : "alt+z",
@@ -359,14 +368,14 @@
       },
       {
         "command": "lynx-keymap.cycleIconColor",
-        "title"  : "Cycle Icon Color (Red → Blue → Default)"
+        "title"  : "Cycle Icon Color (Red → Blue → Default)[Alt+z]"
       },{
         "command": "lynx-keymap.executeColorAndAgentMacro",
-        "title"  : "Execute Color Change + Agent Mode Toggle Macro"
+        "title"  : "Execute Color Change + Agent Mode Toggle [Macro]"
       },
       {
-        "command": "lynx-keymap.toggleGreenMode",
-        "title"  : "Toggle Lynx Green Mode"
+        "command": "lynx-keymap.toggleStatusBarColor",
+        "title"  : "Toggle (Status Bar) Color"
       }
     ]
 }

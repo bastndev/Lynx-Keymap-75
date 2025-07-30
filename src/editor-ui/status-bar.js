@@ -50,9 +50,9 @@ class StatusBarManager {
   }
 
   /**
-   * Legacy method for backward compatibility
+   * Toggles status bar color mode
    */
-  async toggleGreenMode() {
+  async toggleStatusBarColor() {
     await this.toggleColorMode();
   }
 
