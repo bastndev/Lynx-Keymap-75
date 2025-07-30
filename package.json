@@ -232,8 +232,8 @@
         "mac"    : "cmd+insert",
         "command": "workbench.action.debug.restart"
       },{
-        "key"    : "ctrl+end",
-        "mac"    : "cmd+end",
+        "key"    : "alt+insert",
+        "mac"    : "alt+insert",
         "command": "workbench.action.debug.stop"
       },
 
@@ -320,8 +320,8 @@
       },      
 
       {
-        "key"    : "alt+insert",
-        "mac"    : "alt+insert",
+        "key"    : "ctrl+alt+pagedown",
+        "mac"    : "cmd+alt+pagedown",
         "command": "lynx-keymap.toggleStatusBarColor"
       },
 
