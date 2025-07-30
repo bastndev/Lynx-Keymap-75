@@ -365,7 +365,7 @@
 
       {
         "command": "lynx-keymap.executeColorAndAgentMacro",
-        "title"  : "Execute Color Change + Agent Mode Toggle (Macro)[Alt+z]"
+        "title"  : "Execute Icon Color & Ask/Agent/Edit (Macro)"
       },
       {
         "command": "lynx-keymap.toggleStatusBarColor",
