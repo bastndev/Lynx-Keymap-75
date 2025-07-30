@@ -199,19 +199,15 @@
         "mac"    : "cmd+insert",
         "command": "workbench.action.debug.restart"
       },{
-        "key"    : "end",
-        "mac"    : "end",
+        "key"    : "ctrl+end",
+        "mac"    : "cmd+end",
         "command": "workbench.action.debug.stop"
-      },{
-        "key"    : "alt+insert",
-        "mac"    : "alt+insert",
-        "command": "lynx-keymap.toggleStatusBarColor"
       },
 
 
       {
-        "key"    : "ctrl+end",
-        "mac"    : "cmd+end",
+        "key"    : "end",
+        "mac"    : "end",
         "command": "git.viewChanges"
       },{
         "key"    : "pageup",
@@ -230,6 +226,7 @@
         "command": "workbench.action.closeFolder"
       },
 
+      
       {
         "key"    : "shift+alt+t",
         "mac"    : "shift+alt+t",
@@ -296,7 +293,6 @@
         "command": "workbench.action.toggleMaximizedAuxiliaryBar"
       },
 
-
       {
         "key"    : "alt+a",
         "mac"    : "alt+a",
@@ -310,8 +306,12 @@
         "mac"    : "alt+d",
         "command": "lynx-keymap.attachAIContext"
       },      
-      
 
+      {
+        "key"    : "alt+insert",
+        "mac"    : "alt+insert",
+        "command": "lynx-keymap.toggleStatusBarColor"
+      },
 
       {
         "key"    : "alt+z",
