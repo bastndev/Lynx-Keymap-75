@@ -316,10 +316,6 @@
         "key"    : "ctrl+shift+alt+12",
         "mac"    : "cmd+shift+alt+12",
         "command": "workbench.action.chat.toggleAgentMode"
-      },{
-        "key"    : "ctrl+shift+alt+11",
-        "mac"    : "ctrl+shift+alt+11",
-        "command": "lynx-keymap.cycleIconColor"
       },
       {
         "key"    : "alt+z",
@@ -366,12 +362,10 @@
         "command": "lynx-keymap.attachAIContext",
         "title"  : "Attach Context to AI Chat"
       },
+
       {
-        "command": "lynx-keymap.cycleIconColor",
-        "title"  : "Cycle Icon Color (Red → Blue → Default)[Alt+z]"
-      },{
         "command": "lynx-keymap.executeColorAndAgentMacro",
-        "title"  : "Execute Color Change + Agent Mode Toggle [Macro]"
+        "title"  : "Execute Color Change + Agent Mode Toggle (Macro)[Alt+z]"
       },
       {
         "command": "lynx-keymap.toggleStatusBarColor",
