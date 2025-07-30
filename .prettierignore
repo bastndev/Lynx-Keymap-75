@@ -1,4 +1,3 @@
 package.json
 
-src/keymaps/ai-keymap-handler.js
 src/keymaps/ai-commands.js

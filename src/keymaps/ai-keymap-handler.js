@@ -1,53 +1,64 @@
 const vscode = require('vscode');
 const { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } = require('./ai-keymap-commands');
 
+/**
+ * Manages AI command registration and execution
+ */
 class AICommandsManager {
   constructor() {
     this.disposables = [];
   }
 
-  // Register all AI-related commands
+  /**
+   * Registers AI commands from config
+   */
   registerCommands(context) {
-    // Register commands dynamically from configuration
-    const disposables = KEYMAP_CONFIG.map(config => {
-      return vscode.commands.registerCommand(
-        config.commandId,
-        async () => {
-          const commands = AI_COMMANDS_CONFIG[config.commandsKey];
-          await this.executeFirstAvailableCommand(commands, config.errorMessage);
-        }
-      );
+    // Create command registrations from KEYMAP_CONFIG
+    const disposables = KEYMAP_CONFIG.map((config) => {
+      return vscode.commands.registerCommand(config.commandId, async () => {
+        const commands = AI_COMMANDS_CONFIG[config.commandsKey];
+        await this.executeFirstAvailableCommand(commands, config.errorMessage);
+      });
     });
 
-    // Store all disposables
+    // Store for cleanup
     this.disposables = disposables;
 
-    // Add to context subscriptions
+    // Register with context
     context.subscriptions.push(...this.disposables);
 
     return this.disposables;
   }
 
-  // Helper function to execute the first available command from a list
+  /**
+   * Executes first available command from list
+   */
   async executeFirstAvailableCommand(commands, errorMessage) {
+    // Get available commands
     const allCommands = await vscode.commands.getCommands(true);
+    
+    // Try each command until one succeeds
     for (const cmd of commands) {
       if (allCommands.includes(cmd)) {
         try {
           await vscode.commands.executeCommand(cmd);
-          console.log(`Executed command: ${cmd}`);
+          console.log(`Successfully executed command: ${cmd}`);
           return;
         } catch (error) {
-          console.error(`Error executing command ${cmd}:`, error);
+          console.error(`Failed to execute command ${cmd}:`, error);
         }
       } else {
         console.log(`Command not available: ${cmd}`);
       }
     }
+    
+    // Show warning if no commands worked
     vscode.window.showWarningMessage(errorMessage);
   }
 
-  // Cleanup method
+  /**
+   * Cleans up disposables
+   */
   dispose() {
     this.disposables.forEach((disposable) => {
       if (disposable && typeof disposable.dispose === 'function') {
