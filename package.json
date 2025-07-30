@@ -257,7 +257,7 @@
         "key"    : "ctrl+backspace",
         "mac"    : "cmd+backspace",
         "command": "deleteWordLeft",
-        "when": "editorTextFocus"
+        "when"   : "editorTextFocus"
       },{
         "key"    : "alt+backspace",
         "mac"    : "alt+backspace",
