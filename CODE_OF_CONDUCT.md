@@ -44,11 +44,28 @@ We value all forms of contribution to Lynx Keymap 75%, including:
 
 For detailed guidelines on how to contribute, please see our [Contributing Guidelines](https://github.com/bastndev/Lynx-Keymap-75/blob/main/CONTRIBUTING.md).
 
+## Reporting Issues and Contact
+
+If you experience or witness behavior that violates these guidelines, please report it by email to: **gobasdev@gmail.com**
+
+### Important: Email Subject Line Format
+
+**When contacting the maintainer, please include the project name in your email subject line using this format:**
+
+**Subject: [Lynx Keymap 75%] - [Brief description of your message]**
+
+**Examples:**
+- `[Lynx Keymap 75%] - Code of Conduct Violation Report`
+- `[Lynx Keymap 75%] - Question about Contributing Guidelines`
+- `[Lynx Keymap 75%] - Bug Report Discussion`
+
+This helps ensure your message is properly categorized and receives prompt attention, especially since the maintainer manages multiple open source projects.
+
 ## Enforcement
 
-As the maintainer of this project, I am committed to fairly enforcing this Code of Conduct. If you experience or witness behavior that violates these guidelines, please report it to gobasdev@gmail.com.
+As the maintainer of this project, I am committed to fairly enforcing this Code of Conduct. All reports will be handled confidentially and investigated promptly. 
 
-All reports will be handled confidentially and investigated promptly. Depending on the severity and context, responses may include:
+Depending on the severity and context, responses may include:
 
 1. **First violation**: Private discussion and clarification of expectations
 2. **Repeated issues**: Temporary restriction from participating in project discussions
