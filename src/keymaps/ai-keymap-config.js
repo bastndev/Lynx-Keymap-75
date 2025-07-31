@@ -10,7 +10,7 @@ const AI_COMMANDS_CONFIG = {
     'cursor.generateGitCommitMessage',                    // 2: Cursor-AI
     'icube.gitGenerateCommitMessage',                     // 3: Trae-AI
     // Don't have a Firebase equivalent for this          // 4: Firebase.Studio
-    // 'kiro.generateCommitMessage',                      // 5: Kiro (example)
+    // 'kiro.generateCommitMessage',                      // 5: Kiro
   ],
 
   // AI POPUP COMMANDS MARK:[Ctrl`]
@@ -20,12 +20,12 @@ const AI_COMMANDS_CONFIG = {
     'aipopup.action.modal.generate',                      // 2: Cursor-AI
     'icube.inlineChat.start',                             // 3: Trae-AI
     'workbench.action.terminal.chat.start',               // 4: Firebase.Studio
-    'kiroAgent.inlineChat.start',                         // Kiro
+    'kiroAgent.inlineChat.start',                         // 5: Kiro
   ],
 
   // AI CHAT COMMANDS MARK:[Shift+Tab]
   chatCommands: [
-    'kiroAgent.continueGUIView.focus',                    // Kiro
+    'kiroAgent.continueGUIView.focus',                    // 5: Kiro
     'windsurf.prioritized.chat.open',                     // 0: Windsurf
     'workbench.panel.chat',                               // 1: Vscode
     'aichat.newchataction',                               // 2: Cursor-AI
@@ -40,12 +40,12 @@ const AI_COMMANDS_CONFIG = {
     'composer.createNew',                                    // 2: Cursor-AI
     'workbench.action.icube.aiChatSidebar.createNewSession', // 3: Trae-AI
     // 'workbench.action.chat.newChat' NF-now                // 4: Firebase.Studio
-    'kiroAgent.newSession'                                   // Kiro
+    'kiroAgent.newSession'                                   // 5: Kiro
   ],
 
   // AI HISTORY COMMANDS MARK:[Alt+S]
   historyCommands: [
-    'kiroAgent.viewHistoryChats',                         // Kiro
+    'kiroAgent.viewHistoryChats',                         // 5: Kiro
     // ---- ---- ---- ---- --- -- -                       // 0: Windsurf
     'workbench.action.chat.history',                      // 1: Vscode
     'composer.showComposerHistory',                       // 2: Cursor-AI
@@ -60,7 +60,7 @@ const AI_COMMANDS_CONFIG = {
     'composer.openAddContextMenu',                       // 2: Cursor-AI
     // ---- ---- --- --- -- -                            // 3: Trae-AI
     // 'Workbench.action.openWorkspace' NF-now           // 4: Firebase.Studio
-    // ---- ---- ---- ---- --- -- -                      // 5: Kiro (example)
+    // ---- ---- ---- ---- --- -- -                      // 5: Kiro
   ],
 };
 
