@@ -156,5 +156,4 @@ If you want to contribute, check the guidelines: [[>\_ㅤ]](https://github.com/b
 | [<img src="https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default">](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-theme) | [Lynx Theme](https://github.com/bastndev/Lynx-Theme)   | A sleek, customizable VS Code theme with built‑in support for Cursor‑AI, Windsurf & Trae‑AI integrations.                                       |
 | [<img src="https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/f1/0.2.1/1752544035624/Microsoft.VisualStudio.Services.Icons.Default">](https://marketplace.visualstudio.com/items?itemName=bastndev.f1)                 | [F1](https://github.com/bastndev/F1)                   | A Formula 1 themed VS Code extension with racing-inspired snippets, shortcuts, and development tools for speed coding.                          |
 
-**Enjoy 🎉 your new keybindings! Suggestions or feedback? [Open an issue](https://github.com/bastndev/Lynx-Keymap/issues) or contribute.**
-[MORE](https://marketplace.visualstudio.com/publishers/bastndev)
+**Ready! 🚀 Your keybindings are configured. If you find any bugs or have feedback, you can [open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues).**
