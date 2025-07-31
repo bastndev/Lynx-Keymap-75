@@ -49,10 +49,10 @@
 | open gitlens                       | `⌥ +` E          | `Alt +` E            | `Alt +` E            |
 | close & open panel                 | Page Down        | Page Down            | Page Down            |
 | -                                  | -                | -                    | -                    |
-| select theme (VSCode & more)       | `⇧ + ⌥ +` T      | `Shift + Alt +` T    | `Shift + Alt +` T    |
-| reload window                      | `⇧ + ⌥ +` R      | `Shift + Alt +` R    | `Shift + Alt +` R    |
-| expand line selection              | `⇧ + ⌥ +` E      | `Shift + Alt +` E    | `Shift + Alt +` E    |
-| go to line                         | `⇧ + ⌥ +` W      | `Shift + Alt +` W    | `Shift + Alt +` W    |
+| 🆕 select theme                    | `⇧ + ⌥ +` T      | `Shift + Alt +` T    | `Shift + Alt +` T    |
+| 🆕 reload window                   | `⇧ + ⌥ +` R      | `Shift + Alt +` R    | `Shift + Alt +` R    |
+| 🆕 expand line selection           | `⇧ + ⌥ +` E      | `Shift + Alt +` E    | `Shift + Alt +` E    |
+| 🆕 go to line (n.º)                | `⇧ + ⌥ +` W      | `Shift + Alt +` W    | `Shift + Alt +` W    |
 | -                                  | -                | -                    | -                    |
 | start debugging                    | Insert           | Insert               | Insert               |
 | restart debugging                  | `⌥ +` Insert     | `Alt +` Insert       | `Alt +` Insert       |
@@ -89,7 +89,7 @@
 | (AI) show chat history                | ⌥ + S      | Alt + S     | Alt + S     |
 | (AI) attach context                   | ⌥ + D      | Alt + D     | Alt + D     |
 | -                                     | -          | -           | -           |
-| close inline chat                     | ⌥ + Return | Alt + Enter | Alt + Enter |
+| close inline chat (popup)             | ⌥ + Return | Alt + Enter | Alt + Enter |
 | -                                     | -          | -           | -           |
 | Ask, Agent, Edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ       | ⌥ + Z      | Alt + Z     | Alt + Z     |
 | pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ           | ⌥ + X      | Alt + X     | Alt + X     |
