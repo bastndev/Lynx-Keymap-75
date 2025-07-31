@@ -81,19 +81,19 @@
 
 ### (AI ✨) Commands Easy
 
-| Command                               | 🍎 macOS   | 🟦 Windows  | 🐧 Linux    |
-| :------------------------------------ | :--------- | :---------- | :---------- |
-| (AI) chat interface (popup/modal)     | ⌘ + `      | Ctrl + `    | Ctrl + `    |
-| (AI) chat (open/close) x2 click first | ⇧ + Tab    | Shift + Tab | Shift + Tab |
-| (AI) create new session               | ⌥ + A      | Alt + A     | Alt + A     |
-| (AI) show chat history                | ⌥ + S      | Alt + S     | Alt + S     |
-| (AI) attach context                   | ⌥ + D      | Alt + D     | Alt + D     |
-| -                                     | -          | -           | -           |
-| close inline chat (popup)             | ⌥ + Return | Alt + Enter | Alt + Enter |
-| -                                     | -          | -           | -           |
-| Ask, Agent, Edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ       | ⌥ + Z      | Alt + Z     | Alt + Z     |
-| pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ           | ⌥ + X      | Alt + X     | Alt + X     |
-| maximized & minimize (AI) ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ | ⇧ + Esc    | Shift + Esc | Shift + Esc |
+| Command                                      | 🍎 macOS   | 🟦 Windows  | 🐧 Linux    |
+| :------------------------------------------- | :--------- | :---------- | :---------- |
+| (AI) chat interface (popup/modal)            | ⌘ + `      | Ctrl + `    | Ctrl + `    |
+| (AI) chat (open/close) x2 click first        | ⇧ + Tab    | Shift + Tab | Shift + Tab |
+| (AI) create new session                      | ⌥ + A      | Alt + A     | Alt + A     |
+| (AI) show chat history                       | ⌥ + S      | Alt + S     | Alt + S     |
+| (AI) attach context                          | ⌥ + D      | Alt + D     | Alt + D     |
+| -                                            | -          | -           | -           |
+| close inline chat (popup), cancel suggestion | ⌥ + Return | Alt + Enter | Alt + Enter |
+| -                                            | -          | -           | -           |
+| Ask, Agent, Edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ              | ⌥ + Z      | Alt + Z     | Alt + Z     |
+| pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ                  | ⌥ + X      | Alt + X     | Alt + X     |
+| maximized & minimize (AI) ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ        | ⇧ + Esc    | Shift + Esc | Shift + Esc |
 
 </br>
 
