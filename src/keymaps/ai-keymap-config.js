@@ -10,7 +10,7 @@ const AI_COMMANDS_CONFIG = {
     'cursor.generateGitCommitMessage',                    // 2: Cursor-AI
     'icube.gitGenerateCommitMessage',                     // 3: Trae-AI
     // Don't have a Firebase equivalent for this          // 4: Firebase.Studio
-    // 'kiro.generateCommitMessage',                      // 5: Kiro
+    // ---- ---- ---- ---- --- -- -                       // 5: Kiro
   ],
 
   // AI POPUP COMMANDS MARK:[Ctrl`]
@@ -30,7 +30,7 @@ const AI_COMMANDS_CONFIG = {
     'aichat.newchataction',                               // 2: Cursor-AI
     'workbench.action.chat.icube.open',                   // 3: Trae-AI
     'aichat.prompt',                                      // 4: Firebase.Studio
-    'kiroAgent.continueGUIView.focus',                    // 5: Kiro
+    'workbench.action.toggleAuxiliaryBar',                // 5: Kiro
   ],
 
   // NEW AI SESSION COMMANDS MARK:[Alt+A]
