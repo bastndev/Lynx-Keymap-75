@@ -102,12 +102,12 @@
 
       {
         "key"    : "alt+enter",
-        "mac"    : "alt+enter",
+        "mac"    : "alt+return",
         "command": "git.commit",
         "when"   : "scmProvider == git"
       },{
         "key"    : "ctrl+alt+enter",
-        "mac"    : "cmd+alt+enter",
+        "mac"    : "cmd+alt+return",
         "command": "git.push",
         "when"   : "scmProvider == git"
       },
@@ -226,11 +226,11 @@
         "command": "workbench.action.debug.start"
       },{
         "key"    : "alt+insert",
-        "mac"    : "cmd+insert",
+        "mac"    : "alt+insert",
         "command": "workbench.action.debug.restart"
       },{
         "key"    : "ctrl+insert",
-        "mac"    : "alt+insert",
+        "mac"    : "cmd+insert",
         "command": "workbench.action.debug.stop"
       },
 
@@ -342,15 +342,14 @@
 
       {
         "key"    : "ctrl+enter",
-        "mac"    : "cmd+enter",
+        "mac"    : "cmd+return",
         "command": "-github.copilot.generate"
       },{
         "key"    : "alt+enter",
-        "mac"    : "alt+enter",
+        "mac"    : "alt+return",
         "command": "inlineChat.close",
         "when"   : "inlineChatFocused"
       }
-
     ]
   },
 
