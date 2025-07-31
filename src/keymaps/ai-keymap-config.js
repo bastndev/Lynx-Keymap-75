@@ -45,10 +45,10 @@ const AI_COMMANDS_CONFIG = {
 
   // AI HISTORY COMMANDS MARK:[Alt+S]
   historyCommands: [
+    'composer.showComposerHistory',                       // 2: Cursor-AI
     'kiroAgent.viewHistoryChats',                         // 5: Kiro
     // ---- ---- ---- ---- --- -- -                       // 0: Windsurf
     'workbench.action.chat.history',                      // 1: Vscode
-    'composer.showComposerHistory',                       // 2: Cursor-AI
     'workbench.action.icube.aiChatSidebar.showHistory',   // 3: Trae-AI
     // Firebase doesn't have a history NF-now             // 4: Firebase.Studio
   ],
