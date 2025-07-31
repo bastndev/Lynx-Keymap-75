@@ -25,12 +25,12 @@ const AI_COMMANDS_CONFIG = {
 
   // AI CHAT COMMANDS MARK:[Shift+Tab]
   chatCommands: [
-    'kiroAgent.continueGUIView.focus',                    // 5: Kiro
     'windsurf.prioritized.chat.open',                     // 0: Windsurf
     'workbench.panel.chat',                               // 1: Vscode
     'aichat.newchataction',                               // 2: Cursor-AI
     'workbench.action.chat.icube.open',                   // 3: Trae-AI
     'aichat.prompt',                                      // 4: Firebase.Studio
+    'kiroAgent.continueGUIView.focus',                    // 5: Kiro
   ],
 
   // NEW AI SESSION COMMANDS MARK:[Alt+A]
