@@ -29,6 +29,27 @@ Discover more extensions at [bastndev.com/extensions](https://bastndev.com/exten
 
 Following semantic versioning principles for consistent and predictable releases.
 
+## [1.1.1] - 2025-07-31
+
+### Added
+- **New Keyboard Shortcuts**: Enhanced productivity with additional keymaps
+  - `Shift + Alt + T` - Select theme (quick theme switching)
+  - `Shift + Alt + R` - Reload window (instant environment refresh)
+  - `Shift + Alt + E` - Go to line (precise navigation)
+  - `Shift + Alt + W` - Expand line selection (enhanced text selection)
+- **Community Documentation**: Professional contribution guidelines
+  - `CODE_OF_CONDUCT.md` - Community standards and behavior guidelines
+  - `CONTRIBUTING.md` - Developer contribution instructions and workflow
+
+### Changed
+- **Enhanced README**: Improved documentation structure and presentation
+- **Optimized Existing Keymaps**: Refined shortcut combinations for better ergonomics
+
+### Improved
+- Better keymap organization and categorization
+- Enhanced user experience with more intuitive shortcuts
+- Strengthened project governance with community guidelines
+
 ## [1.0.7] - 2025-07-24
 
 ### Added
