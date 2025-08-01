@@ -30,6 +30,7 @@
 | open explorer                      | `⌘ +` 1          | `Ctrl +` 1           | `Ctrl +` 1           |
 | open source control (scm)          | `⌘ +` 2          | `Ctrl +` 2           | `Ctrl +` 2           |
 | open extensions                    | `⌘ +` 3          | `Ctrl +` 3           | `Ctrl +` 3           |
+| open F1- Quick Switch              | `⌘ +` 4          | `Ctrl +` 4           | `Ctrl +` 4           |
 | close & open sidebar               | `⌘ +` Tab        | `Ctrl +` Tab         | `Ctrl +` Tab         |
 | -                                  | -                | -                    | -                    |
 | new file                           | `⌥ +` C          | `Alt +` C            | `Alt +` C            |
@@ -161,6 +162,5 @@ If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/ba
 | [<img src="https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default">](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)   | It is a professional theming extension with five visual modes: Dark, Light, Night, Ghibli, and Coffee Mode—each optimized for different development contexts. It includes integrated icons that complement each theme, offering a more pleasant visual experience.      |
 
 **Ready! 🚀 Your keybindings are configured. If you find any bugs or have feedback, you can [open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues).**
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
