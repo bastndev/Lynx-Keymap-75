@@ -24,42 +24,86 @@ class ExtensionChecker {
 
         const extension = vscode.extensions.getExtension(dependency.extensionId);
         if (!extension) {
-            this.showExtensionRequiredNotification(dependency);
+            this.showExtensionRequiredNotification(dependency, commandId);
         } else if (!extension.isActive) {
             extension.activate().then(() => {
                 vscode.commands.executeCommand(commandId);
             }).catch(() => {
-                this.showExtensionActivationError(dependency);
+                this.showExtensionActivationError(dependency, commandId);
             });
         } else {
             vscode.commands.executeCommand(commandId);
         }
     }
 
-    showExtensionRequiredNotification(dependency) {
-        const message = `📥 Download the "${dependency.displayName}" extension before using this shortcut`;
+    showExtensionRequiredNotification(dependency, commandId) {
+        const message = `📥 The extension "${dependency.displayName}" is required for this command`;
         vscode.window.showInformationMessage(
             message,
-            'Download Extension',
+            'Install Extension',
             'Cancel'
         ).then(selection => {
-            if (selection === 'Download Extension') {
-                vscode.commands.executeCommand('workbench.extensions.search', dependency.marketplaceSearch);
+            if (selection === 'Install Extension') {
+                this.installExtension(dependency, commandId);
             }
         });
     }
 
-    showExtensionActivationError(dependency) {
+    async installExtension(dependency, commandId) {
+        try {
+            // Show progress notification
+            vscode.window.withProgress({
+                location: vscode.ProgressLocation.Notification,
+                title: `Installing ${dependency.displayName}...`,
+                cancellable: false
+            }, async (progress) => {
+                progress.report({ increment: 0, message: "Downloading..." });
+                
+                // Install the extension using VS Code command
+                await vscode.commands.executeCommand('workbench.extensions.installExtension', dependency.extensionId);
+                
+                progress.report({ increment: 50, message: "Activating..." });
+                
+                // Wait a moment for the installation to complete
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                progress.report({ increment: 100, message: "Completed" });
+            });
+
+            // Show success message and ask if the command should be executed
+            const result = await vscode.window.showInformationMessage(
+                `✅ ${dependency.displayName} installed successfully`,
+                'Run Command',
+                'OK'
+            );
+
+            if (result === 'Run Command') {
+                // Execute the original command after installation
+                setTimeout(() => {
+                    this.checkAndExecuteCommand(commandId);
+                }, 1000);
+            }
+
+        } catch (error) {
+            // Handle installation errors
+            vscode.window.showErrorMessage(
+                `❌ Error installing ${dependency.displayName}: ${error.message}`,
+                'Open Marketplace'
+            ).then(selection => {
+                if (selection === 'Open Marketplace') {
+                    vscode.commands.executeCommand('workbench.extensions.search', dependency.marketplaceSearch);
+                }
+            });
+        }
+    }
+
+    showExtensionActivationError(dependency, commandId) {
         vscode.window.showErrorMessage(
-            `$(error) Error activating the "${dependency.displayName}" extension`,
+            `$(error) Error activating "${dependency.displayName}"`,
             'Retry'
         ).then(selection => {
             if (selection === 'Retry') {
                 setTimeout(() => {
-                    // Fix: Find the correct commandId for this dependency
-                    const commandId = Object.keys(this.extensionDependencies).find(
-                        key => this.extensionDependencies[key] === dependency
-                    );
                     this.checkAndExecuteCommand(commandId);
                 }, 1000);
             }
