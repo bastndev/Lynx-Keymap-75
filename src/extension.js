@@ -23,7 +23,7 @@ function activate(context) {
 
   // Register extension checker commands
   extensionCheckerInstance.registerCheckCommands(context);
-  extensionCheckerInstance.createGenericChecker(context);
+  // REMOVED: extensionCheckerInstance.createGenericChecker(context);
 
   // Status bar - [ctrl+alt+pagedown]
   let toggleStatusBarColorDisposable = vscode.commands.registerCommand(
@@ -65,8 +65,9 @@ function activate(context) {
   );
 
   // Check extensions status on activation (optional)
-  // Uncomment the next line if you want to check extensions on startup
-  // extensionCheckerInstance.checkAllExtensionsStatus();
+  // Uncomment the next lines if you want to check extensions on startup
+  // extensionCheckerInstance.checkF1TogglesStatus();
+  // extensionCheckerInstance.checkGitLensStatus();
 
   console.log('Lynx Keymap 75 is now active! 🎯');
 }

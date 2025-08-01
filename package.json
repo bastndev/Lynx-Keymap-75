@@ -137,7 +137,7 @@
       },{
         "key"    : "alt+e",
         "mac"    : "alt+e",
-        "command": "gitlens.showGraph"
+        "command": "lynx-keymap.checkGitLens"
       },{
         "key"    : "pagedown",
         "mac"    : "pagedown",
@@ -391,6 +391,9 @@
       {
       "command": "lynx-keymap.checkF1Toggles",
       "title"  : "Check F1-Toggles Extension and Execute"
+      },{
+      "command": "lynx-keymap.checkGitLens",
+      "title"  : "Check GitLens Extension and Execute"
       }
     ]
 }
