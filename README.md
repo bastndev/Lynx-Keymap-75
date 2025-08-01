@@ -51,8 +51,8 @@
 | -                                  | -                | -                    | -                    |
 | 🆕 select theme                    | `⇧ + ⌥ +` T      | `Shift + Alt +` T    | `Shift + Alt +` T    |
 | 🆕 reload window                   | `⇧ + ⌥ +` R      | `Shift + Alt +` R    | `Shift + Alt +` R    |
-| 🆕 expand line selection           | `⇧ + ⌥ +` E      | `Shift + Alt +` E    | `Shift + Alt +` E    |
-| 🆕 go to line (n.º)                | `⇧ + ⌥ +` W      | `Shift + Alt +` W    | `Shift + Alt +` W    |
+| 🆕 go to line (n.º)                | `⇧ + ⌥ +` E      | `Shift + Alt +` E    | `Shift + Alt +` E    |
+| 🆕 expand line selection           | `⇧ + ⌥ +` W      | `Shift + Alt +` W    | `Shift + Alt +` W    |
 | -                                  | -                | -                    | -                    |
 | start debugging                    | Insert           | Insert               | Insert               |
 | restart debugging                  | `⌥ +` Insert     | `Alt +` Insert       | `Alt +` Insert       |
