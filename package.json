@@ -63,7 +63,7 @@
       },{
         "key"    : "ctrl+4",
         "mac"    : "cmd+4",
-        "command": "f1-toggles.focus"
+        "command": "lynx-keymap.checkF1Toggles"
       },
       
 
@@ -386,6 +386,11 @@
       {
         "command": "lynx-keymap.toggleStatusBarColor",
         "title"  : "Toggle (Status Bar) Color"
+      },
+
+      {
+      "command": "lynx-keymap.checkF1Toggles",
+      "title"  : "Check F1-Toggles Extension and Execute"
       }
     ]
 }

@@ -3,10 +3,12 @@ const ColorManager = require('./editor-ui/icons/icon-painter');
 const MacroManager = require('./editor-ui/icons/macros');
 const StatusBarManager = require('./editor-ui/status-bar');
 const AICommandsManager = require('./keymaps/ai-keymap-handler');
+const ExtensionChecker = require('./notifications/extension-checker');
 
 // Global instances
 let statusBarManagerInstance;
 let aiCommandsManagerInstance;
+let extensionCheckerInstance;
 
 function activate(context) {
   // Initialize managers
@@ -14,11 +16,16 @@ function activate(context) {
   const macroManager = new MacroManager();
   statusBarManagerInstance = new StatusBarManager(context);
   aiCommandsManagerInstance = new AICommandsManager();
+  extensionCheckerInstance = new ExtensionChecker();
 
   // Register AI commands
   aiCommandsManagerInstance.registerCommands(context);
 
-  // Status bar - [alt+insert]
+  // Register extension checker commands
+  extensionCheckerInstance.registerCheckCommands(context);
+  extensionCheckerInstance.createGenericChecker(context);
+
+  // Status bar - [ctrl+alt+pagedown]
   let toggleStatusBarColorDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleStatusBarColor',
     () => statusBarManagerInstance.toggleStatusBarColor()
@@ -36,12 +43,32 @@ function activate(context) {
     () => macroManager.executeColorAndAgentMacro()
   );
 
+  // Command with extension check - F1 Toggles [ctrl+4]
+  let checkF1TogglesDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.checkF1Toggles',
+    () => extensionCheckerInstance.checkAndExecuteCommand('f1-toggles.focus', context)
+  );
+
+  // Command with extension check - GitLens Graph [alt+e]
+  let checkGitLensDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.checkGitLens',
+    () => extensionCheckerInstance.checkAndExecuteCommand('gitlens.showGraph', context)
+  );
+
   // Register commands with VSCode
   context.subscriptions.push(
     toggleStatusBarColorDisposable,
     cycleIconColorDisposable,
-    colorAndAgentMacroDisposable
+    colorAndAgentMacroDisposable,
+    checkF1TogglesDisposable,
+    checkGitLensDisposable
   );
+
+  // Check extensions status on activation (optional)
+  // Uncomment the next line if you want to check extensions on startup
+  // extensionCheckerInstance.checkAllExtensionsStatus();
+
+  console.log('Lynx Keymap 75 is now active! 🎯');
 }
 
 async function deactivate() {
