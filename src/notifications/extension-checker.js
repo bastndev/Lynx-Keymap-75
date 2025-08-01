@@ -72,9 +72,16 @@ class ExtensionChecker {
         vscode.window.showInformationMessage(
             `📥 Downloading ${dependency.displayName}...`
         );
+        // Simulate download (4s)
         await new Promise(resolve => setTimeout(resolve, 4000));
+
+        // Install extension
         await vscode.commands.executeCommand('workbench.extensions.installExtension', dependency.extensionId);
+
+        // Wait for install (2s)
         await new Promise(resolve => setTimeout(resolve, 2000));
+        
+        // Show success message
         vscode.window.showInformationMessage(
             `✅ ${dependency.displayName} installed successfully`
         );
