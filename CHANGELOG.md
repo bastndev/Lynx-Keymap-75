@@ -29,6 +29,25 @@ Discover more extensions at [bastndev.com/extensions](https://bastndev.com/exten
 
 Following semantic versioning principles for consistent and predictable releases.
 
+## [1.2.0] - 2025-08-01
+
+### Added
+- **Custom Notifications**: Introduced personalized notification system for keymap events and updates
+  - Receive in-editor alerts for new shortcut releases and important changes
+  - Customizable notification preferences per editor
+- **Extension Check Shortcuts**: Added new commands for extension checks
+  - `lynx-keymap.checkF1Toggles` - Checks if the F1-Toggles extension is installed; prompts to install if missing
+  - `lynx-keymap.checkGitLens` - Checks if the GitLens extension is installed; prompts to install if missing
+
+### Improved
+- Enhanced user feedback for shortcut activation
+- Improved onboarding experience with notification-driven tips
+
+### Fixed
+- Minor bugs related to notification display on certain platforms
+- Resolved rare issues with notification timing in Cursor and Windsurf editors
+
+
 ## [1.1.1] - 2025-07-31
 
 ### Added

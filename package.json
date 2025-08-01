@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & (Firebase Studio)... 雨",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -60,6 +60,10 @@
         "key"    : "ctrl+3",
         "mac"    : "cmd+3",
         "command": "workbench.view.extensions"
+      },{
+        "key"    : "ctrl+4",
+        "mac"    : "cmd+4",
+        "command": "lynx-keymap.checkF1Toggles"
       },
       
 
@@ -133,7 +137,7 @@
       },{
         "key"    : "alt+e",
         "mac"    : "alt+e",
-        "command": "gitlens.showGraph"
+        "command": "lynx-keymap.checkGitLens"
       },{
         "key"    : "pagedown",
         "mac"    : "pagedown",
@@ -382,6 +386,14 @@
       {
         "command": "lynx-keymap.toggleStatusBarColor",
         "title"  : "Toggle (Status Bar) Color"
+      },
+
+      {
+      "command": "lynx-keymap.checkF1Toggles",
+      "title"  : "Check F1-Toggles Extension and Execute"
+      },{
+      "command": "lynx-keymap.checkGitLens",
+      "title"  : "Check GitLens Extension and Execute"
       }
     ]
 }
