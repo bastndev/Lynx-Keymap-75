@@ -16,7 +16,7 @@
 | Command                                 | 🍎 macOS       | 🟦 Windows          | 🐧 Linux            |
 | :-------------------------------------- | :------------- | :------------------ | :------------------ |
 | 🧪 ask, agent, edit 🔁 `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`    | `⌥ + Z`        | `Alt + Z`           | `Alt + Z`           |
-| 🧪 bottom color change 🟦 🟩 🔲         | `⌘ + ⌥ + PgDn` | `Ctrl + Alt + PgDn` | `Ctrl + Alt + PgDn` |
+| 🧪 toggle (status bar) color            | `⌘ + ⌥ + PgDn` | `Ctrl + Alt + PgDn` | `Ctrl + Alt + PgDn` |
 | -                                       | -              | -                   | -                   |
 | pick (AI) model `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`           | `⌥ + X`        | `Alt + X`           | `Alt + X`           |
 | maximized & minimize (AI) `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ` | `⇧ + Esc`      | `Shift + Esc`       | `Shift + Esc`       |
