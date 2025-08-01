@@ -51,38 +51,29 @@ class ExtensionChecker {
 
     async installExtension(dependency, commandId) {
         try {
-            // Show progress notification
-            vscode.window.withProgress({
-                location: vscode.ProgressLocation.Notification,
-                title: `Installing ${dependency.displayName}...`,
-                cancellable: false
-            }, async (progress) => {
-                progress.report({ increment: 0, message: "Downloading..." });
-                
-                // Install the extension using VS Code command
-                await vscode.commands.executeCommand('workbench.extensions.installExtension', dependency.extensionId);
-                
-                progress.report({ increment: 50, message: "Activating..." });
-                
-                // Wait a moment for the installation to complete
-                await new Promise(resolve => setTimeout(resolve, 2000));
-                
-                progress.report({ increment: 100, message: "Completed" });
-            });
-
-            // Show success message and ask if the command should be executed
-            const result = await vscode.window.showInformationMessage(
-                `✅ ${dependency.displayName} installed successfully`,
-                'Run Command',
-                'OK'
+            // 1. First notification: Downloading
+            vscode.window.showInformationMessage(
+                `📥 Downloading ${dependency.displayName}...`
+            );
+            
+            // Wait to simulate download
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // Install the extension using VS Code command (no intermediate notification)
+            await vscode.commands.executeCommand('workbench.extensions.installExtension', dependency.extensionId);
+            
+            // Wait to complete installation
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // 2. Success notification
+            vscode.window.showInformationMessage(
+                `✅ ${dependency.displayName} installed successfully`
             );
 
-            if (result === 'Run Command') {
-                // Execute the original command after installation
-                setTimeout(() => {
-                    this.checkAndExecuteCommand(commandId);
-                }, 1000);
-            }
+            // Execute command automatically after brief delay
+            setTimeout(() => {
+                this.checkAndExecuteCommand(commandId);
+            }, 2000);
 
         } catch (error) {
             // Handle installation errors
