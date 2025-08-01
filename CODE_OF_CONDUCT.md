@@ -56,8 +56,8 @@ If you experience or witness behavior that violates these guidelines, please rep
 
 **Examples:**
 - `[Lynx Keymap 75%] - Code of Conduct Violation Report`
-- `[Lynx Keymap 75%] - Question about Contributing Guidelines`
-- `[Lynx Keymap 75%] - Bug Report Discussion`
+- `[Lynx Keymap 75%] - Project Collaboration Inquiry`
+- `[Lynx Keymap 75%] - General Project Discussion`
 
 This helps ensure your message is properly categorized and receives prompt attention, especially since the maintainer manages multiple open source projects.
 
