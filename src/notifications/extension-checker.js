@@ -168,10 +168,7 @@ class ExtensionChecker {
 
   registerCheckCommands(context) {
     Object.keys(this.extensionDependencies).forEach((commandId) => {
-      const checkCommandId = `lynx-keymap.check-${commandId.replace(
-        /\./g,
-        '-'
-      )}`;
+      const checkCommandId = `lynx-keymap.check-${commandId.replace(/\./g,'-')}`;
       const disposable = vscode.commands.registerCommand(checkCommandId, () => {
         this.checkAndExecuteCommand(commandId, context);
       });
