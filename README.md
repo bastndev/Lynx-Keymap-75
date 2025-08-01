@@ -30,7 +30,7 @@
 | open explorer                      | `⌘ +` 1          | `Ctrl +` 1           | `Ctrl +` 1           |
 | open source control (scm)          | `⌘ +` 2          | `Ctrl +` 2           | `Ctrl +` 2           |
 | open extensions                    | `⌘ +` 3          | `Ctrl +` 3           | `Ctrl +` 3           |
-| open F1- Quick Switch              | `⌘ +` 4          | `Ctrl +` 4           | `Ctrl +` 4           |
+| open F1-Quick Switch               | `⌘ +` 4          | `Ctrl +` 4           | `Ctrl +` 4           |
 | close & open sidebar               | `⌘ +` Tab        | `Ctrl +` Tab         | `Ctrl +` Tab         |
 | -                                  | -                | -                    | -                    |
 | new file                           | `⌥ +` C          | `Alt +` C            | `Alt +` C            |
