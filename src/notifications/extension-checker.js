@@ -14,10 +14,11 @@ class ExtensionChecker {
         marketplaceSearch: 'eamodio.gitlens',
       },
     };
-    this.currentNotificationTimeout = null;
+    this.activeTimeouts = new Set();
+    this.installationInProgress = new Set();
   }
 
-  checkAndExecuteCommand(commandId, context) {
+  async checkAndExecuteCommand(commandId, context) {
     const dependency = this.extensionDependencies[commandId];
     if (!dependency) {
       return vscode.commands.executeCommand(commandId);
@@ -26,17 +27,16 @@ class ExtensionChecker {
     const extension = vscode.extensions.getExtension(dependency.extensionId);
     if (!extension) {
       this.showExtensionRequiredNotification(dependency, commandId);
-    } else if (!extension.isActive) {
-      extension
-        .activate()
-        .then(() => {
-          vscode.commands.executeCommand(commandId);
-        })
-        .catch(() => {
-          this.showExtensionActivationError(dependency, commandId);
-        });
-    } else {
-      vscode.commands.executeCommand(commandId);
+      return;
+    }
+
+    try {
+      if (!extension.isActive) {
+        await extension.activate();
+      }
+      await vscode.commands.executeCommand(commandId);
+    } catch (error) {
+      this.showExtensionActivationError(dependency, commandId, error);
     }
   }
 
@@ -51,68 +51,119 @@ class ExtensionChecker {
       });
   }
 
-  clearCurrentNotificationTimeout() {
-    if (this.currentNotificationTimeout) {
-      clearTimeout(this.currentNotificationTimeout);
-      this.currentNotificationTimeout = null;
-    }
+  clearAllTimeouts() {
+    this.activeTimeouts.forEach((timeout) => clearTimeout(timeout));
+    this.activeTimeouts.clear();
+  }
+
+  createTimeout(callback, delay) {
+    const timeout = setTimeout(() => {
+      this.activeTimeouts.delete(timeout);
+      callback();
+    }, delay);
+    this.activeTimeouts.add(timeout);
+    return timeout;
   }
 
   showTemporaryNotification(message, duration = 2000) {
-    this.clearCurrentNotificationTimeout();
-    const notification = vscode.window.showInformationMessage(message);
-    this.currentNotificationTimeout = setTimeout(() => {
-      // Notification will disappear naturally
+    // Clear any existing timeouts to prevent overlapping notifications
+    this.clearAllTimeouts();
+
+    // Show the notification
+    vscode.window.showInformationMessage(message);
+
+    // The timeout is just for internal tracking, notifications auto-dismiss
+    this.createTimeout(() => {
+      // Notification will disappear naturally after VSCode's default duration
     }, duration);
-    return notification;
   }
 
   async installExtension(dependency, commandId) {
+    // Prevent multiple installations of the same extension
+    if (this.installationInProgress.has(dependency.extensionId)) {
+      return;
+    }
+
+    this.installationInProgress.add(dependency.extensionId);
+
     try {
-        vscode.window.showInformationMessage(
-            `📥 Downloading ${dependency.displayName}...`
-        );
-        // Simulate download (4s)
-        await new Promise(resolve => setTimeout(resolve, 4000));
+      // Show downloading message
+      vscode.window.showInformationMessage(
+        `📥 Downloading ${dependency.displayName}...`
+      );
 
-        // Install extension
-        await vscode.commands.executeCommand('workbench.extensions.installExtension', dependency.extensionId);
+      // Simulate download time (like original)
+      await new Promise((resolve) => setTimeout(resolve, 4000));
 
-        // Wait for install (2s)
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        // Show success message
-        vscode.window.showInformationMessage(
-            `✅ ${dependency.displayName} installed successfully`
+      // Install extension
+      await vscode.commands.executeCommand(
+        'workbench.extensions.installExtension',
+        dependency.extensionId
+      );
+
+      // Wait for extension to be available
+      let attempts = 0;
+      const maxAttempts = 10;
+      while (attempts < maxAttempts) {
+        const extension = vscode.extensions.getExtension(
+          dependency.extensionId
         );
-        setTimeout(() => {
-            this.checkAndExecuteCommand(commandId);
-        }, 1500);
+        if (extension) break;
+
+        await new Promise((resolve) => setTimeout(resolve, 500));
+        attempts++;
+      }
+
+      // Show success message (this will replace the downloading message visually)
+      vscode.window.showInformationMessage(
+        `✅ ${dependency.displayName} installed successfully`
+      );
+
+      // Execute the original command after success message shows
+      this.createTimeout(() => {
+        this.checkAndExecuteCommand(commandId);
+      }, 1500);
     } catch (error) {
-        vscode.window.showErrorMessage(
-            `❌ Error installing ${dependency.displayName}: ${error.message}`,
-            'Open Marketplace'
-        ).then(selection => {
-            if (selection === 'Open Marketplace') {
-                vscode.commands.executeCommand('workbench.extensions.search', dependency.marketplaceSearch);
-            }
-        });
+      const selection = await vscode.window.showErrorMessage(
+        `❌ Failed to install ${dependency.displayName}: ${error.message}`,
+        'Open Marketplace',
+        'Retry'
+      );
+
+      if (selection === 'Open Marketplace') {
+        vscode.commands.executeCommand(
+          'workbench.extensions.search',
+          dependency.marketplaceSearch
+        );
+      } else if (selection === 'Retry') {
+        this.createTimeout(() => {
+          this.installExtension(dependency, commandId);
+        }, 1000);
+      }
+    } finally {
+      this.installationInProgress.delete(dependency.extensionId);
     }
   }
 
-  showExtensionActivationError(dependency, commandId) {
-    vscode.window
-      .showErrorMessage(
-        `$(error) Error activating "${dependency.displayName}"`,
-        'Retry'
-      )
-      .then((selection) => {
-        if (selection === 'Retry') {
-          setTimeout(() => {
-            this.checkAndExecuteCommand(commandId);
-          }, 1000);
-        }
-      });
+  async showExtensionActivationError(dependency, commandId, error) {
+    const selection = await vscode.window.showErrorMessage(
+      `❌ Failed to activate "${dependency.displayName}": ${
+        error?.message || 'Unknown error'
+      }`,
+      'Retry',
+      'Open Marketplace'
+    );
+
+    if (selection === 'Retry') {
+      this.createTimeout(() => {
+        this.checkAndExecuteCommand(commandId);
+      }, 1000);
+    } else if (selection === 'Open Marketplace') {
+      vscode.commands.executeCommand(
+        'workbench.extensions.search',
+        dependency.marketplaceSearch
+      );
+    }
   }
 
   registerCheckCommands(context) {
@@ -129,7 +180,8 @@ class ExtensionChecker {
   }
 
   dispose() {
-    this.clearCurrentNotificationTimeout();
+    this.clearAllTimeouts();
+    this.installationInProgress.clear();
   }
 }
 
