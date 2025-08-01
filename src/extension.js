@@ -20,10 +20,8 @@ function activate(context) {
 
   // Register AI commands
   aiCommandsManagerInstance.registerCommands(context);
-
   // Register extension checker commands
   extensionCheckerInstance.registerCheckCommands(context);
-  // REMOVED: extensionCheckerInstance.createGenericChecker(context);
 
   // Status bar - [ctrl+alt+pagedown]
   let toggleStatusBarColorDisposable = vscode.commands.registerCommand(
@@ -46,13 +44,21 @@ function activate(context) {
   // Command with extension check - F1 Toggles [ctrl+4]
   let checkF1TogglesDisposable = vscode.commands.registerCommand(
     'lynx-keymap.checkF1Toggles',
-    () => extensionCheckerInstance.checkAndExecuteCommand('f1-toggles.focus', context)
+    () =>
+      extensionCheckerInstance.checkAndExecuteCommand(
+        'f1-toggles.focus',
+        context
+      )
   );
 
   // Command with extension check - GitLens Graph [alt+e]
   let checkGitLensDisposable = vscode.commands.registerCommand(
     'lynx-keymap.checkGitLens',
-    () => extensionCheckerInstance.checkAndExecuteCommand('gitlens.showGraph', context)
+    () =>
+      extensionCheckerInstance.checkAndExecuteCommand(
+        'gitlens.showGraph',
+        context
+      )
   );
 
   // Register commands with VSCode
@@ -63,13 +69,6 @@ function activate(context) {
     checkF1TogglesDisposable,
     checkGitLensDisposable
   );
-
-  // Check extensions status on activation (optional)
-  // Uncomment the next lines if you want to check extensions on startup
-  // extensionCheckerInstance.checkF1TogglesStatus();
-  // extensionCheckerInstance.checkGitLensStatus();
-
-  console.log('Lynx Keymap 75 is now active! 🎯');
 }
 
 async function deactivate() {
