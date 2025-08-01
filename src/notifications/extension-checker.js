@@ -5,7 +5,7 @@ class ExtensionChecker {
         this.extensionDependencies = {
             'f1-toggles.focus': {
                 extensionId: 'bastndev.f1',
-                displayName: 'F1-Toggles',
+                displayName: 'F1-Quick Switch',
                 marketplaceSearch: 'bastndev.f1'
             },
             'gitlens.showGraph': {
@@ -56,6 +56,10 @@ class ExtensionChecker {
         ).then(selection => {
             if (selection === 'Retry') {
                 setTimeout(() => {
+                    // Fix: Find the correct commandId for this dependency
+                    const commandId = Object.keys(this.extensionDependencies).find(
+                        key => this.extensionDependencies[key] === dependency
+                    );
                     this.checkAndExecuteCommand(commandId);
                 }, 1000);
             }
@@ -70,46 +74,6 @@ class ExtensionChecker {
             });
             context.subscriptions.push(disposable);
         });
-    }
-
-    // REMOVED: createGenericChecker method (no longer needed)
-
-    /**
-     * Check status of F1-Toggles extension on startup
-     */
-    async checkF1TogglesStatus() {
-        const dependency = this.extensionDependencies['f1-toggles.focus'];
-        const extension = vscode.extensions.getExtension(dependency.extensionId);
-        if (!extension) {
-            vscode.window.showInformationMessage(
-                '📥 Lynx Keymap: F1-Toggles extension not detected (optional)',
-                'Download F1-Toggles',
-                'Ignore'
-            ).then(selection => {
-                if (selection === 'Download F1-Toggles') {
-                    vscode.commands.executeCommand('workbench.extensions.search', dependency.marketplaceSearch);
-                }
-            });
-        }
-    }
-
-    /**
-     * Check status of GitLens extension on startup
-     */
-    async checkGitLensStatus() {
-        const dependency = this.extensionDependencies['gitlens.showGraph'];
-        const extension = vscode.extensions.getExtension(dependency.extensionId);
-        if (!extension) {
-            vscode.window.showInformationMessage(
-                '📥 Lynx Keymap: GitLens extension not detected (optional)',
-                'Download GitLens',
-                'Ignore'
-            ).then(selection => {
-                if (selection === 'Download GitLens') {
-                    vscode.commands.executeCommand('workbench.extensions.search', dependency.marketplaceSearch);
-                }
-            });
-        }
     }
 }
 
