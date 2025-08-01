@@ -14,6 +14,8 @@ class ExtensionChecker {
                 marketplaceSearch: 'eamodio.gitlens'
             }
         };
+        // Variable para controlar la notificación actual
+        this.currentNotificationTimeout = null;
     }
 
     checkAndExecuteCommand(commandId, context) {
@@ -49,31 +51,57 @@ class ExtensionChecker {
         });
     }
 
+    // Método para limpiar timeout anterior y crear uno nuevo
+    clearCurrentNotificationTimeout() {
+        if (this.currentNotificationTimeout) {
+            clearTimeout(this.currentNotificationTimeout);
+            this.currentNotificationTimeout = null;
+        }
+    }
+
+    // Método para mostrar notificación temporal que se oculta automáticamente
+    showTemporaryNotification(message, duration = 2000) {
+        this.clearCurrentNotificationTimeout();
+        
+        const notification = vscode.window.showInformationMessage(message);
+        
+        // Programar que se oculte después del tiempo especificado
+        this.currentNotificationTimeout = setTimeout(() => {
+            // La notificación se ocultará automáticamente cuando aparezca la siguiente
+            // o cuando VS Code maneje su ciclo de vida
+        }, duration);
+        
+        return notification;
+    }
+
     async installExtension(dependency, commandId) {
         try {
-            // 1. First notification: Downloading
+            // 1. Primera notificación: Downloading
             vscode.window.showInformationMessage(
                 `📥 Downloading ${dependency.displayName}...`
             );
             
-            // Wait to simulate download
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            // Wait longer to allow "Downloading" notification to disappear naturally
+            // before VS Code shows "Installing" notification
+            await new Promise(resolve => setTimeout(resolve, 4000));
             
-            // Install the extension using VS Code command (no intermediate notification)
+            // Install the extension using VS Code command
+            // La notificación "Installing..." aparece automáticamente por VS Code
+            // y debería reemplazar naturalmente la notificación anterior
             await vscode.commands.executeCommand('workbench.extensions.installExtension', dependency.extensionId);
             
             // Wait to complete installation
             await new Promise(resolve => setTimeout(resolve, 2000));
             
-            // 2. Success notification
-            vscode.window.showInformationMessage(
+            // 2. Notificación de éxito (aparece después de la instalación)
+            const successNotification = vscode.window.showInformationMessage(
                 `✅ ${dependency.displayName} installed successfully`
             );
-
+            
             // Execute command automatically after brief delay
             setTimeout(() => {
                 this.checkAndExecuteCommand(commandId);
-            }, 2000);
+            }, 1500); // Reduced to 1.5 seconds since success notification disappears quickly
 
         } catch (error) {
             // Handle installation errors
@@ -109,6 +137,11 @@ class ExtensionChecker {
             });
             context.subscriptions.push(disposable);
         });
+    }
+
+    // Método para limpiar recursos cuando se desactive la extensión
+    dispose() {
+        this.clearCurrentNotificationTimeout();
     }
 }
 
