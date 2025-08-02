@@ -29,6 +29,19 @@ Discover more extensions at [bastndev.com/extensions](https://bastndev.com/exten
 
 Following semantic versioning principles for consistent and predictable releases.
 
+## [1.2.2] - 2025-08-02
+
+### Changed
+- **Inverted Key Combos**: Key combinations in the `package.json` file were inverted to improve ergonomics and adaptability across different platforms and user preferences.
+
+### Improved
+- Enhanced consistency of keyboard shortcuts across operating systems.
+- Updated documentation to reflect the new keybinding changes.
+
+### Fixed
+- Fixed potential shortcut conflicts after key inversion.
+- Improved handling of custom shortcuts in AI environments and supported editors.
+
 ## [1.2.0] - 2025-08-01
 
 ### Added
