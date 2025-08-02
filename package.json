@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & (Firebase Studio)... 雨",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -165,16 +165,16 @@
 
       
       {
-        "key"    : "ctrl+j",
-        "mac"    : "cmd+j",
+        "key"    : "alt+j",
+        "mac"    : "alt+j",
         "command": "workbench.action.openSettings"
       },{
         "key"    : "ctrl+,",
         "mac"    : "cmd+,",
         "command": ""
       },{
-        "key"    : "alt+j",
-        "mac"    : "alt+j",
+        "key"    : "ctrl+j",
+        "mac"    : "cmd+j",
         "command": "workbench.action.openSettingsJson"
       },
 
