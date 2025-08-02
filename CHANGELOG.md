@@ -49,7 +49,7 @@ Following semantic versioning principles for consistent and predictable releases
   - Receive in-editor alerts for new shortcut releases and important changes
   - Customizable notification preferences per editor
 - **Extension Check Shortcuts**: Added new commands for extension checks
-  - `lynx-keymap.checkF1Toggles` - Checks if the F1-Toggles extension is installed; prompts to install if missing
+  - `lynx-keymap.checkF1QuickSwitch` - Checks if the F1-Quick Switch extension is installed; prompts to install if missing
   - `lynx-keymap.checkGitLens` - Checks if the GitLens extension is installed; prompts to install if missing
 
 ### Improved
