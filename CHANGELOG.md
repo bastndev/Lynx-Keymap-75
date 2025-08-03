@@ -29,7 +29,7 @@ Discover more extensions at [bastndev.com/extensions](https://bastndev.com/exten
 
 Following semantic versioning principles for consistent and predictable releases.
 
-## [1.3.0] - 2025-08-02
+## [1.3.1] - 2025-08-03
 
 ### Changed
 - **Inverted Key Combos**: Key combinations in the `package.json` file were inverted to improve ergonomics and adaptability across different platforms and user preferences.
