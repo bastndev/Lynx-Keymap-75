@@ -80,7 +80,7 @@
 | -                                 | -                | -                    | -                    |
 | delete word left                  | `⌘ +` Backspace  | `Ctrl +` Backspace   | `Ctrl +` Backspace   |
 | terminal clear line               | `⌥ +` Backspace  | `Alt +` Backspace    | `Alt +` Backspace    |
-| Finish Project                    | `⌘ +` Delete     | `Ctrl +` Delete      | `Ctrl +` Delete      |
+| Close Project                     | `⌘ +` Delete     | `Ctrl +` Delete      | `Ctrl +` Delete      |
 
 ### ► (AI ✨) Commands Easy
 
