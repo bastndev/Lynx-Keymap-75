@@ -29,6 +29,14 @@ Discover more extensions at [bastndev.com/extensions](https://bastndev.com/exten
 
 Following semantic versioning principles for consistent and predictable releases.
 
+## [1.3.2] - 2025-08-11
+
+### Added
+- **New Keymap**: Added shortcut `Alt + ,` (`alt+,`) for sending the right arrow sequence in the terminal (`workbench.action.terminal.sendSequence` with `\u001b[C`).
+
+### Changed
+- **Enhanced Shortcut**: Updated the keymap for sending `PgDn` in the terminal to include `Ctrl` on all platforms (`ctrl+alt+backspace` on Windows/Linux, `cmd+alt+backspace` on macOS).
+
 ## [1.3.1] - 2025-08-03
 
 ### Changed
