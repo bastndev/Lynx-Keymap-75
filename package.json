@@ -256,6 +256,12 @@
         "command": "deleteWordLeft",
         "when"   : "editorTextFocus"
       },{
+        "key"    : "alt+,", 
+        "mac"    : "alt+,",
+        "command": "workbench.action.terminal.sendSequence",
+        "args"   : {"text": "\u001b[C"},
+        "when"   : "terminalFocus && !terminalSuggestWidgetVisible"
+      },{
         "key"    : "alt+backspace",
         "mac"    : "alt+backspace",
         "command": "workbench.action.terminal.sendSequence",
