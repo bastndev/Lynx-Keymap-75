@@ -10,9 +10,10 @@ const COLORS = {
   BLUE: '#253c52',
   PURPLE: '#3d2952',
   ORANGE: '#4a3c2b',
-  LEMON: '#3b4817',
+  LEMON: '#51641bff',
   RED: '#4a2b2f',
-  WHITE: '#ffffff',
+  GREEN: '#1e5739',
+  WHITE: '#ffffff'
 };
 
 const COLOR_NAMES = {
@@ -21,13 +22,14 @@ const COLOR_NAMES = {
   ORANGE: 'ORANGE',
   LEMON: 'LEMON',
   RED: 'RED',
+  GREEN:'GREEN'
 };
 
 class StatusBarManager {
   constructor(context) {
     this.context = context;
     this.isInitialized = false;
-    this.colorKeys = ['PURPLE', 'BLUE', 'ORANGE', 'LEMON', 'RED'];
+    this.colorKeys = ['PURPLE', 'BLUE', 'ORANGE', 'LEMON', 'RED','GREEN'];
     this.maxHistorySize = 3; 
     this.initializeCleanState();
   }
