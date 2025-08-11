@@ -262,8 +262,8 @@
         "args"   : {"text": "\u001b[C"},
         "when"   : "terminalFocus && !terminalSuggestWidgetVisible"
       },{
-        "key"    : "alt+backspace",
-        "mac"    : "alt+backspace",
+        "key"    : "ctrl+alt+backspace",
+        "mac"    : "cmd+alt+backspace",
         "command": "workbench.action.terminal.sendSequence",
         "args"   : {"text": "\u0001\u000b"},
         "when"   : "terminalFocus"
