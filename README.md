@@ -25,62 +25,63 @@
 
 ## Lynx Keymap 75% — Standard Keybindings
 
-| Command                           | 🍎 macOS         | 🟦 Windows           | 🐧 Linux             |
-| :-------------------------------- | :--------------- | :------------------- | :------------------- |
-| open explorer                     | `⌘ +` 1          | `Ctrl +` 1           | `Ctrl +` 1           |
-| open source control (scm)         | `⌘ +` 2          | `Ctrl +` 2           | `Ctrl +` 2           |
-| open extensions                   | `⌘ +` 3          | `Ctrl +` 3           | `Ctrl +` 3           |
-| open F1-Quick Switch              | `⌘ +` 4          | `Ctrl +` 4           | `Ctrl +` 4           |
-| close & open sidebar              | `⌘ +` Tab        | `Ctrl +` Tab         | `Ctrl +` Tab         |
-| -                                 | -                | -                    | -                    |
-| new file                          | `⌥ +` C          | `Alt +` C            | `Alt +` C            |
-| new folder                        | `⌥ +` V          | `Alt +` V            | `Alt +` V            |
-| -                                 | -                | -                    | -                    |
-| Git: select all changes files     | `⌥ +` 1          | `Alt +` 1            | `Alt +` 1            |
-| Git: generate commit message (AI) | `⌥ +` 2          | `Alt +` 2            | `Alt +` 2            |
-| Git: unstage all changes files    | `⌥ +` 3          | `Alt +` 3            | `Alt +` 3            |
-| git pull                          | `⌥ +` 4          | `Alt +` 4            | `Alt +` 4            |
-| git commit                        | `⌥ +` Return     | `Alt +` Enter        | `Alt +` Enter        |
-| git push                          | `⌘ + ⌥ +` Return | `Ctrl + Alt +` Enter | `Ctrl + Alt +` Enter |
-| -                                 | -                | -                    | -                    |
-| format document                   | `⌥ +` F          | `Alt +` F            | `Alt +` F            |
-| format selection                  | `⌘ + ⌥ +` F      | `Ctrl + Alt +` F     | `Ctrl + Alt +` F     |
-| organize imports                  | `⌥ + Shift +` F  | `Shift + Alt +` F    | `Shift + Alt +` F    |
-| -                                 | -                | -                    | -                    |
-| open & close debug console        | `⌥ +` Q          | `Alt +` Q            | `Alt +` Q            |
-| open & close terminal             | `⌥ +` W          | `Alt +` W            | `Alt +` W            |
-| open gitlens                      | `⌥ +` E          | `Alt +` E            | `Alt +` E            |
-| close & open panel                | Page Down        | Page Down            | Page Down            |
-| -                                 | -                | -                    | -                    |
-| 🆕 select theme                   | `⇧ + ⌥ +` T      | `Shift + Alt +` T    | `Shift + Alt +` T    |
-| 🆕 reload window                  | `⇧ + ⌥ +` R      | `Shift + Alt +` R    | `Shift + Alt +` R    |
-| 🆕 go to line (n.º)               | `⇧ + ⌥ +` E      | `Shift + Alt +` E    | `Shift + Alt +` E    |
-| 🆕 expand line selection          | `⇧ + ⌥ +` W      | `Shift + Alt +` W    | `Shift + Alt +` W    |
-| -                                 | -                | -                    | -                    |
-| start debugging                   | Insert           | Insert               | Insert               |
-| restart debugging                 | `⌥ +` Insert     | `Alt +` Insert       | `Alt +` Insert       |
-| stop debugging                    | `⌘ +` Insert     | `Ctrl +` Insert      | `Ctrl +` Insert      |
-| -                                 | -                | -                    | -                    |
-| view git changes                  | End              | End                  | End                  |
-| show markdown preview             | Page Up          | Page Up              | Page Up              |
-| -                                 | -                | -                    | -                    |
-| open settings (JSON)              | `⌘ +` J          | `Ctrl +` J           | `Ctrl +` J           |
-| open settings                     | `⌥ +` J          | `Alt +` J            | `Alt +` J            |
-| -                                 | -                | -                    | -                    |
-| comment line                      | `⌘ +` /          | `Ctrl +` /           | `Ctrl +` /           |
-| comment block                     | `⌥ +` /          | `Alt +` /            | `Alt +` /            |
-| -                                 | -                | -                    | -                    |
-| zoom in ( 🛞 right )               | `⌥ + ⇧ + Vol` +  | `Alt + ⇧ + Vol` +    | `Alt + ⇧ + Vol` +    |
-| zoom out ( left 🛞 )               | `⌥ + ⇧ + Vol` -  | `Alt + ⇧ + Vol` -    | `Alt + ⇧ + Vol` -    |
-| -                                 | -                | -                    | -                    |
-| copy lines up                     | `⌥ + Shift +` ↑  | `Alt + Shift +` ↑    | `Alt + Shift +` ↑    |
-| copy lines down                   | `⌥ + Shift +` ↓  | `Alt + Shift +` ↓    | `Alt + Shift +` ↓    |
-| insert cursor above               | `⌘ +` ↑          | `Ctrl +` ↑           | `Ctrl +` ↑           |
-| insert cursor below               | `⌘ +` ↓          | `Ctrl +` ↓           | `Ctrl +` ↓           |
-| -                                 | -                | -                    | -                    |
-| delete word left                  | `⌘ +` Backspace  | `Ctrl +` Backspace   | `Ctrl +` Backspace   |
-| terminal clear line               | `⌥ +` Backspace  | `Alt +` Backspace    | `Alt +` Backspace    |
-| Close Project                     | `⌘ +` Delete     | `Ctrl +` Delete      | `Ctrl +` Delete      |
+| Command                           | 🍎 macOS            | 🟦 Windows               | 🐧 Linux                 |
+| :-------------------------------- | :------------------ | :----------------------- | :----------------------- |
+| open explorer                     | `⌘ +` 1             | `Ctrl +` 1               | `Ctrl +` 1               |
+| open source control (scm)         | `⌘ +` 2             | `Ctrl +` 2               | `Ctrl +` 2               |
+| open extensions                   | `⌘ +` 3             | `Ctrl +` 3               | `Ctrl +` 3               |
+| open F1-Quick Switch              | `⌘ +` 4             | `Ctrl +` 4               | `Ctrl +` 4               |
+| close & open sidebar              | `⌘ +` Tab           | `Ctrl +` Tab             | `Ctrl +` Tab             |
+| -                                 | -                   | -                        | -                        |
+| new file                          | `⌥ +` C             | `Alt +` C                | `Alt +` C                |
+| new folder                        | `⌥ +` V             | `Alt +` V                | `Alt +` V                |
+| -                                 | -                   | -                        | -                        |
+| Git: select all changes files     | `⌥ +` 1             | `Alt +` 1                | `Alt +` 1                |
+| Git: generate commit message (AI) | `⌥ +` 2             | `Alt +` 2                | `Alt +` 2                |
+| Git: unstage all changes files    | `⌥ +` 3             | `Alt +` 3                | `Alt +` 3                |
+| git pull                          | `⌥ +` 4             | `Alt +` 4                | `Alt +` 4                |
+| git commit                        | `⌥ +` Return        | `Alt +` Enter            | `Alt +` Enter            |
+| git push                          | `⌘ + ⌥ +` Return    | `Ctrl + Alt +` Enter     | `Ctrl + Alt +` Enter     |
+| -                                 | -                   | -                        | -                        |
+| format document                   | `⌥ +` F             | `Alt +` F                | `Alt +` F                |
+| format selection                  | `⌘ + ⌥ +` F         | `Ctrl + Alt +` F         | `Ctrl + Alt +` F         |
+| organize imports                  | `⌥ + Shift +` F     | `Shift + Alt +` F        | `Shift + Alt +` F        |
+| -                                 | -                   | -                        | -                        |
+| open & close debug console        | `⌥ +` Q             | `Alt +` Q                | `Alt +` Q                |
+| open & close terminal             | `⌥ +` W             | `Alt +` W                | `Alt +` W                |
+| open gitlens                      | `⌥ +` E             | `Alt +` E                | `Alt +` E                |
+| close & open panel                | Page Down           | Page Down                | Page Down                |
+| -                                 | -                   | -                        | -                        |
+| select theme                      | `⇧ + ⌥ +` T         | `Shift + Alt +` T        | `Shift + Alt +` T        |
+| reload window                     | `⇧ + ⌥ +` R         | `Shift + Alt +` R        | `Shift + Alt +` R        |
+| go to line (n.º)                  | `⇧ + ⌥ +` E         | `Shift + Alt +` E        | `Shift + Alt +` E        |
+| expand line selection             | `⇧ + ⌥ +` W         | `Shift + Alt +` W        | `Shift + Alt +` W        |
+| -                                 | -                   | -                        | -                        |
+| start debugging                   | Insert              | Insert                   | Insert                   |
+| restart debugging                 | `⌥ +` Insert        | `Alt +` Insert           | `Alt +` Insert           |
+| stop debugging                    | `⌘ +` Insert        | `Ctrl +` Insert          | `Ctrl +` Insert          |
+| -                                 | -                   | -                        | -                        |
+| view git changes                  | End                 | End                      | End                      |
+| show markdown preview             | Page Up             | Page Up                  | Page Up                  |
+| -                                 | -                   | -                        | -                        |
+| open settings (JSON)              | `⌘ +` J             | `Ctrl +` J               | `Ctrl +` J               |
+| open settings                     | `⌥ +` J             | `Alt +` J                | `Alt +` J                |
+| -                                 | -                   | -                        | -                        |
+| comment line                      | `⌘ +` /             | `Ctrl +` /               | `Ctrl +` /               |
+| comment block                     | `⌥ +` /             | `Alt +` /                | `Alt +` /                |
+| -                                 | -                   | -                        | -                        |
+| zoom in ( 🛞 right )               | `⌥ + ⇧ + Vol` +     | `Alt + ⇧ + Vol` +        | `Alt + ⇧ + Vol` +        |
+| zoom out ( left 🛞 )               | `⌥ + ⇧ + Vol` -     | `Alt + ⇧ + Vol` -        | `Alt + ⇧ + Vol` -        |
+| -                                 | -                   | -                        | -                        |
+| copy lines up                     | `⌥ + Shift +` ↑     | `Alt + Shift +` ↑        | `Alt + Shift +` ↑        |
+| copy lines down                   | `⌥ + Shift +` ↓     | `Alt + Shift +` ↓        | `Alt + Shift +` ↓        |
+| insert cursor above               | `⌘ +` ↑             | `Ctrl +` ↑               | `Ctrl +` ↑               |
+| insert cursor below               | `⌘ +` ↓             | `Ctrl +` ↓               | `Ctrl +` ↓               |
+| -                                 | -                   | -                        | -                        |
+| delete word left                  | `⌘ +` Backspace     | `Ctrl +` Backspace       | `Ctrl +` Backspace       |
+| terminal clear line               | `⌘ + ⌥ +` Backspace | `Ctrl + Alt +` Backspace | `Ctrl + Alt +` Backspace |
+| complete word line                | `⌥ +` ,             | `Alt +` ,                | `Alt +` ,                |
+| Close Project                     | `⌘ +` Delete        | `Ctrl +` Delete          | `Ctrl +` Delete          |
 
 ### ► (AI ✨) Commands Easy
 
