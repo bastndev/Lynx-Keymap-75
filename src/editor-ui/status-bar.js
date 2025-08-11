@@ -7,8 +7,8 @@ const CURRENT_COLOR_KEY = 'lynx-keymap.currentColor';
 const COLOR_HISTORY_KEY = 'lynx-keymap.colorHistory';
 
 const COLORS = {
-  BLUE: '#2b3c4a',
-  GREEN: '#1e5739',
+  BLUE: '#253c52',
+  PURPLE: '#3d2952',
   ORANGE: '#4a3c2b',
   LEMON: '#3b4817',
   RED: '#4a2b2f',
@@ -16,7 +16,7 @@ const COLORS = {
 };
 
 const COLOR_NAMES = {
-  GREEN: 'GREEN',
+  PURPLE: 'PURPLE',
   BLUE: 'BLUE',
   ORANGE: 'ORANGE',
   LEMON: 'LEMON',
@@ -27,7 +27,7 @@ class StatusBarManager {
   constructor(context) {
     this.context = context;
     this.isInitialized = false;
-    this.colorKeys = ['GREEN', 'BLUE', 'ORANGE', 'LEMON', 'RED'];
+    this.colorKeys = ['PURPLE', 'BLUE', 'ORANGE', 'LEMON', 'RED'];
     this.maxHistorySize = 3; 
     this.initializeCleanState();
   }
