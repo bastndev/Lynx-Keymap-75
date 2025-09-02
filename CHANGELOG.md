@@ -23,11 +23,14 @@ A comprehensive keymap extension designed specifically for 75% keyboards, provid
 
 Discover more extensions at [bastndev.com/extensions](https://bastndev.com/extensions)
 
----
 
 ## Changelog
 
 Following semantic versioning principles for consistent and predictable releases.
+
+</br>
+
+<!-- --- -->
 
 ## [1.3.5] - 2025-08-11
 
@@ -37,10 +40,14 @@ Following semantic versioning principles for consistent and predictable releases
 ### Changed
 - **Enhanced Shortcut**: Updated the keymap for sending `PgDn` in the terminal to include `Ctrl` on all platforms (`ctrl+alt+backspace` on Windows/Linux, `cmd+alt+backspace` on macOS).
 
+---
+
 ## [1.3.1] - 2025-08-03
 
 ### Changed
 - Updated extension showcase table description in `README.md`
+
+---
 
 ## [1.2.3] - 2025-08-02
 
@@ -54,6 +61,8 @@ Following semantic versioning principles for consistent and predictable releases
 ### Fixed
 - Fixed potential shortcut conflicts after key inversion.
 - Improved handling of custom shortcuts in AI environments and supported editors.
+
+---
 
 ## [1.2.0] - 2025-08-01
 
@@ -73,6 +82,7 @@ Following semantic versioning principles for consistent and predictable releases
 - Minor bugs related to notification display on certain platforms
 - Resolved rare issues with notification timing in Cursor and Windsurf editors
 
+---
 
 ## [1.1.1] - 2025-07-31
 
@@ -95,6 +105,8 @@ Following semantic versioning principles for consistent and predictable releases
 - Enhanced user experience with more intuitive shortcuts
 - Strengthened project governance with community guidelines
 
+---
+
 ## [1.0.7] - 2025-07-24
 
 ### Added
@@ -110,6 +122,8 @@ Following semantic versioning principles for consistent and predictable releases
 - Minor documentation inconsistencies
 - Enhanced visual elements positioning
 
+---
+
 ## [1.0.2] - 2025-07-22
 
 ### Added
@@ -120,6 +134,8 @@ Following semantic versioning principles for consistent and predictable releases
 - Key binding conflicts resolution across different editors
 - Better handling of international keyboard layouts
 
+---
+
 ## [1.0.0] - 2025-07-20
 
 ### Added
@@ -129,6 +145,8 @@ Following semantic versioning principles for consistent and predictable releases
 ### Changed
 - Optimized shortcut combinations for better ergonomics on 75% keyboards
 - Updated installation instructions with platform-specific guidance
+
+---
 
 ## [0.9.6] - 2025-07-18
 
@@ -142,6 +160,8 @@ Following semantic versioning principles for consistent and predictable releases
 - Improved compatibility with Trae.ai interface
 - Better handling of AI chat interface shortcuts
 
+---
+
 ## [0.9.2] - 2025-07-15
 
 ### Added
@@ -153,6 +173,8 @@ Following semantic versioning principles for consistent and predictable releases
 - Enhanced documentation with emoji indicators for better visual navigation
 - Improved table formatting for better readability
 
+---
+
 ## [0.8.1] - 2025-07-12
 
 ### Added
@@ -163,6 +185,8 @@ Following semantic versioning principles for consistent and predictable releases
 ### Fixed
 - Resolved key binding conflicts between different editors
 - Improved shortcut consistency across platforms (macOS, Windows, Linux)
+
+---
 
 ## [0.5.0] - 2025-07-10
 
@@ -184,6 +208,8 @@ Following semantic versioning principles for consistent and predictable releases
 - `Alt +` F - Consistent code formatting
 - `Ctrl` + `  - AI chat interface (universal)
 - And 40+ more essential shortcuts
+
+---
 
 ## [0.0.1] - 2025-04-26
 
