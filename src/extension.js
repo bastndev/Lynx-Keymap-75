@@ -5,47 +5,77 @@ const StatusBarManager = require('./editor-ui/status-bar');
 const AICommandsManager = require('./keymaps/ai-keymap-handler');
 const ExtensionChecker = require('./notifications/extension-checker');
 
-// Global instances
+// Global instances - lazy initialization
 let statusBarManagerInstance;
 let aiCommandsManagerInstance;
 let extensionCheckerInstance;
+let colorManagerInstance;
+let macroManagerInstance;
+
+// Lazy getters
+function getStatusBarManager(context) {
+  if (!statusBarManagerInstance) {
+    statusBarManagerInstance = new StatusBarManager(context);
+  }
+  return statusBarManagerInstance;
+}
+
+function getAICommandsManager(context) {
+  if (!aiCommandsManagerInstance) {
+    aiCommandsManagerInstance = new AICommandsManager();
+    aiCommandsManagerInstance.registerCommands(context);
+  }
+  return aiCommandsManagerInstance;
+}
+
+function getExtensionChecker(context) {
+  if (!extensionCheckerInstance) {
+    extensionCheckerInstance = new ExtensionChecker();
+    extensionCheckerInstance.registerCheckCommands(context);
+  }
+  return extensionCheckerInstance;
+}
+
+function getColorManager() {
+  if (!colorManagerInstance) {
+    colorManagerInstance = new ColorManager();
+  }
+  return colorManagerInstance;
+}
+
+function getMacroManager() {
+  if (!macroManagerInstance) {
+    macroManagerInstance = new MacroManager();
+  }
+  return macroManagerInstance;
+}
 
 function activate(context) {
-  // Initialize managers
-  const colorManager = new ColorManager();
-  const macroManager = new MacroManager();
-  statusBarManagerInstance = new StatusBarManager(context);
-  aiCommandsManagerInstance = new AICommandsManager();
-  extensionCheckerInstance = new ExtensionChecker();
-
-  // Register AI commands
-  aiCommandsManagerInstance.registerCommands(context);
-  // Register extension checker commands
-  extensionCheckerInstance.registerCheckCommands(context);
+  // Register commands with lazy initialization
 
   // Status bar - [ctrl+alt+pagedown]
   let toggleStatusBarColorDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleStatusBarColor',
-    () => statusBarManagerInstance.toggleStatusBarColor()
+    () => getStatusBarManager(context).toggleStatusBarColor()
   );
 
   // Icon painter [Alt+z]
   let cycleIconColorDisposable = vscode.commands.registerCommand(
     'lynx-keymap.cycleIconColor',
-    () => colorManager.cycleIconColor()
+    () => getColorManager().cycleIconColor()
   );
 
   // Icon painter (Macros)
   let colorAndAgentMacroDisposable = vscode.commands.registerCommand(
     'lynx-keymap.executeColorAndAgentMacro',
-    () => macroManager.executeColorAndAgentMacro()
+    () => getMacroManager().executeColorAndAgentMacro()
   );
 
   // Command with extension check - F1 QuickSwitch [ctrl+4]
   let checkF1QuickSwitchDisposable = vscode.commands.registerCommand(
     'lynx-keymap.checkF1QuickSwitch',
     () =>
-      extensionCheckerInstance.checkAndExecuteCommand(
+      getExtensionChecker(context).checkAndExecuteCommand(
         'f1-toggles.focus',
         context
       )
@@ -55,11 +85,14 @@ function activate(context) {
   let checkGitLensDisposable = vscode.commands.registerCommand(
     'lynx-keymap.checkGitLens',
     () =>
-      extensionCheckerInstance.checkAndExecuteCommand(
+      getExtensionChecker(context).checkAndExecuteCommand(
         'gitlens.showGraph',
         context
       )
   );
+
+  // Initialize AI commands manager (needed for keybindings to work)
+  getAICommandsManager(context);
 
   // Register commands with VSCode
   context.subscriptions.push(
@@ -72,11 +105,15 @@ function activate(context) {
 }
 
 async function deactivate() {
+  // Clean up only initialized instances
   if (statusBarManagerInstance) {
     await statusBarManagerInstance.deactivateColorMode();
   }
   if (aiCommandsManagerInstance) {
     aiCommandsManagerInstance.dispose();
+  }
+  if (extensionCheckerInstance) {
+    extensionCheckerInstance.dispose();
   }
 }
 
