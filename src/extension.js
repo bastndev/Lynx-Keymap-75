@@ -1,208 +1,95 @@
 const vscode = require('vscode');
-
-// Import managers with error handling
-let ColorManager, MacroManager, StatusBarManager, AICommandsManager, ExtensionChecker, TabMessageManager;
-
-try {
-  ColorManager = require('./editor-ui/icons/icon-painter');
-  MacroManager = require('./editor-ui/icons/macros');
-  StatusBarManager = require('./editor-ui/status-bar');
-  AICommandsManager = require('./keymaps/ai-keymap-handler');
-  ExtensionChecker = require('./notifications/extension-checker');
-  TabMessageManager = require('./notifications/tab-messages');
-} catch (error) {
-  console.error('❌ Failed to load required modules:', error);
-  vscode.window.showErrorMessage(`Lynx Keymap: Failed to load modules - ${error.message}`);
-}
+const ColorManager = require('./editor-ui/icons/icon-painter');
+const MacroManager = require('./editor-ui/icons/macros');
+const StatusBarManager = require('./editor-ui/status-bar');
+const AICommandsManager = require('./keymaps/ai-keymap-handler');
+const ExtensionChecker = require('./notifications/extension-checker');
+const TabMessageManager = require('./notifications/tab-messages');
 
 // Global instances
 let statusBarManagerInstance;
 let aiCommandsManagerInstance;
 let extensionCheckerInstance;
 
-/**
- * Extension activation function
- * @param {vscode.ExtensionContext} context 
- */
 function activate(context) {
-  try {
-    // ✨ Fast startup animation (2 seconds)
-    if (TabMessageManager) {
-      TabMessageManager.showStartupNotifications();
-    }
-
-    // Initialize managers with error handling
-    const colorManager = ColorManager ? new ColorManager() : null;
-    const macroManager = MacroManager ? new MacroManager() : null;
-    
-    if (StatusBarManager) {
-      statusBarManagerInstance = new StatusBarManager(context);
-    }
-    
-    if (AICommandsManager) {
-      aiCommandsManagerInstance = new AICommandsManager();
-      aiCommandsManagerInstance.registerCommands(context);
-    }
-    
-    if (ExtensionChecker) {
-      extensionCheckerInstance = new ExtensionChecker();
-      extensionCheckerInstance.registerCheckCommands(context);
-    }
-
-    // Register commands with error handling
-    const commands = [];
-
-    // Status bar - [ctrl+alt+pagedown]
-    if (statusBarManagerInstance) {
-      commands.push(
-        vscode.commands.registerCommand(
-          'lynx-keymap.toggleStatusBarColor',
-          () => {
-            try {
-              statusBarManagerInstance.toggleStatusBarColor();
-            } catch (error) {
-              handleCommandError('toggleStatusBarColor', error);
-            }
-          }
-        )
-      );
-    }
-
-    // Icon painter [Alt+z]
-    if (colorManager) {
-      commands.push(
-        vscode.commands.registerCommand(
-          'lynx-keymap.cycleIconColor',
-          () => {
-            try {
-              colorManager.cycleIconColor();
-            } catch (error) {
-              handleCommandError('cycleIconColor', error);
-            }
-          }
-        )
-      );
-    }
-
-    // Icon painter (Macros)
-    if (macroManager) {
-      commands.push(
-        vscode.commands.registerCommand(
-          'lynx-keymap.executeColorAndAgentMacro',
-          () => {
-            try {
-              macroManager.executeColorAndAgentMacro();
-            } catch (error) {
-              handleCommandError('executeColorAndAgentMacro', error);
-            }
-          }
-        )
-      );
-    }
-
-    // Command with extension check - F1 QuickSwitch [ctrl+4]
-    if (extensionCheckerInstance) {
-      commands.push(
-        vscode.commands.registerCommand(
-          'lynx-keymap.checkF1QuickSwitch',
-          () => {
-            try {
-              extensionCheckerInstance.checkAndExecuteCommand(
-                'f1-toggles.focus',
-                context
-              );
-            } catch (error) {
-              handleCommandError('checkF1QuickSwitch', error);
-            }
-          }
-        )
-      );
-    }
-
-    // Command with extension check - GitLens Graph [alt+e]
-    if (extensionCheckerInstance) {
-      commands.push(
-        vscode.commands.registerCommand(
-          'lynx-keymap.checkGitLens',
-          () => {
-            try {
-              extensionCheckerInstance.checkAndExecuteCommand(
-                'gitlens.showGraph',
-                context
-              );
-            } catch (error) {
-              handleCommandError('checkGitLens', error);
-            }
-          }
-        )
-      );
-    }
-
-    // Register all commands with VSCode
-    context.subscriptions.push(...commands);
-
-    // Log successful activation
-    if (TabMessageManager) {
-      TabMessageManager.logSuccess('Extension activated successfully');
-    } else {
-      console.log('✅ Lynx Keymap: Extension activated successfully');
-    }
-
-  } catch (error) {
-    console.error('❌ Lynx Keymap: Failed to activate extension:', error);
-    vscode.window.showErrorMessage(`Lynx Keymap: Activation failed - ${error.message}`);
-    
-    // Try to show error via TabMessageManager if available
-    if (TabMessageManager) {
-      TabMessageManager.showAIErrorMessage('Activation Failed');
-    }
-  }
-}
-
-/**
- * Handle command execution errors
- * @param {string} commandName 
- * @param {Error} error 
- */
-function handleCommandError(commandName, error) {
-  console.error(`❌ Lynx Keymap: Command '${commandName}' failed:`, error);
+  // ✨ ANIMATION
+  TabMessageManager.showStartupNotifications();
   
-  if (TabMessageManager) {
-    TabMessageManager.showAIErrorMessage(`${commandName} failed`);
-  } else {
-    vscode.window.showWarningMessage(`Lynx Keymap: ${commandName} failed - ${error.message}`);
-  }
+  // Initialize managers
+  const colorManager = new ColorManager();
+  const macroManager = new MacroManager();
+  statusBarManagerInstance = new StatusBarManager(context);
+  aiCommandsManagerInstance = new AICommandsManager();
+  extensionCheckerInstance = new ExtensionChecker();
+
+  // Register AI commands
+  aiCommandsManagerInstance.registerCommands(context);
+  // Register extension checker commands
+  extensionCheckerInstance.registerCheckCommands(context);
+
+  // Status bar - [ctrl+alt+pagedown]
+  let toggleStatusBarColorDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.toggleStatusBarColor',
+    () => statusBarManagerInstance.toggleStatusBarColor()
+  );
+
+  // Icon painter [Alt+z]
+  let cycleIconColorDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.cycleIconColor',
+    () => colorManager.cycleIconColor()
+  );
+
+  // Icon painter (Macros)
+  let colorAndAgentMacroDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.executeColorAndAgentMacro',
+    () => macroManager.executeColorAndAgentMacro()
+  );
+
+  // Command with extension check - F1 QuickSwitch [ctrl+4]
+  let checkF1QuickSwitchDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.checkF1QuickSwitch',
+    () =>
+      extensionCheckerInstance.checkAndExecuteCommand(
+        'f1-toggles.focus',
+        context
+      )
+  );
+
+  // Command with extension check - GitLens Graph [alt+e]
+  let checkGitLensDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.checkGitLens',
+    () =>
+      extensionCheckerInstance.checkAndExecuteCommand(
+        'gitlens.showGraph',
+        context
+      )
+  );
+
+  // Register commands with VSCode
+  context.subscriptions.push(
+    toggleStatusBarColorDisposable,
+    cycleIconColorDisposable,
+    colorAndAgentMacroDisposable,
+    checkF1QuickSwitchDisposable,
+    checkGitLensDisposable
+  );
+
+  // Log successful activation
+  TabMessageManager.logSuccess('Extension activated successfully');
 }
 
-/**
- * Extension deactivation function
- */
 async function deactivate() {
-  try {
-    // Clear any active status messages when deactivating
-    if (TabMessageManager) {
-      TabMessageManager.clearStatusMessage();
-    }
-
-    // Deactivate managers
-    if (statusBarManagerInstance) {
-      await statusBarManagerInstance.deactivateColorMode();
-    }
-    
-    if (aiCommandsManagerInstance) {
-      aiCommandsManagerInstance.dispose();
-    }
-
-    // Log deactivation
-    if (TabMessageManager) {
-      TabMessageManager.logInfo('Extension deactivated');
-    } else {
-      console.log('🔵 Lynx Keymap: Extension deactivated');
-    }
-
-  } catch (error) {
-    console.error('❌ Lynx Keymap: Error during deactivation:', error);
+  // Clear any active status messages when deactivating
+  TabMessageManager.clearStatusMessage();
+  
+  if (statusBarManagerInstance) {
+    await statusBarManagerInstance.deactivateColorMode();
   }
+  if (aiCommandsManagerInstance) {
+    aiCommandsManagerInstance.dispose();
+  }
+  
+  TabMessageManager.logInfo('Extension deactivated');
 }
 
 module.exports = {
