@@ -32,7 +32,7 @@ Following semantic versioning principles for consistent and predictable releases
 
 <!-- --- -->
 
-## [1.3.8] - 2025-09-03
+## [1.3.9] - 2025-09-03
 
 ### Improved
 - **icons-painter.js Logic**: Refined the logic for icon rendering to enhance reliability and maintainability.
