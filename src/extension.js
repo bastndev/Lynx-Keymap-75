@@ -4,6 +4,7 @@ const MacroManager = require('./editor-ui/icons/macros');
 const StatusBarManager = require('./editor-ui/status-bar');
 const AICommandsManager = require('./keymaps/ai-keymap-handler');
 const ExtensionChecker = require('./notifications/extension-checker');
+const TabMessageManager = require('./notifications/tab-messages');
 
 // Global instances
 let statusBarManagerInstance;
@@ -11,6 +12,9 @@ let aiCommandsManagerInstance;
 let extensionCheckerInstance;
 
 function activate(context) {
+  // ✨ ANIMATION
+  TabMessageManager.showStartupNotifications();
+  
   // Initialize managers
   const colorManager = new ColorManager();
   const macroManager = new MacroManager();
@@ -69,15 +73,23 @@ function activate(context) {
     checkF1QuickSwitchDisposable,
     checkGitLensDisposable
   );
+
+  // Log successful activation
+  TabMessageManager.logSuccess('Extension activated successfully');
 }
 
 async function deactivate() {
+  // Clear any active status messages when deactivating
+  TabMessageManager.clearStatusMessage();
+  
   if (statusBarManagerInstance) {
     await statusBarManagerInstance.deactivateColorMode();
   }
   if (aiCommandsManagerInstance) {
     aiCommandsManagerInstance.dispose();
   }
+  
+  TabMessageManager.logInfo('Extension deactivated');
 }
 
 module.exports = {

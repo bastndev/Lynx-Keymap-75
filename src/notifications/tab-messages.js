@@ -79,35 +79,40 @@ class TabMessageManager {
 
   /**
    * Shows a loading message for AI operations
-   * This method is now only used at startup, not for key combinations
+   * Now optimized for automatic startup display
    * @param {number} duration - Duration to show the message
    */
-  static showAILoadingMessage(duration = 3000) {
-    // No longer triggered by key combinations
+  static showAILoadingMessage(duration = 4000) {
     this.showStatusMessage(
-      'Loading AI',
-      'Initializing Lynx Keymap',
+      'Initializing Lynx',
+      'Loading Lynx Keymap extension...',
       duration,
       'loading'
     );
-    this.logInfo('AI initialization started');
+    this.logInfo('Extension initialization started');
   }
 
   /**
    * Shows AI ready notification
    * @param {string} message - Success message to display
    */
-  static showAIReadyMessage(message = 'AI Ready') {
-    this.logSuccess(`AI ready: ${message}`);
+  static showAIReadyMessage(message = 'Lynx Ready') {
+    this.showStatusMessage(
+      message,
+      'Lynx Keymap extension is ready to use',
+      2000,
+      '✅'
+    );
+    this.logSuccess(`Extension ready: ${message}`);
   }
 
   /**
    * Shows AI error message
    * @param {string} message - Error message to display
    */
-  static showAIErrorMessage(message = 'AI Error') {
-    this.showStatusMessage(message, 'AI command failed to execute', 3000, '❌');
-    this.logError(`AI error: ${message}`);
+  static showAIErrorMessage(message = 'Lynx Error') {
+    this.showStatusMessage(message, 'Extension command failed to execute', 3000, '❌');
+    this.logError(`Extension error: ${message}`);
   }
 
   /**
@@ -138,40 +143,36 @@ class TabMessageManager {
    */
   static clearLoadingMessage() {
     this.clearStatusMessage();
-    this.logInfo('Cleared status messages - AI fully initialized');
+    this.logInfo('Status messages cleared - Extension fully loaded');
   }
 
-  /**
-   * Shows startup notifications sequence including icons
-   * Will display loading, warning, and success messages in sequence
-   */
-  static showStartupNotifications() {
-    const duration = 3000; // 3 seconds total duration
-    const stepTime = duration / 3; // Split into three phases
+    static showStartupNotifications() {
+      const totalDuration = 4000;
+      
+      // Phase 1: Loading animation (2.5 seconds)
+      this.showAILoadingMessage(2500);
+      
+      // Phase 2: Completion message (1.5 seconds)
+      setTimeout(() => {
+        this.showAIReadyMessage('Lynx Keymap Ready');
+      }, 2500);
+      
+      this.logInfo('Startup notification sequence initiated');
+    }
 
-    // Phase 1: Loading animation
-    this.showAILoadingMessage(stepTime);
-    
-    // Phase 2: Warning message (after loading animation)
-    setTimeout(() => {
+    /**
+     * Simplified method to show only the automatic loading message
+     * Exact duration of 4 seconds as requested
+     */
+    static showAutoStartupMessage() {
       this.showStatusMessage(
-        'Extension Check',
-        'Checking required extensions',
-        stepTime,
-        '⚠️'
+        'Loading Lynx Keymap',
+        'Extension is starting up...',
+        4000, // Exactly 4 seconds
+        'loading'
       );
-    }, stepTime);
-    
-    // Phase 3: Success message (after warning)
-    setTimeout(() => {
-      this.showStatusMessage(
-        'Lynx Keymap Ready',
-        'Extension successfully loaded',
-        stepTime,
-        '✅'
-      );
-    }, stepTime * 2);
+      this.logInfo('Auto startup message displayed for 4 seconds');
+    }
   }
-}
 
 module.exports = TabMessageManager;
