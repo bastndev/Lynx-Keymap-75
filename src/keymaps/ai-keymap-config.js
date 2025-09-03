@@ -1,6 +1,8 @@
-/*
- *** AI COMMANDS CONFIGURATION
-*/
+/**
+ * AI COMMANDS CONFIGURATION
+ * Commands are tried in order until one succeeds
+ */
+
 
 const AI_COMMANDS_CONFIG = {
   // AI COMMIT GENERATION COMMANDS MARK:[Alt+2]
@@ -70,22 +72,22 @@ const KEYMAP_CONFIG = [
   {
     commandId: 'lynx-keymap.generateAICommit',
     commandsKey: 'commitCommands',
-    errorMessage: 'No AI commit generators available'
+    errorMessage: 'No AI commit generator available'
   },
   {
     commandId: 'lynx-keymap.executeAIPopup',
     commandsKey: 'popupCommands',
-    errorMessage: 'No AI chat providers available'
+    errorMessage: 'No AI popup available'
   },
   {
     commandId: 'lynx-keymap.openAndCloseAIChat',
     commandsKey: 'chatCommands',
-    errorMessage: 'No AI chat providers available'
+    errorMessage: 'No AI chat panel available'
   },
   {
     commandId: 'lynx-keymap.createNewAISession',
     commandsKey: 'newSessionCommands',
-    errorMessage: 'No AI providers available to create a new session'
+    errorMessage: 'No AI session creator available'
   },
   {
     commandId: 'lynx-keymap.showAIHistory',
