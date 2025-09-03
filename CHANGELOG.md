@@ -32,6 +32,17 @@ Following semantic versioning principles for consistent and predictable releases
 
 <!-- --- -->
 
+## [1.3.8] - 2025-09-03
+
+### Improved
+- **icons-painter.js Logic**: Refined the logic for icon rendering to enhance reliability and maintainability.
+- **Keymap Load Time**: Optimized keymap loading for faster startup and reduced latency across supported editors.
+
+### Added
+- **AI Window Control in Cursor**: Implemented new shortcuts to open and close the AI window in Cursor editor for streamlined workflow.
+
+---
+
 ## [1.3.5] - 2025-08-11
 
 ### Added
