@@ -3,7 +3,6 @@
  * Commands are tried in order until one succeeds
  */
 
-
 const AI_COMMANDS_CONFIG = {
   // AI COMMIT GENERATION COMMANDS MARK:[Alt+2]
   commitCommands: [
@@ -27,9 +26,9 @@ const AI_COMMANDS_CONFIG = {
 
   // AI CHAT COMMANDS MARK:[Shift+Tab]
   chatCommands: [
-    'workbench.action.toggleAuxiliaryBar',                // 2: Cursor-AI
     'windsurf.prioritized.chat.open',                     // 0: Windsurf
     'workbench.panel.chat',                               // 1: Vscode
+    'aichat.newchataction',                               // 2: Cursor-AI
     'workbench.action.chat.icube.open',                   // 3: Trae-AI
     'aichat.prompt',                                      // 4: Firebase.Studio
     'workbench.action.toggleAuxiliaryBar',                // 5: Kiro
@@ -72,22 +71,22 @@ const KEYMAP_CONFIG = [
   {
     commandId: 'lynx-keymap.generateAICommit',
     commandsKey: 'commitCommands',
-    errorMessage: 'No AI commit generator available'
+    errorMessage: 'No AI commit generators available'
   },
   {
     commandId: 'lynx-keymap.executeAIPopup',
     commandsKey: 'popupCommands',
-    errorMessage: 'No AI popup available'
+    errorMessage: 'No AI chat providers available'
   },
   {
     commandId: 'lynx-keymap.openAndCloseAIChat',
     commandsKey: 'chatCommands',
-    errorMessage: 'No AI chat panel available'
+    errorMessage: 'No AI chat providers available'
   },
   {
     commandId: 'lynx-keymap.createNewAISession',
     commandsKey: 'newSessionCommands',
-    errorMessage: 'No AI session creator available'
+    errorMessage: 'No AI providers available to create a new session'
   },
   {
     commandId: 'lynx-keymap.showAIHistory',

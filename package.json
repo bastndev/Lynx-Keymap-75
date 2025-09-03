@@ -43,12 +43,7 @@
   },
   
   "activationEvents": [
-    "onCommand:lynx-keymap.generateAICommit",
-    "onCommand:lynx-keymap.executeAIPopup",
-    "onCommand:lynx-keymap.openAndCloseAIChat",
-    "onCommand:lynx-keymap.createNewAISession",
-    "onCommand:lynx-keymap.showAIHistory",
-    "onCommand:lynx-keymap.attachAIContext"
+    "onStartupFinished"
   ],
   "main": "./src/extension.js",
   "contributes": {

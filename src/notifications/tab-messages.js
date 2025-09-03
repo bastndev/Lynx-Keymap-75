@@ -79,17 +79,18 @@ class TabMessageManager {
 
   /**
    * Shows a loading message for AI operations
-   * @param {string} keyCombo - The key combination being executed
+   * This method is now only used at startup, not for key combinations
    * @param {number} duration - Duration to show the message
    */
-  static showAILoadingMessage(keyCombo = 'AI Command', duration = 2000) {
+  static showAILoadingMessage(duration = 3000) {
+    // No longer triggered by key combinations
     this.showStatusMessage(
       'Loading AI',
-      `Executing: ${keyCombo}`,
+      'Initializing Lynx Keymap',
       duration,
       'loading'
     );
-    this.logInfo(`Loading AI for: ${keyCombo}`);
+    this.logInfo('AI initialization started');
   }
 
   /**
@@ -138,6 +139,38 @@ class TabMessageManager {
   static clearLoadingMessage() {
     this.clearStatusMessage();
     this.logInfo('Cleared status messages - AI fully initialized');
+  }
+
+  /**
+   * Shows startup notifications sequence including icons
+   * Will display loading, warning, and success messages in sequence
+   */
+  static showStartupNotifications() {
+    const duration = 3000; // 3 seconds total duration
+    const stepTime = duration / 3; // Split into three phases
+
+    // Phase 1: Loading animation
+    this.showAILoadingMessage(stepTime);
+    
+    // Phase 2: Warning message (after loading animation)
+    setTimeout(() => {
+      this.showStatusMessage(
+        'Extension Check',
+        'Checking required extensions',
+        stepTime,
+        '⚠️'
+      );
+    }, stepTime);
+    
+    // Phase 3: Success message (after warning)
+    setTimeout(() => {
+      this.showStatusMessage(
+        'Lynx Keymap Ready',
+        'Extension successfully loaded',
+        stepTime,
+        '✅'
+      );
+    }, stepTime * 2);
   }
 }
 
