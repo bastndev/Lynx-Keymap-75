@@ -53,7 +53,7 @@ class TabMessageManager {
       this.currentFrame = 0;
       statusBarItem.text = `${this.animationFrames[0]} ${text}`;
 
-      // Start animation
+      // Optimized animation - faster frame rate for smoother animation
       this.animationInterval = setInterval(() => {
         this.currentFrame =
           (this.currentFrame + 1) % this.animationFrames.length;
@@ -62,7 +62,7 @@ class TabMessageManager {
             this.animationFrames[this.currentFrame]
           } ${text}`;
         }
-      }, 100);
+      }, 80); // Reduced from 100ms to 80ms for smoother animation
     } else {
       // Static icon
       const displayText = icon ? `${icon} ${text}` : text;
@@ -78,11 +78,11 @@ class TabMessageManager {
   }
 
   /**
-   * Shows a loading message for AI operations
-   * Now optimized for automatic startup display
-   * @param {number} duration - Duration to show the message
+   * Shows a fast loading message for AI operations
+   * Optimized for quicker startup and smoother animation
+   * @param {number} duration - Duration to show the message (reduced default)
    */
-  static showAILoadingMessage(duration = 4000) {
+  static showAILoadingMessage(duration = 2000) { // Reduced from 4000ms to 2000ms
     this.showStatusMessage(
       'Initializing Lynx',
       'Loading Lynx Keymap extension...',
@@ -90,20 +90,6 @@ class TabMessageManager {
       'loading'
     );
     this.logInfo('Extension initialization started');
-  }
-
-  /**
-   * Shows AI ready notification
-   * @param {string} message - Success message to display
-   */
-  static showAIReadyMessage(message = 'Lynx Ready') {
-    this.showStatusMessage(
-      message,
-      'Lynx Keymap extension is ready to use',
-      2000,
-      '✅'
-    );
-    this.logSuccess(`Extension ready: ${message}`);
   }
 
   /**
@@ -143,36 +129,46 @@ class TabMessageManager {
    */
   static clearLoadingMessage() {
     this.clearStatusMessage();
-    this.logInfo('Status messages cleared - Extension fully loaded');
+    this.logInfo('Extension fully loaded - Ready for use');
   }
 
-    static showStartupNotifications() {
-      const totalDuration = 4000;
-      
-      // Phase 1: Loading animation (2.5 seconds)
-      this.showAILoadingMessage(2500);
-      
-      // Phase 2: Completion message (1.5 seconds)
-      setTimeout(() => {
-        this.showAIReadyMessage('Lynx Keymap Ready');
-      }, 2500);
-      
-      this.logInfo('Startup notification sequence initiated');
-    }
-
-    /**
-     * Simplified method to show only the automatic loading message
-     * Exact duration of 4 seconds as requested
-     */
-    static showAutoStartupMessage() {
-      this.showStatusMessage(
-        'Loading Lynx Keymap',
-        'Extension is starting up...',
-        4000, // Exactly 4 seconds
-        'loading'
-      );
-      this.logInfo('Auto startup message displayed for 4 seconds');
-    }
+  /**
+   * Optimized startup method - only shows loading animation
+   * Faster initialization without the "ready" message
+   */
+  static showStartupNotifications() {
+    // Only show loading animation for 2 seconds
+    this.showAILoadingMessage(2000);
+    this.logInfo('Fast startup sequence initiated');
   }
+
+  /**
+   * Simplified method to show only the automatic loading message
+   * Reduced to 2 seconds for faster startup
+   */
+  static showAutoStartupMessage() {
+    this.showStatusMessage(
+      'Loading Lynx Keymap',
+      'Extension is starting up...',
+      2000, // Reduced from 4000ms to 2000ms
+      'loading'
+    );
+    this.logInfo('Auto startup message displayed for 2 seconds');
+  }
+
+  /**
+   * Instant startup method - minimal loading time
+   * For cases where you want the fastest possible initialization
+   */
+  static showInstantStartup() {
+    this.showStatusMessage(
+      'Lynx Ready',
+      'Extension loaded successfully',
+      1000, // Very short duration
+      '⚡' // Lightning bolt for speed
+    );
+    this.logSuccess('Instant startup completed');
+  }
+}
 
 module.exports = TabMessageManager;
