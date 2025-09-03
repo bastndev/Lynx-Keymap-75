@@ -10,8 +10,8 @@ A comprehensive keymap extension designed specifically for 75% keyboards, provid
 - **Cursor** - AI-first code editor
 - **Windsurf** - AI-powered development environment
 - **Trae.ai** - AI coding assistant
-- **Kiro** - Modern code editor
 - **Firebase Studio** - Google's development platform
+- **Kiro** - Modern code editor with AI-powered features
 
 ## Key Features
 
