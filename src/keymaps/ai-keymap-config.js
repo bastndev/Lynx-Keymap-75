@@ -1,7 +1,6 @@
-/**
- * AI COMMANDS CONFIGURATION
- * Commands are tried in order until one succeeds
- */
+/*
+ *** AI COMMANDS CONFIGURATION
+*/
 
 const AI_COMMANDS_CONFIG = {
   // AI COMMIT GENERATION COMMANDS MARK:[Alt+2]
@@ -26,9 +25,9 @@ const AI_COMMANDS_CONFIG = {
 
   // AI CHAT COMMANDS MARK:[Shift+Tab]
   chatCommands: [
+    'workbench.action.toggleAuxiliaryBar',                               // 2: Cursor-AI
     'windsurf.prioritized.chat.open',                     // 0: Windsurf
     'workbench.panel.chat',                               // 1: Vscode
-    'aichat.newchataction',                               // 2: Cursor-AI
     'workbench.action.chat.icube.open',                   // 3: Trae-AI
     'aichat.prompt',                                      // 4: Firebase.Studio
     'workbench.action.toggleAuxiliaryBar',                // 5: Kiro
