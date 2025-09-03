@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & (Firebase Studio)... 雨",
-  "version": "1.3.5",
+  "version": "1.3.9",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -43,7 +43,16 @@
   },
   
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+
+    "onCommand:lynx-keymap.generateAICommit",
+    "onCommand:lynx-keymap.executeAIPopup",
+    "onCommand:lynx-keymap.openAndCloseAIChat",
+    "onCommand:lynx-keymap.createNewAISession",
+    "onCommand:lynx-keymap.showAIHistory",
+    "onCommand:lynx-keymap.attachAIContext",
+
+    "onCommand:lynx-keymap.executeColorAndAgentMacro"
   ],
   "main": "./src/extension.js",
   "contributes": {
