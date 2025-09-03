@@ -4,7 +4,7 @@ class ColorManager {
   constructor() {
     this.colors = [
       { value: '#008dfa', name: 'Blue' },
-      { value: '#07cc4cff', name: 'Green' },
+      { value: '#10B981', name: 'Green' },
       { value: null, name: 'Default' },
     ];
     this.currentColorIndex = this.colors.length - 1; // Start with default color
