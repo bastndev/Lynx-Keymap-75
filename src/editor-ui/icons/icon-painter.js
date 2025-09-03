@@ -15,7 +15,42 @@ class ColorManager {
 
   constructor() {
     this.colors = [...ColorManager.COLORS];
-    this.currentColorIndex = this.colors.length - 1; 
+    this.currentColorIndex = this.colors.length - 1; // Default fallback
+    this._syncWithCurrentState();
+  }
+
+  /**
+   * Synchronizes the manager with the current VS Code color state
+   * @private
+   */
+  _syncWithCurrentState() {
+    try {
+      const config = vscode.workspace.getConfiguration();
+      const customizations = config.get(ColorManager.CONFIG.WORKBENCH_KEY, {});
+      const currentIconColor = customizations[ColorManager.CONFIG.ICON_KEY];
+
+      // Find the index of the current color
+      const foundIndex = this.colors.findIndex(color => color.value === currentIconColor);
+      
+      if (foundIndex !== -1) {
+        this.currentColorIndex = foundIndex;
+      } else {
+        // If current color is not in predefined colors, assume default
+        this.currentColorIndex = this.colors.length - 1;
+      }
+    } catch (error) {
+      console.error('Error syncing color state:', error);
+      // Fallback to default
+      this.currentColorIndex = this.colors.length - 1;
+    }
+  }
+
+  /**
+   * Manually refresh/sync the current state (useful after external changes)
+   */
+  async refreshState() {
+    this._syncWithCurrentState();
+    return this.getStatus();
   }
 
   /**
@@ -23,6 +58,9 @@ class ColorManager {
    */
   async cycleIconColor() {
     try {
+      // Always sync before cycling to ensure we're starting from the correct state
+      this._syncWithCurrentState();
+      
       this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
       const currentColor = this.getCurrentColor();
       
@@ -159,8 +197,23 @@ class ColorManager {
       currentColor: currentColor.name,
       currentValue: currentColor.value,
       totalColors: this.colors.length,
-      availableColors: this.getAvailableColorNames()
+      availableColors: this.getAvailableColorNames(),
+      currentIndex: this.currentColorIndex
     };
+  }
+
+  /**
+   * Gets the actual color from VS Code settings (for debugging/verification)
+   */
+  getActualVSCodeColor() {
+    try {
+      const config = vscode.workspace.getConfiguration();
+      const customizations = config.get(ColorManager.CONFIG.WORKBENCH_KEY, {});
+      return customizations[ColorManager.CONFIG.ICON_KEY] || null;
+    } catch (error) {
+      console.error('Error getting actual VS Code color:', error);
+      return null;
+    }
   }
 
   /**
