@@ -32,6 +32,18 @@ Following semantic versioning principles for consistent and predictable releases
 
 <!-- --- -->
 
+## [1.4.0] - 2025-09-13
+
+### Fixed
+- Fixed a bug in the integration with the VS Code F1 extension that unexpectedly redirected when pressing `Ctrl+4`. `Ctrl+4` now executes its assigned action without changing focus or opening the F1 extension.
+
+### Improved
+- Better handling of shortcut conflicts between extensions to prevent unwanted redirections.
+- Added automated tests to validate `Ctrl+4` behavior on Windows, macOS, and Linux.
+- Improved diagnostic logging to help identify keybinding conflicts.
+
+---
+
 ## [1.3.9] - 2025-09-03
 
 ### Improved
