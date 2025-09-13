@@ -46,7 +46,7 @@ function activate(context) {
     'lynx-keymap.checkF1QuickSwitch',
     () =>
       extensionCheckerInstance.checkAndExecuteCommand(
-        'f1-toggles.focus',
+        'workbench.view.extension.f1-functions',
         context
       )
   );
