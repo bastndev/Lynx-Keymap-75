@@ -64,8 +64,8 @@
 | view git changes                  | End                 | End                      | End                      |
 | show markdown preview             | Page Up             | Page Up                  | Page Up                  |
 | -                                 | -                   | -                        | -                        |
-| open settings (JSON)              | `⌘ +` J             | `Ctrl +` J               | `Ctrl +` J               |
-| open settings                     | `⌥ +` J             | `Alt +` J                | `Alt +` J                |
+| open settings                     | `⌘ +` J             | `Ctrl +` J               | `Ctrl +` J               |
+| open settings (JSON)              | `⌥ +` J             | `Alt +` J                | `Alt +` J                |
 | -                                 | -                   | -                        | -                        |
 | comment line                      | `⌘ +` /             | `Ctrl +` /               | `Ctrl +` /               |
 | comment block                     | `⌥ +` /             | `Alt +` /                | `Alt +` /                |
