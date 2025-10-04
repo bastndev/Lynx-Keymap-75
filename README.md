@@ -13,13 +13,9 @@
 
 ### New 🧪 (experimental) keymaps
 
-| Command                                 | 🍎 macOS       | 🟦 Windows          | 🐧 Linux            |
-| :-------------------------------------- | :------------- | :------------------ | :------------------ |
-| 🧪 ask, agent, edit 🔁 `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`    | `⌥ + Z`        | `Alt + Z`           | `Alt + Z`           |
-| 🧪 toggle (status bar) color            | `⌘ + ⌥ + PgDn` | `Ctrl + Alt + PgDn` | `Ctrl + Alt + PgDn` |
-| -                                       | -              | -                   | -                   |
-| Select (AI) model `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`         | `⌥ + X`        | `Alt + X`           | `Alt + X`           |
-| maximized & minimize (AI) `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ` | `⇧ + Esc`      | `Shift + Esc`       | `Shift + Esc`       |
+| Command         | 🍎 macOS    | 🟦 Windows        | 🐧 Linux          |
+| :-------------- | :---------- | :---------------- | :---------------- |
+| Compare Code 🆕 | `⇧ + ⌥ + \` | `Shift + Alt + \` | `Shift + Alt + \` |
 
 </br>
 
@@ -99,6 +95,16 @@
 | Ask, Agent, Edit 🔁 ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ        | ⌥ + Z      | Alt + Z      | Alt + Z      |
 | pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ            | ⌥ + X      | Alt + X      | Alt + X      |
 | maximized & minimize (AI) ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ  | ⇧ + Esc    | Shift + Esc  | Shift + Esc  |
+
+### ONLY vscode `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`
+
+| Command                      | 🍎 macOS       | 🟦 Windows          | 🐧 Linux            |
+| :--------------------------- | :------------- | :------------------ | :------------------ |
+| 🧪 ask, agent, edit 🔁       | `⌥ + Z`        | `Alt + Z`           | `Alt + Z`           |
+| 🧪 toggle (status bar) color | `⌘ + ⌥ + PgDn` | `Ctrl + Alt + PgDn` | `Ctrl + Alt + PgDn` |
+| -                            | -              | -                   | -                   |
+| Select (AI) model            | `⌥ + X`        | `Alt + X`           | `Alt + X`           |
+| maximized & minimize (AI)    | `⇧ + Esc`      | `Shift + Esc`       | `Shift + Esc`       |
 
 </br>
 
