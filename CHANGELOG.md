@@ -23,18 +23,18 @@ A comprehensive keymap extension designed specifically for 75% keyboards, provid
 
 Discover more extensions at [bastndev.com/extensions](https://bastndev.com/extensions)
 
-
 ## Changelog
 
 Following semantic versioning principles for consistent and predictable releases.
 
-</br>
+<br>
 
 <!-- --- -->
 
 ## [1.5.0] - 2025-10-04
 
 ### Added
+
 - **Compare Code Extension Integration**: Introduced new shortcut `Shift + Alt + \` (`shift+alt+\`) to instantly activate the Compare Code extension
   - Enables quick side-by-side code comparison and diff viewing
   - Seamless integration with the Compare Code extension workflow
@@ -42,6 +42,7 @@ Following semantic versioning principles for consistent and predictable releases
   - Optimized for 75% keyboard layouts
 
 ### Improved
+
 - Enhanced code review workflow with dedicated comparison shortcuts
 - Better integration with diff and merge tools
 
@@ -50,10 +51,12 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.4.0] - 2025-09-13
 
 ### Fixed
+
 - Fixed a bug in the integration with the VS Code F1 extension that unexpectedly redirected when pressing `Ctrl+4`. `Ctrl+4` now executes its assigned action without changing focus or opening the F1 extension.
 
 ### Improved
-- Better handling of shortcut conflicts between extensions to prevent unwanted redirections.
+
+- Better handling of shortcut conflicts between extensions to prevent unwanted redirection.
 - Added automated tests to validate `Ctrl+4` behavior on Windows, macOS, and Linux.
 - Improved diagnostic logging to help identify keybinding conflicts.
 
@@ -62,10 +65,12 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.3.9] - 2025-09-03
 
 ### Improved
+
 - **icons-painter.js Logic**: Refined the logic for icon rendering to enhance reliability and maintainability.
 - **Keymap Load Time**: Optimized keymap loading for faster startup and reduced latency across supported editors.
 
 ### Added
+
 - **AI Window Control in Cursor**: Implemented new shortcuts to open and close the AI window in Cursor editor for streamlined workflow.
 
 ---
@@ -73,9 +78,11 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.3.5] - 2025-08-11
 
 ### Added
+
 - **New Keymap**: Added shortcut `Alt + ,` (`alt+,`) for sending the right arrow sequence in the terminal (`workbench.action.terminal.sendSequence` with `\u001b[C`).
 
 ### Changed
+
 - **Enhanced Shortcut**: Updated the keymap for sending `PgDn` in the terminal to include `Ctrl` on all platforms (`ctrl+alt+backspace` on Windows/Linux, `cmd+alt+backspace` on macOS).
 
 ---
@@ -83,6 +90,7 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.3.1] - 2025-08-03
 
 ### Changed
+
 - Updated extension showcase table description in `README.md`
 
 ---
@@ -90,13 +98,16 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.2.3] - 2025-08-02
 
 ### Changed
+
 - **Inverted Key Combos**: Key combinations in the `package.json` file were inverted to improve ergonomics and adaptability across different platforms and user preferences.
 
 ### Improved
+
 - Enhanced consistency of keyboard shortcuts across operating systems.
 - Updated documentation to reflect the new keybinding changes.
 
 ### Fixed
+
 - Fixed potential shortcut conflicts after key inversion.
 - Improved handling of custom shortcuts in AI environments and supported editors.
 
@@ -105,6 +116,7 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.2.0] - 2025-08-01
 
 ### Added
+
 - **Custom Notifications**: Introduced personalized notification system for keymap events and updates
   - Receive in-editor alerts for new shortcut releases and important changes
   - Customizable notification preferences per editor
@@ -113,10 +125,12 @@ Following semantic versioning principles for consistent and predictable releases
   - `lynx-keymap.checkGitLens` - Checks if the GitLens extension is installed; prompts to install if missing
 
 ### Improved
+
 - Enhanced user feedback for shortcut activation
 - Improved onboarding experience with notification-driven tips
 
 ### Fixed
+
 - Minor bugs related to notification display on certain platforms
 - Resolved rare issues with notification timing in Cursor and Windsurf editors
 
@@ -125,6 +139,7 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.1.1] - 2025-07-31
 
 ### Added
+
 - **New Keyboard Shortcuts**: Enhanced productivity with additional keymaps
   - `Shift + Alt + T` - Select theme (quick theme switching)
   - `Shift + Alt + R` - Reload window (instant environment refresh)
@@ -135,10 +150,12 @@ Following semantic versioning principles for consistent and predictable releases
   - `CONTRIBUTING.md` - Developer contribution instructions and workflow
 
 ### Changed
+
 - **Enhanced README**: Improved documentation structure and presentation
 - **Optimized Existing Keymaps**: Refined shortcut combinations for better ergonomics
 
 ### Improved
+
 - Better keymap organization and categorization
 - Enhanced user experience with more intuitive shortcuts
 - Strengthened project governance with community guidelines
@@ -148,15 +165,18 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.0.7] - 2025-07-24
 
 ### Added
+
 - **Professional Changelog**: Complete changelog documentation with version history
 - **Repository Star Button**: New ⭐️ button linking directly to GitHub repository for easy starring
 - **Enhanced Banner**: Improved visual design and branding consistency
 
 ### Changed
+
 - Updated documentation structure for better readability
 - Improved README formatting and presentation
 
 ### Fixed
+
 - Minor documentation inconsistencies
 - Enhanced visual elements positioning
 
@@ -165,10 +185,12 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.0.2] - 2025-07-22
 
 ### Added
+
 - Enhanced experimental keymaps section with better categorization
 - Improved AI command shortcuts documentation
 
 ### Fixed
+
 - Key binding conflicts resolution across different editors
 - Better handling of international keyboard layouts
 
@@ -177,10 +199,12 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.0.0] - 2025-07-20
 
 ### Added
+
 - **Firebase Studio Support**: Added dedicated shortcuts for Firebase development workflow
 - **Kiro Editor Integration**: Full keymap support for Kiro code editor
 
 ### Changed
+
 - Optimized shortcut combinations for better ergonomics on 75% keyboards
 - Updated installation instructions with platform-specific guidance
 
@@ -189,12 +213,14 @@ Following semantic versioning principles for consistent and predictable releases
 ## [0.9.6] - 2025-07-18
 
 ### Added
+
 - **Experimental AI Features**: New shortcuts for AI-powered code generation and editing
 - `Alt + Z` - Ask, agent, edit functionality (VS Code only)
 - `Alt + X` - Pick AI model selection (VS Code only)
 - `Shift + Esc` - Maximize & minimize AI interface (VS Code only)
 
 ### Fixed
+
 - Improved compatibility with Trae.ai interface
 - Better handling of AI chat interface shortcuts
 
@@ -203,11 +229,13 @@ Following semantic versioning principles for consistent and predictable releases
 ## [0.9.2] - 2025-07-15
 
 ### Added
+
 - **Multi-Language Keyboard Support**: Extended backquote key equivalents for international layouts
 - Support for Spanish, French, German, Russian, Japanese, Portuguese, Italian, Turkish keyboards
 - **Bottom Color Change**: `Ctrl + Alt + P` for theme color switching
 
 ### Changed
+
 - Enhanced documentation with emoji indicators for better visual navigation
 - Improved table formatting for better readability
 
@@ -216,11 +244,13 @@ Following semantic versioning principles for consistent and predictable releases
 ## [0.8.1] - 2025-07-12
 
 ### Added
+
 - **Windsurf Editor Support**: Complete keymap integration for Windsurf AI development environment
 - **Enhanced Git Workflow**: Streamlined shortcuts for version control operations
 - AI-powered commit message generation with `Alt + 2`
 
 ### Fixed
+
 - Resolved key binding conflicts between different editors
 - Improved shortcut consistency across platforms (macOS, Windows, Linux)
 
@@ -229,6 +259,7 @@ Following semantic versioning principles for consistent and predictable releases
 ## [0.5.0] - 2025-07-10
 
 ### Initial Release
+
 - **Universal Keymap System**: Consistent shortcuts across VS Code, Cursor, Windsurf, Trae.ai
 - **75% Keyboard Optimization**: Specially designed for compact keyboard layouts
 - **Core Functionality**:
@@ -241,10 +272,11 @@ Following semantic versioning principles for consistent and predictable releases
 - **Multi-Editor Support**: Seamless experience across modern code editors
 
 ### Key Shortcuts Introduced
+
 - `Ctrl +` Tab - Toggle sidebar across all editors
 - `Alt +` W - Universal terminal toggle
 - `Alt +` F - Consistent code formatting
-- `Ctrl` + `  - AI chat interface (universal)
+- `Ctrl` + ` - AI chat interface (universal)
 - And 40+ more essential shortcuts
 
 ---
@@ -252,6 +284,7 @@ Following semantic versioning principles for consistent and predictable releases
 ## [0.0.1] - 2025-04-26
 
 ### Initial Release
+
 - Initial release of Lynx Keymap 75%
 - Basic keymap implementation for VS Code
 - Core keyboard shortcut infrastructure and settings
