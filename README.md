@@ -9,7 +9,7 @@
     <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Theme-Pro/refs/heads/main/assets/images/star.png" width="26.6px" alt="Github Star ⭐️"></a>
 </p>
 
-</br>
+<br>
 
 ### New 🧪 (experimental) keymaps
 
@@ -17,7 +17,7 @@
 | :----------------- | :---------- | :---------------- | :---------------- |
 | Compare Code - 🄽🄴🅆 | `⇧ + ⌥ + \` | `Shift + Alt + \` | `Shift + Alt + \` |
 
-</br>
+<br>
 
 ## Lynx Keymap 75% — Standard Keybindings
 
@@ -106,7 +106,7 @@
 | Select (AI) model            | `⌥ + X`        | `Alt + X`           | `Alt + X`           |
 | maximized & minimize (AI)    | `⇧ + Esc`      | `Shift + Esc`       | `Shift + Esc`       |
 
-</br>
+<br>
 
 > [!IMPORTANT]
 >
@@ -161,7 +161,7 @@ If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/ba
 - 🔴 [Youtube](https://www.youtube.com/@bastndev?sub_confirmation=1) - Code, Software and development insights.
 - 💼 [Linkedin](https://www.linkedin.com/in/bastndev) - Professional networking and career updates.
 
-</br>
+<br>
 
 | Icon                                                                                                                                                                                                                                   | Name                                                       | Description                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -173,9 +173,8 @@ If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/ba
 <div align="center">
   <p><strong>Made with 🧡 by <a href="https://bastndev.com/extensions">Gohit Bastian</a></strong></p>
   
-  **Enjoy 🎉 Your Lynx keymaps 75% are now installed!**  
+  **Enjoy 🎉 Your (Lynx keymap 75%) are now installed!**  
   *If you find any bugs or have feedback, you can [open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues)*
-</div
-
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
