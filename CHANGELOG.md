@@ -41,10 +41,16 @@ Following semantic versioning principles for consistent and predictable releases
   - Works across all supported editors for consistent experience
   - Optimized for 75% keyboard layouts
 
-### Improved
+### Changed
+- **Settings Shortcuts**: Optimized keybindings for faster settings access
+  - `Ctrl + J` / `⌘ + J` — Open settings (JSON) for direct configuration editing
+  - `Alt + J` / `⌥ + J` — Open settings (UI) for visual preference management
 
-- Enhanced code review workflow with dedicated comparison shortcuts
-- Better integration with diff and merge tools
+### Improved
+- **AI Command Reliability**: Enhanced stability and response time for AI-powered features across all supported editors
+- **Extension Installation Flow**: Streamlined extension discovery and installation process with better error handling
+- **Code Formatting Logic**: Refined Prettier integration with automatic format-on-save detection and configuration
+- **Documentation**: Updated README.md with new shortcuts, clearer installation instructions, and enhanced troubleshooting guide
 
 ---
 
