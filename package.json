@@ -73,6 +73,14 @@
         "key"    : "ctrl+4",
         "mac"    : "cmd+4",
         "command": "lynx-keymap.checkF1QuickSwitch"
+      },{
+        "key"    : "shift+alt+\\",
+        "mac"    : "shift+alt+\\",
+        "command": "-Compare Code"
+      },{
+        "key"    : "shift+alt+\\",
+        "mac"    : "shift+alt+\\",
+        "command": "lynx-keymap.checkCompareCode"
       },
       
 
@@ -409,6 +417,9 @@
       },{
       "command": "lynx-keymap.checkGitLens",
       "title"  : "Check GitLens Extension and Execute"
+      },{
+      "command": "lynx-keymap.checkCompareCode",
+      "title"  : "Check Compare Code Extension and Execute"
       }
     ]
 }
