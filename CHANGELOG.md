@@ -32,7 +32,7 @@ Following semantic versioning principles for consistent and predictable releases
 
 <!-- --- -->
 
-## [1.5.0] - 2025-10-03
+## [1.5.0] - 2025-10-04
 
 ### Added
 - **Compare Code Extension Integration**: Introduced new shortcut `Shift + Alt + \` (`shift+alt+\`) to instantly activate the Compare Code extension
