@@ -35,8 +35,15 @@ Following semantic versioning principles for consistent and predictable releases
 ## [1.5.0] - 2025-10-03
 
 ### Added
-- **Compare Code Extension**: New shortcut `Shift + Alt + \` to activate the Compare Code extension for side-by-side code comparison and diff viewing.
+- **Compare Code Extension Integration**: Introduced new shortcut `Shift + Alt + \` (`shift+alt+\`) to instantly activate the Compare Code extension
+  - Enables quick side-by-side code comparison and diff viewing
+  - Seamless integration with the Compare Code extension workflow
+  - Works across all supported editors for consistent experience
+  - Optimized for 75% keyboard layouts
 
+### Improved
+- Enhanced code review workflow with dedicated comparison shortcuts
+- Better integration with diff and merge tools
 
 ---
 
