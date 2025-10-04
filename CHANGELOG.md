@@ -32,6 +32,10 @@ Following semantic versioning principles for consistent and predictable releases
 
 <!-- --- -->
 
+## [1.5.0] - 2025-10-03
+
+---
+
 ## [1.4.0] - 2025-09-13
 
 ### Fixed
