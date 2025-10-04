@@ -13,13 +13,9 @@
 
 ### New 🧪 (experimental) keymaps
 
-| Command                                 | 🍎 macOS       | 🟦 Windows          | 🐧 Linux            |
-| :-------------------------------------- | :------------- | :------------------ | :------------------ |
-| 🧪 ask, agent, edit 🔁 `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`    | `⌥ + Z`        | `Alt + Z`           | `Alt + Z`           |
-| 🧪 toggle (status bar) color            | `⌘ + ⌥ + PgDn` | `Ctrl + Alt + PgDn` | `Ctrl + Alt + PgDn` |
-| -                                       | -              | -                   | -                   |
-| Select (AI) model `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ`         | `⌥ + X`        | `Alt + X`           | `Alt + X`           |
-| maximized & minimize (AI) `ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ` | `⇧ + Esc`      | `Shift + Esc`       | `Shift + Esc`       |
+| Command            | 🍎 macOS    | 🟦 Windows        | 🐧 Linux          |
+| :----------------- | :---------- | :---------------- | :---------------- |
+| Compare Code - 🄽🄴🅆 | `⇧ + ⌥ + \` | `Shift + Alt + \` | `Shift + Alt + \` |
 
 </br>
 
@@ -100,6 +96,16 @@
 | pick (AI) model ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ            | ⌥ + X      | Alt + X      | Alt + X      |
 | maximized & minimize (AI) ᵒⁿˡʸ-ᵛˢᶜᵒᵈᵉ  | ⇧ + Esc    | Shift + Esc  | Shift + Esc  |
 
+### ► Only VSCode
+
+| Command                      | 🍎 macOS       | 🟦 Windows          | 🐧 Linux            |
+| :--------------------------- | :------------- | :------------------ | :------------------ |
+| 🧪 ask, agent, edit 🔁       | `⌥ + Z`        | `Alt + Z`           | `Alt + Z`           |
+| 🧪 toggle (status bar) color | `⌘ + ⌥ + PgDn` | `Ctrl + Alt + PgDn` | `Ctrl + Alt + PgDn` |
+| -                            | -              | -                   | -                   |
+| Select (AI) model            | `⌥ + X`        | `Alt + X`           | `Alt + X`           |
+| maximized & minimize (AI)    | `⇧ + Esc`      | `Shift + Esc`       | `Shift + Esc`       |
+
 </br>
 
 > [!IMPORTANT]
@@ -130,9 +136,9 @@
 
 Launch _Quick Open_
 
-- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
-- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
-- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
+- <img src="https://raw.githubusercontent.com/bastndev/bastndev/refs/heads/main/.github/assets/OS/linux.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://raw.githubusercontent.com/bastndev/bastndev/refs/heads/main/.github/assets/OS/macOs.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://raw.githubusercontent.com/bastndev/bastndev/refs/heads/main/.github/assets/OS/windows.ico" width=16 height=16/> Windows `Ctrl+P`
 
 Paste the following command and press `Enter`:
 
@@ -147,6 +153,7 @@ If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/ba
 | [![bastndev](https://github.com/bastndev.png?size=100)](https://www.bastndev.com/) |
 | :--------------------------------------------------------------------------------: |
 |                  **[Gohit Bastian](https://github.com/bastndev)**                  |
+|                               _Creator & Maintainer_                               |
 
 ## About Me
 
@@ -159,9 +166,16 @@ If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/ba
 | Icon                                                                                                                                                                                                                                   | Name                                                       | Description                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap/refs/heads/main/assets/images/logo.png)](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-keymap)                                          | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap) | Standardizes keyboard shortcuts across all code editors, allowing you to use key combinations to access any functionality. It improves workflow and development experience.                 |
-| [![F1-Quick Switch](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/f1/0.2.1/1752544035624/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=bastndev.f1)                | [F1-Quick Switch](https://github.com/bastndev/F1)          | Allows you to control editor functions and manage extensions directly from the keyboard, streamlining your workflow with configurable shortcuts.                                            |
+| [![Compare Code](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/compare-code/0.1.0/1759529717256/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=bastndev.compare-code) | [Compare Code](https://github.com/bastndev/Compare-Code)       | Lets you compare code in a professional, fast, and clear way. With a modern and intuitive interface, it's ideal for developers looking to boost their productivity. |
 | [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://marketplace.visualstudio.com/items?itemName=bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)   | A professional extension with six available themes: Dark, Light, Night, Ghibli, Coffee, and Kiro—with integrated icons. Each theme is optimized to offer a more pleasant visual experience. |
 
-**Ready! 🚀 Your keybindings are configured. If you find any bugs or have feedback, you can [open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues).**
+
+<div align="center">
+  <p><strong>Made with 🧡 by <a href="https://bastndev.com/extensions">Gohit Bastian</a></strong></p>
+  
+  **Enjoy 🎉 Your Lynx keymaps 75% are now installed!**  
+  *If you find any bugs or have feedback, you can [open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues)*
+</div
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

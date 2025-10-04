@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & (Firebase Studio)... 雨",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -73,6 +73,14 @@
         "key"    : "ctrl+4",
         "mac"    : "cmd+4",
         "command": "lynx-keymap.checkF1QuickSwitch"
+      },{
+        "key"    : "shift+alt+\\",
+        "mac"    : "shift+alt+\\",
+        "command": "-Compare Code"
+      },{
+        "key"    : "shift+alt+\\",
+        "mac"    : "shift+alt+\\",
+        "command": "lynx-keymap.checkCompareCode"
       },
       
 
@@ -409,6 +417,9 @@
       },{
       "command": "lynx-keymap.checkGitLens",
       "title"  : "Check GitLens Extension and Execute"
+      },{
+      "command": "lynx-keymap.checkCompareCode",
+      "title"  : "Check Compare Code Extension and Execute"
       }
     ]
 }

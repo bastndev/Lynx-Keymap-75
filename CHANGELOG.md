@@ -32,6 +32,14 @@ Following semantic versioning principles for consistent and predictable releases
 
 <!-- --- -->
 
+## [1.5.0] - 2025-10-03
+
+### Added
+- **Compare Code Extension**: New shortcut `Shift + Alt + \` to activate the Compare Code extension for side-by-side code comparison and diff viewing.
+
+
+---
+
 ## [1.4.0] - 2025-09-13
 
 ### Fixed
