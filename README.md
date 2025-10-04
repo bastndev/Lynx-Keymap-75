@@ -13,9 +13,9 @@
 
 ### New 🧪 (experimental) keymaps
 
-| Command         | 🍎 macOS    | 🟦 Windows        | 🐧 Linux          |
-| :-------------- | :---------- | :---------------- | :---------------- |
-| Compare Code 🆕 | `⇧ + ⌥ + \` | `Shift + Alt + \` | `Shift + Alt + \` |
+| Command            | 🍎 macOS    | 🟦 Windows        | 🐧 Linux          |
+| :----------------- | :---------- | :---------------- | :---------------- |
+| Compare Code - 🄽🄴🅆 | `⇧ + ⌥ + \` | `Shift + Alt + \` | `Shift + Alt + \` |
 
 </br>
 
