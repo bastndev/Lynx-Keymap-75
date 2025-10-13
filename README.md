@@ -148,12 +148,12 @@ ext install bastndev.lynx-keymap-75
 
 ## Contributors
 
-If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/bastndev/Lynx-Keymap-75/blob/main/CONTRIBUTING.md) .
+If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/bastndev/Lynx-Keymap-75/blob/main/CONTRIBUTING.md).
 
-| [![bastndev](https://github.com/bastndev.png?size=100)](https://www.bastndev.com/) |
-| :--------------------------------------------------------------------------------: |
-|                  **[Gohit Bastian](https://github.com/bastndev)**                  |
-|                               _Creator & Maintainer_                               |
+| ![bastndev](https://github.com/bastndev.png?size=100) |
+| :---------------------------------------------------: |
+|       **[Gohit Bastian](https://bastndev.com)**       |
+|                _Creator & Maintainer_                 |
 
 ## About Me
 
@@ -172,7 +172,7 @@ If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/ba
 <br>
 
 <div align="center">
-  <p><strong>Made with 🧡 by <a href="https://bastndev.com/extensions">@bastndev</a></strong></p>
+  <p><strong>Made with 🧡 by <a href="https://github.com/bastndev">@bastndev</a></strong></p>
   
   **Enjoy 🎉 Your (Lynx keymap 75%) are now installed!**  
   *If you find any bugs or have feedback, you can [open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues)*
