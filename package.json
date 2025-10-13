@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & (Firebase Studio)... 雨",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -35,7 +35,7 @@
   },
   "author": {
     "name": "Gohit Bastian",
-    "email": "gobasdev@gmail.com",
+    "email": "dev@bastndev.com",
     "url": "https://www.bastndev.com"
   },
   "sponsor": {
