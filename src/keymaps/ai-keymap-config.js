@@ -11,6 +11,7 @@ const AI_COMMANDS_CONFIG = {
     'icube.gitGenerateCommitMessage',                     // 3: Trae-AI
     // Don't have a Firebase equivalent for this          // 4: Firebase.Studio
     // ---- ---- ---- ---- --- -- -                       // 5: Kiro
+    'antigravity.generateCommitMessage'                   // 6: Antigravity
   ],
 
   // AI POPUP COMMANDS MARK:[Ctrl`]
