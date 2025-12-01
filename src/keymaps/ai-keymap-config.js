@@ -16,13 +16,13 @@ const AI_COMMANDS_CONFIG = {
 
   // AI POPUP COMMANDS MARK:[Ctrl`]
   popupCommands: [
-    'antigravity.prioritized.command.open',               // 6: Antigravity
     'windsurf.prioritized.command.open',                  // 0: Windsurf
     'inlineChat.start',                                   // 1: Vscode
     'aipopup.action.modal.generate',                      // 2: Cursor-AI
     'icube.inlineChat.start',                             // 3: Trae-AI
     'workbench.action.terminal.chat.start',               // 4: Firebase.Studio
     'kiroAgent.inlineChat.start',                         // 5: Kiro
+    'antigravity.prioritized.command.open',               // 6: Antigravity
   ],
 
   // AI CHAT COMMANDS MARK:[Shift+Tab]
@@ -38,13 +38,13 @@ const AI_COMMANDS_CONFIG = {
 
   // NEW AI SESSION COMMANDS MARK:[Alt+A]
   newSessionCommands: [
-    'antigravity.prioritized.chat.openNewConversation',      // 6: Antigravity
     'windsurf.prioritized.chat.openNewConversation',         // 0: Windsurf
     'workbench.action.chat.newEditSession',                  // 1: Vscode
     'composer.createNew',                                    // 2: Cursor-AI
     'workbench.action.icube.aiChatSidebar.createNewSession', // 3: Trae-AI
-    // 'workbench.action.chat.newChat' NF-now                // 4: Firebase.Studio
+    // 'workbench.action.chat.newEditSession' NF-now         // 4: Firebase.Studio
     'kiroAgent.newSession',                                  // 5: Kiro
+    'antigravity.prioritized.chat.openNewConversation',      // 6: Antigravity
   ],
 
   // AI HISTORY COMMANDS MARK:[Alt+S]
