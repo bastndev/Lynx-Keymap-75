@@ -16,6 +16,7 @@ const AI_COMMANDS_CONFIG = {
 
   // AI POPUP COMMANDS MARK:[Ctrl`]
   popupCommands: [
+    'antigravity.prioritized.command.open',               // 6: Antigravity
     'windsurf.prioritized.command.open',                  // 0: Windsurf
     'inlineChat.start',                                   // 1: Vscode
     'aipopup.action.modal.generate',                      // 2: Cursor-AI
@@ -32,16 +33,18 @@ const AI_COMMANDS_CONFIG = {
     'workbench.action.chat.icube.open',                   // 3: Trae-AI
     'aichat.prompt',                                      // 4: Firebase.Studio
     'workbench.action.toggleAuxiliaryBar',                // 5: Kiro
+    // ---- ---- ---- ---- --- -- -                       // 6: Antigravity
   ],
 
   // NEW AI SESSION COMMANDS MARK:[Alt+A]
   newSessionCommands: [
+    'antigravity.prioritized.chat.openNewConversation',      // 6: Antigravity
     'windsurf.prioritized.chat.openNewConversation',         // 0: Windsurf
     'workbench.action.chat.newEditSession',                  // 1: Vscode
     'composer.createNew',                                    // 2: Cursor-AI
     'workbench.action.icube.aiChatSidebar.createNewSession', // 3: Trae-AI
     // 'workbench.action.chat.newChat' NF-now                // 4: Firebase.Studio
-    'kiroAgent.newSession'                                   // 5: Kiro
+    'kiroAgent.newSession',                                  // 5: Kiro
   ],
 
   // AI HISTORY COMMANDS MARK:[Alt+S]
@@ -52,6 +55,7 @@ const AI_COMMANDS_CONFIG = {
     'workbench.action.chat.history',                      // 1: Vscode
     'workbench.action.icube.aiChatSidebar.showHistory',   // 3: Trae-AI
     // Firebase doesn't have a history NF-now             // 4: Firebase.Studio
+    // ---- ---- ---- ---- --- -- -                       // 6: Antigravity
   ],
 
   // AI ATTACH CONTEXT COMMANDS MARK:[Alt+D]
@@ -62,6 +66,7 @@ const AI_COMMANDS_CONFIG = {
     // ---- ---- --- --- -- -                            // 3: Trae-AI
     // 'Workbench.action.openWorkspace' NF-now           // 4: Firebase.Studio
     // ---- ---- ---- ---- --- -- -                      // 5: Kiro
+    // ---- ---- ---- ---- --- -- -                      // 6: Antigravity
   ],
 };
 
