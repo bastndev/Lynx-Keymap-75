@@ -3,7 +3,7 @@
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & (Firebase Studio)... 雨",
   "version": "1.5.2",
-  "publisher": "bastndev",
+  "publisher": "gohitx",
   "license": "MIT",
   "engines": {
     "vscode": "^1.74.0"
@@ -35,11 +35,11 @@
   },
   "author": {
     "name": "Gohit Bastian",
-    "email": "dev@bastndev.com",
-    "url": "https://www.bastndev.com"
+    "email": "hello@gohit.xyz",
+    "url": "https://gohit.xyz"
   },
   "sponsor": {
-    "url": "https://github.com/sponsors/bastndev"
+    "url": "https://github.com/sponsors/gohit.xyz"
   },
   
   "activationEvents": [
