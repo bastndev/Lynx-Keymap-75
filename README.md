@@ -172,7 +172,7 @@ If you want to contribute, check the guidelines: [[>_ᅠ]](https://github.com/ba
 <br>
 
 <div align="center">
-  <p><strong>Made with 🧡 by <a href="https://github.com/bastndev">@bastndev</a></strong></p>
+  <p><strong>Made with 🧡 by <a href="https://github.com/gohitx">@Gohit X</a></strong></p>
   
   **Enjoy 🎉 Your (Lynx keymap 75%) are now installed!**  
   *If you find any bugs or have feedback, you can [open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues)*
