@@ -21,7 +21,7 @@ A comprehensive keymap extension designed specifically for 75% keyboards, provid
 - **Multi-Language Support**: Backquote key equivalents for international keyboards
 - **Experimental Features**: Cutting-edge shortcuts for the latest AI tools
 
-Discover more extensions at [bastndev.com/extensions](https://bastndev.com/extensions)
+  Discover more extensions [here](https://gohit.xyz/)
 
 ## Changelog
 

@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & Antigravity... 雨",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -34,9 +34,9 @@
     "url": "https://github.com/bastndev/Lynx-Keymap-75/issues"
   },
   "author": {
-    "name": "Gohit Bastian",
+    "name": "Gohit Bastian", 
     "email": "hello@gohit.xyz",
-    "url": "https://gohit.xyz"
+    "url": "https://www.gohit.xyz/me"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/gohit.xyz"
