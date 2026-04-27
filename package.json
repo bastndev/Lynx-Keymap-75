@@ -56,7 +56,7 @@
     "onCommand:lynx-keymap.checkF1QuickSwitch",
     "onCommand:lynx-keymap.checkCompareCode"
   ],
-  "main": "./src/extension.js",
+  "main": "./src/extension.ts",
   "contributes": {
     "keybindings": [
       {
@@ -423,5 +423,10 @@
       "command": "lynx-keymap.checkCompareCode",
       "title"  : "Check Compare Code Extension and Execute"
       }
-    ]
+    ],
+    "devDependencies": {
+      "@types/node": "^25.6.0",
+      "@types/vscode": "^1.116.0",
+      "typescript": "^6.0.3"
+    }
 }

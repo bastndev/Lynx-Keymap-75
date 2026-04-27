@@ -1,22 +1,13 @@
-const vscode = require('vscode');
-const { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } = require('./ai-keymap-config');
+import * as vscode from 'vscode';
+import { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } from './ai-keymap-config';
 
-/**
- * Manages AI command registration and execution
- */
-class AICommandsManager {
-  constructor() {
-    this.disposables = [];
-    this.availableCommandsCache = null;
-    this.cacheTimestamp = 0;
-    this.cacheExpiry = 5 * 60 * 1000; // 5 minutes
-  }
+export class AICommandsManager {
+  private disposables: vscode.Disposable[] = [];
+  private availableCommandsCache: string[] | null = null;
+  private cacheTimestamp: number = 0;
+  private cacheExpiry: number = 5 * 60 * 1000;
 
-  /**
-   * Registers AI commands from config
-   */
-  registerCommands(context) {
-    // Create command registrations from KEYMAP_CONFIG
+  registerCommands(context: vscode.ExtensionContext): vscode.Disposable[] {
     const disposables = KEYMAP_CONFIG.map((config) => {
       return vscode.commands.registerCommand(config.commandId, async () => {
         const commands = AI_COMMANDS_CONFIG[config.commandsKey];
@@ -24,22 +15,13 @@ class AICommandsManager {
       });
     });
 
-    // Store for cleanup
     this.disposables = disposables;
-
-    // Register with context
     context.subscriptions.push(...this.disposables);
 
     return this.disposables;
   }
 
-  /**
-   * Executes first available command from list
-   * @param {Array} commands - Array of command strings to try
-   * @param {string} errorMessage - Message to show if no commands work
-   */
-  async executeFirstAvailableCommand(commands, errorMessage) {
-    // Validate parameters
+  async executeFirstAvailableCommand(commands: string[], errorMessage: string): Promise<void> {
     if (!Array.isArray(commands) || commands.length === 0) {
       console.error('Invalid commands array provided:', commands);
       vscode.window.showWarningMessage(errorMessage || 'No commands available');
@@ -50,11 +32,8 @@ class AICommandsManager {
       errorMessage = 'Command execution failed';
     }
 
-    // Get available commands with caching
     const allCommands = await this.getAvailableCommands();
 
-    // 1. Prioritize Antigravity commands
-    // Find any command that starts with 'antigravity.' in the input list
     const antigravityCmd = commands.find(cmd => cmd.startsWith('antigravity.'));
     
     if (antigravityCmd && allCommands.includes(antigravityCmd)) {
@@ -64,13 +43,10 @@ class AICommandsManager {
         return;
       } catch (error) {
         console.error(`Failed to execute prioritized command ${antigravityCmd}:`, error);
-        // If it fails, fall through to the normal loop
       }
     }
 
-    // 2. Try each command until one succeeds
     for (const cmd of commands) {
-      // Skip if we already tried this antigravity command and it failed
       if (cmd === antigravityCmd) continue;
 
       if (allCommands.includes(cmd)) {
@@ -86,15 +62,10 @@ class AICommandsManager {
       }
     }
 
-    // Show warning if no commands worked
     vscode.window.showWarningMessage(errorMessage);
   }
 
-  /**
-   * Gets available commands with caching
-   * @returns {Promise<Array>} Array of available command strings
-   */
-  async getAvailableCommands() {
+  async getAvailableCommands(): Promise<string[]> {
     const now = Date.now();
     if (
       this.availableCommandsCache &&
@@ -109,15 +80,11 @@ class AICommandsManager {
       return this.availableCommandsCache;
     } catch (error) {
       console.error('Failed to get available commands:', error);
-      // Return cached commands if available, otherwise empty array
       return this.availableCommandsCache || [];
     }
   }
 
-  /**
-   * Cleans up disposables
-   */
-  dispose() {
+  dispose(): void {
     this.disposables.forEach((disposable) => {
       if (disposable && typeof disposable.dispose === 'function') {
         disposable.dispose();
@@ -126,5 +93,3 @@ class AICommandsManager {
     this.disposables = [];
   }
 }
-
-module.exports = AICommandsManager;
