@@ -5,11 +5,13 @@ import { StatusBarManager } from './editor-ui/status-bar';
 import { AICommandsManager } from './keymaps/ai-keymap-handler';
 import { ExtensionChecker } from './notifications/extension-checker';
 import { SmartWebviewExtension } from './notifications/smart-checker-webview';
+import { SwapManager } from './keymaps/swap';
 
 let statusBarManagerInstance: StatusBarManager | undefined;
 let aiCommandsManagerInstance: AICommandsManager | undefined;
 let extensionCheckerInstance: ExtensionChecker | undefined;
 let smartWebviewExtensionInstance: SmartWebviewExtension | undefined;
+let swapManagerInstance: SwapManager | undefined;
 
 export function activate(context: vscode.ExtensionContext) {
   const colorManager = new ColorManager();
@@ -18,10 +20,12 @@ export function activate(context: vscode.ExtensionContext) {
   aiCommandsManagerInstance = new AICommandsManager();
   extensionCheckerInstance = new ExtensionChecker();
   smartWebviewExtensionInstance = new SmartWebviewExtension();
+  swapManagerInstance = new SwapManager(aiCommandsManagerInstance);
 
   aiCommandsManagerInstance.registerCommands(context);
   extensionCheckerInstance.registerCheckCommands(context);
   smartWebviewExtensionInstance.registerWebviewCommands(context);
+  swapManagerInstance.initializeContexts();
 
   const toggleStatusBarColorDisposable = vscode.commands.registerCommand(
     'lynx-keymap.toggleStatusBarColor',
