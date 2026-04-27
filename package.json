@@ -41,6 +41,14 @@
   "sponsor": {
     "url": "https://github.com/sponsors/gohit.xyz"
   },
+  "scripts": {
+    "vscode:prepublish": "bun run package",
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "node esbuild.js --production",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
   
   "activationEvents": [
     "onStartupFinished",
@@ -56,7 +64,7 @@
     "onCommand:lynx-keymap.checkF1QuickSwitch",
     "onCommand:lynx-keymap.checkCompareCode"
   ],
-  "main": "./src/extension.ts",
+  "main": "./dist/extension.js",
   "contributes": {
     "keybindings": [
       {
@@ -425,8 +433,12 @@
       }
     ],
     "devDependencies": {
+      "@eslint/js": "^9.21.0",
       "@types/node": "^25.6.0",
       "@types/vscode": "^1.116.0",
-      "typescript": "^6.0.3"
+      "esbuild": "^0.25.0",
+      "eslint": "^9.21.0",
+      "typescript": "^6.0.3",
+      "typescript-eslint": "^8.25.0"
     }
 }
