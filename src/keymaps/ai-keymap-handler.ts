@@ -1,126 +1,147 @@
 import * as vscode from 'vscode';
-import { AI_COMMANDS_CONFIG, KEYMAP_CONFIG } from './ai-keymap-config';
+import {
+  AI_COMMANDS, KEYMAP_CONFIG, EDITOR_SIGNATURES,
+  EditorType, ActionKey
+} from './ai-keymap-config';
 
-/**
- * Manages AI command registration and execution
- */
+const LOG = '[lynx-keymap]';
+
 export class AICommandsManager {
-  private disposables: vscode.Disposable[] = [];
-  private availableCommandsCache: string[] | null = null;
-  private cacheTimestamp: number = 0;
-  private cacheExpiry: number = 5 * 60 * 1000; // 5 minutes
+  private disposables: vscode.Disposable[]  = [];
+  private detectedEditor: EditorType | null = null;
+  private allCommandsCache: string[] | null = null;
+  private cacheTimestamp: number            = 0;
+  private readonly CACHE_EXPIRY             = 5 * 60 * 1000; // 5 min
 
-  /**
-   * Registers AI commands from config
-   */
+  // ─── Public API ────────────────────────────────────────────────────────────
+
   public registerCommands(context: vscode.ExtensionContext): vscode.Disposable[] {
-    // Create command registrations from KEYMAP_CONFIG
-    const disposables = KEYMAP_CONFIG.map((config) => {
-      return vscode.commands.registerCommand(config.commandId, async () => {
-        const commands = AI_COMMANDS_CONFIG[config.commandsKey];
-        await this.executeFirstAvailableCommand(commands, config.errorMessage);
-      });
-    });
+    const disposables = KEYMAP_CONFIG.map(({ commandId, commandsKey, errorMessage }) =>
+      vscode.commands.registerCommand(commandId, async () => {
+        await this.executeForAction(commandsKey, errorMessage);
+      })
+    );
 
-    // Store for cleanup
     this.disposables = disposables;
-
-    // Register with context
-    context.subscriptions.push(...this.disposables);
-
-    return this.disposables;
+    context.subscriptions.push(...disposables);
+    return disposables;
   }
 
+  /** Detect editor eagerly on activation so first keypress is instant */
+  public async warmup(): Promise<EditorType> {
+    return this.detectEditor();
+  }
+
+  /** Force re-detection (call this if user installs a new AI extension) */
+  public resetDetection(): void {
+    this.detectedEditor   = null;
+    this.allCommandsCache = null;
+    console.log(`${LOG} Detection cache cleared`);
+  }
+
+  public dispose(): void {
+    this.disposables.forEach(d => d?.dispose?.());
+    this.disposables = [];
+  }
+
+  // ─── Editor Detection ──────────────────────────────────────────────────────
+
   /**
-   * Executes first available command from list
-   * @param commands - Array of command strings to try
-   * @param errorMessage - Message to show if no commands work
+   * Detects the active editor by checking unique command signatures.
+   * Priority order: Antigravity → Windsurf → Cursor → Trae → Kiro → Firebase → VSCode
    */
-  public async executeFirstAvailableCommand(commands: string[], errorMessage: string): Promise<void> {
-    // Validate parameters
-    if (!Array.isArray(commands) || commands.length === 0) {
-      console.error('Invalid commands array provided:', commands);
-      vscode.window.showWarningMessage(errorMessage || 'No commands available');
-      return;
-    }
+  public async detectEditor(): Promise<EditorType> {
+    if (this.detectedEditor) {return this.detectedEditor;}
 
-    if (!errorMessage || typeof errorMessage !== 'string') {
-      errorMessage = 'Command execution failed';
-    }
+    const allCommands = await this.getAllCommands();
 
-    // Get available commands with caching
-    const allCommands = await this.getAvailableCommands();
+    const DETECTION_ORDER: EditorType[] = [
+      EditorType.ANTIGRAVITY,
+      EditorType.WINDSURF,
+      EditorType.CURSOR,
+      EditorType.TRAE_AI,
+      EditorType.KIRO,
+      EditorType.FIREBASE,
+      EditorType.VSCODE,
+    ];
 
-    // 1. Prioritize Antigravity commands
-    // Find any command that starts with 'antigravity.' in the input list
-    const antigravityCmd = commands.find(cmd => cmd.startsWith('antigravity.'));
-    
-    if (antigravityCmd && allCommands.includes(antigravityCmd)) {
-      try {
-        await vscode.commands.executeCommand(antigravityCmd);
-        console.log(`Successfully executed prioritized command: ${antigravityCmd}`);
-        return;
-      } catch (error) {
-        console.error(`Failed to execute prioritized command ${antigravityCmd}:`, error);
-        // If it fails, fall through to the normal loop
+    for (const editor of DETECTION_ORDER) {
+      const signatures = EDITOR_SIGNATURES[editor];
+      const detected   = signatures.some(sig => allCommands.includes(sig));
+
+      if (detected) {
+        this.detectedEditor = editor;
+        console.log(`${LOG} Detected editor: ${editor}`);
+        return editor;
       }
     }
 
-    // 2. Try each command until one succeeds
-    for (const cmd of commands) {
-      // Skip if we already tried this antigravity command and it failed
-      if (cmd === antigravityCmd) continue;
+    // Ultimate fallback
+    this.detectedEditor = EditorType.VSCODE;
+    console.warn(`${LOG} Editor not detected, defaulting to VSCode`);
+    return this.detectedEditor;
+  }
 
-      if (allCommands.includes(cmd)) {
-        try {
-          await vscode.commands.executeCommand(cmd);
-          console.log(`Successfully executed command: ${cmd}`);
-          return;
-        } catch (error) {
-          console.error(`Failed to execute command ${cmd}:`, error);
-        }
-      } else {
-        console.log(`Command not available: ${cmd}`);
-      }
+  // ─── Execution ─────────────────────────────────────────────────────────────
+
+  private async executeForAction(actionKey: ActionKey, errorMessage: string): Promise<void> {
+    const editor     = await this.detectEditor();
+    const commandMap = AI_COMMANDS[actionKey];
+
+    // 1. Try the exact command for detected editor
+    const primaryCmd = commandMap[editor];
+    if (primaryCmd) {
+      const ok = await this.tryExecute(primaryCmd, editor);
+      if (ok) {return;}
+
+      // Primary failed → reset detection so next call re-detects
+      console.warn(`${LOG} Primary command failed, resetting detection`);
+      this.resetDetection();
+    } else {
+      console.log(`${LOG} No command mapped for ${editor} → ${actionKey}`);
     }
 
-    // Show warning if no commands worked
+    // 2. Fallback: try all other editors in order
+    const fallbackEditors = Object.entries(commandMap) as [EditorType, string][];
+    for (const [fallbackEditor, cmd] of fallbackEditors) {
+      if (fallbackEditor === editor) {continue;} // already tried
+
+      const ok = await this.tryExecute(cmd, fallbackEditor);
+      if (ok) {return;}
+    }
+
     vscode.window.showWarningMessage(errorMessage);
   }
 
   /**
-   * Gets available commands with caching
-   * @returns Array of available command strings
+   * Attempts to execute a command. Returns true on success, false on failure.
+   * Does NOT check the cache — executeCommand itself is the source of truth.
    */
-  private async getAvailableCommands(): Promise<string[]> {
-    const now = Date.now();
-    if (
-      this.availableCommandsCache &&
-      now - this.cacheTimestamp < this.cacheExpiry
-    ) {
-      return this.availableCommandsCache;
-    }
-
+  private async tryExecute(cmd: string, editor: EditorType | string): Promise<boolean> {
     try {
-      this.availableCommandsCache = await vscode.commands.getCommands(true);
-      this.cacheTimestamp = now;
-      return this.availableCommandsCache;
-    } catch (error) {
-      console.error('Failed to get available commands:', error);
-      // Return cached commands if available, otherwise empty array
-      return this.availableCommandsCache || [];
+      await vscode.commands.executeCommand(cmd);
+      console.log(`${LOG} ✓ [${editor}] ${cmd}`);
+      return true;
+    } catch {
+      console.log(`${LOG} ✗ [${editor}] ${cmd}`);
+      return false;
     }
   }
 
-  /**
-   * Cleans up disposables
-   */
-  public dispose(): void {
-    this.disposables.forEach((disposable) => {
-      if (disposable && typeof disposable.dispose === 'function') {
-        disposable.dispose();
-      }
-    });
-    this.disposables = [];
+  // ─── Cache ─────────────────────────────────────────────────────────────────
+
+  private async getAllCommands(): Promise<string[]> {
+    const now = Date.now();
+    if (this.allCommandsCache && now - this.cacheTimestamp < this.CACHE_EXPIRY) {
+      return this.allCommandsCache;
+    }
+    try {
+      this.allCommandsCache = await vscode.commands.getCommands(true);
+      this.cacheTimestamp   = now;
+      return this.allCommandsCache;
+    } catch (error) {
+      console.error(`${LOG} Failed to get commands:`, error);
+      return this.allCommandsCache ?? [];
+    }
   }
 }
