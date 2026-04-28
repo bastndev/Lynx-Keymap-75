@@ -41,6 +41,14 @@
   "sponsor": {
     "url": "https://github.com/sponsors/gohit.xyz"
   },
+  "scripts": {
+    "vscode:prepublish": "bun run package",
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "node esbuild.js --production",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
   
   "activationEvents": [
     "onStartupFinished",
@@ -56,7 +64,7 @@
     "onCommand:lynx-keymap.checkF1QuickSwitch",
     "onCommand:lynx-keymap.checkCompareCode"
   ],
-  "main": "./src/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "keybindings": [
       {
@@ -341,7 +349,14 @@
       {
         "key"    : "alt+a",
         "mac"    : "alt+a",
-        "command": "lynx-keymap.createNewAISession"
+        "command": "antigravity.startNewConversation",
+        "when"   : "lynx-keymap.isAntigravity"
+      },
+      {
+        "key"    : "alt+a",
+        "mac"    : "alt+a",
+        "command": "lynx-keymap.createNewAISession",
+        "when"   : "!lynx-keymap.isAntigravity"
       },{
         "key"    : "alt+s",
         "mac"    : "alt+s",
@@ -423,5 +438,14 @@
       "command": "lynx-keymap.checkCompareCode",
       "title"  : "Check Compare Code Extension and Execute"
       }
-    ]
+    ],
+    "devDependencies": {
+      "@eslint/js": "^9.21.0",
+      "@types/node": "^25.6.0",
+      "@types/vscode": "^1.116.0",
+      "esbuild": "^0.25.0",
+      "eslint": "^9.21.0",
+      "typescript": "^6.0.3",
+      "typescript-eslint": "^8.25.0"
+    }
 }

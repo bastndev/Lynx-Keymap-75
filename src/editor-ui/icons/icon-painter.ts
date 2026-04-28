@@ -1,64 +1,58 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
-class ColorManager {
+interface ColorEntry {
+  value: string | null;
+  name: string;
+}
+
+export class ColorManager {
   static CONFIG = {
     WORKBENCH_KEY: 'workbench.colorCustomizations',
     ICON_KEY: 'icon.foreground',
     TARGET: vscode.ConfigurationTarget.Global
   };
 
-  static COLORS = [
+  static COLORS: ColorEntry[] = [
     { value: '#008dfa', name: 'Blue' },
     { value: '#10B981', name: 'Green' },
     { value: null, name: 'Default' }
   ];
 
+  private colors: ColorEntry[];
+  private currentColorIndex: number;
+
   constructor() {
     this.colors = [...ColorManager.COLORS];
-    this.currentColorIndex = this.colors.length - 1; // Default fallback
+    this.currentColorIndex = this.colors.length - 1;
     this._syncWithCurrentState();
   }
 
-  /**
-   * Synchronizes the manager with the current VS Code color state
-   * @private
-   */
-  _syncWithCurrentState() {
+  private _syncWithCurrentState(): void {
     try {
       const config = vscode.workspace.getConfiguration();
-      const customizations = config.get(ColorManager.CONFIG.WORKBENCH_KEY, {});
+      const customizations = config.get<Record<string, string>>(ColorManager.CONFIG.WORKBENCH_KEY, {});
       const currentIconColor = customizations[ColorManager.CONFIG.ICON_KEY];
 
-      // Find the index of the current color
       const foundIndex = this.colors.findIndex(color => color.value === currentIconColor);
       
       if (foundIndex !== -1) {
         this.currentColorIndex = foundIndex;
       } else {
-        // If current color is not in predefined colors, assume default
         this.currentColorIndex = this.colors.length - 1;
       }
     } catch (error) {
       console.error('Error syncing color state:', error);
-      // Fallback to default
       this.currentColorIndex = this.colors.length - 1;
     }
   }
 
-  /**
-   * Manually refresh/sync the current state (useful after external changes)
-   */
-  async refreshState() {
+  async refreshState(): Promise<{ currentColor: string; currentValue: string | null; totalColors: number; availableColors: string[]; currentIndex: number }> {
     this._syncWithCurrentState();
     return this.getStatus();
   }
 
-  /**
-   * Cycles through available colors
-   */
-  async cycleIconColor() {
+  async cycleIconColor(): Promise<{ success: boolean; color?: ColorEntry; error?: string }> {
     try {
-      // Always sync before cycling to ensure we're starting from the correct state
       this._syncWithCurrentState();
       
       this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
@@ -71,19 +65,16 @@ class ColorManager {
         color: currentColor 
       };
     } catch (error) {
-      return this._createErrorResult('Error cycling icon color', error);
+      return this._createErrorResult('Error cycling icon color', error as Error);
     }
   }
 
-  /**
-   * Resets color to default value
-   */
-  async resetToDefault() {
+  async resetToDefault(): Promise<{ success: boolean; error?: string }> {
     try {
       this.currentColorIndex = this.colors.length - 1;
       
       const config = vscode.workspace.getConfiguration();
-      const customizations = { ...config.get(ColorManager.CONFIG.WORKBENCH_KEY, {}) };
+      const customizations = { ...config.get<Record<string, string>>(ColorManager.CONFIG.WORKBENCH_KEY, {}) };
       
       delete customizations[ColorManager.CONFIG.ICON_KEY];
       
@@ -95,14 +86,11 @@ class ColorManager {
 
       return { success: true };
     } catch (error) {
-      return this._createErrorResult('Error resetting icon color', error);
+      return this._createErrorResult('Error resetting icon color', error as Error);
     }
   }
 
-  /**
-   * Sets a specific color by name
-   */
-  async setColorByName(colorName) {
+  async setColorByName(colorName: string): Promise<{ success: boolean; color?: ColorEntry; error?: string }> {
     if (!colorName || typeof colorName !== 'string') {
       return { success: false, error: 'Invalid color name provided' };
     }
@@ -129,14 +117,11 @@ class ColorManager {
         color: currentColor 
       };
     } catch (error) {
-      return this._createErrorResult('Error setting color by name', error);
+      return this._createErrorResult('Error setting color by name', error as Error);
     }
   }
 
-  /**
-   * Sets a custom color
-   */
-  async setCustomColor(hexColor, name = 'Custom') {
+  async setCustomColor(hexColor: string, name: string = 'Custom'): Promise<{ success: boolean; color?: ColorEntry; error?: string }> {
     if (!this._isValidHexColor(hexColor)) {
       return { success: false, error: 'Invalid hex color format' };
     }
@@ -144,54 +129,36 @@ class ColorManager {
     try {
       await this._updateIconColor(hexColor);
       
-      const customColor = { value: hexColor, name };
+      const customColor: ColorEntry = { value: hexColor, name };
       return { success: true, color: customColor };
     } catch (error) {
-      return this._createErrorResult('Error setting custom color', error);
+      return this._createErrorResult('Error setting custom color', error as Error);
     }
   }
 
-  /**
-   * Gets current color object
-   */
-  getCurrentColor() {
+  getCurrentColor(): ColorEntry {
     return { ...this.colors[this.currentColorIndex] };
   }
 
-  /**
-   * Gets current color name
-   */
-  getCurrentColorName() {
+  getCurrentColorName(): string {
     return this.getCurrentColor().name;
   }
 
-  /**
-   * Gets all available colors
-   */
-  getAvailableColors() {
+  getAvailableColors(): ColorEntry[] {
     return this.colors.map(color => ({ ...color }));
   }
 
-  /**
-   * Gets all available color names
-   */
-  getAvailableColorNames() {
+  getAvailableColorNames(): string[] {
     return this.colors.map(color => color.name);
   }
 
-  /**
-   * Checks if a color exists by name
-   */
-  hasColor(colorName) {
+  hasColor(colorName: string): boolean {
     return this.colors.some(
       color => color.name.toLowerCase() === colorName.toLowerCase().trim()
     );
   }
 
-  /**
-   * Gets current manager status information
-   */
-  getStatus() {
+  getStatus(): { currentColor: string; currentValue: string | null; totalColors: number; availableColors: string[]; currentIndex: number } {
     const currentColor = this.getCurrentColor();
     return {
       currentColor: currentColor.name,
@@ -202,13 +169,10 @@ class ColorManager {
     };
   }
 
-  /**
-   * Gets the actual color from VS Code settings (for debugging/verification)
-   */
-  getActualVSCodeColor() {
+  getActualVSCodeColor(): string | null {
     try {
       const config = vscode.workspace.getConfiguration();
-      const customizations = config.get(ColorManager.CONFIG.WORKBENCH_KEY, {});
+      const customizations = config.get<Record<string, string>>(ColorManager.CONFIG.WORKBENCH_KEY, {});
       return customizations[ColorManager.CONFIG.ICON_KEY] || null;
     } catch (error) {
       console.error('Error getting actual VS Code color:', error);
@@ -216,13 +180,9 @@ class ColorManager {
     }
   }
 
-  /**
-   * Updates icon color in VS Code settings
-   * @private
-   */
-  async _updateIconColor(colorValue) {
+  private async _updateIconColor(colorValue: string | null): Promise<void> {
     const config = vscode.workspace.getConfiguration();
-    const customizations = { ...config.get(ColorManager.CONFIG.WORKBENCH_KEY, {}) };
+    const customizations = { ...config.get<Record<string, string>>(ColorManager.CONFIG.WORKBENCH_KEY, {}) };
 
     if (colorValue === null) {
       delete customizations[ColorManager.CONFIG.ICON_KEY];
@@ -237,11 +197,7 @@ class ColorManager {
     );
   }
 
-  /**
-   * Creates consistent error results
-   * @private
-   */
-  _createErrorResult(message, error) {
+  private _createErrorResult(message: string, error: Error): { success: boolean; error: string } {
     const errorMessage = `${message}: ${error.message}`;
     console.error(errorMessage, error);
     
@@ -251,13 +207,7 @@ class ColorManager {
     };
   }
 
-  /**
-   * Validates hexadecimal color format
-   * @private
-   */
-  _isValidHexColor(color) {
+  private _isValidHexColor(color: string): boolean {
     return typeof color === 'string' && /^#([0-9A-F]{3}){1,2}$/i.test(color);
   }
 }
-
-module.exports = ColorManager;
