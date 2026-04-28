@@ -354,11 +354,11 @@
       },      {
         "key"    : "alt+s",
         "mac"    : "alt+s",
-        "command": "lynx-keymap.toggleChatFocus"
+        "command": "lynx-keymap.attachAIContext"
       },{
         "key"    : "alt+d",
         "mac"    : "alt+d",
-        "command": "lynx-keymap.attachAIContext"
+        "command": "lynx-keymap.toggleChatFocus"
       },      
 
 
