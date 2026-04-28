@@ -351,9 +351,13 @@
         "key"    : "alt+a",
         "mac"    : "alt+a",
         "command": "lynx-keymap.createNewAISession"
-      },{
+      },      {
         "key"    : "alt+s",
         "mac"    : "alt+s",
+        "command": "antigravity.toggleChatFocus"
+      },{
+        "key"    : "ctrl+alt+s",
+        "mac"    : "cmd+alt+s",
         "command": "lynx-keymap.showAIHistory"
       },{
         "key"    : "alt+d",
