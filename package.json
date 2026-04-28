@@ -96,12 +96,12 @@
       
 
       {
-        "key"    : "alt+c",
-        "mac"    : "alt+c",
+        "key"    : "alt+x",
+        "mac"    : "alt+x",
         "command": "explorer.newFile"
       },{
-        "key"    : "alt+v",
-        "mac"    : "alt+v",
+        "key"    : "alt+c",
+        "mac"    : "alt+c",
         "command": "explorer.newFolder"
       },{
         "key"    : "ctrl+tab",
@@ -368,8 +368,8 @@
         "mac"    : "alt+z",
         "command": "lynx-keymap.toggleAgentMode"
       },{
-        "key"    : "alt+x",
-        "mac"    : "alt+x",
+        "key"    : "shift+alt+x",
+        "mac"    : "shift+alt+x",
         "command": "workbench.action.chat.openModelPicker"
       },
 
