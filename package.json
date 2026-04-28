@@ -43,9 +43,9 @@
   },
   "scripts": {
     "vscode:prepublish": "bun run package",
-    "compile": "node esbuild.js",
-    "watch": "node esbuild.js --watch",
-    "package": "node esbuild.js --production",
+    "compile": "bun esbuild.js",
+    "watch": "bun esbuild.js --watch",
+    "package": "bun esbuild.js --production",
     "lint": "eslint .",
     "check-types": "tsc --noEmit"
   },
