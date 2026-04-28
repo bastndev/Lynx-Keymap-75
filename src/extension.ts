@@ -26,18 +26,18 @@ export function activate(context: vscode.ExtensionContext) {
       )
   );
 
-  const checkGitLensDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.checkGitLens',
+  const checkGitLabDisposable = vscode.commands.registerCommand(
+    'lynx-keymap.checkGitLab',
     () =>
       extensionCheckerInstance?.checkAndExecuteCommand(
-        'gitlens.showGraph',
+        'gitlab.graphView.focus',
         context
       )
   );
 
   context.subscriptions.push(
     checkF1QuickSwitchDisposable,
-    checkGitLensDisposable
+    checkGitLabDisposable
   );
 }
 

@@ -165,7 +165,7 @@
       },{
         "key"    : "alt+e",
         "mac"    : "alt+e",
-        "command": "lynx-keymap.checkGitLens"
+        "command": "lynx-keymap.checkGitLab"
       },{
         "key"    : "pagedown",
         "mac"    : "pagedown",
@@ -422,8 +422,8 @@
       "command": "lynx-keymap.checkF1QuickSwitch",
       "title"  : "Check F1-QuickSwitch Extension and Execute"
       },{
-      "command": "lynx-keymap.checkGitLens",
-      "title"  : "Check GitLens Extension and Execute"
+      "command": "lynx-keymap.checkGitLab",
+      "title"  : "Check GitLab Extension and Execute"
       },{
       "command": "lynx-keymap.checkCompareCode",
       "title"  : "Check Compare Code Extension and Execute"

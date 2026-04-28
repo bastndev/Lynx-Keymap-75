@@ -13,10 +13,10 @@ export class ExtensionChecker {
       displayName: 'F1-Quick Switch',
       marketplaceSearch: 'bastndev.f1',
     },
-    'gitlens.showGraph': {
-      extensionId: 'eamodio.gitlens',
-      displayName: 'GitLens',
-      marketplaceSearch: 'eamodio.gitlens',
+    'gitlab.graphView.focus': {
+      extensionId: 'bastndev.atm',
+      displayName: 'GitLab',
+      marketplaceSearch: 'bastndev.atm',
     },
   };
   private activeTimeouts: Set<ReturnType<typeof setTimeout>> = new Set();

@@ -95,7 +95,7 @@ export class SmartWebviewExtension {
 
   isWebviewAlreadyOpen(extensionId: string): boolean {
     const lastOpened = this.webviewInstances.get(extensionId);
-    if (!lastOpened) return false;
+    if (!lastOpened) {return false;}
 
     const timeDiff = Date.now() - lastOpened;
     return timeDiff < 500;
@@ -139,7 +139,7 @@ export class SmartWebviewExtension {
         const extension = vscode.extensions.getExtension(
           dependency.extensionId
         );
-        if (extension) break;
+        if (extension) {break;}
 
         await new Promise((resolve) => setTimeout(resolve, 500));
         attempts++;
