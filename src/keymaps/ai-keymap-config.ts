@@ -83,7 +83,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
 
   // MARK:[Alt+S]
   historyCommands: {
-    // [EditorType.ANTIGRAVITY]: [no support]
+    [EditorType.ANTIGRAVITY]: 'antigravity.openConversationPicker',
     [EditorType.VSCODE]:      'workbench.action.chat.history',
     [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
     [EditorType.CURSOR]:      'composer.showComposerHistory',
