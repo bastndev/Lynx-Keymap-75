@@ -34,7 +34,9 @@ export type ActionKey =
   | 'chatCommands'
   | 'newSessionCommands'
   | 'historyCommands'
-  | 'attachContextCommands';
+  | 'attachContextCommands'
+  | 'agentCommands'
+  | 'modelPickerCommands';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
 export type EditorCommandMap = Partial<Record<EditorType, string>>;
@@ -94,6 +96,22 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
     [EditorType.CURSOR]:      'composer.openAddContextMenu',
   },
+
+  // MARK:[Alt+Z]
+  agentCommands: {
+    [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
+    [EditorType.CURSOR]:      'composer.toggleAgent',
+    [EditorType.WINDSURF]:    'windsurf.toggleAgentMode',
+    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
+  },
+
+  // MARK:[Alt+X]
+  modelPickerCommands: {
+    [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',
+    [EditorType.CURSOR]:      'composer.openModelPicker',
+    [EditorType.WINDSURF]:    'windsurf.openModelPicker',
+    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.openModelPicker',
+  },
 };
 
 // ─── Keymap Config ────────────────────────────────────────────────────────────
@@ -133,5 +151,10 @@ export const KEYMAP_CONFIG: KeymapConfig[] = [
     commandId:    'lynx-keymap.attachAIContext',
     commandsKey:  'attachContextCommands',
     errorMessage: 'No AI context attachment available'
+  },
+  {
+    commandId:    'lynx-keymap.toggleAgentMode',
+    commandsKey:  'agentCommands',
+    errorMessage: 'No AI agent toggle available'
   }
 ];

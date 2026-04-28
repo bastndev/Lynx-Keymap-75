@@ -60,7 +60,8 @@
     "onCommand:lynx-keymap.showAIHistory",
     "onCommand:lynx-keymap.attachAIContext",
 
-    "onCommand:lynx-keymap.executeColorAndAgentMacro",
+    "onCommand:lynx-keymap.toggleAgentMode",
+    "onCommand:lynx-keymap.openModelPicker",
     "onCommand:lynx-keymap.checkF1QuickSwitch",
     "onCommand:lynx-keymap.checkCompareCode"
   ],
@@ -367,16 +368,12 @@
         "command": "lynx-keymap.attachAIContext"
       },      
 
-      {
-        "key"    : "ctrl+alt+pagedown",
-        "mac"    : "cmd+alt+pagedown",
-        "command": "lynx-keymap.toggleStatusBarColor"
-      },
+
 
       {
         "key"    : "alt+z",
         "mac"    : "alt+z",
-        "command": "lynx-keymap.executeColorAndAgentMacro"
+        "command": "lynx-keymap.toggleAgentMode"
       },{
         "key"    : "alt+x",
         "mac"    : "alt+x",
@@ -420,12 +417,12 @@
       },
 
       {
-        "command": "lynx-keymap.executeColorAndAgentMacro",
-        "title"  : "Execute Icon Color & Ask/Agent/Edit (Macro)"
+        "command": "lynx-keymap.toggleAgentMode",
+        "title"  : "Toggle AI Agent Mode"
       },
       {
-        "command": "lynx-keymap.toggleStatusBarColor",
-        "title"  : "Toggle (Status Bar) Color"
+        "command": "lynx-keymap.openModelPicker",
+        "title"  : "Open AI Model Picker"
       },
 
       {
