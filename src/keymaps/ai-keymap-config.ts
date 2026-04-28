@@ -1,29 +1,23 @@
-/*
- *** AI COMMANDS CONFIGURATION
- */
-
-// ─── Editor Types ────────────────────────────────────────────────────────────
 export enum EditorType {
   ANTIGRAVITY = 'antigravity',
-  WINDSURF    = 'windsurf',
-  CURSOR      = 'cursor',
-  TRAE_AI     = 'trae-ai',
-  KIRO        = 'kiro',
-  FIREBASE    = 'firebase',
   VSCODE      = 'vscode',
+  KIRO        = 'kiro',
+  CURSOR      = 'cursor',
+  WINDSURF    = 'windsurf',
+  TRAE_AI     = 'trae-ai',
+  FIREBASE    = 'firebase',
   UNKNOWN     = 'unknown'
 }
 
 // ─── Detection Signatures ────────────────────────────────────────────────────
-// Commands unique to each editor, used to detect which one is running
 export const EDITOR_SIGNATURES: Record<EditorType, string[]> = {
   [EditorType.ANTIGRAVITY]: ['antigravity.startNewConversation', 'antigravity.prioritized.command.open'],
-  [EditorType.WINDSURF]:    ['windsurf.prioritized.chat.open',   'windsurf.generateCommitMessage'],
-  [EditorType.CURSOR]:      ['composer.createNew',               'cursor.generateGitCommitMessage'],
-  [EditorType.TRAE_AI]:     ['icube.inlineChat.start',           'icube.gitGenerateCommitMessage'],
-  [EditorType.KIRO]:        ['kiroAgent.newSession',             'kiroAgent.inlineChat.start'],
-  [EditorType.FIREBASE]:    ['workbench.action.terminal.chat.start'],
   [EditorType.VSCODE]:      ['inlineChat.start',                 'workbench.action.chat.newEditSession'],
+  [EditorType.KIRO]:        ['kiroAgent.newSession',             'kiroAgent.inlineChat.start'],
+  [EditorType.CURSOR]:      ['composer.createNew',               'cursor.generateGitCommitMessage'],
+  [EditorType.WINDSURF]:    ['windsurf.prioritized.chat.open',   'windsurf.generateCommitMessage'],
+  [EditorType.TRAE_AI]:     ['icube.inlineChat.start',           'icube.gitGenerateCommitMessage'],
+  [EditorType.FIREBASE]:    ['workbench.action.terminal.chat.start'],
   [EditorType.UNKNOWN]:     []
 };
 
@@ -46,72 +40,89 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   // MARK:[Alt+2]
   commitCommands: {
     [EditorType.ANTIGRAVITY]: 'antigravity.generateCommitMessage',
-    [EditorType.WINDSURF]:    'windsurf.generateCommitMessage',
     [EditorType.VSCODE]:      'github.copilot.git.generateCommitMessage',
+    // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'cursor.generateGitCommitMessage',
+    [EditorType.WINDSURF]:    'windsurf.generateCommitMessage',
     [EditorType.TRAE_AI]:     'icube.gitGenerateCommitMessage',
+    // [EditorType.FIREBASE]: [no support]
   },
 
   // MARK:[Ctrl`]
   popupCommands: {
     [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
-    [EditorType.WINDSURF]:    'windsurf.prioritized.command.open',
     [EditorType.VSCODE]:      'inlineChat.start',
+    [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
     [EditorType.CURSOR]:      'aipopup.action.modal.generate',
+    [EditorType.WINDSURF]:    'windsurf.prioritized.command.open',
     [EditorType.TRAE_AI]:     'icube.inlineChat.start',
     [EditorType.FIREBASE]:    'workbench.action.terminal.chat.start',
-    [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
   },
 
   // MARK:[Shift+Tab]
   chatCommands: {
     [EditorType.ANTIGRAVITY]: 'antigravity.openAgent',
-    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.open',
     [EditorType.VSCODE]:      'workbench.panel.chat',
+    [EditorType.KIRO]:        'workbench.action.toggleAuxiliaryBar',
     [EditorType.CURSOR]:      'workbench.action.toggleAuxiliaryBar',
+    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.open',
     [EditorType.TRAE_AI]:     'workbench.action.chat.icube.open',
     [EditorType.FIREBASE]:    'aichat.prompt',
-    [EditorType.KIRO]:        'workbench.action.toggleAuxiliaryBar',
   },
 
   // MARK:[Alt+A]
   newSessionCommands: {
     [EditorType.ANTIGRAVITY]: 'antigravity.startNewConversation',
-    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.openNewConversation',
     [EditorType.VSCODE]:      'workbench.action.chat.newEditSession',
-    [EditorType.CURSOR]:      'composer.createNew',
-    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.createNewSession',
     [EditorType.KIRO]:        'kiroAgent.newSession',
+    [EditorType.CURSOR]:      'composer.createNew',
+    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.openNewConversation',
+    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.createNewSession',
+    // [EditorType.FIREBASE]: [no support]
   },
 
   // MARK:[Alt+S]
   historyCommands: {
-    [EditorType.CURSOR]:      'composer.showComposerHistory',
-    [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
+    // [EditorType.ANTIGRAVITY]: [no support]
     [EditorType.VSCODE]:      'workbench.action.chat.history',
+    [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
+    [EditorType.CURSOR]:      'composer.showComposerHistory',
+    // [EditorType.WINDSURF]: [no support]
     [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.showHistory',
+    // [EditorType.FIREBASE]: [no support]
   },
 
   // MARK:[Alt+D]
   attachContextCommands: {
+    // [EditorType.ANTIGRAVITY]: [no support]
     [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
+    // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.openAddContextMenu',
+    // [EditorType.WINDSURF]: [no support]
+    // [EditorType.TRAE_AI]: [no support]
+    // [EditorType.FIREBASE]: [no support]
   },
 
   // MARK:[Alt+Z]
   agentCommands: {
+    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
     [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
+    // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.toggleAgent',
     [EditorType.WINDSURF]:    'windsurf.toggleAgentMode',
-    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
+    // [EditorType.TRAE_AI]: [no support]
+    // [EditorType.FIREBASE]: [no support]
   },
 
   // MARK:[Alt+X]
   modelPickerCommands: {
+    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.openModelPicker',
     [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',
+    // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.openModelPicker',
     [EditorType.WINDSURF]:    'windsurf.openModelPicker',
-    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.openModelPicker',
+    // [EditorType.TRAE_AI]: [no support]
+    // [EditorType.FIREBASE]: [no support]
   },
 };
 
