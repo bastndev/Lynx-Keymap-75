@@ -1,27 +1,34 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
-class ExtensionChecker {
+interface ExtensionDependency {
+  extensionId: string;
+  displayName: string;
+  marketplaceSearch: string;
+}
+
+export class ExtensionChecker {
+  private extensionDependencies: Record<string, ExtensionDependency> = {
+    'workbench.view.extension.f1-functions': {
+      extensionId: 'bastndev.f1',
+      displayName: 'F1-Quick Switch',
+      marketplaceSearch: 'bastndev.f1',
+    },
+    'gitlens.showGraph': {
+      extensionId: 'eamodio.gitlens',
+      displayName: 'GitLens',
+      marketplaceSearch: 'eamodio.gitlens',
+    },
+  };
+  private activeTimeouts: Set<ReturnType<typeof setTimeout>> = new Set();
+  private installationInProgress: Set<string> = new Set();
+  private maxTimeouts: number = 10;
+  private timeoutCleanupInterval: ReturnType<typeof setTimeout> | null = null;
+
   constructor() {
-    this.extensionDependencies = {
-      'workbench.view.extension.f1-functions': {
-        extensionId: 'bastndev.f1',
-        displayName: 'F1-Quick Switch',
-        marketplaceSearch: 'bastndev.f1',
-      },
-      'gitlens.showGraph': {
-        extensionId: 'eamodio.gitlens',
-        displayName: 'GitLens',
-        marketplaceSearch: 'eamodio.gitlens',
-      },
-    };
-    this.activeTimeouts = new Set();
-    this.installationInProgress = new Set();
-    this.maxTimeouts = 10; // Limit concurrent timeouts
-    this.timeoutCleanupInterval = null;
     this.startTimeoutCleanup();
   }
 
-  async checkAndExecuteCommand(commandId, context) {
+  async checkAndExecuteCommand(commandId: string, context: vscode.ExtensionContext): Promise<void> {
     const dependency = this.extensionDependencies[commandId];
     if (!dependency) {
       return vscode.commands.executeCommand(commandId);
@@ -39,11 +46,11 @@ class ExtensionChecker {
       }
       await vscode.commands.executeCommand(commandId);
     } catch (error) {
-      this.showExtensionActivationError(dependency, commandId, error);
+      this.showExtensionActivationError(dependency, commandId, error as Error);
     }
   }
 
-  showExtensionRequiredNotification(dependency, commandId) {
+  showExtensionRequiredNotification(dependency: ExtensionDependency, commandId: string): void {
     const message = `📥 The extension "${dependency.displayName}" is required for this command`;
     vscode.window
       .showInformationMessage(message, 'Install Extension', 'Cancel')
@@ -54,13 +61,12 @@ class ExtensionChecker {
       });
   }
 
-  clearAllTimeouts() {
+  clearAllTimeouts(): void {
     this.activeTimeouts.forEach((timeout) => clearTimeout(timeout));
     this.activeTimeouts.clear();
   }
 
-  createTimeout(callback, delay) {
-    // Prevent timeout overflow
+  createTimeout(callback: () => void, delay: number): ReturnType<typeof setTimeout> {
     if (this.activeTimeouts.size >= this.maxTimeouts) {
       console.warn('Maximum timeouts reached, clearing oldest ones');
       this.clearOldestTimeouts(Math.floor(this.maxTimeouts / 2));
@@ -81,10 +87,7 @@ class ExtensionChecker {
     return timeout;
   }
 
-  /**
-   * Clears oldest timeouts to prevent memory leaks
-   */
-  clearOldestTimeouts(count) {
+  clearOldestTimeouts(count: number): void {
     const timeoutsArray = Array.from(this.activeTimeouts);
     for (let i = 0; i < Math.min(count, timeoutsArray.length); i++) {
       clearTimeout(timeoutsArray[i]);
@@ -92,11 +95,7 @@ class ExtensionChecker {
     }
   }
 
-  /**
-   * Starts automatic timeout cleanup
-   */
-  startTimeoutCleanup() {
-    // Clean up every 30 seconds
+  startTimeoutCleanup(): void {
     this.timeoutCleanupInterval = setInterval(() => {
       if (this.activeTimeouts.size > this.maxTimeouts) {
         console.log(`Cleaning up excess timeouts: ${this.activeTimeouts.size}`);
@@ -105,21 +104,14 @@ class ExtensionChecker {
     }, 30000);
   }
 
-  showTemporaryNotification(message, duration = 2000) {
-    // Clear any existing timeouts to prevent overlapping notifications
+  showTemporaryNotification(message: string, duration: number = 2000): void {
     this.clearAllTimeouts();
-
-    // Show the notification
     vscode.window.showInformationMessage(message);
-
-    // The timeout is just for internal tracking, notifications auto-dismiss
     this.createTimeout(() => {
-      // Notification will disappear naturally after VSCode's default duration
     }, duration);
   }
 
-  async installExtension(dependency, commandId) {
-    // Prevent multiple installations of the same extension
+  async installExtension(dependency: ExtensionDependency, commandId: string): Promise<void> {
     if (this.installationInProgress.has(dependency.extensionId)) {
       return;
     }
@@ -127,21 +119,17 @@ class ExtensionChecker {
     this.installationInProgress.add(dependency.extensionId);
 
     try {
-      // Show downloading message
       vscode.window.showInformationMessage(
         `📥 Downloading ${dependency.displayName}...`
       );
 
-      // Simulate download time (like original)
       await new Promise((resolve) => setTimeout(resolve, 4000));
 
-      // Install extension
       await vscode.commands.executeCommand(
         'workbench.extensions.installExtension',
         dependency.extensionId
       );
 
-      // Wait for extension to be available
       let attempts = 0;
       const maxAttempts = 10;
       while (attempts < maxAttempts) {
@@ -154,18 +142,16 @@ class ExtensionChecker {
         attempts++;
       }
 
-      // Show success message (this will replace the downloading message visually)
       vscode.window.showInformationMessage(
         `✅ ${dependency.displayName} installed successfully`
       );
 
-      // Execute the original command after success message shows
       this.createTimeout(() => {
-        this.checkAndExecuteCommand(commandId);
+        this.checkAndExecuteCommand(commandId, null as any);
       }, 1500);
     } catch (error) {
       const selection = await vscode.window.showErrorMessage(
-        `❌ Failed to install ${dependency.displayName}: ${error.message}`,
+        `❌ Failed to install ${dependency.displayName}: ${(error as Error).message}`,
         'Open Marketplace',
         'Retry'
       );
@@ -185,7 +171,7 @@ class ExtensionChecker {
     }
   }
 
-  async showExtensionActivationError(dependency, commandId, error) {
+  async showExtensionActivationError(dependency: ExtensionDependency, commandId: string, error: Error): Promise<void> {
     const selection = await vscode.window.showErrorMessage(
       `❌ Failed to activate "${dependency.displayName}": ${
         error?.message || 'Unknown error'
@@ -196,7 +182,7 @@ class ExtensionChecker {
 
     if (selection === 'Retry') {
       this.createTimeout(() => {
-        this.checkAndExecuteCommand(commandId);
+        this.checkAndExecuteCommand(commandId, null as any);
       }, 1000);
     } else if (selection === 'Open Marketplace') {
       vscode.commands.executeCommand(
@@ -206,7 +192,7 @@ class ExtensionChecker {
     }
   }
 
-  registerCheckCommands(context) {
+  registerCheckCommands(context: vscode.ExtensionContext): void {
     Object.keys(this.extensionDependencies).forEach((commandId) => {
       const checkCommandId = `lynx-keymap.check-${commandId.replace(/\./g,'-')}`;
       const disposable = vscode.commands.registerCommand(checkCommandId, () => {
@@ -216,16 +202,13 @@ class ExtensionChecker {
     });
   }
 
-  dispose() {
+  dispose(): void {
     this.clearAllTimeouts();
     this.installationInProgress.clear();
     
-    // Clear cleanup interval
     if (this.timeoutCleanupInterval) {
       clearInterval(this.timeoutCleanupInterval);
       this.timeoutCleanupInterval = null;
     }
   }
 }
-
-module.exports = ExtensionChecker;

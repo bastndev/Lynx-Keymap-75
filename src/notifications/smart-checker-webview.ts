@@ -1,34 +1,37 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
-/**
- * Smart Webview Extension Handler
- * Manages webview-based extensions with keybinding conflict resolution
- */
-class SmartWebviewExtension {
+interface WebviewExtension {
+  extensionId: string;
+  displayName: string;
+  marketplaceSearch: string;
+  originalKeybinding: string;
+  webviewCommand: string;
+  originalCommand: string;
+}
+
+export class SmartWebviewExtension {
+  private webviewExtensions: Record<string, WebviewExtension> = {
+    'compare-code.openWebview': {
+      extensionId: 'bastndev.compare-code',
+      displayName: 'Compare Code',
+      marketplaceSearch: 'bastndev.compare-code',
+      originalKeybinding: 'shift+alt+\\',
+      webviewCommand: 'compare-code.compareFiles',
+      originalCommand: 'Compare Code',
+    },
+  };
+
+  private activeTimeouts: Set<ReturnType<typeof setTimeout>> = new Set();
+  private installationInProgress: Set<string> = new Set();
+  private webviewInstances: Map<string, number> = new Map();
+  private maxTimeouts: number = 10;
+  private timeoutCleanupInterval: ReturnType<typeof setTimeout> | null = null;
+
   constructor() {
-    this.webviewExtensions = {
-      'compare-code.openWebview': {
-        extensionId: 'bastndev.compare-code',
-        displayName: 'Compare Code',
-        marketplaceSearch: 'bastndev.compare-code',
-        originalKeybinding: 'shift+alt+\\',
-        webviewCommand: 'compare-code.compareFiles',
-        originalCommand: 'Compare Code',
-      },
-    };
-
-    this.activeTimeouts = new Set();
-    this.installationInProgress = new Set();
-    this.webviewInstances = new Map();
-    this.maxTimeouts = 10; // Limit concurrent timeouts
-    this.timeoutCleanupInterval = null;
     this.startTimeoutCleanup();
   }
 
-  /**
-   * Checks extension and handles webview opening with conflict resolution
-   */
-  async checkAndOpenWebview(commandId, context) {
+  async checkAndOpenWebview(commandId: string, context: vscode.ExtensionContext): Promise<void> {
     const dependency = this.webviewExtensions[commandId];
     if (!dependency) {
       console.error(`Unknown webview command: ${commandId}`);
@@ -42,7 +45,6 @@ class SmartWebviewExtension {
       return;
     }
 
-    // FAST PATH: If extension is already active, execute directly
     if (extension.isActive) {
       try {
         await vscode.commands.executeCommand(dependency.webviewCommand);
@@ -52,47 +54,36 @@ class SmartWebviewExtension {
         return;
       } catch (error) {
         console.log(
-          `Fast path failed, falling back to full logic: ${error.message}`
+          `Fast path failed, falling back to full logic: ${(error as Error).message}`
         );
-        // Fall through to full logic if fast path fails
       }
     }
 
-    // FULL LOGIC: For activation and complex scenarios
     try {
-      // Ensure extension is activated
       if (!extension.isActive) {
         await extension.activate();
-        // Reduced wait time for activation
         await new Promise((resolve) => setTimeout(resolve, 200));
       }
 
-      // Check if webview is already open to prevent duplicates
       if (this.isWebviewAlreadyOpen(dependency.extensionId)) {
         console.log(`Webview for ${dependency.displayName} is already open`);
         return;
       }
 
-      // Execute the webview command
       await this.executeWebviewCommand(dependency, commandId);
     } catch (error) {
       console.error(`Error executing webview command:`, error);
-      this.showWebviewActivationError(dependency, commandId, error);
+      this.showWebviewActivationError(dependency, commandId, error as Error);
     }
   }
 
-  /**
-   * Executes webview command with duplicate prevention
-   */
-  async executeWebviewCommand(dependency, commandId) {
+  async executeWebviewCommand(dependency: WebviewExtension, commandId: string): Promise<void> {
     try {
-      // Mark webview as opening
       this.webviewInstances.set(dependency.extensionId, Date.now());
 
       await vscode.commands.executeCommand(dependency.webviewCommand);
       console.log(`Successfully opened webview: ${dependency.displayName}`);
 
-      // Reduced cleanup time for faster response
       this.createTimeout(() => {
         this.webviewInstances.delete(dependency.extensionId);
       }, 500);
@@ -102,22 +93,15 @@ class SmartWebviewExtension {
     }
   }
 
-  /**
-   * Checks if webview is already open (basic duplicate prevention)
-   */
-  isWebviewAlreadyOpen(extensionId) {
+  isWebviewAlreadyOpen(extensionId: string): boolean {
     const lastOpened = this.webviewInstances.get(extensionId);
     if (!lastOpened) return false;
 
-    // Reduced duplicate prevention window for faster response
     const timeDiff = Date.now() - lastOpened;
     return timeDiff < 500;
   }
 
-  /**
-   * Shows notification for missing webview extension
-   */
-  showWebviewExtensionRequiredNotification(dependency, commandId) {
+  showWebviewExtensionRequiredNotification(dependency: WebviewExtension, commandId: string): void {
     const message = `🔍 The extension "${dependency.displayName}" is required to open this webview`;
 
     vscode.window
@@ -129,11 +113,7 @@ class SmartWebviewExtension {
       });
   }
 
-  /**
-   * Installs webview extension with enhanced feedback
-   */
-  async installWebviewExtension(dependency, commandId) {
-    // Prevent multiple installations
+  async installWebviewExtension(dependency: WebviewExtension, commandId: string): Promise<void> {
     if (this.installationInProgress.has(dependency.extensionId)) {
       return;
     }
@@ -141,23 +121,19 @@ class SmartWebviewExtension {
     this.installationInProgress.add(dependency.extensionId);
 
     try {
-      // Show downloading message
       vscode.window.showInformationMessage(
         `📥 Downloading ${dependency.displayName}...`
       );
 
-      // Simulate download time
       await new Promise((resolve) => setTimeout(resolve, 3000));
 
-      // Install extension
       await vscode.commands.executeCommand(
         'workbench.extensions.installExtension',
         dependency.extensionId
       );
 
-      // Wait for extension to be available
       let attempts = 0;
-      const maxAttempts = 15; // More attempts for webview extensions
+      const maxAttempts = 15;
 
       while (attempts < maxAttempts) {
         const extension = vscode.extensions.getExtension(
@@ -169,18 +145,16 @@ class SmartWebviewExtension {
         attempts++;
       }
 
-      // Show success message
       vscode.window.showInformationMessage(
         `✅ ${dependency.displayName} installed successfully! Opening webview...`
       );
 
-      // Execute the webview command after installation
       this.createTimeout(() => {
-        this.checkAndOpenWebview(commandId);
+        this.checkAndOpenWebview(commandId, null as any);
       }, 1500);
     } catch (error) {
       const selection = await vscode.window.showErrorMessage(
-        `❌ Failed to install ${dependency.displayName}: ${error.message}`,
+        `❌ Failed to install ${dependency.displayName}: ${(error as Error).message}`,
         'Open Marketplace',
         'Retry'
       );
@@ -200,10 +174,7 @@ class SmartWebviewExtension {
     }
   }
 
-  /**
-   * Shows webview activation error with recovery options
-   */
-  async showWebviewActivationError(dependency, commandId, error) {
+  async showWebviewActivationError(dependency: WebviewExtension, commandId: string, error: Error): Promise<void> {
     const selection = await vscode.window.showErrorMessage(
       `❌ Failed to open "${dependency.displayName}" webview: ${
         error?.message || 'Unknown error'
@@ -215,7 +186,7 @@ class SmartWebviewExtension {
 
     if (selection === 'Retry') {
       this.createTimeout(() => {
-        this.checkAndOpenWebview(commandId);
+        this.checkAndOpenWebview(commandId, null as any);
       }, 1000);
     } else if (selection === 'Open Marketplace') {
       vscode.commands.executeCommand(
@@ -227,12 +198,8 @@ class SmartWebviewExtension {
     }
   }
 
-  /**
-   * Registers webview check commands
-   */
-  registerWebviewCommands(context) {
-    // Manual registration for specific commands to match extension.js
-    const commandMappings = {
+  registerWebviewCommands(context: vscode.ExtensionContext): vscode.Disposable[] {
+    const commandMappings: Record<string, string> = {
       'compare-code.openWebview': 'lynx-keymap.checkCompareCode',
     };
 
@@ -255,16 +222,12 @@ class SmartWebviewExtension {
     return disposables;
   }
 
-  /**
-   * Timeout management utilities
-   */
-  clearAllTimeouts() {
+  clearAllTimeouts(): void {
     this.activeTimeouts.forEach((timeout) => clearTimeout(timeout));
     this.activeTimeouts.clear();
   }
 
-  createTimeout(callback, delay) {
-    // Prevent timeout overflow
+  createTimeout(callback: () => void, delay: number): ReturnType<typeof setTimeout> {
     if (this.activeTimeouts.size >= this.maxTimeouts) {
       console.warn('Maximum webview timeouts reached, clearing oldest ones');
       this.clearOldestTimeouts(Math.floor(this.maxTimeouts / 2));
@@ -285,10 +248,7 @@ class SmartWebviewExtension {
     return timeout;
   }
 
-  /**
-   * Clears oldest timeouts to prevent memory leaks
-   */
-  clearOldestTimeouts(count) {
+  clearOldestTimeouts(count: number): void {
     const timeoutsArray = Array.from(this.activeTimeouts);
     for (let i = 0; i < Math.min(count, timeoutsArray.length); i++) {
       clearTimeout(timeoutsArray[i]);
@@ -296,11 +256,7 @@ class SmartWebviewExtension {
     }
   }
 
-  /**
-   * Starts automatic timeout cleanup
-   */
-  startTimeoutCleanup() {
-    // Clean up every 30 seconds
+  startTimeoutCleanup(): void {
     this.timeoutCleanupInterval = setInterval(() => {
       if (this.activeTimeouts.size > this.maxTimeouts) {
         console.log(
@@ -311,20 +267,14 @@ class SmartWebviewExtension {
     }, 30000);
   }
 
-  /**
-   * Cleanup resources
-   */
-  dispose() {
+  dispose(): void {
     this.clearAllTimeouts();
     this.installationInProgress.clear();
     this.webviewInstances.clear();
 
-    // Clear cleanup interval
     if (this.timeoutCleanupInterval) {
       clearInterval(this.timeoutCleanupInterval);
       this.timeoutCleanupInterval = null;
     }
   }
 }
-
-module.exports = SmartWebviewExtension;

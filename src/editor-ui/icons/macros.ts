@@ -1,16 +1,17 @@
-const vscode = require('vscode');
+import * as vscode from 'vscode';
 
-class MacroManager {
+interface CommandStep {
+  command: string;
+  delay?: number;
+}
+
+export class MacroManager {
+  private isExecuting: boolean = false;
+
   constructor() {
-    this.isExecuting = false;
   }
 
-  /**
-   * Executes a sequence of commands with delays
-   * @param {Array} commandSequence - Array of objects {command: string, delay?: number}
-   */
-  async executeSequence(commandSequence) {
-    // Validate parameters
+  async executeSequence(commandSequence: CommandStep[]): Promise<void> {
     if (!Array.isArray(commandSequence) || commandSequence.length === 0) {
       vscode.window.showErrorMessage('Invalid command sequence provided');
       return;
@@ -29,7 +30,6 @@ class MacroManager {
       for (let i = 0; i < commandSequence.length; i++) {
         const step = commandSequence[i];
 
-        // Validate step structure
         if (!step || typeof step.command !== 'string') {
           console.error('Invalid command step:', step);
           continue;
@@ -40,7 +40,6 @@ class MacroManager {
           console.log(`Executed macro step: ${step.command}`);
         } catch (stepError) {
           console.error(`Failed to execute step ${step.command}:`, stepError);
-          // Continue with next step instead of failing entire macro
         }
 
         if (step.delay && i < commandSequence.length - 1) {
@@ -49,18 +48,15 @@ class MacroManager {
       }
     } catch (error) {
       vscode.window.showErrorMessage(
-        `Macro execution failed: ${error.message}`
+        `Macro execution failed: ${(error as Error).message}`
       );
     } finally {
       this.isExecuting = false;
     }
   }
 
-  /**
-   * Toggle Agent Mode + Change icon color macro
-   */
-  async executeColorAndAgentMacro() {
-    const sequence = [
+  async executeColorAndAgentMacro(): Promise<void> {
+    const sequence: CommandStep[] = [
       {
         command: 'workbench.action.chat.toggleAgentMode',
         delay: 10,
@@ -73,11 +69,8 @@ class MacroManager {
     await this.executeSequence(sequence);
   }
 
-  /**
-   * Custom macro example
-   */
-  async executeCustomMacro() {
-    const sequence = [
+  async executeCustomMacro(): Promise<void> {
+    const sequence: CommandStep[] = [
       { command: 'workbench.view.explorer', delay: 10 },
       { command: 'workbench.view.scm', delay: 10 },
       { command: 'workbench.view.extensions' },
@@ -86,23 +79,14 @@ class MacroManager {
     await this.executeSequence(sequence);
   }
 
-  /**
-   * Creates a delay
-   * @param {number} ms - Milliseconds to wait
-   */
-  delay(ms) {
+  delay(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  /**
-   * Cancels macro execution
-   */
-  cancelExecution() {
+  cancelExecution(): void {
     if (this.isExecuting) {
       this.isExecuting = false;
       vscode.window.showInformationMessage('Macro execution cancelled');
     }
   }
 }
-
-module.exports = MacroManager;
