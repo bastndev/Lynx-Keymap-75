@@ -30,7 +30,8 @@ export type ActionKey =
   | 'historyCommands'
   | 'attachContextCommands'
   | 'agentCommands'
-  | 'modelPickerCommands';
+  | 'modelPickerCommands'
+  | 'focusCommands';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
 export type EditorCommandMap = Partial<Record<EditorType, string>>;
@@ -82,6 +83,14 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Alt+S]
+  focusCommands: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
+    // [EditorType.VSCODE]:   [no support]
+    [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
+    // [EditorType.WINDSURF]: [no support]
+    // [EditorType.TRAE_AI]:  [no support]
+    // [EditorType.FIREBASE]: [no support]
+  },
 
   // MARK:[Alt+D]
   attachContextCommands: {
@@ -90,7 +99,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.openAddContextMenu',
     // [EditorType.WINDSURF]: [no support]
-    // [EditorType.TRAE_AI]: [no support]
+    // [EditorType.TRAE_AI]:  [no support]
     // [EditorType.FIREBASE]: [no support]
   },
 
@@ -101,7 +110,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.toggleAgent',
     [EditorType.WINDSURF]:    'windsurf.toggleAgentMode',
-    // [EditorType.TRAE_AI]: [no support]
+    // [EditorType.TRAE_AI]:  [no support]
     // [EditorType.FIREBASE]: [no support]
   },
 
@@ -123,7 +132,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.openModelPicker',
     [EditorType.WINDSURF]:    'windsurf.openModelPicker',
-    // [EditorType.TRAE_AI]: [no support]
+    // [EditorType.TRAE_AI]:  [no support]
     // [EditorType.FIREBASE]: [no support]
   },
 };
@@ -170,5 +179,10 @@ export const KEYMAP_CONFIG: KeymapConfig[] = [
     commandId:    'lynx-keymap.toggleAgentMode',
     commandsKey:  'agentCommands',
     errorMessage: 'No AI agent toggle available'
+  },
+  {
+    commandId:    'lynx-keymap.toggleChatFocus',
+    commandsKey:  'focusCommands',
+    errorMessage: 'No AI chat focus toggle available'
   }
 ];

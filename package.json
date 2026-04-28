@@ -354,7 +354,7 @@
       },      {
         "key"    : "alt+s",
         "mac"    : "alt+s",
-        "command": "antigravity.toggleChatFocus"
+        "command": "lynx-keymap.toggleChatFocus"
       },{
         "key"    : "alt+d",
         "mac"    : "alt+d",
@@ -395,6 +395,10 @@
       {
         "command": "lynx-keymap.generateAICommit",
         "title"  : "Generate AI Commit Message"
+      },
+      {
+        "command": "lynx-keymap.toggleChatFocus",
+        "title"  : "Toggle AI Chat Focus"
       },
       {
         "command": "lynx-keymap.executeAIPopup",
