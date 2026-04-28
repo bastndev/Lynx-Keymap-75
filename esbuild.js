@@ -38,25 +38,25 @@ async function main() {
 		plugins: [esbuildProblemMatcherPlugin],
 	});
 
-	const ctxWebview = await esbuild.context({
-		entryPoints: ['src/focus/view/ui/index.ts'],
-		bundle: true,
-		format: 'iife',
-		minify: production,
-		sourcemap: !production,
-		sourcesContent: false,
-		platform: 'browser',
-		outfile: 'dist/webview.js',
-		logLevel: 'silent',
-		plugins: [esbuildProblemMatcherPlugin],
-	});
+	// const ctxWebview = await esbuild.context({
+	// 	entryPoints: ['src/focus/view/ui/index.ts'],
+	// 	bundle: true,
+	// 	format: 'iife',
+	// 	minify: production,
+	// 	sourcemap: !production,
+	// 	sourcesContent: false,
+	// 	platform: 'browser',
+	// 	outfile: 'dist/webview.js',
+	// 	logLevel: 'silent',
+	// 	plugins: [esbuildProblemMatcherPlugin],
+	// });
 
 	if (watch) {
-		await Promise.all([ctxExtension.watch(), ctxWebview.watch()]);
+		await Promise.all([ctxExtension.watch()]);
 	} else {
-		await Promise.all([ctxExtension.rebuild(), ctxWebview.rebuild()]);
+		await Promise.all([ctxExtension.rebuild()]);
 		await ctxExtension.dispose();
-		await ctxWebview.dispose();
+		// await ctxWebview.dispose();
 	}
 }
 

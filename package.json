@@ -43,9 +43,9 @@
   },
   "scripts": {
     "vscode:prepublish": "bun run package",
-    "compile": "node esbuild.js",
-    "watch": "node esbuild.js --watch",
-    "package": "node esbuild.js --production",
+    "compile": "bun esbuild.js",
+    "watch": "bun esbuild.js --watch",
+    "package": "bun esbuild.js --production",
     "lint": "eslint .",
     "check-types": "tsc --noEmit"
   },
@@ -60,7 +60,8 @@
     "onCommand:lynx-keymap.showAIHistory",
     "onCommand:lynx-keymap.attachAIContext",
 
-    "onCommand:lynx-keymap.executeColorAndAgentMacro",
+    "onCommand:lynx-keymap.toggleAgentMode",
+    "onCommand:lynx-keymap.openModelPicker",
     "onCommand:lynx-keymap.checkF1QuickSwitch",
     "onCommand:lynx-keymap.checkCompareCode"
   ],
@@ -349,14 +350,7 @@
       {
         "key"    : "alt+a",
         "mac"    : "alt+a",
-        "command": "antigravity.startNewConversation",
-        "when"   : "lynx-keymap.isAntigravity"
-      },
-      {
-        "key"    : "alt+a",
-        "mac"    : "alt+a",
-        "command": "lynx-keymap.createNewAISession",
-        "when"   : "!lynx-keymap.isAntigravity"
+        "command": "lynx-keymap.createNewAISession"
       },{
         "key"    : "alt+s",
         "mac"    : "alt+s",
@@ -367,16 +361,12 @@
         "command": "lynx-keymap.attachAIContext"
       },      
 
-      {
-        "key"    : "ctrl+alt+pagedown",
-        "mac"    : "cmd+alt+pagedown",
-        "command": "lynx-keymap.toggleStatusBarColor"
-      },
+
 
       {
         "key"    : "alt+z",
         "mac"    : "alt+z",
-        "command": "lynx-keymap.executeColorAndAgentMacro"
+        "command": "lynx-keymap.toggleAgentMode"
       },{
         "key"    : "alt+x",
         "mac"    : "alt+x",
@@ -420,12 +410,12 @@
       },
 
       {
-        "command": "lynx-keymap.executeColorAndAgentMacro",
-        "title"  : "Execute Icon Color & Ask/Agent/Edit (Macro)"
+        "command": "lynx-keymap.toggleAgentMode",
+        "title"  : "Toggle AI Agent Mode"
       },
       {
-        "command": "lynx-keymap.toggleStatusBarColor",
-        "title"  : "Toggle (Status Bar) Color"
+        "command": "lynx-keymap.openModelPicker",
+        "title"  : "Open AI Model Picker"
       },
 
       {
