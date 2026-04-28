@@ -82,15 +82,6 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Alt+S]
-  historyCommands: {
-    [EditorType.ANTIGRAVITY]: 'antigravity.openConversationPicker',
-    [EditorType.VSCODE]:      'workbench.action.chat.history',
-    [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
-    [EditorType.CURSOR]:      'composer.showComposerHistory',
-    // [EditorType.WINDSURF]: [no support]
-    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.showHistory',
-    // [EditorType.FIREBASE]: [no support]
-  },
 
   // MARK:[Alt+D]
   attachContextCommands: {
@@ -103,7 +94,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.FIREBASE]: [no support]
   },
 
-  // MARK:[Alt+Z]
+  // MARK:[Shift+Alt+A]
   agentCommands: {
     [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
     [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
@@ -114,7 +105,18 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.FIREBASE]: [no support]
   },
 
-  // MARK:[Alt+X]
+  // MARK:[Shift+Alt+S]
+  historyCommands: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.openConversationPicker',
+    [EditorType.VSCODE]:      'workbench.action.chat.history',
+    [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
+    [EditorType.CURSOR]:      'composer.showComposerHistory',
+    // [EditorType.WINDSURF]: [no support]
+    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.showHistory',
+    // [EditorType.FIREBASE]: [no support]
+  },
+
+  // MARK:[Alt+D]
   modelPickerCommands: {
     [EditorType.ANTIGRAVITY]: 'workbench.action.chat.openModelPicker',
     [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',

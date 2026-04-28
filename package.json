@@ -356,24 +356,24 @@
         "mac"    : "alt+s",
         "command": "antigravity.toggleChatFocus"
       },{
-        "key"    : "shift+alt+s",
-        "mac"    : "shift+alt+s",
-        "command": "lynx-keymap.showAIHistory"
-      },{
         "key"    : "alt+d",
         "mac"    : "alt+d",
         "command": "lynx-keymap.attachAIContext"
       },      
 
 
-
       {
-        "key"    : "alt+z",
-        "mac"    : "alt+z",
+        "key"    : "shift+alt+a",
+        "mac"    : "shift+alt+a",
         "command": "lynx-keymap.toggleAgentMode"
       },{
-        "key"    : "shift+alt+x",
-        "mac"    : "shift+alt+x",
+        "key"    : "shift+alt+s",
+        "mac"    : "shift+alt+s",
+        "command": "lynx-keymap.showAIHistory"
+      },
+      {
+        "key"    : "shift+alt+d",
+        "mac"    : "shift+alt+d",
         "command": "workbench.action.chat.openModelPicker"
       },
 
