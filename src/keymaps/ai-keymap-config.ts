@@ -65,6 +65,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
 
   // MARK:[Shift+Tab]
   chatCommands: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.openAgent',
     [EditorType.WINDSURF]:    'windsurf.prioritized.chat.open',
     [EditorType.VSCODE]:      'workbench.panel.chat',
     [EditorType.CURSOR]:      'workbench.action.toggleAuxiliaryBar',
