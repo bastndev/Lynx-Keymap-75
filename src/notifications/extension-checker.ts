@@ -136,7 +136,7 @@ export class ExtensionChecker {
         const extension = vscode.extensions.getExtension(
           dependency.extensionId
         );
-        if (extension) break;
+        if (extension) {break;}
 
         await new Promise((resolve) => setTimeout(resolve, 500));
         attempts++;
