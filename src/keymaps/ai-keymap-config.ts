@@ -94,7 +94,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
 
   // MARK:[Alt+D]
   attachContextCommands: {
-    // [EditorType.ANTIGRAVITY]: [no support]
+    [EditorType.ANTIGRAVITY]: 'antigravity.toggleModelSelector',
     [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
     // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.openAddContextMenu',
