@@ -350,14 +350,7 @@
       {
         "key"    : "alt+a",
         "mac"    : "alt+a",
-        "command": "antigravity.startNewConversation",
-        "when"   : "lynx-keymap.isAntigravity"
-      },
-      {
-        "key"    : "alt+a",
-        "mac"    : "alt+a",
-        "command": "lynx-keymap.createNewAISession",
-        "when"   : "!lynx-keymap.isAntigravity"
+        "command": "lynx-keymap.createNewAISession"
       },{
         "key"    : "alt+s",
         "mac"    : "alt+s",
