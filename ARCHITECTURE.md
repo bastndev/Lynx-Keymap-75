@@ -12,8 +12,6 @@
 - **🌐 Universal Editor Support**: Consistent experience across 6 major code editors
 - **🤖 Intelligent AI Integration**: Smart fallback system for AI commands across platforms
 - **⚡ Enhanced Productivity**: Streamlined workflows through optimized key combinations
-- **🎨 Visual Customization**: Dynamic color management for improved visual feedback
-- **🔄 Macro Automation**: Complex command sequences with precise timing control
 
 ## Architecture Diagram
 
@@ -26,9 +24,8 @@ graph TB
         subgraph "🎯 Core Systems"
             direction TB
             E[AICommandsManager<br/>🤖 AI Integration]
-            F[StatusBarManager<br/>🎨 Color Management]
-            G[ColorManager<br/>🎯 Icon Colors]
-            H[MacroManager<br/>⚡ Command Sequences]
+            F[SwapManager<br/>🔄 Context Swapper]
+            G[ExtensionChecker<br/>🔍 Compat Checks]
         end
 
         subgraph "🌐 Multi-Editor Support"
@@ -52,7 +49,6 @@ graph TB
     A --> E
     A --> F
     A --> G
-    A --> H
     E --> K
     E --> L
     E --> M
@@ -69,7 +65,7 @@ graph TB
     classDef integration fill:#a8e6cf,stroke:#333,stroke-width:2px,color:#000
 
     class A mainConfig
-    class E,F,G,H managers
+    class E,F,G managers
     class K,L,M,N,O,P editors
     class W,Z integration
 ```
@@ -98,22 +94,19 @@ graph TB
 
 1. **Install**: Search "Lynx Keymap 75" in VS Code Extensions
 2. **Activate**: Restart VS Code - shortcuts are automatically active
-3. **Test**: Press `Ctrl+1` (Explorer), `Alt+2` (AI Commit), `Ctrl+Alt+PgDn` (Color Toggle)
+3. **Test**: Press `Ctrl+1` (Explorer), `Alt+2` (AI Commit), `Alt+Z` (AI Agent)
 
 ## Project Structure
 
 ```
 lynx-keymap-75/
 ├── src/
-│   ├── extension.js              # Main entry point
-│   ├── editor-ui/                # UI components
-│   │   ├── status-bar.js         # Status bar colors
-│   │   └── icons/
-│   │       ├── icon-painter.js   # Icon colors
-│   │       └── macros.js         # Macro system
-│   └── keymaps/                  # Keyboard mappings
-│       ├── ai-keymap-config.js   # AI commands
-│       └── ai-keymap-handler.js  # AI execution
+│   ├── extension.ts              # Main entry point
+│   ├── keymaps/                  # Keyboard mappings
+│   │   ├── ai-keymap-config.ts   # AI commands
+│   │   ├── ai-keymap-handler.ts  # AI execution logic
+│   │   └── swap.ts               # Context key management
+│   └── notifications/            # Compatibility checks
 ├── assets/                       # Resources
 ├── package.json                  # Extension config
 └── README.md                     # Documentation
@@ -126,18 +119,7 @@ lynx-keymap-75/
 - **Smart Detection**: Automatically detects available AI providers
 - **Intelligent Fallback**: Priority-based command execution across editors
 - **Universal Commands**: Same shortcuts work in all supported editors
-
-### 🎨 Visual Management
-
-- **Status Bar Colors**: 5-color rotation with smart history (Green, Blue, Orange, Lemon, Red)
-- **Icon Colors**: Blue → Green → Default cycle
-- **Smart Selection**: Prevents recent color repetition
-
-### ⚡ Macro System
-
-- **Command Sequences**: Execute multiple commands with precise timing
-- **Execution Lock**: Prevents concurrent macro conflicts
-- **Error Recovery**: Robust handling of failed commands
+- **Agent Mode**: Quick toggle for agentic AI behaviors
 
 ## Keyboard Shortcuts
 
