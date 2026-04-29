@@ -23,15 +23,15 @@ export const EDITOR_SIGNATURES: Record<EditorType, string[]> = {
 
 // ─── Action Keys ─────────────────────────────────────────────────────────────
 export type ActionKey =
-  | 'commitCommands'
-  | 'popupCommands'
-  | 'chatCommands'
-  | 'newSessionCommands'
-  | 'historyCommands'
-  | 'attachContextCommands'
-  | 'agentCommands'
-  | 'modelPickerCommands'
-  | 'selectCodeCommands';
+  | 'generateAICommit'
+  | 'executeAIPopup'
+  | 'openAndCloseAIChat'
+  | 'createNewAISession'
+  | 'showAIHistory'
+  | 'attachAIContext'
+  | 'toggleAgentMode'
+  | 'openModelPicker'
+  | 'selectCode';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
 export type EditorCommandMap = Partial<Record<EditorType, string>>;
@@ -39,10 +39,10 @@ export type EditorCommandMap = Partial<Record<EditorType, string>>;
 export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
 
   // MARK:[Alt+2]
-  commitCommands: {
+  generateAICommit: {
     [EditorType.ANTIGRAVITY]: 'antigravity.generateCommitMessage',
     [EditorType.VSCODE]:      'github.copilot.git.generateCommitMessage',
-    // [EditorType.KIRO]:     [no support]
+    [EditorType.KIRO]:        'kiroAgent.generateCommitMessage',
     [EditorType.CURSOR]:      'cursor.generateGitCommitMessage',
     [EditorType.WINDSURF]:    'windsurf.generateCommitMessage',
     [EditorType.TRAE_AI]:     'icube.gitGenerateCommitMessage',
@@ -50,7 +50,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Ctrl`]
-  popupCommands: {
+  executeAIPopup: {
     [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
     [EditorType.VSCODE]:      'inlineChat.start',
     [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
@@ -61,7 +61,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Shift+Tab]
-  chatCommands: {
+  openAndCloseAIChat: {
     [EditorType.ANTIGRAVITY]: 'antigravity.openAgent',
     [EditorType.VSCODE]:      'workbench.panel.chat',
     [EditorType.KIRO]:        'workbench.action.toggleAuxiliaryBar',
@@ -72,7 +72,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Alt+A]
-  newSessionCommands: {
+  createNewAISession: {
     [EditorType.ANTIGRAVITY]: 'antigravity.startNewConversation',
     [EditorType.VSCODE]:      'workbench.action.chat.newEditSession',
     [EditorType.KIRO]:        'kiroAgent.newSession',
@@ -83,7 +83,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Alt+S]
-  attachContextCommands: {
+  attachAIContext: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleModelSelector',
     [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
     // [EditorType.KIRO]:     [no support]
@@ -94,7 +94,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
   
   // MARK:[Alt+D]
-  selectCodeCommands: {
+  selectCode: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
     // [EditorType.VSCODE]:   [no support]
     [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
@@ -105,7 +105,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Shift+Alt+A]
-  agentCommands: {
+  toggleAgentMode: {
     [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
     [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
     // [EditorType.KIRO]:     [no support]
@@ -116,7 +116,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Shift+Alt+S]
-  historyCommands: {
+  showAIHistory: {
     [EditorType.ANTIGRAVITY]: 'antigravity.openConversationPicker',
     [EditorType.VSCODE]:      'workbench.action.chat.history',
     [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
@@ -126,8 +126,8 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.FIREBASE]: [no support]
   },
 
-  // MARK:[Alt+D]
-  modelPickerCommands: {
+  // MARK:[Shift+Alt+D]
+  openModelPicker: {
     [EditorType.ANTIGRAVITY]: 'workbench.action.chat.openModelPicker',
     [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',
     // [EditorType.KIRO]:     [no support]
@@ -148,42 +148,47 @@ export interface KeymapConfig {
 export const KEYMAP_CONFIG: KeymapConfig[] = [
   {
     commandId:    'lynx-keymap.generateAICommit',
-    commandsKey:  'commitCommands',
+    commandsKey:  'generateAICommit',
     errorMessage: 'No AI commit generators available'
   },
   {
     commandId:    'lynx-keymap.executeAIPopup',
-    commandsKey:  'popupCommands',
+    commandsKey:  'executeAIPopup',
     errorMessage: 'No AI popup providers available'
   },
   {
     commandId:    'lynx-keymap.openAndCloseAIChat',
-    commandsKey:  'chatCommands',
+    commandsKey:  'openAndCloseAIChat',
     errorMessage: 'No AI chat providers available'
   },
   {
     commandId:    'lynx-keymap.createNewAISession',
-    commandsKey:  'newSessionCommands',
+    commandsKey:  'createNewAISession',
     errorMessage: 'No AI providers available to create a new session'
   },
   {
     commandId:    'lynx-keymap.showAIHistory',
-    commandsKey:  'historyCommands',
+    commandsKey:  'showAIHistory',
     errorMessage: 'No AI history available'
   },
   {
     commandId:    'lynx-keymap.attachAIContext',
-    commandsKey:  'attachContextCommands',
+    commandsKey:  'attachAIContext',
     errorMessage: 'No AI context attachment available'
   },
   {
     commandId:    'lynx-keymap.toggleAgentMode',
-    commandsKey:  'agentCommands',
+    commandsKey:  'toggleAgentMode',
     errorMessage: 'No AI agent toggle available'
   },
   {
     commandId:    'lynx-keymap.selectCode',
-    commandsKey:  'selectCodeCommands',
+    commandsKey:  'selectCode',
     errorMessage: 'No AI select code available'
+  },
+  {
+    commandId:    'lynx-keymap.openModelPicker',
+    commandsKey:  'openModelPicker',
+    errorMessage: 'No AI model picker available'
   }
 ];
