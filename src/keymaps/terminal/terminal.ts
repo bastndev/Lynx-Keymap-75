@@ -18,11 +18,13 @@ export class TerminalManager {
           
           if (sideBarLocation === 'left') {
             await vscode.commands.executeCommand('workbench.action.positionPanelRight');
-            await terminalConfig.update('tabs.location', 'right', vscode.ConfigurationTarget.Global);
           } else {
             await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
-            await terminalConfig.update('tabs.location', 'left', vscode.ConfigurationTarget.Global);
           }
+
+          // Hide tabs and panel labels for a cleaner lateral terminal
+          await terminalConfig.update('tabs.enabled', false, vscode.ConfigurationTarget.Global);
+          await config.update('panel.showLabels', false, vscode.ConfigurationTarget.Global);
           
           // 3. Close the AI chat
           await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
@@ -31,6 +33,12 @@ export class TerminalManager {
         } else {
           // 1. Close the panel (where the terminal is)
           await vscode.commands.executeCommand('workbench.action.closePanel');
+          
+          // Restore tabs and panel labels to default
+          const config = vscode.workspace.getConfiguration('workbench');
+          const terminalConfig = vscode.workspace.getConfiguration('terminal.integrated');
+          await terminalConfig.update('tabs.enabled', undefined, vscode.ConfigurationTarget.Global);
+          await config.update('panel.showLabels', undefined, vscode.ConfigurationTarget.Global);
           
           // 2. Open the AI chat
           await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
