@@ -30,7 +30,6 @@ export type ActionKey =
   | 'showAIHistory'
   | 'selectModel'
   | 'toggleAgentMode'
-  | 'openModelPicker'
   | 'selectCode';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
@@ -71,7 +70,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     [EditorType.FIREBASE]:    'aichat.prompt',
   },
 
-  // MARK:[Alt+A]
+  // MARK:[Alt+A]   (AI)
   createNewAISession: {
     [EditorType.ANTIGRAVITY]: 'antigravity.startNewConversation',
     [EditorType.VSCODE]:      'workbench.action.chat.newEditSession',
@@ -104,7 +103,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.FIREBASE]: [no support]
   },
 
-  // MARK:[Shift+Alt+A]
+  // MARK:[Shift+Alt+A] ---
   toggleAgentMode: {
     [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
     [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
@@ -126,16 +125,6 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.FIREBASE]: [no support]
   },
 
-  // MARK:[Shift+Alt+D]
-  openModelPicker: {
-    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.openModelPicker',
-    [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',
-    // [EditorType.KIRO]:     [no support]
-    [EditorType.CURSOR]:      'composer.openModelPicker',
-    [EditorType.WINDSURF]:    'windsurf.openModelPicker',
-    // [EditorType.TRAE_AI]:  [no support]
-    // [EditorType.FIREBASE]: [no support]
-  },
 };
 
 // ─── Keymap Config ────────────────────────────────────────────────────────────
@@ -185,10 +174,5 @@ export const KEYMAP_CONFIG: KeymapConfig[] = [
     commandId:    'lynx-keymap.selectCode',
     commandsKey:  'selectCode',
     errorMessage: 'No AI select code available'
-  },
-  {
-    commandId:    'lynx-keymap.openModelPicker',
-    commandsKey:  'openModelPicker',
-    errorMessage: 'No AI model picker available'
   }
 ];

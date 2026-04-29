@@ -61,7 +61,6 @@
     "onCommand:lynx-keymap.selectModel",
 
     "onCommand:lynx-keymap.toggleAgentMode",
-    "onCommand:lynx-keymap.openModelPicker",
     "onCommand:lynx-keymap.checkF1QuickSwitch",
     "onCommand:lynx-keymap.checkCompareCode"
   ],
@@ -371,11 +370,6 @@
         "mac"    : "shift+alt+s",
         "command": "lynx-keymap.showAIHistory"
       },
-      {
-        "key"    : "shift+alt+d",
-        "mac"    : "shift+alt+d",
-        "command": "workbench.action.chat.openModelPicker"
-      },
 
 
       {
@@ -420,10 +414,6 @@
       {
         "command": "lynx-keymap.toggleAgentMode",
         "title"  : "Toggle AI Agent Mode"
-      },
-      {
-        "command": "lynx-keymap.openModelPicker",
-        "title"  : "Open AI Model Picker"
       },
 
       {
