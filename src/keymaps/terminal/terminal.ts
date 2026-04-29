@@ -2,48 +2,49 @@ import * as vscode from 'vscode';
 
 export class TerminalManager {
   private isTerminalMode = false;
+  private originalTabsEnabled: boolean | undefined;
+  private originalPanelShowLabels: boolean | undefined;
 
   public registerCommands(context: vscode.ExtensionContext) {
+    const config = vscode.workspace.getConfiguration('workbench');
+    const terminalConfig = vscode.workspace.getConfiguration('terminal.integrated');
+
     const toggleTerminalDisposable = vscode.commands.registerCommand(
       'lynx-keymap.toggleTerminalLeft',
       async () => {
-        if (!this.isTerminalMode) {
-          // 1. Ensure the terminal opens and gets focused
-          await vscode.commands.executeCommand('workbench.action.terminal.focus');
-          
-          // 2. Intelligently position the panel opposite to the sidebar
-          const config = vscode.workspace.getConfiguration('workbench');
-          const sideBarLocation = config.get<string>('sideBar.location', 'left');
-          const terminalConfig = vscode.workspace.getConfiguration('terminal.integrated');
-          
-          if (sideBarLocation === 'left') {
-            await vscode.commands.executeCommand('workbench.action.positionPanelRight');
-          } else {
-            await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
-          }
+        try {
+          if (!this.isTerminalMode) {
+            this.originalTabsEnabled = terminalConfig.get<boolean>('tabs.enabled');
+            this.originalPanelShowLabels = config.get<boolean>('panel.showLabels');
 
-          // Hide tabs and panel labels for a cleaner lateral terminal
-          await terminalConfig.update('tabs.enabled', false, vscode.ConfigurationTarget.Global);
-          await config.update('panel.showLabels', false, vscode.ConfigurationTarget.Global);
-          
-          // 3. Close the AI chat
-          await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
-          
-          this.isTerminalMode = true;
-        } else {
-          // 1. Close the panel (where the terminal is)
-          await vscode.commands.executeCommand('workbench.action.closePanel');
-          
-          // Restore tabs and panel labels to default
-          const config = vscode.workspace.getConfiguration('workbench');
-          const terminalConfig = vscode.workspace.getConfiguration('terminal.integrated');
-          await terminalConfig.update('tabs.enabled', undefined, vscode.ConfigurationTarget.Global);
-          await config.update('panel.showLabels', undefined, vscode.ConfigurationTarget.Global);
-          
-          // 2. Open the AI chat
-          await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
-          
-          this.isTerminalMode = false;
+            await vscode.commands.executeCommand('workbench.action.terminal.focus');
+
+            const sideBarLocation = config.get<string>('sideBar.location', 'left');
+
+            if (sideBarLocation === 'left') {
+              await vscode.commands.executeCommand('workbench.action.positionPanelRight');
+            } else {
+              await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
+            }
+
+            await terminalConfig.update('tabs.enabled', false, vscode.ConfigurationTarget.Global);
+            await config.update('panel.showLabels', false, vscode.ConfigurationTarget.Global);
+
+            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+
+            this.isTerminalMode = true;
+          } else {
+            await vscode.commands.executeCommand('workbench.action.closePanel');
+
+            await terminalConfig.update('tabs.enabled', this.originalTabsEnabled, vscode.ConfigurationTarget.Global);
+            await config.update('panel.showLabels', this.originalPanelShowLabels, vscode.ConfigurationTarget.Global);
+
+            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+
+            this.isTerminalMode = false;
+          }
+        } catch (error) {
+          vscode.window.showErrorMessage(`Terminal toggle failed: ${error}`);
         }
       }
     );
