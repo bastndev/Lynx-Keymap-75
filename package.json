@@ -358,7 +358,7 @@
       },{
         "key"    : "alt+d",
         "mac"    : "alt+d",
-        "command": "lynx-keymap.toggleChatFocus"
+        "command": "lynx-keymap.selectCode"
       },      
 
 
@@ -397,8 +397,8 @@
         "title"  : "Generate AI Commit Message"
       },
       {
-        "command": "lynx-keymap.toggleChatFocus",
-        "title"  : "Toggle AI Chat Focus"
+        "command": "lynx-keymap.selectCode",
+        "title"  : "AI Select Code"
       },
       {
         "command": "lynx-keymap.executeAIPopup",

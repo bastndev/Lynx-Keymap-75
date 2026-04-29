@@ -31,7 +31,7 @@ export type ActionKey =
   | 'attachContextCommands'
   | 'agentCommands'
   | 'modelPickerCommands'
-  | 'focusCommands';
+  | 'selectCodeCommands';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
 export type EditorCommandMap = Partial<Record<EditorType, string>>;
@@ -94,7 +94,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
   
   // MARK:[Alt+D]
-  focusCommands: {
+  selectCodeCommands: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
     // [EditorType.VSCODE]:   [no support]
     [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
@@ -182,8 +182,8 @@ export const KEYMAP_CONFIG: KeymapConfig[] = [
     errorMessage: 'No AI agent toggle available'
   },
   {
-    commandId:    'lynx-keymap.toggleChatFocus',
-    commandsKey:  'focusCommands',
-    errorMessage: 'No AI chat focus toggle available'
+    commandId:    'lynx-keymap.selectCode',
+    commandsKey:  'selectCodeCommands',
+    errorMessage: 'No AI select code available'
   }
 ];
