@@ -156,7 +156,11 @@
       {
         "key"    : "alt+q",
         "mac"    : "alt+q",
-        "command": "workbench.debug.action.toggleRepl"
+        "command": "workbench.action.terminal.new"
+      },{
+        "key"    : "ctrl+q",
+        "mac"    : "cmd+q",
+        "command": "workbench.action.terminal.kill"
       },{
         "key"    : "alt+w",
         "mac"    : "alt+w",
