@@ -28,7 +28,7 @@ export type ActionKey =
   | 'openAndCloseAIChat'
   | 'createNewAISession'
   | 'showAIHistory'
-  | 'attachAIContext'
+  | 'selectModel'
   | 'toggleAgentMode'
   | 'openModelPicker'
   | 'selectCode';
@@ -83,7 +83,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Alt+S]
-  attachAIContext: {
+  selectModel: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleModelSelector',
     [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
     // [EditorType.KIRO]:     [no support]
@@ -96,7 +96,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   // MARK:[Alt+D]
   selectCode: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
-    // [EditorType.VSCODE]:   [no support]
+    // [EditorType.VSCODE]:   [no support]   
     [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
     [EditorType.CURSOR]:      'aichat.newhatction',
     // [EditorType.WINDSURF]: [no support]
@@ -172,9 +172,9 @@ export const KEYMAP_CONFIG: KeymapConfig[] = [
     errorMessage: 'No AI history available'
   },
   {
-    commandId:    'lynx-keymap.attachAIContext',
-    commandsKey:  'attachAIContext',
-    errorMessage: 'No AI context attachment available'
+    commandId:    'lynx-keymap.selectModel',
+    commandsKey:  'selectModel',
+    errorMessage: 'No AI model selector available'
   },
   {
     commandId:    'lynx-keymap.toggleAgentMode',
