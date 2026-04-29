@@ -85,7 +85,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   // MARK:[Alt+S]
   selectModel: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleModelSelector',
-    [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
+    [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',
     // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.openAddContextMenu',
     // [EditorType.WINDSURF]: [no support]
