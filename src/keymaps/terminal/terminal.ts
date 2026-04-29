@@ -1,23 +1,30 @@
 import * as vscode from 'vscode';
 
 export class TerminalManager {
-  private isTerminalLeftMode = false;
+  private isTerminalMode = false;
 
   public registerCommands(context: vscode.ExtensionContext) {
-    const toggleTerminalLeftDisposable = vscode.commands.registerCommand(
+    const toggleTerminalDisposable = vscode.commands.registerCommand(
       'lynx-keymap.toggleTerminalLeft',
       async () => {
-        if (!this.isTerminalLeftMode) {
+        if (!this.isTerminalMode) {
           // 1. Ensure the terminal opens and gets focused
           await vscode.commands.executeCommand('workbench.action.terminal.focus');
           
-          // 2. Move the panel to the left side
-          await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
+          // 2. Intelligently position the panel opposite to the sidebar
+          const config = vscode.workspace.getConfiguration('workbench');
+          const sideBarLocation = config.get<string>('sideBar.location', 'left');
+          
+          if (sideBarLocation === 'left') {
+            await vscode.commands.executeCommand('workbench.action.positionPanelRight');
+          } else {
+            await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
+          }
           
           // 3. Close the AI chat
           await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
           
-          this.isTerminalLeftMode = true;
+          this.isTerminalMode = true;
         } else {
           // 1. Close the panel (where the terminal is)
           await vscode.commands.executeCommand('workbench.action.closePanel');
@@ -25,11 +32,11 @@ export class TerminalManager {
           // 2. Open the AI chat
           await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
           
-          this.isTerminalLeftMode = false;
+          this.isTerminalMode = false;
         }
       }
     );
 
-    context.subscriptions.push(toggleTerminalLeftDisposable);
+    context.subscriptions.push(toggleTerminalDisposable);
   }
 }
