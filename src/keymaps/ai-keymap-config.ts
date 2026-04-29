@@ -51,7 +51,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
 
   // MARK:[Ctrl`]
   executeAIPopup: {
-    // [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
+    [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
     [EditorType.VSCODE]:      'inlineChat.start',
     [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
     [EditorType.CURSOR]:      'aipopup.action.modal.generate',
@@ -98,7 +98,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
     // [EditorType.VSCODE]:   [no support]   
     [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
-    [EditorType.CURSOR]:      'aichat.newhatction',
+    [EditorType.CURSOR]:      'aichat.newchataction',
     // [EditorType.WINDSURF]: [no support]
     // [EditorType.TRAE_AI]:  [no support]
     // [EditorType.FIREBASE]: [no support]
