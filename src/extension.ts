@@ -2,20 +2,24 @@ import * as vscode from 'vscode';
 import { AICommandsManager } from './keymaps/ai-keymap-handler';
 import { ExtensionChecker } from './notifications/extension-checker';
 import { SmartWebviewExtension } from './notifications/smart-checker-webview';
+import { TerminalManager } from './keymaps/terminal/terminal';
 // import { SwapManager } from './keymaps/swap';
 
 let aiCommandsManagerInstance: AICommandsManager | undefined;
 let extensionCheckerInstance: ExtensionChecker | undefined;
 let smartWebviewExtensionInstance: SmartWebviewExtension | undefined;
+let terminalManagerInstance: TerminalManager | undefined;
 
 export function activate(context: vscode.ExtensionContext) {
   aiCommandsManagerInstance = new AICommandsManager();
   extensionCheckerInstance = new ExtensionChecker();
   smartWebviewExtensionInstance = new SmartWebviewExtension();
+  terminalManagerInstance = new TerminalManager();
 
   aiCommandsManagerInstance.registerCommands(context);
   extensionCheckerInstance.registerCheckCommands(context);
   smartWebviewExtensionInstance.registerWebviewCommands(context);
+  terminalManagerInstance.registerCommands(context);
 
   const checkF1QuickSwitchDisposable = vscode.commands.registerCommand(
     'lynx-keymap.checkF1QuickSwitch',

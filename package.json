@@ -58,6 +58,7 @@
     "onCommand:lynx-keymap.createNewAISession",
     "onCommand:lynx-keymap.showAIHistory",
     "onCommand:lynx-keymap.selectModels",
+    "onCommand:lynx-keymap.toggleTerminalLeft",
 
     "onCommand:lynx-keymap.toggleAgentMode",
     "onCommand:lynx-keymap.checkF1QuickSwitch",
@@ -338,7 +339,7 @@
       {
         "key"    : "ctrl+[Backquote]",
         "mac"    : "cmd+[Backquote]",
-        "command": "workbench.action.positionPanelLeft"
+        "command": "lynx-keymap.toggleTerminalLeft"
       },{
         "key"    : "ctrl+tab",
         "mac"    : "cmd+tab",
@@ -389,6 +390,10 @@
   },
 
   "commands": [
+      {
+        "command": "lynx-keymap.toggleTerminalLeft",
+        "title"  : "Toggle Terminal Left"
+      },
       {
         "command": "lynx-keymap.generateAICommit",
         "title"  : "Generate AI Commit Message"
