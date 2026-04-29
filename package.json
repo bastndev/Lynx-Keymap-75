@@ -153,14 +153,15 @@
 
 
 
+
       {
+        "key"    : "ctrl+[Backquote]",
+        "mac"    : "cmd+[Backquote]",
+        "command": "lynx-keymap.toggleTerminalLeft"
+      },{
         "key"    : "alt+q",
         "mac"    : "alt+q",
         "command": "workbench.action.terminal.new"
-      },{
-        "key"    : "ctrl+q",
-        "mac"    : "cmd+q",
-        "command": "workbench.action.terminal.kill"
       },{
         "key"    : "alt+w",
         "mac"    : "alt+w",
@@ -168,12 +169,21 @@
       },{
         "key"    : "alt+e",
         "mac"    : "alt+e",
-        "command": "lynx-keymap.checkGitLab"
-      },{
+        "command": "workbench.action.terminal.kill"
+      },
+      
+      
+      {
         "key"    : "pagedown",
         "mac"    : "pagedown",
         "command": "workbench.action.togglePanel"
+      },{
+        "key"    : "ctrl+q",
+        "mac"    : "cmd+q",
+        "command": "lynx-keymap.checkGitLab"
       },
+
+
 
 
       {
@@ -335,12 +345,7 @@
 
 
 
-
-      {
-        "key"    : "ctrl+[Backquote]",
-        "mac"    : "cmd+[Backquote]",
-        "command": "lynx-keymap.toggleTerminalLeft"
-      },{
+{
         "key"    : "ctrl+tab",
         "mac"    : "cmd+tab",
         "command": "lynx-keymap.openAndCloseAIChat"
