@@ -24,7 +24,6 @@ export const EDITOR_SIGNATURES: Record<EditorType, string[]> = {
 // ─── Action Keys ─────────────────────────────────────────────────────────────
 export type ActionKey =
   | 'generateAICommit'
-  | 'executeAIPopup'
   | 'openAndCloseAIChat'
   | 'createNewAISession'
   | 'showAIHistory'
@@ -46,17 +45,6 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     [EditorType.WINDSURF]:    'windsurf.generateCommitMessage',
     [EditorType.TRAE_AI]:     'icube.gitGenerateCommitMessage',
     // [EditorType.FIREBASE]: [no support]
-  },
-
-  // MARK:[Ctrl`]
-  executeAIPopup: {
-    // [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
-    // [EditorType.VSCODE]:      'inlineChat.start',
-    // [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
-    // [EditorType.CURSOR]:      'aipopup.action.modal.generate',
-    // [EditorType.WINDSURF]:    'windsurf.prioritized.command.open',
-    // [EditorType.TRAE_AI]:     'icube.inlineChat.start',
-    // [EditorType.FIREBASE]:    'workbench.action.terminal.chat.start',
   },
 
   // MARK:[Shift+Tab]
@@ -139,11 +127,6 @@ export const KEYMAP_CONFIG: KeymapConfig[] = [
     commandId:    'lynx-keymap.generateAICommit',
     commandsKey:  'generateAICommit',
     errorMessage: 'No AI commit generators available'
-  },
-  {
-    commandId:    'lynx-keymap.executeAIPopup',
-    commandsKey:  'executeAIPopup',
-    errorMessage: 'No AI popup providers available'
   },
   {
     commandId:    'lynx-keymap.openAndCloseAIChat',

@@ -54,7 +54,6 @@
     "onStartupFinished",
 
     "onCommand:lynx-keymap.generateAICommit",
-    "onCommand:lynx-keymap.executeAIPopup",
     "onCommand:lynx-keymap.openAndCloseAIChat",
     "onCommand:lynx-keymap.createNewAISession",
     "onCommand:lynx-keymap.showAIHistory",
@@ -103,8 +102,8 @@
         "mac"    : "alt+c",
         "command": "explorer.newFolder"
       },{
-        "key"    : "ctrl+tab",
-        "mac"    : "cmd+tab",
+        "key"    : "ctrl+capslock",
+        "mac"    : "cmd+capslock",
         "command": "workbench.action.toggleSidebarVisibility"
       },
 
@@ -339,10 +338,10 @@
       {
         "key"    : "ctrl+[Backquote]",
         "mac"    : "cmd+[Backquote]",
-        "command": "lynx-keymap.executeAIPopup"
+        "command": "workbench.action.positionPanelLeft"
       },{
-        "key"    : "shift+tab",
-        "mac"    : "shift+tab",
+        "key"    : "ctrl+tab",
+        "mac"    : "cmd+tab",
         "command": "lynx-keymap.openAndCloseAIChat"
       },{
         "key"    : "shift+escape",
@@ -397,10 +396,6 @@
       {
         "command": "lynx-keymap.selectCode",
         "title"  : "AI Select Code"
-      },
-      {
-        "command": "lynx-keymap.executeAIPopup",
-        "title"  : "Open AI Chat Interface"
       },{
         "command": "lynx-keymap.openAndCloseAIChat",
         "title"  : "Open and Close AI Chat"
