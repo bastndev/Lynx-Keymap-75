@@ -14,11 +14,14 @@ export class TerminalManager {
           // 2. Intelligently position the panel opposite to the sidebar
           const config = vscode.workspace.getConfiguration('workbench');
           const sideBarLocation = config.get<string>('sideBar.location', 'left');
+          const terminalConfig = vscode.workspace.getConfiguration('terminal.integrated');
           
           if (sideBarLocation === 'left') {
             await vscode.commands.executeCommand('workbench.action.positionPanelRight');
+            await terminalConfig.update('tabs.location', 'right', vscode.ConfigurationTarget.Global);
           } else {
             await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
+            await terminalConfig.update('tabs.location', 'left', vscode.ConfigurationTarget.Global);
           }
           
           // 3. Close the AI chat
