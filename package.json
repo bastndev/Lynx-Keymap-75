@@ -58,7 +58,7 @@
     "onCommand:lynx-keymap.openAndCloseAIChat",
     "onCommand:lynx-keymap.createNewAISession",
     "onCommand:lynx-keymap.showAIHistory",
-    "onCommand:lynx-keymap.selectModel",
+    "onCommand:lynx-keymap.selectModels",
 
     "onCommand:lynx-keymap.toggleAgentMode",
     "onCommand:lynx-keymap.checkF1QuickSwitch",
@@ -353,7 +353,7 @@
       },      {
         "key"    : "alt+s",
         "mac"    : "alt+s",
-        "command": "lynx-keymap.selectModel"
+        "command": "lynx-keymap.selectModels"
       },{
         "key"    : "alt+d",
         "mac"    : "alt+d",
@@ -407,7 +407,7 @@
         "command": "lynx-keymap.showAIHistory",
         "title"  : "Show AI Chat History"
       },{
-        "command": "lynx-keymap.selectModel",
+        "command": "lynx-keymap.selectModels",
         "title"  : "Select AI Model"
       },
 

@@ -28,7 +28,7 @@ export type ActionKey =
   | 'openAndCloseAIChat'
   | 'createNewAISession'
   | 'showAIHistory'
-  | 'selectModel'
+  | 'selectModels'
   | 'toggleAgentMode'
   | 'selectCode';
 
@@ -82,7 +82,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Alt+S]
-  selectModel: {
+  selectModels: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleModelSelector',
     [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',
     // [EditorType.KIRO]:     [no support]
@@ -161,8 +161,8 @@ export const KEYMAP_CONFIG: KeymapConfig[] = [
     errorMessage: 'No AI history available'
   },
   {
-    commandId:    'lynx-keymap.selectModel',
-    commandsKey:  'selectModel',
+    commandId:    'lynx-keymap.selectModels',
+    commandsKey:  'selectModels',
     errorMessage: 'No AI model selector available'
   },
   {
