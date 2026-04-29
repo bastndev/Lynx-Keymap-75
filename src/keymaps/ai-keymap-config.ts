@@ -83,21 +83,22 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   },
 
   // MARK:[Alt+S]
-  focusCommands: {
-    [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
-    // [EditorType.VSCODE]:   [no support]
-    [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
-    // [EditorType.WINDSURF]: [no support]
-    // [EditorType.TRAE_AI]:  [no support]
-    // [EditorType.FIREBASE]: [no support]
-  },
-
-  // MARK:[Alt+D]
   attachContextCommands: {
     [EditorType.ANTIGRAVITY]: 'antigravity.toggleModelSelector',
     [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
     // [EditorType.KIRO]:     [no support]
     [EditorType.CURSOR]:      'composer.openAddContextMenu',
+    // [EditorType.WINDSURF]: [no support]
+    // [EditorType.TRAE_AI]:  [no support]
+    // [EditorType.FIREBASE]: [no support]
+  },
+  
+  // MARK:[Alt+D]
+  focusCommands: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
+    // [EditorType.VSCODE]:   [no support]
+    [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
+    [EditorType.CURSOR]:      'aichat.newhatction',
     // [EditorType.WINDSURF]: [no support]
     // [EditorType.TRAE_AI]:  [no support]
     // [EditorType.FIREBASE]: [no support]
@@ -108,7 +109,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
     [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
     // [EditorType.KIRO]:     [no support]
-    [EditorType.CURSOR]:      'composer.toggleAgent',
+    [EditorType.CURSOR]:      'workbench.action.toggleAuxiliaryBart',
     [EditorType.WINDSURF]:    'windsurf.toggleAgentMode',
     // [EditorType.TRAE_AI]:  [no support]
     // [EditorType.FIREBASE]: [no support]
