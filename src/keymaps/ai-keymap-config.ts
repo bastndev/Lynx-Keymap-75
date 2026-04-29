@@ -50,13 +50,13 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
 
   // MARK:[Ctrl`]
   executeAIPopup: {
-    [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
-    [EditorType.VSCODE]:      'inlineChat.start',
-    [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
-    [EditorType.CURSOR]:      'aipopup.action.modal.generate',
-    [EditorType.WINDSURF]:    'windsurf.prioritized.command.open',
-    [EditorType.TRAE_AI]:     'icube.inlineChat.start',
-    [EditorType.FIREBASE]:    'workbench.action.terminal.chat.start',
+    // [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
+    // [EditorType.VSCODE]:      'inlineChat.start',
+    // [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
+    // [EditorType.CURSOR]:      'aipopup.action.modal.generate',
+    // [EditorType.WINDSURF]:    'windsurf.prioritized.command.open',
+    // [EditorType.TRAE_AI]:     'icube.inlineChat.start',
+    // [EditorType.FIREBASE]:    'workbench.action.terminal.chat.start',
   },
 
   // MARK:[Shift+Tab]
