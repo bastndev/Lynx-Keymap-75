@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { AICommandsManager } from './keymaps/ai-keymap-handler';
+import { AICommandsManager } from './keymaps/ai/ai-keymap-handler';
 import { ExtensionChecker } from './notifications/extension-checker';
 import { SmartWebviewExtension } from './notifications/smart-checker-webview';
 import { TerminalManager } from './keymaps/terminal/terminal';
