@@ -50,7 +50,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
   // MARK:[Shift+Tab]
   openAndCloseAIChat: {
     [EditorType.ANTIGRAVITY]: 'antigravity.openAgent',
-    [EditorType.VSCODE]:      'workbench.panel.chat',
+    [EditorType.VSCODE]:      'workbench.action.chat.toggle',
     [EditorType.KIRO]:        'workbench.action.toggleAuxiliaryBar',
     [EditorType.CURSOR]:      'workbench.action.toggleAuxiliaryBar',
     [EditorType.WINDSURF]:    'windsurf.prioritized.chat.open',
