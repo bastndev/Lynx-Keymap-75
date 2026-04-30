@@ -17,7 +17,7 @@ export class TerminalManager {
     if (lastMode === 'terminal') {
       this.originalTabsEnabled = context.workspaceState.get(STATE_KEY_TABS);
       this.originalPanelShowLabels = context.workspaceState.get(STATE_KEY_LABELS);
-      await this.activateTerminalMode(context);
+      await this.activateTerminalModeOnlyTerminal(context);
     }
   }
 
@@ -29,7 +29,7 @@ export class TerminalManager {
     }
   }
 
-  private async activateTerminalMode(context: vscode.ExtensionContext) {
+  private async activateTerminalModeOnlyTerminal(context: vscode.ExtensionContext) {
     const terminalConfig = vscode.workspace.getConfiguration('terminal.integrated');
     const config = vscode.workspace.getConfiguration('workbench');
 
@@ -44,8 +44,6 @@ export class TerminalManager {
 
     await terminalConfig.update('tabs.enabled', false, vscode.ConfigurationTarget.Global);
     await config.update('panel.showLabels', false, vscode.ConfigurationTarget.Global);
-
-    await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
 
     this.isTerminalMode = true;
     await this.saveState(context, 'terminal');
@@ -63,7 +61,7 @@ export class TerminalManager {
             this.originalTabsEnabled = terminalConfig.get<boolean>('tabs.enabled');
             this.originalPanelShowLabels = config.get<boolean>('panel.showLabels');
 
-            await this.activateTerminalMode(context);
+      await this.activateTerminalModeOnlyTerminal(context);
           } else {
             await vscode.commands.executeCommand('workbench.action.closePanel');
 
