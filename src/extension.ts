@@ -1,57 +1,28 @@
 import * as vscode from 'vscode';
-import { AICommandsManager } from './keymaps/ai/ai-handler';
+import { AICommandsManager, TerminalManager } from './keymaps';
 import { ExtensionChecker } from './notifications/extension-checker';
 import { SmartWebviewExtension } from './notifications/smart-checker-webview';
-import { TerminalManager } from './keymaps/terminal/terminal';
-// import { SwapManager } from './keymaps/swap';
 
-let aiCommandsManagerInstance: AICommandsManager | undefined;
-let extensionCheckerInstance: ExtensionChecker | undefined;
-let smartWebviewExtensionInstance: SmartWebviewExtension | undefined;
-let terminalManagerInstance: TerminalManager | undefined;
+let aiManager: AICommandsManager | undefined;
+let checkerManager: ExtensionChecker | undefined;
+let webviewManager: SmartWebviewExtension | undefined;
 
 export async function activate(context: vscode.ExtensionContext) {
-  aiCommandsManagerInstance = new AICommandsManager();
-  extensionCheckerInstance = new ExtensionChecker();
-  smartWebviewExtensionInstance = new SmartWebviewExtension();
-  terminalManagerInstance = new TerminalManager();
+  aiManager = new AICommandsManager();
+  checkerManager = new ExtensionChecker();
+  webviewManager = new SmartWebviewExtension();
+  const terminalManager = new TerminalManager();
 
-  aiCommandsManagerInstance.registerCommands(context);
-  extensionCheckerInstance.registerCheckCommands(context);
-  smartWebviewExtensionInstance.registerWebviewCommands(context);
-  terminalManagerInstance.registerCommands(context);
+  aiManager.registerCommands(context);
+  checkerManager.registerCheckCommands(context);
+  webviewManager.registerWebviewCommands(context);
+  terminalManager.registerCommands(context);
 
-  await terminalManagerInstance.restoreState(context);
-
-  const checkF1QuickSwitchDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.checkF1QuickSwitch',
-    () =>
-      extensionCheckerInstance?.checkAndExecuteCommand(
-        'workbench.view.extension.f1-functions',
-        context
-      )
-  );
-
-  const checkGitLabDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.checkGitLab',
-    () =>
-      extensionCheckerInstance?.checkAndExecuteCommand(
-        'gitlab.graphView.focus',
-        context
-      )
-  );
-
-  context.subscriptions.push(
-    checkF1QuickSwitchDisposable,
-    checkGitLabDisposable
-  );
+  await terminalManager.restoreState(context);
 }
 
 export async function deactivate() {
-  if (aiCommandsManagerInstance) {
-    aiCommandsManagerInstance.dispose();
-  }
-  if (smartWebviewExtensionInstance) {
-    smartWebviewExtensionInstance.dispose();
-  }
+  aiManager?.dispose();
+  checkerManager?.dispose();
+  webviewManager?.dispose();
 }
