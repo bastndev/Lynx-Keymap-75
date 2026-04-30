@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import {
   AI_COMMANDS, KEYMAP_CONFIG, EDITOR_SIGNATURES,
   EditorType, ActionKey
-} from './ai-keymap-config';
+} from './utils';
 
 const LOG = '[lynx-keymap]';
 
