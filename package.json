@@ -197,7 +197,11 @@
 
 
 
-
+      {
+        "key"    : "ctrl+p",
+        "mac"    : "cmd+p",
+        "command": "-workbench.action.quickOpen"
+      },
       {
         "key"    : "shift+alt+q",
         "mac"    : "shift+alt+q",
