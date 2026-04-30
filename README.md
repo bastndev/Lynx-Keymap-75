@@ -45,7 +45,7 @@
 | -                                 | -                   | -                        | -                        |
 | open & close debug console        | `⌥ +` Q             | `Alt +` Q                | `Alt +` Q                |
 | open & close terminal             | `⌥ +` W             | `Alt +` W                | `Alt +` W                |
-| open gitlens                      | `⌥ +` E             | `Alt +` E                | `Alt +` E                |
+| open gitlab                       | `⌥ +` E             | `Alt +` E                | `Alt +` E                |
 | close & open panel                | Page Down           | Page Down                | Page Down                |
 | -                                 | -                   | -                        | -                        |
 | select theme                      | `⇧ + ⌥ +` T         | `Shift + Alt +` T        | `Shift + Alt +` T        |

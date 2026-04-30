@@ -1,51 +1,28 @@
 import * as vscode from 'vscode';
-import { AICommandsManager } from './keymaps/ai-keymap-handler';
+import { AICommandsManager, TerminalManager } from './keymaps';
 import { ExtensionChecker } from './notifications/extension-checker';
 import { SmartWebviewExtension } from './notifications/smart-checker-webview';
-// import { SwapManager } from './keymaps/swap';
 
-let aiCommandsManagerInstance: AICommandsManager | undefined;
-let extensionCheckerInstance: ExtensionChecker | undefined;
-let smartWebviewExtensionInstance: SmartWebviewExtension | undefined;
+let aiManager: AICommandsManager | undefined;
+let checkerManager: ExtensionChecker | undefined;
+let webviewManager: SmartWebviewExtension | undefined;
 
-export function activate(context: vscode.ExtensionContext) {
-  aiCommandsManagerInstance = new AICommandsManager();
-  extensionCheckerInstance = new ExtensionChecker();
-  smartWebviewExtensionInstance = new SmartWebviewExtension();
+export async function activate(context: vscode.ExtensionContext) {
+  aiManager = new AICommandsManager();
+  checkerManager = new ExtensionChecker();
+  webviewManager = new SmartWebviewExtension();
+  const terminalManager = new TerminalManager();
 
-  aiCommandsManagerInstance.registerCommands(context);
-  extensionCheckerInstance.registerCheckCommands(context);
-  smartWebviewExtensionInstance.registerWebviewCommands(context);
+  aiManager.registerCommands(context);
+  checkerManager.registerCheckCommands(context);
+  webviewManager.registerWebviewCommands(context);
+  terminalManager.registerCommands(context);
 
-  const checkF1QuickSwitchDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.checkF1QuickSwitch',
-    () =>
-      extensionCheckerInstance?.checkAndExecuteCommand(
-        'workbench.view.extension.f1-functions',
-        context
-      )
-  );
-
-  const checkGitLensDisposable = vscode.commands.registerCommand(
-    'lynx-keymap.checkGitLens',
-    () =>
-      extensionCheckerInstance?.checkAndExecuteCommand(
-        'gitlens.showGraph',
-        context
-      )
-  );
-
-  context.subscriptions.push(
-    checkF1QuickSwitchDisposable,
-    checkGitLensDisposable
-  );
+  await terminalManager.restoreState(context);
 }
 
 export async function deactivate() {
-  if (aiCommandsManagerInstance) {
-    aiCommandsManagerInstance.dispose();
-  }
-  if (smartWebviewExtensionInstance) {
-    smartWebviewExtensionInstance.dispose();
-  }
+  aiManager?.dispose();
+  checkerManager?.dispose();
+  webviewManager?.dispose();
 }

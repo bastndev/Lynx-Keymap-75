@@ -1,42 +1,35 @@
-/*
- *** AI COMMANDS CONFIGURATION
- */
-
-// ─── Editor Types ────────────────────────────────────────────────────────────
 export enum EditorType {
   ANTIGRAVITY = 'antigravity',
-  WINDSURF    = 'windsurf',
-  CURSOR      = 'cursor',
-  TRAE_AI     = 'trae-ai',
-  KIRO        = 'kiro',
-  FIREBASE    = 'firebase',
   VSCODE      = 'vscode',
+  KIRO        = 'kiro',
+  CURSOR      = 'cursor',
+  WINDSURF    = 'windsurf',
+  TRAE_AI     = 'trae-ai',
+  FIREBASE    = 'firebase',
   UNKNOWN     = 'unknown'
 }
 
 // ─── Detection Signatures ────────────────────────────────────────────────────
-// Commands unique to each editor, used to detect which one is running
 export const EDITOR_SIGNATURES: Record<EditorType, string[]> = {
   [EditorType.ANTIGRAVITY]: ['antigravity.startNewConversation', 'antigravity.prioritized.command.open'],
-  [EditorType.WINDSURF]:    ['windsurf.prioritized.chat.open',   'windsurf.generateCommitMessage'],
-  [EditorType.CURSOR]:      ['composer.createNew',               'cursor.generateGitCommitMessage'],
-  [EditorType.TRAE_AI]:     ['icube.inlineChat.start',           'icube.gitGenerateCommitMessage'],
-  [EditorType.KIRO]:        ['kiroAgent.newSession',             'kiroAgent.inlineChat.start'],
-  [EditorType.FIREBASE]:    ['workbench.action.terminal.chat.start'],
   [EditorType.VSCODE]:      ['inlineChat.start',                 'workbench.action.chat.newEditSession'],
+  [EditorType.KIRO]:        ['kiroAgent.newSession',             'kiroAgent.inlineChat.start'],
+  [EditorType.CURSOR]:      ['composer.createNew',               'cursor.generateGitCommitMessage'],
+  [EditorType.WINDSURF]:    ['windsurf.prioritized.chat.open',   'windsurf.generateCommitMessage'],
+  [EditorType.TRAE_AI]:     ['icube.inlineChat.start',           'icube.gitGenerateCommitMessage'],
+  [EditorType.FIREBASE]:    ['workbench.action.terminal.chat.start'],
   [EditorType.UNKNOWN]:     []
 };
 
 // ─── Action Keys ─────────────────────────────────────────────────────────────
 export type ActionKey =
-  | 'commitCommands'
-  | 'popupCommands'
-  | 'chatCommands'
-  | 'newSessionCommands'
-  | 'historyCommands'
-  | 'attachContextCommands'
-  | 'agentCommands'
-  | 'modelPickerCommands';
+  | 'generateAICommit'
+  | 'openAndCloseAIChat'
+  | 'createNewAISession'
+  | 'showAIHistory'
+  | 'selectModels'
+  | 'toggleAgentMode'
+  | 'selectCode';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
 export type EditorCommandMap = Partial<Record<EditorType, string>>;
@@ -44,74 +37,82 @@ export type EditorCommandMap = Partial<Record<EditorType, string>>;
 export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
 
   // MARK:[Alt+2]
-  commitCommands: {
+  generateAICommit: {
     [EditorType.ANTIGRAVITY]: 'antigravity.generateCommitMessage',
-    [EditorType.WINDSURF]:    'windsurf.generateCommitMessage',
     [EditorType.VSCODE]:      'github.copilot.git.generateCommitMessage',
+    [EditorType.KIRO]:        'kiroAgent.generateCommitMessage',
     [EditorType.CURSOR]:      'cursor.generateGitCommitMessage',
+    [EditorType.WINDSURF]:    'windsurf.generateCommitMessage',
     [EditorType.TRAE_AI]:     'icube.gitGenerateCommitMessage',
-  },
-
-  // MARK:[Ctrl`]
-  popupCommands: {
-    [EditorType.ANTIGRAVITY]: 'antigravity.prioritized.command.open',
-    [EditorType.WINDSURF]:    'windsurf.prioritized.command.open',
-    [EditorType.VSCODE]:      'inlineChat.start',
-    [EditorType.CURSOR]:      'aipopup.action.modal.generate',
-    [EditorType.TRAE_AI]:     'icube.inlineChat.start',
-    [EditorType.FIREBASE]:    'workbench.action.terminal.chat.start',
-    [EditorType.KIRO]:        'kiroAgent.inlineChat.start',
+    // [EditorType.FIREBASE]: [no support]
   },
 
   // MARK:[Shift+Tab]
-  chatCommands: {
-    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.open',
-    [EditorType.VSCODE]:      'workbench.panel.chat',
+  openAndCloseAIChat: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.openAgent',
+    [EditorType.VSCODE]:      'workbench.action.chat.toggle',
+    [EditorType.KIRO]:        'workbench.action.toggleAuxiliaryBar',
     [EditorType.CURSOR]:      'workbench.action.toggleAuxiliaryBar',
+    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.open',
     [EditorType.TRAE_AI]:     'workbench.action.chat.icube.open',
     [EditorType.FIREBASE]:    'aichat.prompt',
-    [EditorType.KIRO]:        'workbench.action.toggleAuxiliaryBar',
   },
 
-  // MARK:[Alt+A]
-  newSessionCommands: {
+  // MARK:[Alt+A]   (AI)
+  createNewAISession: {
     [EditorType.ANTIGRAVITY]: 'antigravity.startNewConversation',
-    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.openNewConversation',
     [EditorType.VSCODE]:      'workbench.action.chat.newEditSession',
-    [EditorType.CURSOR]:      'composer.createNew',
-    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.createNewSession',
     [EditorType.KIRO]:        'kiroAgent.newSession',
+    [EditorType.CURSOR]:      'composer.createNew',
+    [EditorType.WINDSURF]:    'windsurf.prioritized.chat.openNewConversation',
+    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.createNewSession',
+    // [EditorType.FIREBASE]: [no support]
   },
 
   // MARK:[Alt+S]
-  historyCommands: {
-    [EditorType.CURSOR]:      'composer.showComposerHistory',
-    [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
-    [EditorType.VSCODE]:      'workbench.action.chat.history',
-    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.showHistory',
-  },
-
-  // MARK:[Alt+D]
-  attachContextCommands: {
-    [EditorType.VSCODE]:      'workbench.action.chat.attachContext',
-    [EditorType.CURSOR]:      'composer.openAddContextMenu',
-  },
-
-  // MARK:[Alt+Z]
-  agentCommands: {
-    [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
-    [EditorType.CURSOR]:      'composer.toggleAgent',
-    [EditorType.WINDSURF]:    'windsurf.toggleAgentMode',
-    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
-  },
-
-  // MARK:[Alt+X]
-  modelPickerCommands: {
+  selectModels: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.toggleModelSelector',
     [EditorType.VSCODE]:      'workbench.action.chat.openModelPicker',
-    [EditorType.CURSOR]:      'composer.openModelPicker',
-    [EditorType.WINDSURF]:    'windsurf.openModelPicker',
-    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.openModelPicker',
+    // [EditorType.KIRO]:     [no support]
+    [EditorType.CURSOR]:      'composer.openAddContextMenu',
+    // [EditorType.WINDSURF]: [no support]
+    // [EditorType.TRAE_AI]:  [no support]
+    // [EditorType.FIREBASE]: [no support]
   },
+  
+  // MARK:[Alt+D]
+  selectCode: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.toggleChatFocus',
+    // [EditorType.VSCODE]:   [no support]   
+    [EditorType.KIRO]:        'kiroAgent.focusContinueInputWithoutNewSession',
+    [EditorType.CURSOR]:      'aichat.newchataction',
+    // [EditorType.WINDSURF]: [no support]
+    // [EditorType.TRAE_AI]:  [no support]
+    // [EditorType.FIREBASE]: [no support]
+  },
+
+  // MARK:[Shift+Alt+A] ---
+  toggleAgentMode: {
+    [EditorType.ANTIGRAVITY]: 'workbench.action.chat.toggleAgentMode',
+    [EditorType.VSCODE]:      'workbench.action.chat.toggleAgentMode',
+    // [EditorType.KIRO]:     [no support]
+    [EditorType.CURSOR]:      'workbench.action.toggleAuxiliaryBart',
+    [EditorType.WINDSURF]:    'windsurf.toggleAgentMode',
+    // [EditorType.TRAE_AI]:  [no support]
+    // [EditorType.FIREBASE]: [no support]
+  },
+
+  // MARK:[Shift+Alt+S]
+  showAIHistory: {
+    [EditorType.ANTIGRAVITY]: 'antigravity.openConversationPicker',
+    [EditorType.VSCODE]:      'workbench.action.chat.history',
+    [EditorType.KIRO]:        'kiroAgent.viewHistoryChats',
+    [EditorType.CURSOR]:      'composer.showComposerHistory',
+    // [EditorType.WINDSURF]: [no support]
+    [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.showHistory',
+    // [EditorType.FIREBASE]: [no support]
+  },
+
 };
 
 // ─── Keymap Config ────────────────────────────────────────────────────────────
@@ -124,37 +125,37 @@ export interface KeymapConfig {
 export const KEYMAP_CONFIG: KeymapConfig[] = [
   {
     commandId:    'lynx-keymap.generateAICommit',
-    commandsKey:  'commitCommands',
+    commandsKey:  'generateAICommit',
     errorMessage: 'No AI commit generators available'
   },
   {
-    commandId:    'lynx-keymap.executeAIPopup',
-    commandsKey:  'popupCommands',
-    errorMessage: 'No AI popup providers available'
-  },
-  {
     commandId:    'lynx-keymap.openAndCloseAIChat',
-    commandsKey:  'chatCommands',
+    commandsKey:  'openAndCloseAIChat',
     errorMessage: 'No AI chat providers available'
   },
   {
     commandId:    'lynx-keymap.createNewAISession',
-    commandsKey:  'newSessionCommands',
+    commandsKey:  'createNewAISession',
     errorMessage: 'No AI providers available to create a new session'
   },
   {
     commandId:    'lynx-keymap.showAIHistory',
-    commandsKey:  'historyCommands',
+    commandsKey:  'showAIHistory',
     errorMessage: 'No AI history available'
   },
   {
-    commandId:    'lynx-keymap.attachAIContext',
-    commandsKey:  'attachContextCommands',
-    errorMessage: 'No AI context attachment available'
+    commandId:    'lynx-keymap.selectModels',
+    commandsKey:  'selectModels',
+    errorMessage: 'No AI model selector available'
   },
   {
     commandId:    'lynx-keymap.toggleAgentMode',
-    commandsKey:  'agentCommands',
+    commandsKey:  'toggleAgentMode',
     errorMessage: 'No AI agent toggle available'
+  },
+  {
+    commandId:    'lynx-keymap.selectCode',
+    commandsKey:  'selectCode',
+    errorMessage: 'No AI select code available'
   }
 ];

@@ -128,7 +128,7 @@ Following semantic versioning principles for consistent and predictable releases
   - Customizable notification preferences per editor
 - **Extension Check Shortcuts**: Added new commands for extension checks
   - `lynx-keymap.checkF1QuickSwitch` - Checks if the F1-Quick Switch extension is installed; prompts to install if missing
-  - `lynx-keymap.checkGitLens` - Checks if the GitLens extension is installed; prompts to install if missing
+  - `lynx-keymap.checkGitLab` - Checks if the GitLab extension is installed; prompts to install if missing
 
 ### Improved
 

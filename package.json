@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
   "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & Antigravity... 雨",
-  "version": "1.5.5",
+  "version": "2.0.0",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -54,14 +54,13 @@
     "onStartupFinished",
 
     "onCommand:lynx-keymap.generateAICommit",
-    "onCommand:lynx-keymap.executeAIPopup",
     "onCommand:lynx-keymap.openAndCloseAIChat",
     "onCommand:lynx-keymap.createNewAISession",
     "onCommand:lynx-keymap.showAIHistory",
-    "onCommand:lynx-keymap.attachAIContext",
+    "onCommand:lynx-keymap.selectModels",
+    "onCommand:lynx-keymap.toggleTerminalLeft",
 
     "onCommand:lynx-keymap.toggleAgentMode",
-    "onCommand:lynx-keymap.openModelPicker",
     "onCommand:lynx-keymap.checkF1QuickSwitch",
     "onCommand:lynx-keymap.checkCompareCode"
   ],
@@ -96,16 +95,16 @@
       
 
       {
-        "key"    : "alt+c",
-        "mac"    : "alt+c",
+        "key"    : "alt+x",
+        "mac"    : "alt+x",
         "command": "explorer.newFile"
       },{
-        "key"    : "alt+v",
-        "mac"    : "alt+v",
+        "key"    : "alt+c",
+        "mac"    : "alt+c",
         "command": "explorer.newFolder"
       },{
-        "key"    : "ctrl+tab",
-        "mac"    : "cmd+tab",
+        "key"    : "ctrl+capslock",
+        "mac"    : "cmd+capslock",
         "command": "workbench.action.toggleSidebarVisibility"
       },
 
@@ -154,10 +153,15 @@
 
 
 
+
       {
+        "key"    : "ctrl+[Backquote]",
+        "mac"    : "cmd+[Backquote]",
+        "command": "lynx-keymap.toggleTerminalLeft"
+      },{
         "key"    : "alt+q",
         "mac"    : "alt+q",
-        "command": "workbench.debug.action.toggleRepl"
+        "command": "workbench.action.terminal.new"
       },{
         "key"    : "alt+w",
         "mac"    : "alt+w",
@@ -165,30 +169,59 @@
       },{
         "key"    : "alt+e",
         "mac"    : "alt+e",
-        "command": "lynx-keymap.checkGitLens"
+        "command": "workbench.action.terminal.kill"
+      },
+      
+      
+      {
+        "key"    : "ctrl+alt+q",
+        "mac"    : "cmd+alt+q",
+        "command": "workbench.action.quickOpenTerm"
+      },{
+        "key"    : "ctrl+alt+e",
+        "mac"    : "cmd+alt+e",
+        "command": "workbench.action.focusFirstEditorGroup"
       },{
         "key"    : "pagedown",
         "mac"    : "pagedown",
         "command": "workbench.action.togglePanel"
+      },{
+        "key"    : "ctrl+q",
+        "mac"    : "cmd+q",
+        "command": "lynx-keymap.checkGitLab"
+      },{
+        "key"    : "ctrl+e",
+        "mac"    : "cmd+e",
+        "command": "workbench.action.toggleMaximizedPanel"
       },
 
 
+
       {
-        "key"    : "shift+alt+t",
-        "mac"    : "shift+alt+t",
-        "command": "workbench.action.selectTheme"
-      },{
-        "key"    : "shift+alt+r",
-        "mac"    : "shift+alt+r",
-        "command": "workbench.action.reloadWindow"
-      },{
-        "key"    : "shift+alt+e",
-        "mac"    : "shift+alt+e",
+        "key"    : "ctrl+p",
+        "mac"    : "cmd+p",
+        "command": "-workbench.action.quickOpen"
+      },
+      {
+        "key"    : "shift+alt+q",
+        "mac"    : "shift+alt+q",
         "command": "workbench.action.gotoLine"
       },{
         "key"    : "shift+alt+w",
         "mac"    : "shift+alt+w",
         "command": "expandLineSelection"
+      },{
+        "key"    : "shift+alt+e",
+        "mac"    : "shift+alt+e",
+        "command": "workbench.action.quickOpen"
+      },{
+        "key"    : "shift+alt+r",
+        "mac"    : "shift+alt+r",
+        "command": "workbench.action.reloadWindow"
+      },{
+        "key"    : "shift+alt+t",
+        "mac"    : "shift+alt+t",
+        "command": "workbench.action.selectTheme"
       },
 
       
@@ -332,14 +365,9 @@
 
 
 
-
-      {
-        "key"    : "ctrl+[Backquote]",
-        "mac"    : "cmd+[Backquote]",
-        "command": "lynx-keymap.executeAIPopup"
-      },{
-        "key"    : "shift+tab",
-        "mac"    : "shift+tab",
+{
+        "key"    : "ctrl+tab",
+        "mac"    : "cmd+tab",
         "command": "lynx-keymap.openAndCloseAIChat"
       },{
         "key"    : "shift+escape",
@@ -351,26 +379,25 @@
         "key"    : "alt+a",
         "mac"    : "alt+a",
         "command": "lynx-keymap.createNewAISession"
-      },{
+      },      {
         "key"    : "alt+s",
         "mac"    : "alt+s",
-        "command": "lynx-keymap.showAIHistory"
+        "command": "lynx-keymap.selectModels"
       },{
         "key"    : "alt+d",
         "mac"    : "alt+d",
-        "command": "lynx-keymap.attachAIContext"
+        "command": "lynx-keymap.selectCode"
       },      
 
 
-
       {
-        "key"    : "alt+z",
-        "mac"    : "alt+z",
+        "key"    : "shift+alt+a",
+        "mac"    : "shift+alt+a",
         "command": "lynx-keymap.toggleAgentMode"
       },{
-        "key"    : "alt+x",
-        "mac"    : "alt+x",
-        "command": "workbench.action.chat.openModelPicker"
+        "key"    : "shift+alt+s",
+        "mac"    : "shift+alt+s",
+        "command": "lynx-keymap.showAIHistory"
       },
 
 
@@ -389,12 +416,16 @@
 
   "commands": [
       {
+        "command": "lynx-keymap.toggleTerminalLeft",
+        "title"  : "Toggle Terminal Left"
+      },
+      {
         "command": "lynx-keymap.generateAICommit",
         "title"  : "Generate AI Commit Message"
       },
       {
-        "command": "lynx-keymap.executeAIPopup",
-        "title"  : "Open AI Chat Interface"
+        "command": "lynx-keymap.selectCode",
+        "title"  : "AI Select Code"
       },{
         "command": "lynx-keymap.openAndCloseAIChat",
         "title"  : "Open and Close AI Chat"
@@ -405,25 +436,21 @@
         "command": "lynx-keymap.showAIHistory",
         "title"  : "Show AI Chat History"
       },{
-        "command": "lynx-keymap.attachAIContext",
-        "title"  : "Attach Context to AI Chat"
+        "command": "lynx-keymap.selectModels",
+        "title"  : "Select AI Model"
       },
 
       {
         "command": "lynx-keymap.toggleAgentMode",
         "title"  : "Toggle AI Agent Mode"
       },
-      {
-        "command": "lynx-keymap.openModelPicker",
-        "title"  : "Open AI Model Picker"
-      },
 
       {
       "command": "lynx-keymap.checkF1QuickSwitch",
       "title"  : "Check F1-QuickSwitch Extension and Execute"
       },{
-      "command": "lynx-keymap.checkGitLens",
-      "title"  : "Check GitLens Extension and Execute"
+      "command": "lynx-keymap.checkGitLab",
+      "title"  : "Check GitLab Extension and Execute"
       },{
       "command": "lynx-keymap.checkCompareCode",
       "title"  : "Check Compare Code Extension and Execute"
@@ -432,7 +459,7 @@
     "devDependencies": {
       "@eslint/js": "^9.21.0",
       "@types/node": "^25.6.0",
-      "@types/vscode": "^1.116.0",
+      "@types/vscode": "^1.74.0",
       "esbuild": "^0.25.0",
       "eslint": "^9.21.0",
       "typescript": "^6.0.3",
