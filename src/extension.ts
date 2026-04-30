@@ -10,7 +10,7 @@ let extensionCheckerInstance: ExtensionChecker | undefined;
 let smartWebviewExtensionInstance: SmartWebviewExtension | undefined;
 let terminalManagerInstance: TerminalManager | undefined;
 
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
   aiCommandsManagerInstance = new AICommandsManager();
   extensionCheckerInstance = new ExtensionChecker();
   smartWebviewExtensionInstance = new SmartWebviewExtension();
@@ -20,6 +20,8 @@ export function activate(context: vscode.ExtensionContext) {
   extensionCheckerInstance.registerCheckCommands(context);
   smartWebviewExtensionInstance.registerWebviewCommands(context);
   terminalManagerInstance.registerCommands(context);
+
+  await terminalManagerInstance.restoreState(context);
 
   const checkF1QuickSwitchDisposable = vscode.commands.registerCommand(
     'lynx-keymap.checkF1QuickSwitch',
