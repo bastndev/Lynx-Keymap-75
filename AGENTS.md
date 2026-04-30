@@ -2,14 +2,14 @@
 
 ## Quick Commands
 
-| Task | Command |
-|------|---------|
-| Build (dev) | `bun run compile` |
-| Build (production) | `bun run package` |
-| Watch | `bun run watch` |
-| Type check | `bun run check-types` |
-| Lint | `bun run lint` |
-| Launch extension | F5 in VS Code (runs `bun-compile` prelaunch task) |
+| Task               | Command                                           |
+| ------------------ | ------------------------------------------------- |
+| Build (dev)        | `bun run compile`                                 |
+| Build (production) | `bun run package`                                 |
+| Watch              | `bun run watch`                                   |
+| Type check         | `bun run check-types`                             |
+| Lint               | `bun run lint`                                    |
+| Launch extension   | F5 in VS Code (runs `bun-compile` prelaunch task) |
 
 - **Package manager**: Bun (lockfile is `bun.lock`). Do not use `npm`/`pnpm`/`yarn`.
 - **No tests** in this repo. Verification = lint + typecheck + manual launch.
