@@ -178,6 +178,10 @@
         "mac"    : "cmd+alt+q",
         "command": "workbench.action.quickOpenTerm"
       },{
+        "key"    : "ctrl+alt+e",
+        "mac"    : "cmd+alt+e",
+        "command": "workbench.action.focusFirstEditorGroup"
+      },{
         "key"    : "pagedown",
         "mac"    : "pagedown",
         "command": "workbench.action.togglePanel"
