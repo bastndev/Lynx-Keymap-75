@@ -189,6 +189,10 @@
         "key"    : "ctrl+q",
         "mac"    : "cmd+q",
         "command": "lynx-keymap.checkGitLab"
+      },{
+        "key"    : "ctrl+e",
+        "mac"    : "cmd+e",
+        "command": "workbench.action.toggleMaximizedPanel"
       },
 
 
