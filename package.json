@@ -294,15 +294,14 @@
       
       
       {
-        "key"    : "alt+e",
-        "mac"    : "alt+e",
+        "key"    : "ctrl+alt+[Backquote]",
+        "mac"    : "cmd+alt+[Backquote]",
         "command": "workbench.action.terminal.kill"
       },{
-        "key"    : "alt+q",
-        "mac"    : "alt+q",
+        "key"    : "ctrl+[Backquote]",
+        "mac"    : "cmd+[Backquote]",
         "command": "workbench.action.terminal.new"
       },
-      
       
       
       
@@ -321,16 +320,16 @@
         "mac"    : "alt+w",
         "command": "lynx-keymap.toggleTerminalBottom"
       },{
-        "key"    : "ctrl+tab",
-        "mac"    : "cmd+tab",
-        "command": "lynx-keymap.openAndCloseAIChat"
-      },{
-        "key"    : "ctrl+[Backquote]",
-        "mac"    : "cmd+[Backquote]",
+        "key"    : "alt+capslock",
+        "mac"    : "alt+capslock",
         "command": "lynx-keymap.toggleTerminalLeft"
       },{
         "key"    : "ctrl+capslock",
         "mac"    : "cmd+capslock",
+        "command": "lynx-keymap.openAndCloseAIChat"
+      },{
+        "key"    : "ctrl+tab",
+        "mac"    : "cmd+tab",
         "command": "workbench.action.toggleSidebarVisibility"
       },
       
