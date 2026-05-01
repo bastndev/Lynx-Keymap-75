@@ -145,13 +145,8 @@
         "command": "workbench.action.zoomIn",
         "when"   : "editorTextFocus || !inputFocus"
       },
-
-
-
-
-
-
-
+      
+      
       {
         "key"    : "ctrl+backspace",
         "mac"    : "cmd+backspace",
