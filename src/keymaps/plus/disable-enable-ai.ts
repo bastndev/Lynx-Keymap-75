@@ -6,7 +6,7 @@ import * as vscode from 'vscode';
 function showAIToggleNotification(isEnabled: boolean): void {
   const emoji = isEnabled ? '✅' : '❌';
   const status = isEnabled ? 'ENABLED' : 'DISABLED';
-  vscode.window.showInformationMessage(`💡 AI Suggestions ${status} ${emoji}`);
+  vscode.window.showInformationMessage(`AI Suggestions ${status} ${emoji}`);
 }
 
 /**
