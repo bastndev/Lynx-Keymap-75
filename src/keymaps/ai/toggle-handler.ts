@@ -69,12 +69,11 @@ export class AIToggleManager {
   }
 
   private notify(editor: EditorType, enabled: boolean): void {
-    const icon  = enabled ? '✨' : '🌑';
     const check = enabled ? '✅' : '❌';
     const label = enabled ? 'ENABLED' : 'DISABLED';
     const name  = editor.charAt(0).toUpperCase() + editor.slice(1);
     
-    vscode.window.showInformationMessage(`${icon} Lynx Keymap: ${name} AI Suggestions ${label} ${check}`);
+    vscode.window.showInformationMessage(`(${name}) AI: ${label} ${check}`);
   }
 
   private async safeExecute(command: string): Promise<boolean> {
