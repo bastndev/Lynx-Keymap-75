@@ -117,11 +117,7 @@
         "command": "lynx-keymap.createNewAISession"
       },
 
-      {
-        "key"    : "shift+escape",
-        "mac"    : "shift+escape",
-        "command": "workbench.action.toggleMaximizedAuxiliaryBar"
-      },
+
 
       {
         "key"    : "alt+shift+audiovolumedown",
@@ -300,7 +296,11 @@
       
       
       
-      
+      {
+        "key"    : "shift+escape",
+        "mac"    : "shift+escape",
+        "command": "workbench.action.toggleMaximizedAuxiliaryBar"
+      },
       
       
       
