@@ -101,11 +101,7 @@
 
 
 
-      {
-        "key"    : "alt+z",
-        "mac"    : "alt+z",
-        "command": "f1.toggleMarkdownWrap"
-      },{
+{
         "key"    : "alt+enter",
         "mac"    : "alt+return",
         "command": "inlineChat.close",
@@ -394,7 +390,7 @@
         "command": "git.commit",
         "when"   : "scmProvider == git"
       },
-
+       
       {
         "key"    : "alt+3",
         "mac"    : "alt+3",
@@ -412,6 +408,7 @@
         "when"   : "scmProvider == git"
       },
 
+
       {
         "key"    : "alt+c",
         "mac"    : "alt+c",
@@ -421,7 +418,12 @@
         "mac"    : "alt+x",
         "command": "explorer.newFile"
       },
-
+      {
+        "key"    : "alt+z",
+        "mac"    : "alt+z",
+        "command": "f1.toggleMarkdownWrap"
+      },
+       
       {
         "key"    : "ctrl+3",
         "mac"    : "cmd+3",
