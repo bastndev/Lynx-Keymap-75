@@ -275,18 +275,10 @@
         "mac"    : "cmd+q",
         "command": "lynx-keymap.checkGitLab"
       },
-
       
       
-      {
-        "key"    : "ctrl+alt+[Backquote]",
-        "mac"    : "cmd+alt+[Backquote]",
-        "command": "workbench.action.terminal.kill"
-      },{
-        "key"    : "ctrl+[Backquote]",
-        "mac"    : "cmd+[Backquote]",
-        "command": "workbench.action.terminal.new"
-      },
+      
+      
       
       
       
@@ -303,6 +295,21 @@
       },
       
       
+      
+      
+      
+      
+      
+      
+            {
+        "key"    : "ctrl+alt+[Backquote]",
+        "mac"    : "cmd+alt+[Backquote]",
+        "command": "workbench.action.terminal.kill"
+      },{
+        "key"    : "ctrl+[Backquote]",
+        "mac"    : "cmd+[Backquote]",
+        "command": "workbench.action.terminal.new"
+      },
       
       {
         "key"    : "pagedown",
@@ -321,6 +328,13 @@
         "mac"    : "alt+q",
         "command": "workbench.action.focusFirstEditorGroup"
       },
+      
+      
+      
+      
+      
+      
+      
       
       {
         "key"    : "alt+capslock",
@@ -343,16 +357,6 @@
       
       
       
-      {
-        "key"    : "alt+c",
-        "mac"    : "alt+c",
-        "command": "explorer.newFolder"
-      },{
-        "key"    : "alt+x",
-        "mac"    : "alt+x",
-        "command": "explorer.newFile"
-      },
-
       {
         "key"    : "ctrl+alt+enter",
         "mac"    : "cmd+alt+return",
@@ -380,6 +384,16 @@
         "mac"    : "alt+1",
         "command": "git.stageAll",
         "when"   : "scmProvider == git"
+      },
+
+      {
+        "key"    : "alt+c",
+        "mac"    : "alt+c",
+        "command": "explorer.newFolder"
+      },{
+        "key"    : "alt+x",
+        "mac"    : "alt+x",
+        "command": "explorer.newFile"
       },
 
       {
