@@ -159,15 +159,6 @@
       },
 
       
-      {
-        "key"    : "pageup",
-        "mac"    : "pageup",
-        "command": "markdown.showPreviewToSide"
-      },{
-        "key"    : "end",
-        "mac"    : "end",
-        "command": "git.viewChanges"
-      },
 
 
 
@@ -189,7 +180,20 @@
         "key"    : "alt+shift+up",
         "mac"    : "alt+shift+up",
         "command": "editor.action.copyLinesUpAction"
+      },{
+        "key"    : "pagedown",
+        "mac"    : "pagedown",
+        "command": "workbench.action.togglePanel"
+      },{
+        "key"    : "pageup",
+        "mac"    : "pageup",
+        "command": "markdown.showPreviewToSide"
+      },{
+        "key"    : "end",
+        "mac"    : "end",
+        "command": "git.viewChanges"
       },
+      
       
       
       
@@ -325,7 +329,7 @@
       
       
       
-            {
+      {
         "key"    : "ctrl+alt+[Backquote]",
         "mac"    : "cmd+alt+[Backquote]",
         "command": "workbench.action.terminal.kill"
@@ -336,10 +340,6 @@
       },
       
       {
-        "key"    : "pagedown",
-        "mac"    : "pagedown",
-        "command": "workbench.action.togglePanel"
-      },{
         "key"    : "alt+e",
         "mac"    : "alt+e",
         "command": "lynx-keymap.toggleTerminalBottom"
