@@ -20,13 +20,12 @@ export class AIToggleManager {
 
     switch (editor) {
       case EditorType.CURSOR:
-        // Cursor usa su propio setting desde ~0.40+
         isNowEnabled = await this.toggleAllAISettings();
-        await this.safeExecute('cursor.toggleCopilot'); // fallback command
+        await this.safeExecute('cursor.toggleCopilot'); // Fallback
         break;
 
       case EditorType.WINDSURF:
-        // Windsurf/Codeium: el comando toggle es más confiable que el setting
+        // Command is more reliable than setting
         await this.safeExecute('codeium.toggleEnable');
         isNowEnabled = await this.toggleAllAISettings();
         break;
@@ -46,7 +45,6 @@ export class AIToggleManager {
 
   /**
    * Toggles ALL known AI suggestion settings.
-   * Actualizado 2025: settings verificados por editor.
    */
   private async toggleAllAISettings(): Promise<boolean> {
     const config = vscode.workspace.getConfiguration();
@@ -57,7 +55,7 @@ export class AIToggleManager {
       // ── VS Code base ──────────────────────────────────────────
       'editor.inlineSuggest.enabled',
 
-      // ── GitHub Copilot (new setting )─────────────
+      // ── GitHub Copilot (new setting )──────────────────────────
       'github.copilot.editor.enableAutoCompletions',
 
       // ── Cursor ────────────────────────────────────────────────
@@ -75,8 +73,7 @@ export class AIToggleManager {
 
     for (const setting of booleanSettings) {
       try {
-        // Solo actualiza si el setting existe en la config activa,
-        // excepto el de VS Code base que siempre debe tocarse.
+        // Update if setting exists or is VS Code base
         if (config.has(setting) || setting === 'editor.inlineSuggest.enabled') {
           await config.update(setting, newState, vscode.ConfigurationTarget.Global);
         }
@@ -85,13 +82,12 @@ export class AIToggleManager {
       }
     }
 
-    // Codeium/Windsurf usa un objeto { "*": true } por lenguaje, no un boolean.
-    // Es más confiable usar el comando de toggle que el setting directo.
+    // Codeium uses per-language objects; command is more reliable
     if (newState === false) {
-      await this.safeExecute('codeium.toggleEnable'); // toggle off
+      await this.safeExecute('codeium.toggleEnable');
     }
 
-    // Copilot: también intentar via comando como respaldo
+    // Copilot fallback
     await this.safeExecute('github.copilot.toggleCopilot');
 
     return newState;
