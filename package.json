@@ -274,7 +274,7 @@
 
 
 
-      {
+{
         "key"    : "ctrl+e",
         "mac"    : "cmd+e",
         "command": "workbench.action.toggleMaximizedPanel"
@@ -282,15 +282,8 @@
         "key"    : "ctrl+q",
         "mac"    : "cmd+q",
         "command": "lynx-keymap.checkGitLab"
-      },{
-        "key"    : "ctrl+alt+e",
-        "mac"    : "cmd+alt+e",
-        "command": "workbench.action.focusFirstEditorGroup"
-      },{
-        "key"    : "ctrl+alt+q",
-        "mac"    : "cmd+alt+q",
-        "command": "workbench.action.quickOpenTerm"
       },
+
       
       
       {
@@ -316,10 +309,19 @@
         "mac"    : "pagedown",
         "command": "workbench.action.togglePanel"
       },{
+        "key"    : "alt+e",
+        "mac"    : "alt+e",
+        "command": "workbench.action.quickOpenTerm"
+      },{
         "key"    : "alt+w",
         "mac"    : "alt+w",
         "command": "lynx-keymap.toggleTerminalBottom"
+      },{
+        "key"    : "alt+q",
+        "mac"    : "alt+q",
+        "command": "workbench.action.focusFirstEditorGroup"
       },
+      
       {
         "key"    : "alt+capslock",
         "mac"    : "alt+capslock",
