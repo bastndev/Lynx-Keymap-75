@@ -36,7 +36,6 @@ export class AICommandsManager {
   public resetDetection(): void {
     this.detectedEditor   = null;
     this.allCommandsCache = null;
-    console.log(`${LOG} Detection cache cleared`);
   }
 
   public dispose(): void {
@@ -71,7 +70,6 @@ export class AICommandsManager {
 
       if (detected) {
         this.detectedEditor = editor;
-        console.log(`${LOG} Detected editor: ${editor}`);
         return editor;
       }
     }
@@ -97,8 +95,6 @@ export class AICommandsManager {
       // Primary failed → reset detection so next call re-detects
       console.warn(`${LOG} Primary command failed, resetting detection`);
       this.resetDetection();
-    } else {
-      console.log(`${LOG} No command mapped for ${editor} → ${actionKey}`);
     }
 
     // 2. Fallback: try all other editors in order
@@ -120,10 +116,8 @@ export class AICommandsManager {
   private async tryExecute(cmd: string, editor: EditorType | string): Promise<boolean> {
     try {
       await vscode.commands.executeCommand(cmd);
-      console.log(`${LOG} ✓ [${editor}] ${cmd}`);
       return true;
     } catch {
-      console.log(`${LOG} ✗ [${editor}] ${cmd}`);
       return false;
     }
   }

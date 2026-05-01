@@ -126,8 +126,6 @@ export class AIToggleManager {
           const finalState = await getCurrentAISuggestionsState();
 
           showAIToggleNotification(finalState);
-
-          console.log(`AI Suggestions: ${currentState} → ${finalState}`);
         } catch (error) {
           vscode.window.showErrorMessage(
             `Error toggling AI suggestions: ${error}`

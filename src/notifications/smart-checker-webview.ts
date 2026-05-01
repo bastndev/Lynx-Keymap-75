@@ -23,10 +23,9 @@ export class SmartWebviewExtension {
     if (extension.isActive) {
       try {
         await vscode.commands.executeCommand(dependency.webviewCommand);
-        console.log(`Fast path: Successfully opened webview: ${dependency.displayName}`);
         return;
       } catch (error) {
-        console.log(`Fast path failed, falling back to full logic: ${(error as Error).message}`);
+        console.warn(`Fast path failed, falling back to full logic: ${(error as Error).message}`);
       }
     }
 
@@ -37,7 +36,6 @@ export class SmartWebviewExtension {
       }
 
       if (this.isWebviewAlreadyOpen(dependency.extensionId)) {
-        console.log(`Webview for ${dependency.displayName} is already open`);
         return;
       }
 
@@ -53,7 +51,6 @@ export class SmartWebviewExtension {
       this.webviewInstances.set(dependency.extensionId, Date.now());
 
       await vscode.commands.executeCommand(dependency.webviewCommand);
-      console.log(`Successfully opened webview: ${dependency.displayName}`);
 
       this.timeoutManager.create(() => {
         this.webviewInstances.delete(dependency.extensionId);
@@ -169,7 +166,6 @@ export class SmartWebviewExtension {
         this.checkAndOpenWebview(commandId, context);
       });
 
-      console.log(`Registered webview command: ${checkCommandId} -> ${commandId}`);
       return disposable;
     });
 
