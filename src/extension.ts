@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { AICommandsManager, BottomTerminalManager, TerminalManager } from './keymaps';
+import { AICommandsManager, BottomTerminalManager, TerminalManager, MarkdownManager, AIToggleManager } from './keymaps';
 import { ExtensionChecker } from './notifications/extension-checker';
 import { SmartWebviewExtension } from './notifications/smart-checker-webview';
 
@@ -8,6 +8,8 @@ let checkerManager: ExtensionChecker | undefined;
 let webviewManager: SmartWebviewExtension | undefined;
 let terminalManager: TerminalManager | undefined;
 let bottomTerminalManager: BottomTerminalManager | undefined;
+let markdownManager: MarkdownManager | undefined;
+let aiToggleManager: AIToggleManager | undefined;
 
 export async function activate(context: vscode.ExtensionContext) {
   aiManager = new AICommandsManager();
@@ -15,12 +17,16 @@ export async function activate(context: vscode.ExtensionContext) {
   webviewManager = new SmartWebviewExtension();
   terminalManager = new TerminalManager();
   bottomTerminalManager = new BottomTerminalManager();
+  markdownManager = new MarkdownManager();
+  aiToggleManager = new AIToggleManager();
 
   aiManager.registerCommands(context);
   checkerManager.registerCheckCommands(context);
   webviewManager.registerWebviewCommands(context);
   terminalManager.registerCommands(context);
   bottomTerminalManager.registerCommands(context);
+  markdownManager.registerCommands(context);
+  aiToggleManager.registerCommands(context);
   await context.workspaceState.update('lynx-keymap:lastActiveMode', undefined);
   await context.workspaceState.update('lynx-keymap:originalTabsEnabled', undefined);
   await context.workspaceState.update('lynx-keymap:originalPanelShowLabels', undefined);
@@ -32,4 +38,6 @@ export async function deactivate() {
   webviewManager?.dispose();
   terminalManager?.dispose();
   bottomTerminalManager?.dispose();
+  markdownManager?.dispose();
+  aiToggleManager?.dispose();
 }
