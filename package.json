@@ -314,22 +314,31 @@
         "key"    : "alt+q",
         "mac"    : "alt+q",
         "command": "workbench.action.terminal.new"
-      },{
-        "key"    : "ctrl+[Backquote]",
-        "mac"    : "cmd+[Backquote]",
-        "command": "lynx-keymap.toggleTerminalLeft"
       },
 
 
 
 
 
-
-      {
+{
+        "key"    : "ctrl+[Backquote]",
+        "mac"    : "cmd+[Backquote]",
+        "command": "lynx-keymap.toggleTerminalLeft"
+      },{
         "key"    : "ctrl+capslock",
         "mac"    : "cmd+capslock",
         "command": "workbench.action.toggleSidebarVisibility"
-      },{
+      },
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      {
         "key"    : "alt+c",
         "mac"    : "alt+c",
         "command": "explorer.newFolder"
@@ -338,9 +347,6 @@
         "mac"    : "alt+x",
         "command": "explorer.newFile"
       },
-
-
-
 
       {
         "key"    : "ctrl+alt+enter",
@@ -370,7 +376,6 @@
         "command": "git.stageAll",
         "when"   : "scmProvider == git"
       },
-
 
       {
         "key"    : "ctrl+3",
