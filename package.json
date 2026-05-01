@@ -103,19 +103,6 @@
       },
 
 
-      {
-        "key"    : "alt+d",
-        "mac"    : "alt+d",
-        "command": "lynx-keymap.selectCode"
-      },{
-        "key"    : "alt+s",
-        "mac"    : "alt+s",
-        "command": "lynx-keymap.selectModels"
-      },{
-        "key"    : "alt+a",
-        "mac"    : "alt+a",
-        "command": "lynx-keymap.createNewAISession"
-      },
 
 
 
@@ -274,6 +261,20 @@
         "key"    : "ctrl+q",
         "mac"    : "cmd+q",
         "command": "lynx-keymap.checkGitLab"
+      },
+      
+      {
+        "key"    : "alt+d",
+        "mac"    : "alt+d",
+        "command": "lynx-keymap.selectCode"
+      },{
+        "key"    : "alt+s",
+        "mac"    : "alt+s",
+        "command": "lynx-keymap.selectModels"
+      },{
+        "key"    : "alt+a",
+        "mac"    : "alt+a",
+        "command": "lynx-keymap.createNewAISession"
       },
       
       
