@@ -319,7 +319,8 @@
         "key"    : "alt+w",
         "mac"    : "alt+w",
         "command": "lynx-keymap.toggleTerminalBottom"
-      },{
+      },
+      {
         "key"    : "alt+capslock",
         "mac"    : "alt+capslock",
         "command": "lynx-keymap.toggleTerminalLeft"
