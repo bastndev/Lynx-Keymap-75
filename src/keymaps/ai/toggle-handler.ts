@@ -1,79 +1,80 @@
 import * as vscode from 'vscode';
 import { EditorType, EDITOR_SIGNATURES } from './utils';
 
+/** Primary setting used as the state source of truth per editor. */
+const EDITOR_PRIMARY_SETTING: Record<EditorType, string> = {
+  [EditorType.ANTIGRAVITY]: 'antigravity.tab.enabled',
+  [EditorType.VSCODE]:      'editor.inlineSuggest.enabled',
+  [EditorType.KIRO]:        'kiro.completions.enabled',
+  [EditorType.CURSOR]:      'cursor.completions.enabled',
+  [EditorType.WINDSURF]:    'editor.inlineSuggest.enabled',
+  [EditorType.TRAE_AI]:     'trae.autocomplete.enabled',
+  [EditorType.FIREBASE]:    'cloudcode.duetAI.completions.enabled',
+  [EditorType.UNKNOWN]:     'editor.inlineSuggest.enabled',
+};
+
 export class AIToggleManager {
   private disposables: vscode.Disposable[] = [];
   private detectedEditor: EditorType | null = null;
 
   public registerCommands(context: vscode.ExtensionContext): void {
     const toggleCmd = vscode.commands.registerCommand('lynx.toggleSuggestionAI', async () => {
-      await this.toggleAI();
+      await this.toggleAI(context);
     });
 
     this.disposables.push(toggleCmd);
     context.subscriptions.push(toggleCmd);
   }
 
-  private async toggleAI(): Promise<void> {
+  private async toggleAI(context: vscode.ExtensionContext): Promise<void> {
     const editor = await this.detectEditor();
-    let isNowEnabled = false;
 
-    switch (editor) {
-      case EditorType.CURSOR:
-        isNowEnabled = await this.toggleAllAISettings();
-        await this.safeExecute('cursor.toggleCopilot'); // Fallback
-        break;
+    // Use stored state first to survive command-only toggles; fall back to config.
+    const storedState  = context.globalState.get<boolean>('lynx.suggestionsEnabled');
+    const config       = vscode.workspace.getConfiguration();
+    const currentState = storedState ?? config.get<boolean>(EDITOR_PRIMARY_SETTING[editor], true);
+    const newState     = !currentState;
 
-      case EditorType.WINDSURF:
-        // Command is more reliable than setting
-        await this.safeExecute('codeium.toggleEnable');
-        isNowEnabled = await this.toggleAllAISettings();
-        break;
+    await context.globalState.update('lynx.suggestionsEnabled', newState);
+    await this.applyAllSettings(newState);
+    await this.applyEditorCommands(editor, newState);
 
-      case EditorType.TRAE_AI:
-        await this.safeExecute('trae.toggleAutocomplete');
-        isNowEnabled = await this.toggleAllAISettings();
-        break;
-
-      default:
-        isNowEnabled = await this.toggleAllAISettings();
-        break;
-    }
-
-    this.notify(editor, isNowEnabled);
+    this.notify(editor, newState);
   }
 
-  /**
-   * Toggles ALL known AI suggestion settings.
-   */
-  private async toggleAllAISettings(): Promise<boolean> {
+  /** Updates all known AI suggestion settings to newState. Skips absent settings. */
+  private async applyAllSettings(newState: boolean): Promise<void> {
     const config = vscode.workspace.getConfiguration();
-    const currentState = config.get<boolean>('editor.inlineSuggest.enabled', true);
-    const newState = !currentState;
 
     const booleanSettings = [
-      // ── VS Code base ──────────────────────────────────────────
+      // ── Antigravity ───────────────────────────────────────────
+      'antigravity.tab.enabled',
+
+      // ── VS Code base (copilot default)──────────────────────────
       'editor.inlineSuggest.enabled',
 
-      // ── GitHub Copilot (new setting )──────────────────────────
+      // ── GitHub Copilot ────────────────────────────────────────
       'github.copilot.editor.enableAutoCompletions',
+
+      // ── Kiro (AWS) ────────────────────────────────────────────
+      'kiro.completions.enabled',
 
       // ── Cursor ────────────────────────────────────────────────
       'cursor.completions.enabled',
 
-      // ── Antigravity ───────────────────────────────────────────
-      'antigravity.tab.enabled',
+      // ── Windsurf (Codeium) — boolean guard only; command handles the rest ──
+      // 'codeium.enableConfig' is a per-language object, not a boolean.
+      // If a simple boolean ever ships, add it here.
 
       // ── Trae AI ───────────────────────────────────────────────
       'trae.autocomplete.enabled',
 
-      // ── Kiro (AWS) ────────────────────────────────────────────
-      'kiro.completions.enabled',
+      // ── Firebase / Gemini Code Assist ─────────────────────────
+      'cloudcode.duetAI.completions.enabled',
     ];
 
     for (const setting of booleanSettings) {
       try {
-        // Update if setting exists or is VS Code base
         if (config.has(setting) || setting === 'editor.inlineSuggest.enabled') {
           await config.update(setting, newState, vscode.ConfigurationTarget.Global);
         }
@@ -81,16 +82,32 @@ export class AIToggleManager {
         console.error(`[Lynx] Failed to update "${setting}":`, e);
       }
     }
+  }
 
-    // Codeium uses per-language objects; command is more reliable
-    if (newState === false) {
-      await this.safeExecute('codeium.toggleEnable');
+  /** Fires editor-specific commands for cases where settings alone are insufficient. */
+  private async applyEditorCommands(editor: EditorType, newState: boolean): Promise<void> {
+    switch (editor) {
+      case EditorType.VSCODE:
+        await this.safeExecute('github.copilot.toggleCopilot');
+        break;
+
+      case EditorType.CURSOR:
+        await this.safeExecute('cursor.toggleCopilot');
+        break;
+
+      case EditorType.WINDSURF:
+        // codeium.toggleEnable is required; config is per-language, not a boolean.
+        await this.safeExecute('codeium.toggleEnable');
+        break;
+
+      case EditorType.TRAE_AI:
+        await this.safeExecute('trae.toggleAutocomplete');
+        break;
+
+      case EditorType.FIREBASE:
+        await this.safeExecute('cloudcode.duetAI.toggleInlineCompletion');
+        break;
     }
-
-    // Copilot fallback
-    await this.safeExecute('github.copilot.toggleCopilot');
-
-    return newState;
   }
 
   private notify(editor: EditorType, enabled: boolean): void {
