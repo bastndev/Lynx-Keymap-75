@@ -50,7 +50,7 @@ export class AIToggleManager {
       // ── Antigravity ───────────────────────────────────────────
       'antigravity.tab.enabled',
 
-      // ── VS Code base (copilot default)──────────────────────────
+      // ── VS Code base ──────────────────────────────────────────
       'editor.inlineSuggest.enabled',
 
       // ── GitHub Copilot ────────────────────────────────────────
@@ -62,9 +62,7 @@ export class AIToggleManager {
       // ── Cursor ────────────────────────────────────────────────
       'cursor.completions.enabled',
 
-      // ── Windsurf (Codeium) — boolean guard only; command handles the rest ──
-      // 'codeium.enableConfig' is a per-language object, not a boolean.
-      // If a simple boolean ever ships, add it here.
+      // ── Windsurf (Codeium) — per-language object, not a boolean; command handles it.
 
       // ── Trae AI ───────────────────────────────────────────────
       'trae.autocomplete.enabled',
@@ -88,7 +86,7 @@ export class AIToggleManager {
   private async applyEditorCommands(editor: EditorType, newState: boolean): Promise<void> {
     switch (editor) {
       case EditorType.VSCODE:
-        await this.safeExecute('github.copilot.toggleCopilot');
+        await this.safeExecute('github.copilot.chat.completions.toggle');
         break;
 
       case EditorType.CURSOR:
