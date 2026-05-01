@@ -321,17 +321,7 @@
       },
 
 
-      {
-        "key"    : "ctrl+alt+enter",
-        "mac"    : "cmd+alt+return",
-        "command": "git.push",
-        "when"   : "scmProvider == git"
-      },{
-        "key"    : "alt+enter",
-        "mac"    : "alt+return",
-        "command": "git.commit",
-        "when"   : "scmProvider == git"
-      },
+
 
 
 
@@ -350,6 +340,19 @@
       },
 
 
+
+
+      {
+        "key"    : "ctrl+alt+enter",
+        "mac"    : "cmd+alt+return",
+        "command": "git.push",
+        "when"   : "scmProvider == git"
+      },{
+        "key"    : "alt+enter",
+        "mac"    : "alt+return",
+        "command": "git.commit",
+        "when"   : "scmProvider == git"
+      },
 
       {
         "key"    : "alt+3",
