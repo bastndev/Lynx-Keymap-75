@@ -68,13 +68,22 @@
   "main": "./dist/extension.js",
   "contributes": {
 "keybindings": [
-  {
-  "key"    : "ctrl+z",
-  "mac"    : "cmd+z",
-  "command": "workbench.action.terminal.sendSequence",
-  "args"   : { "text": "\u0000" },
-  "when"   : "terminalFocus"
-},
+        {
+        "key"    : "ctrl+z",
+        "mac"    : "cmd+z",
+        "command": "workbench.action.terminal.sendSequence",
+        "args"   : { "text": "\u0000" },
+        "when"   : "terminalFocus"
+      },{
+        "key"    : "ctrl+p",
+        "mac"    : "cmd+p",
+        "command": "-workbench.action.quickOpen"
+      },
+
+
+
+
+
       {
         "key": "shift+f1",
         "mac": "shift+f1",
@@ -256,10 +265,6 @@
         "key"    : "shift+alt+q",
         "mac"    : "shift+alt+q",
         "command": "workbench.action.gotoLine"
-      },{
-        "key"    : "ctrl+p",
-        "mac"    : "cmd+p",
-        "command": "-workbench.action.quickOpen"
       },
 
 
