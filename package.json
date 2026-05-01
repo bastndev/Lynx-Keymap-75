@@ -271,10 +271,6 @@
 
 
 {
-        "key"    : "ctrl+e",
-        "mac"    : "cmd+e",
-        "command": "workbench.action.toggleMaximizedPanel"
-      },{
         "key"    : "ctrl+q",
         "mac"    : "cmd+q",
         "command": "lynx-keymap.checkGitLab"
@@ -295,7 +291,11 @@
       
       
       
-      
+      {
+        "key"    : "ctrl+escape",
+        "mac"    : "cmd+escape",
+        "command": "workbench.action.toggleMaximizedPanel"
+      },
       {
         "key"    : "shift+escape",
         "mac"    : "shift+escape",
