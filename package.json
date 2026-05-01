@@ -68,6 +68,13 @@
   "main": "./dist/extension.js",
   "contributes": {
 "keybindings": [
+  {
+  "key"    : "ctrl+z",
+  "mac"    : "cmd+z",
+  "command": "workbench.action.terminal.sendSequence",
+  "args"   : { "text": "\u0000" },
+  "when"   : "terminalFocus"
+},
       {
         "key": "shift+f1",
         "mac": "shift+f1",
