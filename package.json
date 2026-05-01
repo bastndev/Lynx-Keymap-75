@@ -101,12 +101,6 @@
 
 
 
-{
-        "key"    : "alt+enter",
-        "mac"    : "alt+return",
-        "command": "inlineChat.close",
-        "when"   : "inlineChatFocused"
-      },
 
 
 
@@ -139,14 +133,6 @@
       
       
       {
-        "key"    : "ctrl+down",
-        "mac"    : "cmd+down",
-        "command": "editor.action.insertCursorBelow"
-      },{
-        "key"    : "ctrl+up",
-        "mac"    : "cmd+up",
-        "command": "editor.action.insertCursorAbove"
-      },{
         "key"    : "alt+shift+down",
         "mac"    : "alt+shift+down",
         "command": "editor.action.copyLinesDownAction"
@@ -154,6 +140,19 @@
         "key"    : "alt+shift+up",
         "mac"    : "alt+shift+up",
         "command": "editor.action.copyLinesUpAction"
+      },{
+        "key"    : "alt+enter",
+        "mac"    : "alt+return",
+        "command": "inlineChat.close",
+        "when"   : "inlineChatFocused"
+      },      {
+        "key"    : "ctrl+down",
+        "mac"    : "cmd+down",
+        "command": "editor.action.insertCursorBelow"
+      },{
+        "key"    : "ctrl+up",
+        "mac"    : "cmd+up",
+        "command": "editor.action.insertCursorAbove"
       },
 
 
