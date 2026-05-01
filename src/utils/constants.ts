@@ -69,6 +69,7 @@ export const STORAGE_KEYS = {
   LAST_ACTIVE_MODE: 'lynx-keymap:lastActiveMode',
   ORIGINAL_TABS_ENABLED: 'lynx-keymap:originalTabsEnabled',
   ORIGINAL_PANEL_SHOW_LABELS: 'lynx-keymap:originalPanelShowLabels',
+  PANEL_POSITION: 'lynx-keymap:terminalPanelPosition',
 } as const;
 
 // ─── Log Prefix ──────────────────────────────────────────────────────────────

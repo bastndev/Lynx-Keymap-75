@@ -59,6 +59,7 @@
     "onCommand:lynx-keymap.showAIHistory",
     "onCommand:lynx-keymap.selectModels",
     "onCommand:lynx-keymap.toggleTerminalLeft",
+    "onCommand:lynx-keymap.toggleTerminalBottom",
 
     "onCommand:lynx-keymap.toggleAgentMode",
     "onCommand:lynx-keymap.checkF1QuickSwitch",
@@ -165,7 +166,7 @@
       },{
         "key"    : "alt+w",
         "mac"    : "alt+w",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "command": "lynx-keymap.toggleTerminalBottom"
       },{
         "key"    : "alt+e",
         "mac"    : "alt+e",

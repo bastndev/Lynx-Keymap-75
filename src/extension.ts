@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { AICommandsManager, TerminalManager } from './keymaps';
+import { AICommandsManager, BottomTerminalManager, TerminalManager } from './keymaps';
 import { ExtensionChecker } from './notifications/extension-checker';
 import { SmartWebviewExtension } from './notifications/smart-checker-webview';
 
@@ -12,11 +12,13 @@ export async function activate(context: vscode.ExtensionContext) {
   checkerManager = new ExtensionChecker();
   webviewManager = new SmartWebviewExtension();
   const terminalManager = new TerminalManager();
+  const bottomTerminalManager = new BottomTerminalManager();
 
   aiManager.registerCommands(context);
   checkerManager.registerCheckCommands(context);
   webviewManager.registerWebviewCommands(context);
   terminalManager.registerCommands(context);
+  bottomTerminalManager.registerCommands(context);
   await context.workspaceState.update('lynx-keymap:lastActiveMode', undefined);
   await context.workspaceState.update('lynx-keymap:originalTabsEnabled', undefined);
   await context.workspaceState.update('lynx-keymap:originalPanelShowLabels', undefined);
