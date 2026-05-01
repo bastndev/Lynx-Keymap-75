@@ -170,19 +170,7 @@
       },
 
 
-      {
-        "key"    : "ctrl+insert",
-        "mac"    : "cmd+insert",
-        "command": "workbench.action.debug.stop"
-      },{
-        "key"    : "alt+insert",
-        "mac"    : "alt+insert",
-        "command": "workbench.action.debug.restart"
-      },{
-        "key"    : "insert",
-        "mac"    : "insert",
-        "command": "workbench.action.debug.start"
-      },
+
 
 
       {
@@ -201,6 +189,22 @@
         "key"    : "alt+shift+up",
         "mac"    : "alt+shift+up",
         "command": "editor.action.copyLinesUpAction"
+      },
+      
+      
+      
+      {
+        "key"    : "ctrl+insert",
+        "mac"    : "cmd+insert",
+        "command": "workbench.action.debug.stop"
+      },{
+        "key"    : "alt+insert",
+        "mac"    : "alt+insert",
+        "command": "workbench.action.debug.restart"
+      },{
+        "key"    : "insert",
+        "mac"    : "insert",
+        "command": "workbench.action.debug.start"
       },
 
 
