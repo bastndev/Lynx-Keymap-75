@@ -180,7 +180,18 @@
         "key"    : "alt+shift+up",
         "mac"    : "alt+shift+up",
         "command": "editor.action.copyLinesUpAction"
-      },{
+      },
+
+
+
+
+
+
+
+
+
+
+      {
         "key"    : "pagedown",
         "mac"    : "pagedown",
         "command": "workbench.action.togglePanel"
@@ -193,8 +204,6 @@
         "mac"    : "end",
         "command": "git.viewChanges"
       },
-      
-      
       
       
       {
