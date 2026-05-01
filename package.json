@@ -120,15 +120,7 @@
       },
 
 
-      {
-        "key"    : "shift+alt+s",
-        "mac"    : "shift+alt+s",
-        "command": "lynx-keymap.showAIHistory"
-      },{
-        "key"    : "shift+alt+a",
-        "mac"    : "shift+alt+a",
-        "command": "lynx-keymap.toggleAgentMode"
-      },
+
 
 
 
@@ -303,6 +295,17 @@
 
 
 
+      {
+        "key"    : "shift+alt+s",
+        "mac"    : "shift+alt+s",
+        "command": "lynx-keymap.showAIHistory"
+      },{
+        "key"    : "shift+alt+a",
+        "mac"    : "shift+alt+a",
+        "command": "lynx-keymap.toggleAgentMode"
+      },
+      
+      
       {
         "key"    : "alt+d",
         "mac"    : "alt+d",
