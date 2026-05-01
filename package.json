@@ -382,7 +382,7 @@
         "command": "git.commit",
         "when"   : "scmProvider == git"
       },
-       
+      
       {
         "key"    : "alt+3",
         "mac"    : "alt+3",
@@ -415,7 +415,7 @@
         "mac"    : "alt+z",
         "command": "f1.toggleMarkdownWrap"
       },
-       
+      
       {
         "key"    : "ctrl+3",
         "mac"    : "cmd+3",
