@@ -41,14 +41,6 @@
   "sponsor": {
     "url": "https://github.com/sponsors/gohit.xyz"
   },
-  "scripts": {
-    "vscode:prepublish": "bun run package",
-    "compile": "bun esbuild.js",
-    "watch": "bun esbuild.js --watch",
-    "package": "bun esbuild.js --production",
-    "lint": "eslint .",
-    "check-types": "tsc --noEmit"
-  },
   
   "activationEvents": [
     "onStartupFinished",
@@ -66,6 +58,7 @@
     "onCommand:lynx-keymap.checkCompareCode"
   ],
   "main": "./dist/extension.js",
+  
   "contributes": {
 "keybindings": [
         {
@@ -491,6 +484,14 @@
       "title"  : "Check Compare Code Extension and Execute"
       }
     ],
+    "scripts": {
+      "vscode:prepublish": "bun run package",
+      "compile": "bun esbuild.js",
+      "watch": "bun esbuild.js --watch",
+      "package": "bun esbuild.js --production",
+      "lint": "eslint .",
+      "check-types": "tsc --noEmit"
+    },
     "devDependencies": {
       "@eslint/js": "^9.21.0",
       "@types/node": "^25.6.0",
