@@ -413,7 +413,7 @@
       {
         "key"    : "alt+z",
         "mac"    : "alt+z",
-        "command": "f1.toggleMarkdownWrap"
+        "command": "editor.action.toggleWordWrap"
       },
       
       {
