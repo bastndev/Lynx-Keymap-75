@@ -17,8 +17,6 @@ export async function activate(context: vscode.ExtensionContext) {
   checkerManager.registerCheckCommands(context);
   webviewManager.registerWebviewCommands(context);
   terminalManager.registerCommands(context);
-
-  await terminalManager.restoreState(context);
 }
 
 export async function deactivate() {

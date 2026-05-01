@@ -411,13 +411,28 @@
         "command": "inlineChat.close",
         "when"   : "inlineChatFocused"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Lynx Keymap",
+      "properties": {
+        "lynx-keymap.terminalPosition": {
+          "type": "string",
+          "default": "right",
+          "enum": ["left", "right"],
+          "enumDescriptions": [
+            "Terminal panel opens on the left side",
+            "Terminal panel opens on the right side"
+          ],
+          "description": "Sets the side where the terminal panel opens when using the toggle shortcut"
+        }
+      }
+    }
   },
 
   "commands": [
       {
         "command": "lynx-keymap.toggleTerminalLeft",
-        "title"  : "Toggle Terminal Left"
+        "title"  : "Toggle Terminal"
       },
       {
         "command": "lynx-keymap.generateAICommit",
