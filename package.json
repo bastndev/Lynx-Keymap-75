@@ -78,6 +78,18 @@
         "key"    : "ctrl+p",
         "mac"    : "cmd+p",
         "command": "-workbench.action.quickOpen"
+      },{
+        "key"    : "alt+,", 
+        "mac"    : "alt+,",
+        "command": "workbench.action.terminal.sendSequence",
+        "args"   : {"text": "\u001b[C"},
+        "when"   : "terminalFocus && !terminalSuggestWidgetVisible"
+      },{
+        "key"    : "ctrl+alt+backspace",
+        "mac"    : "cmd+alt+backspace",
+        "command": "workbench.action.terminal.sendSequence",
+        "args"   : {"text": "\u0001\u000b"},
+        "when"   : "terminalFocus"
       },
 
 
@@ -135,35 +147,23 @@
       },
 
 
+
+
+
+
+
       {
-        "key"    : "ctrl+delete",
-        "mac"    : "cmd+delete",
-        "command": "workbench.action.closeFolder"
-      },{
-        "key"    : "alt+,", 
-        "mac"    : "alt+,",
-        "command": "workbench.action.terminal.sendSequence",
-        "args"   : {"text": "\u001b[C"},
-        "when"   : "terminalFocus && !terminalSuggestWidgetVisible"
-      },{
-        "key"    : "ctrl+alt+backspace",
-        "mac"    : "cmd+alt+backspace",
-        "command": "workbench.action.terminal.sendSequence",
-        "args"   : {"text": "\u0001\u000b"},
-        "when"   : "terminalFocus"
-      },{
         "key"    : "ctrl+backspace",
         "mac"    : "cmd+backspace",
         "command": "deleteWordLeft",
         "when"   : "editorTextFocus"
+      },{
+        "key"    : "ctrl+delete",
+        "mac"    : "cmd+delete",
+        "command": "workbench.action.closeFolder"
       },
-
       
-
-
-
-
-
+      
       {
         "key"    : "ctrl+down",
         "mac"    : "cmd+down",
@@ -181,7 +181,6 @@
         "mac"    : "alt+shift+up",
         "command": "editor.action.copyLinesUpAction"
       },
-
 
 
 
