@@ -204,6 +204,14 @@
       },
 
 
+
+
+
+
+
+
+
+
       {
         "key"    : "alt+/",
         "mac"    : "alt+/",
@@ -213,8 +221,8 @@
         "mac"    : "cmd+/",
         "command": "editor.action.commentLine"
       },
-
-
+      
+      
       {
         "key"    : "shift+alt+f",
         "mac"    : "shift+alt+f",
@@ -228,8 +236,8 @@
         "mac"    : "alt+f",
         "command": "editor.action.formatDocument"
       },
-
-
+      
+      
       {
         "key"    : "ctrl+j",
         "mac"    : "cmd+j",
