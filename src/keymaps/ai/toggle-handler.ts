@@ -17,63 +17,91 @@ export class AIToggleManager {
   private async toggleAI(): Promise<void> {
     const editor = await this.detectEditor();
     let isNowEnabled = false;
-    
+
     switch (editor) {
       case EditorType.CURSOR:
-        try {
-          const config = vscode.workspace.getConfiguration();
-          const currentlyEnabled = config.get('editor.inlineSuggest.enabled', true);
-          if (currentlyEnabled) {
-            await vscode.commands.executeCommand('editor.cpp.disableenabled');
-            isNowEnabled = false;
-          } else {
-            await vscode.commands.executeCommand('editor.action.enableCppGlobally');
-            isNowEnabled = true;
-          }
-        } catch {
-          // Fallback if Cursor internal commands fail
-          isNowEnabled = await this.toggleGenericInlineSuggest();
-        }
+        // Cursor usa su propio setting desde ~0.40+
+        isNowEnabled = await this.toggleAllAISettings();
+        await this.safeExecute('cursor.toggleCopilot'); // fallback command
         break;
 
       case EditorType.WINDSURF:
-        await this.safeExecute('windsurf.prioritized.supercompleteEscape');
-        isNowEnabled = await this.getInlineSuggestState();
+        // Windsurf/Codeium: el comando toggle es más confiable que el setting
+        await this.safeExecute('codeium.toggleEnable');
+        isNowEnabled = await this.toggleAllAISettings();
         break;
 
       case EditorType.TRAE_AI:
-        await this.safeExecute('trae.tab.enableSmartEdit');
-        isNowEnabled = await this.getInlineSuggestState();
+        await this.safeExecute('trae.toggleAutocomplete');
+        isNowEnabled = await this.toggleAllAISettings();
         break;
 
       default:
-        // For VS Code (Copilot) and others, toggle inlineSuggest
-        isNowEnabled = await this.toggleGenericInlineSuggest();
+        isNowEnabled = await this.toggleAllAISettings();
         break;
     }
 
     this.notify(editor, isNowEnabled);
   }
 
-  private async toggleGenericInlineSuggest(): Promise<boolean> {
+  /**
+   * Toggles ALL known AI suggestion settings.
+   * Actualizado 2025: settings verificados por editor.
+   */
+  private async toggleAllAISettings(): Promise<boolean> {
     const config = vscode.workspace.getConfiguration();
-    const currentState = config.get('editor.inlineSuggest.enabled', true);
+    const currentState = config.get<boolean>('editor.inlineSuggest.enabled', true);
     const newState = !currentState;
-    await config.update('editor.inlineSuggest.enabled', newState, vscode.ConfigurationTarget.Global);
-    await this.safeExecute('github.copilot.toggleInlineSuggestion');
+
+    const booleanSettings = [
+      // ── VS Code base ──────────────────────────────────────────
+      'editor.inlineSuggest.enabled',
+
+      // ── GitHub Copilot (new setting )─────────────
+      'github.copilot.editor.enableAutoCompletions',
+
+      // ── Cursor ────────────────────────────────────────────────
+      'cursor.completions.enabled',
+
+      // ── Antigravity ───────────────────────────────────────────
+      'antigravity.tab.enabled',
+
+      // ── Trae AI ───────────────────────────────────────────────
+      'trae.autocomplete.enabled',
+
+      // ── Kiro (AWS) ────────────────────────────────────────────
+      'kiro.completions.enabled',
+    ];
+
+    for (const setting of booleanSettings) {
+      try {
+        // Solo actualiza si el setting existe en la config activa,
+        // excepto el de VS Code base que siempre debe tocarse.
+        if (config.has(setting) || setting === 'editor.inlineSuggest.enabled') {
+          await config.update(setting, newState, vscode.ConfigurationTarget.Global);
+        }
+      } catch (e) {
+        console.error(`[Lynx] Failed to update "${setting}":`, e);
+      }
+    }
+
+    // Codeium/Windsurf usa un objeto { "*": true } por lenguaje, no un boolean.
+    // Es más confiable usar el comando de toggle que el setting directo.
+    if (newState === false) {
+      await this.safeExecute('codeium.toggleEnable'); // toggle off
+    }
+
+    // Copilot: también intentar via comando como respaldo
+    await this.safeExecute('github.copilot.toggleCopilot');
+
     return newState;
   }
 
-  private getInlineSuggestState(): boolean {
-    return vscode.workspace.getConfiguration().get('editor.inlineSuggest.enabled', true);
-  }
-
   private notify(editor: EditorType, enabled: boolean): void {
-    const check = enabled ? '✅' : '❌';
+    const icon  = enabled ? '✅' : '❌';
     const label = enabled ? 'ENABLED' : 'DISABLED';
     const name  = editor.charAt(0).toUpperCase() + editor.slice(1);
-    
-    vscode.window.showInformationMessage(`(${name}) AI: ${label} ${check}`);
+    vscode.window.showInformationMessage(`(${name}) AI Suggestions: ${label} ${icon}`);
   }
 
   private async safeExecute(command: string): Promise<boolean> {
@@ -86,7 +114,7 @@ export class AIToggleManager {
   }
 
   private async detectEditor(): Promise<EditorType> {
-    if (this.detectedEditor) {return this.detectedEditor;}
+    if (this.detectedEditor) { return this.detectedEditor; }
 
     const allCommands = await vscode.commands.getCommands(true);
     const DETECTION_ORDER = [
