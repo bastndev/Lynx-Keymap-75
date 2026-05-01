@@ -6,13 +6,15 @@ import { SmartWebviewExtension } from './notifications/smart-checker-webview';
 let aiManager: AICommandsManager | undefined;
 let checkerManager: ExtensionChecker | undefined;
 let webviewManager: SmartWebviewExtension | undefined;
+let terminalManager: TerminalManager | undefined;
+let bottomTerminalManager: BottomTerminalManager | undefined;
 
 export async function activate(context: vscode.ExtensionContext) {
   aiManager = new AICommandsManager();
   checkerManager = new ExtensionChecker();
   webviewManager = new SmartWebviewExtension();
-  const terminalManager = new TerminalManager();
-  const bottomTerminalManager = new BottomTerminalManager();
+  terminalManager = new TerminalManager();
+  bottomTerminalManager = new BottomTerminalManager();
 
   aiManager.registerCommands(context);
   checkerManager.registerCheckCommands(context);
@@ -28,4 +30,6 @@ export async function deactivate() {
   aiManager?.dispose();
   checkerManager?.dispose();
   webviewManager?.dispose();
+  terminalManager?.dispose();
+  bottomTerminalManager?.dispose();
 }

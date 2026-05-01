@@ -1,6 +1,8 @@
 import typescriptEslint from "typescript-eslint";
 
 export default [{
+    ignores: ["dist/**"],
+}, {
     files: ["**/*.ts"],
 }, {
     plugins: {

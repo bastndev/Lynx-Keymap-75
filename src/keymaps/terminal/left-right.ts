@@ -1,69 +1,67 @@
 import * as vscode from 'vscode';
-import { STORAGE_KEYS } from '../../utils/constants';
-
-const TERMINAL_CONFIG = 'terminal.integrated';
+import { STORAGE_KEYS, LOG_PREFIX } from '../../utils/constants';
+import {
+  saveOriginalSettings,
+  restoreOriginalSettings,
+  applyTerminalSettings,
+  PANEL_POSITIONS,
+} from './shared';
 
 export class TerminalManager {
-  private context!: vscode.ExtensionContext;
+  private disposables: vscode.Disposable[] = [];
 
-  public registerCommands(context: vscode.ExtensionContext) {
-    this.context = context;
-
-    const toggleTerminalDisposable = vscode.commands.registerCommand(
+  public registerCommands(context: vscode.ExtensionContext): void {
+    const toggleCmd = vscode.commands.registerCommand(
       'lynx-keymap.toggleTerminalLeft',
       async () => {
         try {
           const current = context.workspaceState.get<string>(STORAGE_KEYS.PANEL_POSITION);
 
-          if (current === 'left') {
-            await this.restoreTabsConfig();
+          if (current === PANEL_POSITIONS.LEFT) {
+            await restoreOriginalSettings(context);
             await vscode.commands.executeCommand('workbench.action.closePanel');
             await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
             await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined);
           } else {
+            if (current !== undefined) {
+              await vscode.commands.executeCommand('workbench.action.closePanel');
+              if (current === PANEL_POSITIONS.BOTTOM) {
+                await restoreOriginalSettings(context);
+              }
+            }
+
             await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
-            await this.openTerminal();
-            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, 'left');
+            await saveOriginalSettings(context);
+            await applyTerminalSettings(false, false);
+
+            const sideBarLocation = vscode.workspace
+              .getConfiguration('workbench')
+              .get<string>('sideBar.location', PANEL_POSITIONS.LEFT);
+
+            if (sideBarLocation === PANEL_POSITIONS.LEFT) {
+              await vscode.commands.executeCommand('workbench.action.positionPanelRight');
+            } else {
+              await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
+            }
+
+            await vscode.commands.executeCommand('workbench.action.terminal.focus');
+            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, PANEL_POSITIONS.LEFT);
           }
         } catch (error) {
+          console.error(`${LOG_PREFIX} Terminal left toggle failed:`, error);
           vscode.window.showErrorMessage(`Terminal toggle failed: ${error}`);
         }
       }
     );
 
-    context.subscriptions.push(toggleTerminalDisposable);
+    this.disposables.push(toggleCmd);
+    context.subscriptions.push(toggleCmd);
   }
 
-  private async openTerminal() {
-    const terminalConfig = vscode.workspace.getConfiguration(TERMINAL_CONFIG);
-    const workbenchConfig = vscode.workspace.getConfiguration('workbench');
-
-    const originalTabsEnabled = terminalConfig.inspect<boolean>('tabs.enabled')?.globalValue;
-    const originalPanelShowLabels = workbenchConfig.inspect<boolean>('panel.showLabels')?.globalValue;
-
-    await this.context.globalState.update(STORAGE_KEYS.ORIGINAL_TABS_ENABLED, originalTabsEnabled ?? true);
-    await this.context.globalState.update(STORAGE_KEYS.ORIGINAL_PANEL_SHOW_LABELS, originalPanelShowLabels ?? true);
-
-    await terminalConfig.update('tabs.enabled', false, vscode.ConfigurationTarget.Global);
-    await workbenchConfig.update('panel.showLabels', false, vscode.ConfigurationTarget.Global);
-
-    const sideBarLocation = workbenchConfig.get<string>('sideBar.location', 'left');
-    if (sideBarLocation === 'left') {
-      await vscode.commands.executeCommand('workbench.action.positionPanelRight');
-    } else {
-      await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
+  public dispose(): void {
+    for (const d of this.disposables) {
+      d.dispose();
     }
-    await vscode.commands.executeCommand('workbench.action.terminal.focus');
-  }
-
-  private async restoreTabsConfig() {
-    const originalTabs = this.context.globalState.get<boolean>(STORAGE_KEYS.ORIGINAL_TABS_ENABLED, true);
-    const originalLabels = this.context.globalState.get<boolean>(STORAGE_KEYS.ORIGINAL_PANEL_SHOW_LABELS, true);
-
-    const terminalConfig = vscode.workspace.getConfiguration(TERMINAL_CONFIG);
-    const workbenchConfig = vscode.workspace.getConfiguration('workbench');
-
-    await terminalConfig.update('tabs.enabled', originalTabs, vscode.ConfigurationTarget.Global);
-    await workbenchConfig.update('panel.showLabels', originalLabels, vscode.ConfigurationTarget.Global);
+    this.disposables = [];
   }
 }

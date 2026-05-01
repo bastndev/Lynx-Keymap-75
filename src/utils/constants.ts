@@ -11,7 +11,8 @@ export const COMMAND_IDS = {
     SELECT_CODE: 'lynx-keymap.selectCode',
   },
   TERMINAL: {
-    TOGGLE: 'lynx-keymap.toggleTerminalLeft',
+    TOGGLE_LEFT: 'lynx-keymap.toggleTerminalLeft',
+    TOGGLE_BOTTOM: 'lynx-keymap.toggleTerminalBottom',
   },
   EXTENSION_CHECK: {
     F1_QUICK_SWITCH: 'lynx-keymap.checkF1QuickSwitch',
