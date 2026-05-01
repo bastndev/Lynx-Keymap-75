@@ -280,11 +280,11 @@
       },{
         "key"    : "shift+alt+w",
         "mac"    : "shift+alt+w",
-        "command": "expandLineSelection"
+        "command": "workbench.action.gotoLine"
       },{
         "key"    : "shift+alt+q",
         "mac"    : "shift+alt+q",
-        "command": "workbench.action.gotoLine"
+        "command": "expandLineSelection"
       },
 
 
