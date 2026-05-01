@@ -53,7 +53,7 @@ export class AIToggleManager {
       // ── VS Code base ──────────────────────────────────────────
       'editor.inlineSuggest.enabled',
 
-      // ── GitHub Copilot ────────────────────────────────────────
+      // ── GitHub (Copilot) ────────────────────────────────────────
       'github.copilot.editor.enableAutoCompletions',
 
       // ── Kiro (AWS) ────────────────────────────────────────────
