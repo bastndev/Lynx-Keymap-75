@@ -244,7 +244,15 @@
         "command": "workbench.action.openSettingsJson"
       },
 
-      
+
+
+
+
+
+
+
+
+
       {
         "key"    : "shift+alt+t",
         "mac"    : "shift+alt+t",
@@ -269,12 +277,13 @@
 
 
 
-{
-        "key"    : "ctrl+q",
-        "mac"    : "cmd+q",
-        "command": "lynx-keymap.checkGitLab"
-      },
-      
+
+
+
+
+
+
+
       {
         "key"    : "alt+d",
         "mac"    : "alt+d",
@@ -291,11 +300,6 @@
       
       
       
-      
-      
-      
-      
-      
       {
         "key"    : "ctrl+escape",
         "mac"    : "cmd+escape",
@@ -306,11 +310,6 @@
         "mac"    : "shift+escape",
         "command": "workbench.action.toggleMaximizedAuxiliaryBar"
       },
-      
-      
-      
-      
-      
       
       
       
