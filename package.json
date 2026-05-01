@@ -311,11 +311,11 @@
       },{
         "key"    : "alt+e",
         "mac"    : "alt+e",
-        "command": "workbench.action.quickOpenTerm"
+        "command": "lynx-keymap.toggleTerminalBottom"
       },{
         "key"    : "alt+w",
         "mac"    : "alt+w",
-        "command": "lynx-keymap.toggleTerminalBottom"
+        "command": "workbench.action.quickOpenTerm"
       },{
         "key"    : "alt+q",
         "mac"    : "alt+q",
