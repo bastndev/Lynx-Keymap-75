@@ -333,12 +333,25 @@
         "when"   : "scmProvider == git"
       },
 
+
+
       {
-        "key"    : "alt+4",
-        "mac"    : "alt+4",
-        "command": "git.pull",
-        "when"   : "scmProvider == git"
+        "key"    : "ctrl+capslock",
+        "mac"    : "cmd+capslock",
+        "command": "workbench.action.toggleSidebarVisibility"
       },{
+        "key"    : "alt+c",
+        "mac"    : "alt+c",
+        "command": "explorer.newFolder"
+      },{
+        "key"    : "alt+x",
+        "mac"    : "alt+x",
+        "command": "explorer.newFile"
+      },
+
+
+
+      {
         "key"    : "alt+3",
         "mac"    : "alt+3",
         "command": "git.unstageAll",
@@ -357,32 +370,6 @@
 
 
       {
-        "key"    : "ctrl+capslock",
-        "mac"    : "cmd+capslock",
-        "command": "workbench.action.toggleSidebarVisibility"
-      },{
-        "key"    : "alt+c",
-        "mac"    : "alt+c",
-        "command": "explorer.newFolder"
-      },{
-        "key"    : "alt+x",
-        "mac"    : "alt+x",
-        "command": "explorer.newFile"
-      },
-
-      {
-        "key"    : "shift+alt+\\",
-        "mac"    : "shift+alt+\\",
-        "command": "lynx-keymap.checkCompareCode"
-      },{
-        "key"    : "shift+alt+\\",
-        "mac"    : "shift+alt+\\",
-        "command": "-Compare Code"
-      },{
-        "key"    : "ctrl+4",
-        "mac"    : "cmd+4",
-        "command": "lynx-keymap.checkF1QuickSwitch"
-      },{
         "key"    : "ctrl+3",
         "mac"    : "cmd+3",
         "command": "workbench.view.extensions"
