@@ -17,6 +17,9 @@ export async function activate(context: vscode.ExtensionContext) {
   checkerManager.registerCheckCommands(context);
   webviewManager.registerWebviewCommands(context);
   terminalManager.registerCommands(context);
+  await context.workspaceState.update('lynx-keymap:lastActiveMode', undefined);
+  await context.workspaceState.update('lynx-keymap:originalTabsEnabled', undefined);
+  await context.workspaceState.update('lynx-keymap:originalPanelShowLabels', undefined);
 }
 
 export async function deactivate() {
