@@ -121,12 +121,7 @@
         "key"    : "shift+escape",
         "mac"    : "shift+escape",
         "command": "workbench.action.toggleMaximizedAuxiliaryBar"
-      },{
-        "key"    : "ctrl+tab",
-        "mac"    : "cmd+tab",
-        "command": "lynx-keymap.openAndCloseAIChat"
       },
-
 
       {
         "key"    : "alt+shift+audiovolumedown",
@@ -288,10 +283,6 @@
         "mac"    : "cmd+q",
         "command": "lynx-keymap.checkGitLab"
       },{
-        "key"    : "pagedown",
-        "mac"    : "pagedown",
-        "command": "workbench.action.togglePanel"
-      },{
         "key"    : "ctrl+alt+e",
         "mac"    : "cmd+alt+e",
         "command": "workbench.action.focusFirstEditorGroup"
@@ -307,20 +298,33 @@
         "mac"    : "alt+e",
         "command": "workbench.action.terminal.kill"
       },{
-        "key"    : "alt+w",
-        "mac"    : "alt+w",
-        "command": "lynx-keymap.toggleTerminalBottom"
-      },{
         "key"    : "alt+q",
         "mac"    : "alt+q",
         "command": "workbench.action.terminal.new"
       },
-
-
-
-
-
-{
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      {
+        "key"    : "pagedown",
+        "mac"    : "pagedown",
+        "command": "workbench.action.togglePanel"
+      },{
+        "key"    : "alt+w",
+        "mac"    : "alt+w",
+        "command": "lynx-keymap.toggleTerminalBottom"
+      },{
+        "key"    : "ctrl+tab",
+        "mac"    : "cmd+tab",
+        "command": "lynx-keymap.openAndCloseAIChat"
+      },{
         "key"    : "ctrl+[Backquote]",
         "mac"    : "cmd+[Backquote]",
         "command": "lynx-keymap.toggleTerminalLeft"
@@ -329,7 +333,6 @@
         "mac"    : "cmd+capslock",
         "command": "workbench.action.toggleSidebarVisibility"
       },
-      
       
       
       
