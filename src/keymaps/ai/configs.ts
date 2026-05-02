@@ -60,7 +60,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.FIREBASE]: [no support]
   },
 
-  // MARK:[Shift+Tab]
+  // MARK:[ctrl+capslock]
   openAndCloseAIChat: {
     [EditorType.ANTIGRAVITY]: 'antigravity.openAgent',
     [EditorType.VSCODE]:      'workbench.action.chat.toggle',
