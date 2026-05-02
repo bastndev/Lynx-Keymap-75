@@ -1,9 +1,92 @@
 import * as vscode from 'vscode';
-import { EXTENSION_DEPENDENCIES, ExtensionDependency, COMMAND_IDS } from '../utils/constants';
-import { TimeoutManager } from '../utils/timeout-manager';
 
+// ─── Timeout Manager ──────────────────────────────────────────────────────────
+const LOG_PREFIX = '[lynx-keymap]';
+
+class TimeoutManager {
+  private activeTimeouts: Set<ReturnType<typeof setTimeout>> = new Set();
+  private maxTimeouts    = 10;
+  private cleanupInterval: ReturnType<typeof setInterval> | null = null;
+
+  constructor() { this.startCleanup(); }
+
+  create(callback: () => void, delay: number): ReturnType<typeof setTimeout> {
+    if (this.activeTimeouts.size >= this.maxTimeouts) {
+      console.warn(`${LOG_PREFIX} Maximum timeouts reached, clearing oldest`);
+      this.clearOldest(Math.floor(this.maxTimeouts / 2));
+    }
+
+    const timeout = setTimeout(() => {
+      this.activeTimeouts.delete(timeout);
+      try { callback(); } catch (error) {
+        console.error(`${LOG_PREFIX} Timeout callback error:`, error);
+      }
+    }, delay);
+
+    this.activeTimeouts.add(timeout);
+    return timeout;
+  }
+
+  clearAll(): void {
+    this.activeTimeouts.forEach(t => clearTimeout(t));
+    this.activeTimeouts.clear();
+  }
+
+  clearOldest(count: number): void {
+    const timeouts = Array.from(this.activeTimeouts);
+    for (let i = 0; i < Math.min(count, timeouts.length); i++) {
+      clearTimeout(timeouts[i]);
+      this.activeTimeouts.delete(timeouts[i]);
+    }
+  }
+
+  private startCleanup(): void {
+    this.cleanupInterval = setInterval(() => {
+      if (this.activeTimeouts.size > this.maxTimeouts) {
+        this.clearOldest(this.activeTimeouts.size - this.maxTimeouts);
+      }
+    }, 30000);
+  }
+
+  dispose(): void {
+    this.clearAll();
+    if (this.cleanupInterval) {
+      clearInterval(this.cleanupInterval);
+      this.cleanupInterval = null;
+    }
+  }
+}
+
+// ─── Constants ────────────────────────────────────────────────────────────────
+const COMMAND_IDS = {
+  EXTENSION_CHECK: {
+    F1_QUICK_SWITCH: 'lynx-keymap.checkF1QuickSwitch',
+    GITLAB:          'lynx-keymap.checkGitLab',
+  },
+} as const;
+
+interface ExtensionDependency {
+  extensionId:       string;
+  displayName:       string;
+  marketplaceSearch: string;
+}
+
+const EXTENSION_DEPENDENCIES: Record<string, ExtensionDependency> = {
+  'workbench.view.extension.f1-functions': {
+    extensionId:       'bastndev.f1',
+    displayName:       'F1-Quick Switch',
+    marketplaceSearch: 'bastndev.f1',
+  },
+  'gitlab.graphView.focus': {
+    extensionId:       'bastndev.atm',
+    displayName:       'GitLab',
+    marketplaceSearch: 'bastndev.atm',
+  },
+} as const;
+
+// ─── Extension Checker ────────────────────────────────────────────────────────
 export class ExtensionChecker {
-  private timeoutManager = new TimeoutManager();
+  private timeoutManager          = new TimeoutManager();
   private installationInProgress: Set<string> = new Set();
 
   async checkAndExecuteCommand(commandId: string, context: vscode.ExtensionContext): Promise<void> {
@@ -19,9 +102,7 @@ export class ExtensionChecker {
     }
 
     try {
-      if (!extension.isActive) {
-        await extension.activate();
-      }
+      if (!extension.isActive) { await extension.activate(); }
       await vscode.commands.executeCommand(commandId);
     } catch (error) {
       this.showExtensionActivationError(dependency, commandId, error as Error);
@@ -32,7 +113,7 @@ export class ExtensionChecker {
     const message = `The extension "${dependency.displayName}" is required for this command`;
     vscode.window
       .showInformationMessage(message, 'Install Extension', 'Cancel')
-      .then((selection) => {
+      .then(selection => {
         if (selection === 'Install Extension') {
           this.installExtension(dependency, commandId);
         }
@@ -45,16 +126,12 @@ export class ExtensionChecker {
   }
 
   async installExtension(dependency: ExtensionDependency, commandId: string): Promise<void> {
-    if (this.installationInProgress.has(dependency.extensionId)) {
-      return;
-    }
-
+    if (this.installationInProgress.has(dependency.extensionId)) { return; }
     this.installationInProgress.add(dependency.extensionId);
 
     try {
       vscode.window.showInformationMessage(`Downloading ${dependency.displayName}...`);
-
-      await new Promise((resolve) => setTimeout(resolve, 4000));
+      await new Promise(resolve => setTimeout(resolve, 4000));
 
       await vscode.commands.executeCommand(
         'workbench.extensions.installExtension',
@@ -62,12 +139,9 @@ export class ExtensionChecker {
       );
 
       let attempts = 0;
-      const maxAttempts = 10;
-      while (attempts < maxAttempts) {
-        const extension = vscode.extensions.getExtension(dependency.extensionId);
-        if (extension) { break; }
-
-        await new Promise((resolve) => setTimeout(resolve, 500));
+      while (attempts < 10) {
+        if (vscode.extensions.getExtension(dependency.extensionId)) { break; }
+        await new Promise(resolve => setTimeout(resolve, 500));
         attempts++;
       }
 
@@ -79,16 +153,12 @@ export class ExtensionChecker {
     } catch (error) {
       const selection = await vscode.window.showErrorMessage(
         `Failed to install ${dependency.displayName}: ${(error as Error).message}`,
-        'Open Marketplace',
-        'Retry'
+        'Open Marketplace', 'Retry'
       );
-
       if (selection === 'Open Marketplace') {
         vscode.commands.executeCommand('workbench.extensions.search', dependency.marketplaceSearch);
       } else if (selection === 'Retry') {
-        this.timeoutManager.create(() => {
-          this.installExtension(dependency, commandId);
-        }, 1000);
+        this.timeoutManager.create(() => { this.installExtension(dependency, commandId); }, 1000);
       }
     } finally {
       this.installationInProgress.delete(dependency.extensionId);
@@ -98,10 +168,8 @@ export class ExtensionChecker {
   async showExtensionActivationError(dependency: ExtensionDependency, commandId: string, error: Error): Promise<void> {
     const selection = await vscode.window.showErrorMessage(
       `Failed to activate "${dependency.displayName}": ${error?.message || 'Unknown error'}`,
-      'Retry',
-      'Open Marketplace'
+      'Retry', 'Open Marketplace'
     );
-
     if (selection === 'Retry') {
       this.timeoutManager.create(() => {
         this.checkAndExecuteCommand(commandId, undefined as unknown as vscode.ExtensionContext);
@@ -112,7 +180,7 @@ export class ExtensionChecker {
   }
 
   registerCheckCommands(context: vscode.ExtensionContext): void {
-    Object.keys(EXTENSION_DEPENDENCIES).forEach((commandId) => {
+    Object.keys(EXTENSION_DEPENDENCIES).forEach(commandId => {
       const checkCommandId = `lynx-keymap.check-${commandId.replace(/\./g, '-')}`;
       const disposable = vscode.commands.registerCommand(checkCommandId, () => {
         this.checkAndExecuteCommand(commandId, context);

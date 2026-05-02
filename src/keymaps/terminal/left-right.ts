@@ -1,10 +1,11 @@
 import * as vscode from 'vscode';
-import { STORAGE_KEYS, LOG_PREFIX } from '../../utils/constants';
 import {
+  STORAGE_KEYS,
+  LOG_PREFIX,
+  PANEL_POSITIONS,
   saveOriginalSettings,
   restoreOriginalSettings,
   applyTerminalSettings,
-  PANEL_POSITIONS,
 } from './shared';
 
 export class TerminalManager {
