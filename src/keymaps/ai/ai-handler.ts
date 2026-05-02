@@ -198,13 +198,8 @@ export class AIToggleManager {
 
   /** Fires editor-specific commands where settings alone are insufficient. */
   private async applyEditorCommands(editor: EditorType, _newState: boolean): Promise<void> {
-    switch (editor) {
-      case EditorType.VSCODE:    await this.safeExecute('github.copilot.chat.completions.toggle'); break;
-      case EditorType.CURSOR:    await this.safeExecute('cursor.toggleCopilot');                   break;
-      case EditorType.WINDSURF:  await this.safeExecute('codeium.toggleEnable');                   break;
-      case EditorType.TRAE_AI:   await this.safeExecute('trae.toggleAutocomplete');                break;
-      case EditorType.FIREBASE:  await this.safeExecute('cloudcode.duetAI.toggleInlineCompletion'); break;
-    }
+    const cmd = AI_COMMANDS.toggleSuggestionAI[editor];
+    if (cmd) { await this.safeExecute(cmd); }
   }
 
   private async safeExecute(command: string): Promise<boolean> {

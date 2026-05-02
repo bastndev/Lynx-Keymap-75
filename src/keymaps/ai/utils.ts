@@ -41,7 +41,8 @@ export type ActionKey =
   | 'showAIHistory'
   | 'selectModels'
   | 'toggleAgentMode'
-  | 'selectCode';
+  | 'selectCode'
+  | 'toggleSuggestionAI';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
 export type EditorCommandMap = Partial<Record<EditorType, string>>;
@@ -123,6 +124,17 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.WINDSURF]: [no support]
     [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.showHistory',
     // [EditorType.FIREBASE]: [no support]
+  },
+
+  // MARK:[Shift+Alt+D] — per-editor toggle command (fired after settings update)
+  toggleSuggestionAI: {
+    // [EditorType.ANTIGRAVITY]: only settings, no extra command needed
+    [EditorType.VSCODE]:   'github.copilot.chat.completions.toggle',
+    [EditorType.CURSOR]:   'cursor.toggleCopilot',
+    // [EditorType.KIRO]:        only settings, no extra command needed
+    [EditorType.WINDSURF]: 'codeium.toggleEnable',
+    [EditorType.TRAE_AI]:  'trae.toggleAutocomplete',
+    [EditorType.FIREBASE]: 'cloudcode.duetAI.toggleInlineCompletion',
   },
 
 };
