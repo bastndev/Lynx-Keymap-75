@@ -51,3 +51,25 @@ export async function restoreOriginalSettings(context: vscode.ExtensionContext):
 
   await applyTerminalSettings(tabsEnabled, panelShowLabels);
 }
+
+// ─── Base Manager ─────────────────────────────────────────────────────────────
+// Shared foundation for TerminalManager and BottomTerminalManager.
+// Centralizes disposable tracking, registration, and cleanup.
+export abstract class BaseTerminalManager {
+  protected disposables: vscode.Disposable[] = [];
+
+  abstract registerCommands(context: vscode.ExtensionContext): void;
+
+  /** Registers commands in both the internal list and extension context. */
+  protected register(context: vscode.ExtensionContext, ...cmds: vscode.Disposable[]): void {
+    this.disposables.push(...cmds);
+    context.subscriptions.push(...cmds);
+  }
+
+  public dispose(): void {
+    for (const d of this.disposables) {
+      d.dispose();
+    }
+    this.disposables = [];
+  }
+}

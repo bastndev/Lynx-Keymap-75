@@ -6,10 +6,10 @@ import {
   saveOriginalSettings,
   restoreOriginalSettings,
   applyTerminalSettings,
+  BaseTerminalManager,
 } from './shared';
 
-export class BottomTerminalManager {
-  private disposables: vscode.Disposable[] = [];
+export class BottomTerminalManager extends BaseTerminalManager {
 
   public registerCommands(context: vscode.ExtensionContext): void {
     const toggleCmd = vscode.commands.registerCommand(
@@ -44,14 +44,6 @@ export class BottomTerminalManager {
       }
     );
 
-    this.disposables.push(toggleCmd);
-    context.subscriptions.push(toggleCmd);
-  }
-
-  public dispose(): void {
-    for (const d of this.disposables) {
-      d.dispose();
-    }
-    this.disposables = [];
+    this.register(context, toggleCmd);
   }
 }
