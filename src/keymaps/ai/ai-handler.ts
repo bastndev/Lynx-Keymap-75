@@ -1,8 +1,9 @@
 import * as vscode from 'vscode';
 import {
   AI_COMMANDS, KEYMAP_CONFIG, EDITOR_SIGNATURES,
-  EditorType, ActionKey
+  EditorType, ActionKey, EDITOR_PRIMARY_SETTING
 } from './utils';
+import { notifyToggle } from '../../notifications/informative';
 
 const LOG = '[lynx-keymap]';
 
@@ -137,5 +138,81 @@ export class AICommandsManager {
       console.error(`${LOG} Failed to get commands:`, error);
       return this.allCommandsCache ?? [];
     }
+  }
+}
+
+// ─── AI Toggle Manager ────────────────────────────────────────────────────────
+// Reuses AICommandsManager.detectEditor() so both share the same 5-min cache.
+
+export class AIToggleManager {
+  private disposables: vscode.Disposable[] = [];
+
+  constructor(private readonly aiManager: AICommandsManager) {}
+
+  public registerCommands(context: vscode.ExtensionContext): void {
+    const toggleCmd = vscode.commands.registerCommand('lynx.toggleSuggestionAI', async () => {
+      await this.toggleAI(context);
+    });
+    this.disposables.push(toggleCmd);
+    context.subscriptions.push(toggleCmd);
+  }
+
+  private async toggleAI(context: vscode.ExtensionContext): Promise<void> {
+    const editor = await this.aiManager.detectEditor();
+
+    const storedState  = context.globalState.get<boolean>('lynx.suggestionsEnabled');
+    const config       = vscode.workspace.getConfiguration();
+    const currentState = storedState ?? config.get<boolean>(EDITOR_PRIMARY_SETTING[editor], true);
+    const newState     = !currentState;
+
+    await context.globalState.update('lynx.suggestionsEnabled', newState);
+    await this.applyAllSettings(newState);
+    await this.applyEditorCommands(editor, newState);
+
+    notifyToggle(editor, newState);
+  }
+
+  /** Updates all known AI suggestion settings across editors. Skips absent settings. */
+  private async applyAllSettings(newState: boolean): Promise<void> {
+    const config = vscode.workspace.getConfiguration();
+    const booleanSettings = [
+      'antigravity.tab.enabled',
+      'editor.inlineSuggest.enabled',
+      'github.copilot.editor.enableAutoCompletions',
+      'kiro.completions.enabled',
+      'cursor.completions.enabled',
+      'trae.autocomplete.enabled',
+      'cloudcode.duetAI.completions.enabled',
+    ];
+
+    for (const setting of booleanSettings) {
+      try {
+        if (config.has(setting) || setting === 'editor.inlineSuggest.enabled') {
+          await config.update(setting, newState, vscode.ConfigurationTarget.Global);
+        }
+      } catch (e) {
+        console.error(`${LOG} Failed to update "${setting}":`, e);
+      }
+    }
+  }
+
+  /** Fires editor-specific commands where settings alone are insufficient. */
+  private async applyEditorCommands(editor: EditorType, _newState: boolean): Promise<void> {
+    switch (editor) {
+      case EditorType.VSCODE:    await this.safeExecute('github.copilot.chat.completions.toggle'); break;
+      case EditorType.CURSOR:    await this.safeExecute('cursor.toggleCopilot');                   break;
+      case EditorType.WINDSURF:  await this.safeExecute('codeium.toggleEnable');                   break;
+      case EditorType.TRAE_AI:   await this.safeExecute('trae.toggleAutocomplete');                break;
+      case EditorType.FIREBASE:  await this.safeExecute('cloudcode.duetAI.toggleInlineCompletion'); break;
+    }
+  }
+
+  private async safeExecute(command: string): Promise<boolean> {
+    try { await vscode.commands.executeCommand(command); return true; }
+    catch { return false; }
+  }
+
+  public dispose(): void {
+    this.disposables.forEach(d => d.dispose());
   }
 }

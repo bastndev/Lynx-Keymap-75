@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { AICommandsManager, BottomTerminalManager, TerminalManager, AIToggleManager } from './keymaps';
+import { AICommandsManager, AIToggleManager, BottomTerminalManager, TerminalManager } from './keymaps';
 
 let aiManager:             AICommandsManager     | undefined;
 let terminalManager:       TerminalManager       | undefined;
@@ -10,7 +10,7 @@ export async function activate(context: vscode.ExtensionContext) {
   aiManager             = new AICommandsManager();
   terminalManager       = new TerminalManager();
   bottomTerminalManager = new BottomTerminalManager();
-  aiToggleManager       = new AIToggleManager();
+  aiToggleManager       = new AIToggleManager(aiManager); // shares detectEditor() cache
 
   aiManager.registerCommands(context);
   terminalManager.registerCommands(context);

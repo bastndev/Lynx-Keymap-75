@@ -21,6 +21,18 @@ export const EDITOR_SIGNATURES: Record<EditorType, string[]> = {
   [EditorType.UNKNOWN]:     []
 };
 
+// ─── Primary Setting per Editor (for toggle state source of truth) ────────────
+export const EDITOR_PRIMARY_SETTING: Record<EditorType, string> = {
+  [EditorType.ANTIGRAVITY]: 'antigravity.tab.enabled',
+  [EditorType.VSCODE]:      'editor.inlineSuggest.enabled',
+  [EditorType.KIRO]:        'kiro.completions.enabled',
+  [EditorType.CURSOR]:      'cursor.completions.enabled',
+  [EditorType.WINDSURF]:    'editor.inlineSuggest.enabled',
+  [EditorType.TRAE_AI]:     'trae.autocomplete.enabled',
+  [EditorType.FIREBASE]:    'cloudcode.duetAI.completions.enabled',
+  [EditorType.UNKNOWN]:     'editor.inlineSuggest.enabled',
+};
+
 // ─── Action Keys ─────────────────────────────────────────────────────────────
 export type ActionKey =
   | 'generateAICommit'
