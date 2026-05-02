@@ -2,8 +2,8 @@ import * as vscode from 'vscode';
 import {
   AI_COMMANDS, KEYMAP_CONFIG, EDITOR_SIGNATURES,
   EditorType, ActionKey, EDITOR_PRIMARY_SETTING
-} from './utils';
-import { notifyToggle } from '../../notifications/informative';
+} from './configs';
+import { notifyToggle } from '../../notifications/info';
 
 const LOG = '[lynx-keymap]';
 
