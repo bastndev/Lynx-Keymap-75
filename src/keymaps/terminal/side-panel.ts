@@ -21,7 +21,7 @@ export class TerminalManager {
           if (current === PANEL_POSITIONS.LEFT) {
             await restoreOriginalSettings(context);
             await vscode.commands.executeCommand('workbench.action.closePanel');
-            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat'); // re-open AI when closing terminal
             await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined);
           } else {
             if (current !== undefined) {
@@ -31,7 +31,8 @@ export class TerminalManager {
               }
             }
 
-            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+            // Explicit close — safe even if AI is already closed (no toggle side-effects)
+            await vscode.commands.executeCommand('workbench.action.closeAuxiliaryBar');
             await saveOriginalSettings(context);
             await applyTerminalSettings(false, false);
 
