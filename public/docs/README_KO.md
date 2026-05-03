@@ -21,6 +21,8 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
 </p>
 
+<br>
+
 <h2 align="center">Lynx Keymap 75% — <b>키바인딩 참조</b></h2>
 
 > VSCode · Cursor · Windsurf · Trae.ai · Kiro & Antigravity에서 **75% 키보드**에 최적화되었습니다.

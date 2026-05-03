@@ -21,6 +21,8 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
 </p>
 
+<br>
+
 <h2 align="center">Lynx Keymap 75% — <b>Référence des raccourcis clavier</b></h2>
 
 > Optimisé pour les **claviers 75%** sur VSCode · Cursor · Windsurf · Trae.ai · Kiro & Antigravity.
