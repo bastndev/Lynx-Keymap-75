@@ -1,6 +1,6 @@
 {
-  "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Configuration et raccourcis optimisés pour les claviers 75%. Bascules intelligentes pour l'IA et le Terminal dans VSCode, Cursor, Windsurf, Trae.ai & Kiro.",
+  "displayName": "Lynx Keymap 75% (AI Orchestrator)",
+  "description": "La suite ultime de raccourcis clavier pour les IDE basés sur l'IA. ⚡️ Boostez votre flux de travail dans VSCode, Cursor, Windsurf, Trae.ai et Kiro avec une orchestration IA intelligente, un basculement de terminal en une touche et des dispositions éprouvées pour claviers 75%. Arrêtez de cliquer. Commencez à commander.",
 
   "lynx.notification.ai.enabled": "({0}) Suggestions IA : ACTIVÉES ✅",
   "lynx.notification.ai.disabled": "({0}) Suggestions IA : DÉSACTIVÉES ❌"

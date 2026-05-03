@@ -1,6 +1,6 @@
 {
   "displayName": "Lynx Keymap 75% (AI Orchestrator)",
-  "description": "The ultimate keyboard shortcut suite for AI-powered IDEs. ⚡️ Supercharge your workflow in VSCode, Cursor, Windsurf, Trae.ai & Kiro with intelligent AI orchestration, one-keystroke terminal switching, and battle-tested 75% keyboard layouts. Stop clicking. Start commanding.",
+  "description": "Die ultimative Tastenkombinations-Suite für KI-gestützte IDEs. ⚡️ Optimiere deinen Workflow in VSCode, Cursor, Windsurf, Trae.ai & Kiro mit intelligenter KI-Orchestrierung, Terminal-Umschaltung per Tastendruck und bewährten 75%-Tastaturlayouts. Hör auf zu klicken. Fang an zu steuern.",
 
   "lynx.notification.ai.enabled": "({0}) KI-Vorschläge: AKTIVIERT ✅",
   "lynx.notification.ai.disabled": "({0}) KI-Vorschläge: DEAKTIVIERT ❌"
