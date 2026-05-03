@@ -168,21 +168,19 @@
 
 ---
 
-## 📦 Installation
+## Installation
 
-### Method 1 — Quick Open
+Launch _Quick Open_
 
-Open the command palette for your OS:
+- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-- 🐧 Linux · 🟦 Windows → `Ctrl + P`
-- 🍎 macOS → `⌘ + P`
-
-Paste and press `Enter`:
+Paste the following command and press `Enter`:
 
 ```
 ext install bastndev.lynx-keymap-75
 ```
-
 ### Method 2 — Extensions View
 
 1. Open Extensions (`Ctrl+Shift+X` / `⌘+Shift+X`)
@@ -191,28 +189,30 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## 🧩 Complementary Extensions
-
-|                                                                                              Extension                                                                                              | Name                                                           | Description                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|                                                 [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                  | [ATM](https://github.com/bastndev/ATM)                         | All-in-one toolkit with Error Lens, Git Blame, Env Protection, and code screenshots across major editors. |
-|                   [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                    | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardizes keyboard shortcuts across all code editors. Improves workflow and development experience.    |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Six professional themes: Dark, Light, Night, Ghibli, Coffee & Kiro — with integrated icons.               |
-
----
-
-## 👤 About the Author
+## About Me
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                          _Creator & Maintainer_                           |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx)** — Code, software & development insights
-- 🌱 **[Instagram](https://instagram.com/gohitx)** — Project previews & updates
-- 🐦 **[X / Twitter](https://twitter.com/gohitx)** — Questions & discussions
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : Code, Software and development insights.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`new`** – Project previews & life updates.
+- 🐦 **[X](https://twitter.com/gohitx)** : For questions and discussions.
 
----
+<br>
+
+<h2 align="center">
+  Complementary  Extensions 🧩 
+</h2>
+
+| ㅤㅤ Extension                                                                                                                                                                                      | < Name/>                                                       | Description                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | An all-in-one toolkit 👻 that supercharges your workflow with essential features like Error Lens, Git Blame, Env Protection, and code screenshots across major editors.                     |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardizes keyboard shortcuts across all code editors, allowing you to use key combinations to access any functionality. It improves workflow and development experience.                 |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | A professional extension with six available themes: Dark, Light, Night, Ghibli, Coffee, and Kiro—with integrated icons. Each theme is optimized to offer a more pleasant visual experience. |
+
+<br>
 
 <div align="center">
 
