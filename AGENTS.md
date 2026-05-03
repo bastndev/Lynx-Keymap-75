@@ -9,35 +9,30 @@
 | Typecheck | `bun run check-types` |
 | Lint | `bun run lint` |
 
-- **Runtime:** Bun (`bun.lock`). No tests.
-- **Build:** esbuild → `src/extension.ts` → `dist/extension.js` (cjs, node, minified in prod). External: `vscode`.
+- **Runtime:** Bun (`bun.lock`).
+- **Build:** esbuild → `src/extension.ts` → `dist/extension.js`.
 
 ## Actual Structure
 ```
 src/
 ├── extension.ts              # Entry point — registers all managers
-├── utils/
-│   ├── constants.ts          # Command IDs, extension dependencies, storage keys
-│   └── timeout-manager.ts    # Timeout utility with limit and cleanup
 ├── keymaps/
-│   ├── index.ts              # Barrel export for all modules
+│   ├── index.ts              # Barrel export
 │   ├── ai/
-│   │   ├── utils.ts          # EditorType enum, EDITOR_SIGNATURES, AI_COMMANDS, KEYMAP_CONFIG
-│   │   ├── ai-handler.ts     # Editor auto-detection (Antigravity→Windsurf→Cursor→Trae→Kiro→Firebase→VSCode) + fallback execution
-│   │   └── toggle-handler.ts # Toggle AI suggestions (Shift+Alt+D) per detected editor
+│   │   ├── configs.ts        # Editor signatures & AI command mappings
+│   │   └── controller.ts     # Detection & execution logic
 │   └── terminal/
-│       ├── shared.ts         # Save/restore terminal settings (tabs, labels)
-│       ├── left-right.ts     # Toggle terminal panel left/right (Alt+CapsLock)
-│       └── bottom.ts         # Toggle terminal panel to bottom (Alt+E)
+│       ├── shared.ts         # Terminal state management
+│       ├── side-panel.ts     # Left/Right toggle
+│       └── bottom-panel.ts   # Bottom toggle
 └── notifications/
-    ├── extension-checker.ts  # Checks dependencies (F1-Quick Switch, GitLab) and installs if missing
-    └── smart-checker-webview.ts # Checks and installs webview extensions (Compare Code)
+    ├── info.ts               # Standard alerts
+    └── whith-buttons.ts      # Actionable notifications
 ```
 
-## How to Add an AI Command
-1. Add entry in `src/keymaps/ai/utils.ts` → `AI_COMMANDS` (action → per-editor command mapping)
-2. Add `KEYMAP_CONFIG` entry + `command` in `package.json`
-3. Add `keybinding` in `package.json`
+## AI Command Logic
+1. `configs.ts` defines `AI_COMMANDS` (mapping internal actions to editor-specific commands).
+2. `controller.ts` detects the editor type and executes the corresponding native command.
 
 ## Required External Extensions
 | Extension | ID | Shortcut |
@@ -45,12 +40,3 @@ src/
 | F1-Quick Switch | `bastndev.f1` | `Ctrl+4` |
 | GitLab | `bastndev.atm` | `Ctrl+Q` |
 | Compare Code | `bastndev.compare-code` | `Shift+Alt+\` |
-
-## Active Managers
-All instantiated in `activate()` and disposed in `deactivate()`:
-- `AICommandsManager` — multi-editor AI commands (detect + fallback)
-- `AIToggleManager` — toggle AI suggestions
-- `TerminalManager` — toggle side panel
-- `BottomTerminalManager` — toggle bottom panel
-- `ExtensionChecker` — check/install dependencies
-- `SmartWebviewExtension` — check/install external webviews
