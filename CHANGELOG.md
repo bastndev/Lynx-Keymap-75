@@ -33,6 +33,11 @@ Following semantic versioning principles for consistent and predictable releases
 ---
 ## [2.0.1] - 2026-05-04
 
+### Better
+-  README.md multy - language support
+-  CHANGELOG.md multy - repporting
+-  CODE_OF_CONDUCT.md - more simple
+-  CODE_OF_CONDUCT.md - more simple
 ---
 ## [2.0.1] - 2026-05-04
 
