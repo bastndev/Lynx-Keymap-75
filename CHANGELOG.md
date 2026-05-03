@@ -31,7 +31,10 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
-## [1.6.0] - 2026-05-04
+## [2.0.1] - 2026-05-04
+
+---
+## [2.0.1] - 2026-05-04
 
 ### Added
 - **AI Orchestrator**: Integrated robust support for multiple editors via terminal with enhanced detection and execution logic.
