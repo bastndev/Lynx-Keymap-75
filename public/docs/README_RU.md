@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
@@ -17,7 +18,6 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
 </p>
 
@@ -85,7 +85,7 @@
 | Развернуть / Свернуть панель          | `⌘ + Esc`               | `Ctrl + Esc`                 |
 | Переключить панель                    | `Page Down`             | `Page Down`                  |
 | -                                     | -                       | -                            |
-| **Умное закрытие** — ИИ-чат или Терм. | `⌘ + CapsLock`         | `Ctrl + CapsLock`            |
+| **Умное закрытие** — ИИ-чат или Терм. | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |
 | Создать новую сессию ИИ               | `⌥ + A`                 | `Alt + A`                    |
 | Выбрать модель ИИ                     | `⌥ + S`                 | `Alt + S`                    |
 | Выбрать код для ИИ                    | `⌥ + D`                 | `Alt + D`                    |
@@ -197,9 +197,9 @@ ext install bastndev.lynx-keymap-75
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _Создатель & Сопровождающий_                      |
+|                       _Создатель & Сопровождающий_                        |
 
-- 🔴 **[Youtube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Код, ПО и инсайты по разработке.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Код, ПО и инсайты по разработке.
 - 🌱 **[IG](https://instagram.com/gohitx)** : **`новое`** – Превью проектов & обновления.
 - 🐦 **[X](https://twitter.com/gohitx)** : Вопросы и обсуждения.
 
@@ -211,11 +211,11 @@ ext install bastndev.lynx-keymap-75
   Дополнительные расширения 🧩
 </h2>
 
-| ㅤㅤ Расширение                                                                                                                                                                                     | < Название/>                                                   | Описание                                                                                                                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ㅤㅤ Расширение                                                                                                                                                                                     | < Название/>                                                   | Описание                                                                                                                                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Стандартизирует сочетания клавиш во всех редакторах кода, обеспечивая мгновенный доступ к любой функции с помощью одной комбинации клавиш — ускоряя ваш рабочий процесс и улучшая опыт разработки. **`Если у вас обычная клавиатура, лучше скачайте этот.`** |
-| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Универсальный набор инструментов 👻, который выводит ваш рабочий процесс на новый уровень с Error Lens, Git Blame, защитой переменных окружения и снимками кода во всех основных редакторах.                        |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Профессиональное расширение с шестью темами: Dark, Light, Night, Ghibli, Coffee и Kiro — со встроенными иконками. Каждая тема оптимизирована для обеспечения более приятного визуального опыта.                    |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Универсальный набор инструментов 👻, который выводит ваш рабочий процесс на новый уровень с Error Lens, Git Blame, защитой переменных окружения и снимками кода во всех основных редакторах.                                                                 |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Профессиональное расширение с шестью темами: Dark, Light, Night, Ghibli, Coffee и Kiro — со встроенными иконками. Каждая тема оптимизирована для обеспечения более приятного визуального опыта.                                                              |
 
 <br>
 

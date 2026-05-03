@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
@@ -17,8 +18,7 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a><span>...</span>
 </p>
 
 <br>
@@ -47,55 +47,55 @@
 
 <br>
 
-| Lệnh                                  | 🍎 macOS                | 🟦 Windows / 🐧 Linux        |
-| :------------------------------------ | :---------------------- | :--------------------------- |
-| Mở Explorer                           | `⌘ + 1`                 | `Ctrl + 1`                   |
-| Mở Quản lý mã nguồn                   | `⌘ + 2`                 | `Ctrl + 2`                   |
-| Mở Tiện ích mở rộng                   | `⌘ + 3`                 | `Ctrl + 3`                   |
-| Mở F1-Chuyển nhanh                    | `⌘ + 4`                 | `Ctrl + 4`                   |
-| Ẩn/Hiện thanh bên                     | `⌘ + Tab`               | `Ctrl + Tab`                 |
-| Mở nhanh tập tin                      | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |
-| Đi đến Dòng                           | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |
-| Tập trung vào Nhóm Editor đầu tiên    | `⌥ + Q`                 | `Alt + Q`                    |
-| -                                     | -                       | -                            |
-| Tập tin mới                           | `⌥ + X`                 | `Alt + X`                    |
-| Thư mục mới                           | `⌥ + C`                 | `Alt + C`                    |
-| Bật/Tắt tự động xuống dòng            | `⌥ + Z`                 | `Alt + Z`                    |
-| Mở rộng vùng chọn dòng                | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |
-| Sao chép dòng lên trên                | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |
-| Sao chép dòng xuống dưới              | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |
-| Chèn con trỏ lên trên                 | `⌘ + ↑`                 | `Ctrl + ↑`                   |
-| Chèn con trỏ xuống dưới               | `⌘ + ↓`                 | `Ctrl + ↓`                   |
-| Xóa từ bên trái                       | `⌘ + Backspace`         | `Ctrl + Backspace`           |
-| Đóng Dự án                            | `⌘ + Delete`            | `Ctrl + Delete`              |
-| -                                     | -                       | -                            |
-| Định dạng Tài liệu                    | `⌥ + F`                 | `Alt + F`                    |
-| Định dạng Vùng chọn                   | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |
-| Tổ chức Imports                       | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |
-| Chú thích Dòng                        | `⌘ + /`                 | `Ctrl + /`                   |
-| Chú thích Khối                        | `⌥ + /`                 | `Alt + /`                    |
-| -                                     | -                       | -                            |
-| Terminal Dưới (bật/tắt)               | `⌥ + E`                 | `Alt + E`                    |
-| Terminal Trái/Phải (bật/tắt)          | `⌥ + CapsLock`          | `Alt + CapsLock`             |
-| Mở nhanh Terminal                     | `⌥ + W`                 | `Alt + W`                    |
-| Terminal mới                          | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |
-| Đóng Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |
-| Terminal — Xóa Dòng                   | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |
-| Terminal — Hoàn thành Từ              | `⌥ + ,`                 | `Alt + ,`                    |
-| Phóng to / Thu nhỏ Bảng điều khiển    | `⌘ + Esc`               | `Ctrl + Esc`                 |
-| Bật/Tắt Bảng điều khiển               | `Page Down`             | `Page Down`                  |
-| -                                     | -                       | -                            |
-| **Đóng Thông minh** — Chat AI hoặc Terminal | `⌘ + CapsLock`    | `Ctrl + CapsLock`            |
-| Tạo Phiên bản AI mới                  | `⌥ + A`                 | `Alt + A`                    |
-| Chọn Mô hình AI                       | `⌥ + S`                 | `Alt + S`                    |
-| AI Chọn Mã                            | `⌥ + D`                 | `Alt + D`                    |
-| -                                     | -                       | -                            |
-| Bật/Tắt Chế độ Tác nhân AI            | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |
-| Hiển thị Lịch sử Chat AI              | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |
-| Bật/Tắt Đề xuất AI                    | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |
-| -                                     | -                       | -                            |
-| Hủy Chat Nội tuyến                    | `⌥ + Return`            | `Alt + Enter`                |
-| Phóng to / Thu nhỏ Thanh phụ          | `⇧ + Esc`               | `Shift + Esc`                |
+| Lệnh                                        | 🍎 macOS                | 🟦 Windows / 🐧 Linux        |
+| :------------------------------------------ | :---------------------- | :--------------------------- |
+| Mở Explorer                                 | `⌘ + 1`                 | `Ctrl + 1`                   |
+| Mở Quản lý mã nguồn                         | `⌘ + 2`                 | `Ctrl + 2`                   |
+| Mở Tiện ích mở rộng                         | `⌘ + 3`                 | `Ctrl + 3`                   |
+| Mở F1-Chuyển nhanh                          | `⌘ + 4`                 | `Ctrl + 4`                   |
+| Ẩn/Hiện thanh bên                           | `⌘ + Tab`               | `Ctrl + Tab`                 |
+| Mở nhanh tập tin                            | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |
+| Đi đến Dòng                                 | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |
+| Tập trung vào Nhóm Editor đầu tiên          | `⌥ + Q`                 | `Alt + Q`                    |
+| -                                           | -                       | -                            |
+| Tập tin mới                                 | `⌥ + X`                 | `Alt + X`                    |
+| Thư mục mới                                 | `⌥ + C`                 | `Alt + C`                    |
+| Bật/Tắt tự động xuống dòng                  | `⌥ + Z`                 | `Alt + Z`                    |
+| Mở rộng vùng chọn dòng                      | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |
+| Sao chép dòng lên trên                      | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |
+| Sao chép dòng xuống dưới                    | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |
+| Chèn con trỏ lên trên                       | `⌘ + ↑`                 | `Ctrl + ↑`                   |
+| Chèn con trỏ xuống dưới                     | `⌘ + ↓`                 | `Ctrl + ↓`                   |
+| Xóa từ bên trái                             | `⌘ + Backspace`         | `Ctrl + Backspace`           |
+| Đóng Dự án                                  | `⌘ + Delete`            | `Ctrl + Delete`              |
+| -                                           | -                       | -                            |
+| Định dạng Tài liệu                          | `⌥ + F`                 | `Alt + F`                    |
+| Định dạng Vùng chọn                         | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |
+| Tổ chức Imports                             | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |
+| Chú thích Dòng                              | `⌘ + /`                 | `Ctrl + /`                   |
+| Chú thích Khối                              | `⌥ + /`                 | `Alt + /`                    |
+| -                                           | -                       | -                            |
+| Terminal Dưới (bật/tắt)                     | `⌥ + E`                 | `Alt + E`                    |
+| Terminal Trái/Phải (bật/tắt)                | `⌥ + CapsLock`          | `Alt + CapsLock`             |
+| Mở nhanh Terminal                           | `⌥ + W`                 | `Alt + W`                    |
+| Terminal mới                                | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |
+| Đóng Terminal                               | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |
+| Terminal — Xóa Dòng                         | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |
+| Terminal — Hoàn thành Từ                    | `⌥ + ,`                 | `Alt + ,`                    |
+| Phóng to / Thu nhỏ Bảng điều khiển          | `⌘ + Esc`               | `Ctrl + Esc`                 |
+| Bật/Tắt Bảng điều khiển                     | `Page Down`             | `Page Down`                  |
+| -                                           | -                       | -                            |
+| **Đóng Thông minh** — Chat AI hoặc Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |
+| Tạo Phiên bản AI mới                        | `⌥ + A`                 | `Alt + A`                    |
+| Chọn Mô hình AI                             | `⌥ + S`                 | `Alt + S`                    |
+| AI Chọn Mã                                  | `⌥ + D`                 | `Alt + D`                    |
+| -                                           | -                       | -                            |
+| Bật/Tắt Chế độ Tác nhân AI                  | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |
+| Hiển thị Lịch sử Chat AI                    | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |
+| Bật/Tắt Đề xuất AI                          | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |
+| -                                           | -                       | -                            |
+| Hủy Chat Nội tuyến                          | `⌥ + Return`            | `Alt + Enter`                |
+| Phóng to / Thu nhỏ Thanh phụ                | `⇧ + Esc`               | `Shift + Esc`                |
 
 > **Đóng Thông minh** (`Ctrl + CapsLock`) nhận biết ngữ cảnh:
 >
@@ -120,25 +120,25 @@
 
 ## 🛠️ Cài đặt & Cửa sổ
 
-| Lệnh                  | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
-| :-------------------- | :-------------- | :-------------------- |
-| Mở Cài đặt (UI)       | `⌘ + J`         | `Ctrl + J`            |
-| Cài đặt (JSON)        | `⌥ + J`         | `Alt + J`             |
-| Chọn Chủ đề           | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
-| Tải lại Cửa sổ        | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| Phóng to              | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| Thu nhỏ               | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
-| Xem trước Markdown    | `Page Up`       | `Page Up`             |
+| Lệnh               | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
+| :----------------- | :-------------- | :-------------------- |
+| Mở Cài đặt (UI)    | `⌘ + J`         | `Ctrl + J`            |
+| Cài đặt (JSON)     | `⌥ + J`         | `Alt + J`             |
+| Chọn Chủ đề        | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
+| Tải lại Cửa sổ     | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
+| Phóng to           | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
+| Thu nhỏ            | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
+| Xem trước Markdown | `Page Up`       | `Page Up`             |
 
 ---
 
 ## 🐛 Gỡ lỗi
 
-| Lệnh              | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :---------------- | :----------- | :-------------------- |
-| Bắt đầu Gỡ lỗi    | `Insert`     | `Insert`              |
-| Khởi động lại     | `⌥ + Insert` | `Alt + Insert`        |
-| Dừng Gỡ lỗi       | `⌘ + Insert` | `Ctrl + Insert`       |
+| Lệnh           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :------------- | :----------- | :-------------------- |
+| Bắt đầu Gỡ lỗi | `Insert`     | `Insert`              |
+| Khởi động lại  | `⌥ + Insert` | `Alt + Insert`        |
+| Dừng Gỡ lỗi    | `⌘ + Insert` | `Ctrl + Insert`       |
 
 ---
 
@@ -197,9 +197,9 @@ ext install bastndev.lynx-keymap-75
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _Người tạo & Bảo trì_                             |
+|                           _Người tạo & Bảo trì_                           |
 
-- 🔴 **[Youtube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, phần mềm và thông tin phát triển.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, phần mềm và thông tin phát triển.
 - 🌱 **[IG](https://instagram.com/gohitx)** : **`mới`** – Xem trước dự án & cập nhật cuộc sống.
 - 🐦 **[X](https://twitter.com/gohitx)** : Câu hỏi và thảo luận.
 
@@ -211,11 +211,11 @@ ext install bastndev.lynx-keymap-75
   Các tiện ích bổ sung 🧩
 </h2>
 
-| ㅤㅤ Tiện ích                                                                                                                                                                                       | < Tên/>                                                        | Mô tả                                                                                                                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ㅤㅤ Tiện ích                                                                                                                                                                                       | < Tên/>                                                        | Mô tả                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Tiêu chuẩn hóa phím tắt trên tất cả các trình soạn thảo mã, giúp bạn truy cập tức thì vào bất kỳ chức năng nào bằng một tổ hợp phím duy nhất — thúc đẩy quy trình làm việc và trải nghiệm phát triển của bạn. **`Nếu bạn có bàn phím bình thường, tốt hơn nên tải cái này.`** |
-| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Bộ công cụ tất cả trong một 👻 giúp tăng cường quy trình làm việc với các tính năng thiết yếu như Error Lens, Git Blame, bảo vệ Env và chụp ảnh mã trong các trình soạn thảo lớn.                              |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Tiện ích chuyên nghiệp với sáu chủ đề: Dark, Light, Night, Ghibli, Coffee và Kiro — có biểu tượng tích hợp. Mỗi chủ đề được tối ưu hóa để mang lại trải nghiệm thị giác dễ chịu hơn.                          |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Bộ công cụ tất cả trong một 👻 giúp tăng cường quy trình làm việc với các tính năng thiết yếu như Error Lens, Git Blame, bảo vệ Env và chụp ảnh mã trong các trình soạn thảo lớn.                                                                                             |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Tiện ích chuyên nghiệp với sáu chủ đề: Dark, Light, Night, Ghibli, Coffee và Kiro — có biểu tượng tích hợp. Mỗi chủ đề được tối ưu hóa để mang lại trải nghiệm thị giác dễ chịu hơn.                                                                                          |
 
 <br>
 
