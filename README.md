@@ -15,6 +15,16 @@
 
 ---
 
+## 🧪 Experimental — 🄽🄴🅆
+
+| Command             | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
+| :------------------ | :--------------- | :-------------------- |
+| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock`      |
+
+---
+
+<br>
+
 | Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        |
 | :------------------------------------ | :---------------------- | :--------------------------- |
 | Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |
@@ -110,13 +120,7 @@
 
 ---
 
-## 🧪 Experimental — 🄽🄴🅆
-
-| Command             | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------ | :--------------- | :-------------------- |
-| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock`      |
-
----
+<br>
 
 > [!IMPORTANT]
 >
