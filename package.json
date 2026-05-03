@@ -1,7 +1,7 @@
 {
   "name": "lynx-keymap-75",
-  "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & Antigravity... 雨",
+  "displayName": "%displayName%",
+  "description": "%description%",
   "version": "2.0.0",
   "publisher": "bastndev",
   "license": "MIT",
@@ -10,15 +10,18 @@
   },
   "categories": ["Keymaps","Other"],
   "keywords": [
-    "keybindings",
-    "keymap",
+    "AI Orchestrator",
     "75% keyboard",
-    "shortcuts",
     "productivity",
+    "antigravity",
+    "keybindings",
+    "shortcuts",
     "windows",
+    "keymap",
     "linux",
     "macos",
-    "2025"
+    "2026",
+    "ai"
   ],
   "icon": "icon.png",
   "galleryBanner": {
@@ -35,7 +38,7 @@
   },
   "author": {
     "name": "Gohit Bastian", 
-    "email": "hello@gohit.xyz",
+    "email": "bastndev@gohit.xyz",
     "url": "https://www.gohit.xyz/me"
   },
   "sponsor": {
@@ -341,11 +344,11 @@
       {
         "key"    : "alt+capslock",
         "mac"    : "alt+capslock",
-        "command": "lynx-keymap.toggleTerminalLeft"
+        "command": "lynx-keymap.toggleTerminalLeftAndRight"
       },{
         "key"    : "ctrl+capslock",
         "mac"    : "cmd+capslock",
-        "command": "lynx-keymap.openAndCloseAIChat"
+        "command": "lynx-keymap.openAndCloseAIChatAndTerminal"
       },{
         "key"    : "ctrl+tab",
         "mac"    : "cmd+tab",
@@ -428,6 +431,9 @@
         "command": "lynx-keymap.openAndCloseAIChat",
         "title"  : "Open and Close AI Chat"
       },{
+        "command": "lynx-keymap.openAndCloseAIChatAndTerminal",
+        "title"  : "Smart Close: AI Chat or Terminal"
+      },{
         "command": "lynx-keymap.createNewAISession",
         "title"  : "Create New AI Session"
       },{
@@ -448,8 +454,8 @@
       },
 
       {
-        "command": "lynx-keymap.toggleTerminalLeft",
-        "title"  : "Toggle Terminal"
+        "command": "lynx-keymap.toggleTerminalLeftAndRight",
+        "title"  : "Toggle Terminal Left and Right"
       },{
         "command": "lynx-keymap.toggleTerminalBottom",
         "title"  : "Toggle Terminal Bottom"
