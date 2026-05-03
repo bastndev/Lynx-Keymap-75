@@ -1,7 +1,7 @@
 {
   "name": "lynx-keymap-75",
   "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Available now: VSCode • Cursor • Windsurf • Trae.ai • Kiro & Antigravity... 雨",
+  "description": "Optimized keymap & shortcuts for 75% keyboards. Smart AI & Terminal toggles across VSCode, Cursor, Windsurf, Trae.ai & Kiro.",
   "version": "2.0.0",
   "publisher": "bastndev",
   "license": "MIT",
@@ -11,14 +11,16 @@
   "categories": ["Keymaps","Other"],
   "keywords": [
     "keybindings",
-    "keymap",
     "75% keyboard",
-    "shortcuts",
     "productivity",
+    "antigravity",
+    "shortcuts",
     "windows",
+    "keymap",
     "linux",
     "macos",
-    "2025"
+    "2026",
+    "ai"
   ],
   "icon": "icon.png",
   "galleryBanner": {
@@ -35,7 +37,7 @@
   },
   "author": {
     "name": "Gohit Bastian", 
-    "email": "hello@gohit.xyz",
+    "email": "bastndev@gohit.xyz",
     "url": "https://www.gohit.xyz/me"
   },
   "sponsor": {
