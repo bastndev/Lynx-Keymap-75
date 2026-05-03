@@ -199,7 +199,7 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                          _Người tạo & Bảo trì_                             |
 
-- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : Code, phần mềm và thông tin phát triển.
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, phần mềm và thông tin phát triển.
 - 🌱 **[IG](https://instagram.com/gohitx)** : **`mới`** – Xem trước dự án & cập nhật cuộc sống.
 - 🐦 **[X](https://twitter.com/gohitx)** : Câu hỏi và thảo luận.
 
