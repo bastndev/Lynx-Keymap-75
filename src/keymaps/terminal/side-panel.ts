@@ -56,6 +56,31 @@ export class TerminalManager extends BaseTerminalManager {
       }
     );
 
-    this.register(context, toggleCmd);
+    // ─── Smart Close: Terminal lateral OR AI Chat ──────────────────────────────
+    // ctrl+capslock — if terminal is occupying the side panel, close it;
+    // otherwise fall through to the normal AI Chat toggle.
+    const smartCloseCmd = vscode.commands.registerCommand(
+      'lynx-keymap.openAndCloseAIChatAndTerminal',
+      async () => {
+        try {
+          const current = context.workspaceState.get<string>(STORAGE_KEYS.PANEL_POSITION);
+
+          if (current === PANEL_POSITIONS.LEFT) {
+            // Terminal is in the side → close it and restore settings
+            await restoreOriginalSettings(context);
+            await vscode.commands.executeCommand('workbench.action.closePanel');
+            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined);
+          } else {
+            // AI Chat is showing (or nothing is open) → delegate to AI Chat toggle
+            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+          }
+        } catch (error) {
+          console.error(`${LOG_PREFIX} Smart close failed:`, error);
+          vscode.window.showErrorMessage(`Smart close failed: ${error}`);
+        }
+      }
+    );
+
+    this.register(context, toggleCmd, smartCloseCmd);
   }
 }

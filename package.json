@@ -345,7 +345,7 @@
       },{
         "key"    : "ctrl+capslock",
         "mac"    : "cmd+capslock",
-        "command": "lynx-keymap.openAndCloseAIChat"
+        "command": "lynx-keymap.openAndCloseAIChatAndTerminal"
       },{
         "key"    : "ctrl+tab",
         "mac"    : "cmd+tab",
@@ -427,6 +427,9 @@
       {
         "command": "lynx-keymap.openAndCloseAIChat",
         "title"  : "Open and Close AI Chat"
+      },{
+        "command": "lynx-keymap.openAndCloseAIChatAndTerminal",
+        "title"  : "Smart Close: AI Chat or Terminal"
       },{
         "command": "lynx-keymap.createNewAISession",
         "title"  : "Create New AI Session"
