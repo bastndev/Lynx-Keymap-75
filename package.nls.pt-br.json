@@ -1,4 +1,7 @@
 {
   "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Mapeamento e atalhos otimizados para teclados 75%. Alternadores inteligentes de IA e Terminal no VSCode, Cursor, Windsurf, Trae.ai e Kiro."
+  "description": "Mapeamento e atalhos otimizados para teclados 75%. Alternadores inteligentes de IA e Terminal no VSCode, Cursor, Windsurf, Trae.ai e Kiro.",
+
+  "lynx.notification.ai.enabled": "({0}) Sugestões de IA: ATIVADAS ✅",
+  "lynx.notification.ai.disabled": "({0}) Sugestões de IA: DESATIVADAS ❌"
 }

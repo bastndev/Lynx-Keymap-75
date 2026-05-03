@@ -1,4 +1,7 @@
 {
   "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Optimierte Tastaturbelegung und Tastenkombinationen für 75%-Tastaturen. Intelligente KI- und Terminal-Umschalter in VSCode, Cursor, Windsurf, Trae.ai & Kiro."
+  "description": "Optimierte Tastaturbelegung und Tastenkombinationen für 75%-Tastaturen. Intelligente KI- und Terminal-Umschalter in VSCode, Cursor, Windsurf, Trae.ai & Kiro.",
+
+  "lynx.notification.ai.enabled": "({0}) KI-Vorschläge: AKTIVIERT ✅",
+  "lynx.notification.ai.disabled": "({0}) KI-Vorschläge: DEAKTIVIERT ❌"
 }

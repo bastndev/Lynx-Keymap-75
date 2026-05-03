@@ -1,4 +1,7 @@
 {
   "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Оптимизированная раскладка и сочетания клавиш для 75% клавиатур. Умные переключатели ИИ и Терминала в VSCode, Cursor, Windsurf, Trae.ai и Kiro."
+  "description": "Оптимизированная раскладка и сочетания клавиш для 75% клавиатур. Умные переключатели ИИ и Терминала в VSCode, Cursor, Windsurf, Trae.ai и Kiro.",
+
+  "lynx.notification.ai.enabled": "({0}) Подсказки ИИ: ВКЛЮЧЕНЫ ✅",
+  "lynx.notification.ai.disabled": "({0}) Подсказки ИИ: ВЫКЛЮЧЕНЫ ❌"
 }

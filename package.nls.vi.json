@@ -1,4 +1,7 @@
 {
   "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Sơ đồ phím & phím tắt được tối ưu hóa cho bàn phím 75%. Chuyển đổi thông minh cho AI & Terminal trên VSCode, Cursor, Windsurf, Trae.ai & Kiro."
+  "description": "Sơ đồ phím & phím tắt được tối ưu hóa cho bàn phím 75%. Chuyển đổi thông minh cho AI & Terminal trên VSCode, Cursor, Windsurf, Trae.ai & Kiro.",
+
+  "lynx.notification.ai.enabled": "({0}) Đề xuất AI: ĐÃ BẬT ✅",
+  "lynx.notification.ai.disabled": "({0}) Đề xuất AI: ĐÃ TẮT ❌"
 }

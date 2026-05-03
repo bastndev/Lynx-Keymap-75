@@ -1,4 +1,7 @@
 {
   "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "为75%键盘优化的按键映射和快捷键。在VSCode、Cursor、Windsurf、Trae.ai和Kiro中支持智能AI和终端切换。"
+  "description": "为75%键盘优化的按键映射和快捷键。在VSCode、Cursor、Windsurf、Trae.ai和Kiro中支持智能AI和终端切换。",
+
+  "lynx.notification.ai.enabled": "({0}) AI 建议: 已启用 ✅",
+  "lynx.notification.ai.disabled": "({0}) AI 建议: 已禁用 ❌"
 }

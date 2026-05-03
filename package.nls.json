@@ -1,4 +1,7 @@
 {
   "displayName": "Lynx Keymap 75% Keyboard",
-  "description": "Optimized keymap & shortcuts for 75% keyboards. Smart AI & Terminal toggles across VSCode, Cursor, Windsurf, Trae.ai & Kiro."
+  "description": "Optimized keymap & shortcuts for 75% keyboards. Smart AI & Terminal toggles across VSCode, Cursor, Windsurf, Trae.ai & Kiro.",
+
+  "lynx.notification.ai.enabled": "({0}) AI Suggestions: ENABLED ✅",
+  "lynx.notification.ai.disabled": "({0}) AI Suggestions: DISABLED ❌"
 }
