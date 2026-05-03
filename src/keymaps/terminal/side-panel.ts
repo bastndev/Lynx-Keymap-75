@@ -19,10 +19,14 @@ export class TerminalManager extends BaseTerminalManager {
           const current = context.workspaceState.get<string>(STORAGE_KEYS.PANEL_POSITION);
 
           if (current === PANEL_POSITIONS.LEFT) {
-            await restoreOriginalSettings(context);
+            // ── Close path ── restore settings & state in parallel, then close UI
+            await Promise.all([
+              restoreOriginalSettings(context),
+              context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined),
+            ]);
             await vscode.commands.executeCommand('workbench.action.closePanel');
             await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat'); // re-open AI when closing terminal
-            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined);
+
           } else {
             if (current !== undefined) {
               await vscode.commands.executeCommand('workbench.action.closePanel');
@@ -33,21 +37,25 @@ export class TerminalManager extends BaseTerminalManager {
 
             // Explicit close — safe even if AI is already closed (no toggle side-effects)
             await vscode.commands.executeCommand('workbench.action.closeAuxiliaryBar');
-            await saveOriginalSettings(context);
-            await applyTerminalSettings(false, false);
 
             const sideBarLocation = vscode.workspace
               .getConfiguration('workbench')
               .get<string>('sideBar.location', PANEL_POSITIONS.LEFT);
 
-            if (sideBarLocation === PANEL_POSITIONS.LEFT) {
-              await vscode.commands.executeCommand('workbench.action.positionPanelRight');
-            } else {
-              await vscode.commands.executeCommand('workbench.action.positionPanelLeft');
-            }
+            // ── Open path ── save settings, apply & persist state in parallel
+            await Promise.all([
+              saveOriginalSettings(context),
+              applyTerminalSettings(false, false),
+              context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, PANEL_POSITIONS.LEFT),
+            ]);
+
+            await vscode.commands.executeCommand(
+              sideBarLocation === PANEL_POSITIONS.LEFT
+                ? 'workbench.action.positionPanelRight'
+                : 'workbench.action.positionPanelLeft'
+            );
 
             await vscode.commands.executeCommand('workbench.action.terminal.focus');
-            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, PANEL_POSITIONS.LEFT);
           }
         } catch (error) {
           console.error(`${LOG_PREFIX} Terminal left toggle failed:`, error);
@@ -67,9 +75,11 @@ export class TerminalManager extends BaseTerminalManager {
 
           if (current === PANEL_POSITIONS.LEFT) {
             // Terminal is in the side → close it and restore settings
-            await restoreOriginalSettings(context);
+            await Promise.all([
+              restoreOriginalSettings(context),
+              context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined),
+            ]);
             await vscode.commands.executeCommand('workbench.action.closePanel');
-            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined);
           } else {
             // AI Chat is showing (or nothing is open) → delegate to AI Chat toggle
             await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
