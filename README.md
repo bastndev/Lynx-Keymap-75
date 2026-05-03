@@ -170,7 +170,7 @@
 
 ## Installation
 
-Launch _Quick Open_
+### Method 1 — Quick Open
 
 - <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
 - <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
