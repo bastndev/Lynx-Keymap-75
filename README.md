@@ -168,7 +168,7 @@
 
 ---
 
-## Installation
+## ➤ Installation
 
 ### Method 1 — Quick Open
 
@@ -181,6 +181,7 @@ Paste the following command and press `Enter`:
 ```
 ext install bastndev.lynx-keymap-75
 ```
+
 ### Method 2 — Extensions View
 
 1. Open Extensions (`Ctrl+Shift+X` / `⌘+Shift+X`)
@@ -189,7 +190,7 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## About Me
+## ➤ About Me
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
@@ -201,6 +202,8 @@ ext install bastndev.lynx-keymap-75
 - 🐦 **[X](https://twitter.com/gohitx)** : For questions and discussions.
 
 <br>
+
+---
 
 <h2 align="center">
   Complementary  Extensions 🧩 
