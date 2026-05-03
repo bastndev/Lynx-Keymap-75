@@ -19,7 +19,7 @@
 
 <br>
 
-## Lynx Keymap 75% — Standard Keybindings
+<h2 align="center">Lynx Keymap 75% — <b>Standard Keybindings</b></h2>
 
 | Command                           | 🍎 macOS                | 🟦 Windows                   | 🐧 Linux                     |
 | :-------------------------------- | :---------------------- | :--------------------------- | :--------------------------- |
@@ -128,9 +128,12 @@
 > ];
 > ```
 
+<br>
+
+---
 ## Installation
 
-Launch _Quick Open_
+### Method 1: Quick Open
 
 - <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
 - <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
@@ -141,6 +144,11 @@ Paste the following command and press `Enter`:
 ```
 ext install bastndev.lynx-keymap-75
 ```
+### Method 2: Extensions View
+
+1. Open Extensions (`Ctrl+Shift+X` or `⌘+Shift+X`)
+2. Search for **"Lynx Keymap 75%"**
+3. Click **Install**
 
 ## About Me
 
