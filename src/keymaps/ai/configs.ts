@@ -21,6 +21,18 @@ export const EDITOR_SIGNATURES: Record<EditorType, string[]> = {
   [EditorType.UNKNOWN]:     []
 };
 
+// ─── Primary Setting per Editor (for toggle state source of truth) ────────────
+export const EDITOR_PRIMARY_SETTING: Record<EditorType, string> = {
+  [EditorType.ANTIGRAVITY]: 'antigravity.tab.enabled',
+  [EditorType.VSCODE]:      'editor.inlineSuggest.enabled',
+  [EditorType.KIRO]:        'kiro.completions.enabled',
+  [EditorType.CURSOR]:      'cursor.completions.enabled',
+  [EditorType.WINDSURF]:    'editor.inlineSuggest.enabled',
+  [EditorType.TRAE_AI]:     'trae.autocomplete.enabled',
+  [EditorType.FIREBASE]:    'cloudcode.duetAI.completions.enabled',
+  [EditorType.UNKNOWN]:     'editor.inlineSuggest.enabled',
+};
+
 // ─── Action Keys ─────────────────────────────────────────────────────────────
 export type ActionKey =
   | 'generateAICommit'
@@ -29,7 +41,8 @@ export type ActionKey =
   | 'showAIHistory'
   | 'selectModels'
   | 'toggleAgentMode'
-  | 'selectCode';
+  | 'selectCode'
+  | 'toggleSuggestionAI';
 
 // ─── Commands by Action → Editor ─────────────────────────────────────────────
 export type EditorCommandMap = Partial<Record<EditorType, string>>;
@@ -47,7 +60,7 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.FIREBASE]: [no support]
   },
 
-  // MARK:[Shift+Tab]
+  // MARK:[ctrl+capslock]
   openAndCloseAIChat: {
     [EditorType.ANTIGRAVITY]: 'antigravity.openAgent',
     [EditorType.VSCODE]:      'workbench.action.chat.toggle',
@@ -111,6 +124,17 @@ export const AI_COMMANDS: Record<ActionKey, EditorCommandMap> = {
     // [EditorType.WINDSURF]: [no support]
     [EditorType.TRAE_AI]:     'workbench.action.icube.aiChatSidebar.showHistory',
     // [EditorType.FIREBASE]: [no support]
+  },
+
+  // MARK:[Shift+Alt+D] — per-editor toggle command (fired after settings update)
+  toggleSuggestionAI: {
+    // [EditorType.ANTIGRAVITY]: only settings, no extra command needed
+    [EditorType.VSCODE]:   'github.copilot.chat.completions.toggle',
+    [EditorType.CURSOR]:   'cursor.toggleCopilot',
+    // [EditorType.KIRO]:        only settings, no extra command needed
+    [EditorType.WINDSURF]: 'codeium.toggleEnable',
+    [EditorType.TRAE_AI]:  'trae.toggleAutocomplete',
+    [EditorType.FIREBASE]: 'cloudcode.duetAI.toggleInlineCompletion',
   },
 
 };

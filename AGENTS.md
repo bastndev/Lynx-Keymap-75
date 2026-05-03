@@ -1,66 +1,56 @@
 # Lynx Keymap 75% — Agent Notes
 
-## Build Commands
+## Commands
 | Task | Command |
 |------|---------|
-| Dev | `bun run compile` |
-| Prod | `bun run package` |
+| Build | `bun run compile` |
+| Package (prod) | `bun run package` |
 | Watch | `bun run watch` |
 | Typecheck | `bun run check-types` |
 | Lint | `bun run lint` |
-| Launch | F5 (VS Code) |
 
-> Bun only. Lockfile: `bun.lock`. No tests.
+- **Runtime:** Bun (`bun.lock`). No tests.
+- **Build:** esbuild → `src/extension.ts` → `dist/extension.js` (cjs, node, minified in prod). External: `vscode`.
 
-## Build
-- Entry: `src/extension.ts` → `dist/extension.js` (esbuild)
-- Format: cjs, platform: node
-- Externals: `vscode`, `NeteaseCloudMusicApi` (dead ref)
-- Flags: `--production` (minify), `--watch`
-- Publish: `vscode:prepublish` → `bun run package`
-
-## Structure
+## Actual Structure
 ```
 src/
-├── extension.ts         # Entry point
+├── extension.ts              # Entry point — registers all managers
 ├── utils/
-│   ├── constants.ts    # COMMAND_IDS, EXTENSION_DEPENDENCIES, STORAGE_KEYS
-│   └── timeout-manager.ts
+│   ├── constants.ts          # Command IDs, extension dependencies, storage keys
+│   └── timeout-manager.ts    # Timeout utility with limit and cleanup
 ├── keymaps/
+│   ├── index.ts              # Barrel export for all modules
 │   ├── ai/
-│   │   ├── ai-handler.ts  # Editor detection + fallback
-│   │   └── utils.ts       # KEYMAP_CONFIG source of truth
-│   ├── terminal/
-│   │   ├── shared.ts      # Save/restore terminal settings
-│   │   ├── left-right.ts # Toggle panel left/right
-│   │   └── bottom.ts     # Toggle panel to bottom
-│   └── plus/
-│       ├── markdown.ts      # Markdown word wrap (F1)
-│       └── disable-enable-ai.ts # Toggle AI suggestions (Shift+F1)
+│   │   ├── utils.ts          # EditorType enum, EDITOR_SIGNATURES, AI_COMMANDS, KEYMAP_CONFIG
+│   │   ├── ai-handler.ts     # Editor auto-detection (Antigravity→Windsurf→Cursor→Trae→Kiro→Firebase→VSCode) + fallback execution
+│   │   └── toggle-handler.ts # Toggle AI suggestions (Shift+Alt+D) per detected editor
+│   └── terminal/
+│       ├── shared.ts         # Save/restore terminal settings (tabs, labels)
+│       ├── left-right.ts     # Toggle terminal panel left/right (Alt+CapsLock)
+│       └── bottom.ts         # Toggle terminal panel to bottom (Alt+E)
 └── notifications/
-    ├── extension-checker.ts   # Guard: bastndev.f1, bastndev.atm
-    └── smart-checker-webview.ts # Guard: bastndev.compare-code
+    ├── extension-checker.ts  # Checks dependencies (F1-Quick Switch, GitLab) and installs if missing
+    └── smart-checker-webview.ts # Checks and installs webview extensions (Compare Code)
 ```
 
-## AI Commands
-1. Edit `src/keymaps/ai/utils.ts`: `EDITOR_SIGNATURES`, `AI_COMMANDS`, `ActionKey`, `KEYMAP_CONFIG`
-2. Add keybinding + command in `package.json`
-3. Auto-detect: Antigravity → Windsurf → Cursor → Trae → Kiro → Firebase → VSCode
+## How to Add an AI Command
+1. Add entry in `src/keymaps/ai/utils.ts` → `AI_COMMANDS` (action → per-editor command mapping)
+2. Add `KEYMAP_CONFIG` entry + `command` in `package.json`
+3. Add `keybinding` in `package.json`
 
-## Dependencies
-| Extension | Trigger |
-|-----------|----------|
-| bastndev.f1 (F1-Quick Switch) | `Ctrl+4` |
-| bastndev.atm (GitLab) | `Ctrl+Q` |
-| bastndev.compare-code (Compare Code) | `Shift+Alt+\` |
+## Required External Extensions
+| Extension | ID | Shortcut |
+|-----------|-----|----------|
+| F1-Quick Switch | `bastndev.f1` | `Ctrl+4` |
+| GitLab | `bastndev.atm` | `Ctrl+Q` |
+| Compare Code | `bastndev.compare-code` | `Shift+Alt+\` |
 
-Config: `src/utils/constants.ts` → `EXTENSION_DEPENDENCIES`, `WEBVIEW_EXTENSIONS`
-
-## Lint & Types
-- ESLint: flat config (`eslint.config.mjs`)
-- TypeScript: strict, `Node16`, ES2022, rootDir `src`
-
-## Publish
-- Version/publisher: `package.json`
-- Assets: `assets/`
-- `.vscodeignore`: minimal
+## Active Managers
+All instantiated in `activate()` and disposed in `deactivate()`:
+- `AICommandsManager` — multi-editor AI commands (detect + fallback)
+- `AIToggleManager` — toggle AI suggestions
+- `TerminalManager` — toggle side panel
+- `BottomTerminalManager` — toggle bottom panel
+- `ExtensionChecker` — check/install dependencies
+- `SmartWebviewExtension` — check/install external webviews

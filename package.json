@@ -6,7 +6,7 @@
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.75.0"
   },
   "categories": ["Keymaps","Other"],
   "keywords": [
@@ -20,7 +20,7 @@
     "macos",
     "2025"
   ],
-  "icon": "assets/icon.png",
+  "icon": "icon.png",
   "galleryBanner": {
     "color": "#0a0a0a",
     "theme": "dark"
@@ -41,31 +41,12 @@
   "sponsor": {
     "url": "https://github.com/sponsors/gohit.xyz"
   },
-  "scripts": {
-    "vscode:prepublish": "bun run package",
-    "compile": "bun esbuild.js",
-    "watch": "bun esbuild.js --watch",
-    "package": "bun esbuild.js --production",
-    "lint": "eslint .",
-    "check-types": "tsc --noEmit"
-  },
   
   "activationEvents": [
-    "onStartupFinished",
-
-    "onCommand:lynx-keymap.generateAICommit",
-    "onCommand:lynx-keymap.openAndCloseAIChat",
-    "onCommand:lynx-keymap.createNewAISession",
-    "onCommand:lynx-keymap.showAIHistory",
-    "onCommand:lynx-keymap.selectModels",
-    "onCommand:lynx-keymap.toggleTerminalLeft",
-    "onCommand:lynx-keymap.toggleTerminalBottom",
-
-    "onCommand:lynx-keymap.toggleAgentMode",
-    "onCommand:lynx-keymap.checkF1QuickSwitch",
-    "onCommand:lynx-keymap.checkCompareCode"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
+  
   "contributes": {
 "keybindings": [
         {
@@ -285,7 +266,7 @@
       {
         "key"    : "shift+alt+d",
         "mac"    : "shift+alt+d",
-        "command": "f1.toggleAISuggestions"
+        "command": "lynx.toggleSuggestionAI"
       },{
         "key"    : "shift+alt+s",
         "mac"    : "shift+alt+s",
@@ -389,7 +370,7 @@
         "command": "git.commit",
         "when"   : "scmProvider == git"
       },
-       
+      
       {
         "key"    : "alt+3",
         "mac"    : "alt+3",
@@ -420,9 +401,9 @@
       {
         "key"    : "alt+z",
         "mac"    : "alt+z",
-        "command": "f1.toggleMarkdownWrap"
+        "command": "editor.action.toggleWordWrap"
       },
-       
+      
       {
         "key"    : "ctrl+3",
         "mac"    : "cmd+3",
@@ -436,22 +417,14 @@
         "mac"    : "cmd+1",
         "command": "workbench.view.explorer"
       }
-    ]
-  },
-
-  "commands": [
-      {
-        "command": "lynx-keymap.toggleTerminalLeft",
-        "title"  : "Toggle Terminal"
-      },
+    ],
+    "commands": [
       {
         "command": "lynx-keymap.generateAICommit",
         "title"  : "Generate AI Commit Message"
       },
+
       {
-        "command": "lynx-keymap.selectCode",
-        "title"  : "AI Select Code"
-      },{
         "command": "lynx-keymap.openAndCloseAIChat",
         "title"  : "Open and Close AI Chat"
       },{
@@ -463,41 +436,41 @@
       },{
         "command": "lynx-keymap.selectModels",
         "title"  : "Select AI Model"
-      },
-
-      {
+      },{
         "command": "lynx-keymap.toggleAgentMode",
         "title"  : "Toggle AI Agent Mode"
-      },
-
-      {
-        "command": "f1.toggleMarkdownWrap",
-        "title"  : "Toggle Markdown Word Wrap"
-      },
-
-      {
-        "command": "f1.toggleAISuggestions",
+      },{
+        "command": "lynx.toggleSuggestionAI",
         "title"  : "Toggle AI Suggestions"
+      },{
+        "command": "lynx-keymap.selectCode",
+        "title"  : "AI Select Code"
       },
 
       {
-      "command": "lynx-keymap.checkF1QuickSwitch",
-      "title"  : "Check F1-QuickSwitch Extension and Execute"
+        "command": "lynx-keymap.toggleTerminalLeft",
+        "title"  : "Toggle Terminal"
       },{
-      "command": "lynx-keymap.checkGitLab",
-      "title"  : "Check GitLab Extension and Execute"
-      },{
-      "command": "lynx-keymap.checkCompareCode",
-      "title"  : "Check Compare Code Extension and Execute"
+        "command": "lynx-keymap.toggleTerminalBottom",
+        "title"  : "Toggle Terminal Bottom"
       }
-    ],
-    "devDependencies": {
-      "@eslint/js": "^9.21.0",
-      "@types/node": "^25.6.0",
-      "@types/vscode": "^1.74.0",
-      "esbuild": "^0.25.0",
-      "eslint": "^9.21.0",
-      "typescript": "^6.0.3",
-      "typescript-eslint": "^8.25.0"
-    }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "bun run package",
+    "compile": "bun esbuild.js",
+    "watch": "bun esbuild.js --watch",
+    "package": "bun esbuild.js --production",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^25.6.0",
+    "@types/vscode": "^1.74.0",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.21.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.25.0"
+  }
 }

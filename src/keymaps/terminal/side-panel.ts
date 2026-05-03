@@ -1,14 +1,15 @@
 import * as vscode from 'vscode';
-import { STORAGE_KEYS, LOG_PREFIX } from '../../utils/constants';
 import {
+  STORAGE_KEYS,
+  LOG_PREFIX,
+  PANEL_POSITIONS,
   saveOriginalSettings,
   restoreOriginalSettings,
   applyTerminalSettings,
-  PANEL_POSITIONS,
+  BaseTerminalManager,
 } from './shared';
 
-export class TerminalManager {
-  private disposables: vscode.Disposable[] = [];
+export class TerminalManager extends BaseTerminalManager {
 
   public registerCommands(context: vscode.ExtensionContext): void {
     const toggleCmd = vscode.commands.registerCommand(
@@ -20,7 +21,7 @@ export class TerminalManager {
           if (current === PANEL_POSITIONS.LEFT) {
             await restoreOriginalSettings(context);
             await vscode.commands.executeCommand('workbench.action.closePanel');
-            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat'); // re-open AI when closing terminal
             await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined);
           } else {
             if (current !== undefined) {
@@ -30,7 +31,8 @@ export class TerminalManager {
               }
             }
 
-            await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+            // Explicit close — safe even if AI is already closed (no toggle side-effects)
+            await vscode.commands.executeCommand('workbench.action.closeAuxiliaryBar');
             await saveOriginalSettings(context);
             await applyTerminalSettings(false, false);
 
@@ -54,14 +56,6 @@ export class TerminalManager {
       }
     );
 
-    this.disposables.push(toggleCmd);
-    context.subscriptions.push(toggleCmd);
-  }
-
-  public dispose(): void {
-    for (const d of this.disposables) {
-      d.dispose();
-    }
-    this.disposables = [];
+    this.register(context, toggleCmd);
   }
 }

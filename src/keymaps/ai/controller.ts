@@ -1,8 +1,9 @@
 import * as vscode from 'vscode';
 import {
   AI_COMMANDS, KEYMAP_CONFIG, EDITOR_SIGNATURES,
-  EditorType, ActionKey
-} from './utils';
+  EditorType, ActionKey, EDITOR_PRIMARY_SETTING
+} from './configs';
+import { notifyToggle } from '../../notifications/info';
 
 const LOG = '[lynx-keymap]';
 
@@ -36,7 +37,6 @@ export class AICommandsManager {
   public resetDetection(): void {
     this.detectedEditor   = null;
     this.allCommandsCache = null;
-    console.log(`${LOG} Detection cache cleared`);
   }
 
   public dispose(): void {
@@ -71,7 +71,6 @@ export class AICommandsManager {
 
       if (detected) {
         this.detectedEditor = editor;
-        console.log(`${LOG} Detected editor: ${editor}`);
         return editor;
       }
     }
@@ -97,8 +96,6 @@ export class AICommandsManager {
       // Primary failed → reset detection so next call re-detects
       console.warn(`${LOG} Primary command failed, resetting detection`);
       this.resetDetection();
-    } else {
-      console.log(`${LOG} No command mapped for ${editor} → ${actionKey}`);
     }
 
     // 2. Fallback: try all other editors in order
@@ -120,10 +117,8 @@ export class AICommandsManager {
   private async tryExecute(cmd: string, editor: EditorType | string): Promise<boolean> {
     try {
       await vscode.commands.executeCommand(cmd);
-      console.log(`${LOG} ✓ [${editor}] ${cmd}`);
       return true;
     } catch {
-      console.log(`${LOG} ✗ [${editor}] ${cmd}`);
       return false;
     }
   }
@@ -143,5 +138,76 @@ export class AICommandsManager {
       console.error(`${LOG} Failed to get commands:`, error);
       return this.allCommandsCache ?? [];
     }
+  }
+}
+
+// ─── AI Toggle Manager ────────────────────────────────────────────────────────
+// Reuses AICommandsManager.detectEditor() so both share the same 5-min cache.
+
+export class AIToggleManager {
+  private disposables: vscode.Disposable[] = [];
+
+  constructor(private readonly aiManager: AICommandsManager) {}
+
+  public registerCommands(context: vscode.ExtensionContext): void {
+    const toggleCmd = vscode.commands.registerCommand('lynx.toggleSuggestionAI', async () => {
+      await this.toggleAI(context);
+    });
+    this.disposables.push(toggleCmd);
+    context.subscriptions.push(toggleCmd);
+  }
+
+  private async toggleAI(context: vscode.ExtensionContext): Promise<void> {
+    const editor = await this.aiManager.detectEditor();
+
+    const storedState  = context.globalState.get<boolean>('lynx.suggestionsEnabled');
+    const config       = vscode.workspace.getConfiguration();
+    const currentState = storedState ?? config.get<boolean>(EDITOR_PRIMARY_SETTING[editor], true);
+    const newState     = !currentState;
+
+    await context.globalState.update('lynx.suggestionsEnabled', newState);
+    await this.applyAllSettings(newState);
+    await this.applyEditorCommands(editor, newState);
+
+    notifyToggle(editor, newState);
+  }
+
+  /** Updates all known AI suggestion settings across editors. Skips absent settings. */
+  private async applyAllSettings(newState: boolean): Promise<void> {
+    const config = vscode.workspace.getConfiguration();
+    const booleanSettings = [
+      'antigravity.tab.enabled',
+      'editor.inlineSuggest.enabled',
+      'github.copilot.editor.enableAutoCompletions',
+      'kiro.completions.enabled',
+      'cursor.completions.enabled',
+      'trae.autocomplete.enabled',
+      'cloudcode.duetAI.completions.enabled',
+    ];
+
+    for (const setting of booleanSettings) {
+      try {
+        if (config.has(setting) || setting === 'editor.inlineSuggest.enabled') {
+          await config.update(setting, newState, vscode.ConfigurationTarget.Global);
+        }
+      } catch (e) {
+        console.error(`${LOG} Failed to update "${setting}":`, e);
+      }
+    }
+  }
+
+  /** Fires editor-specific commands where settings alone are insufficient. */
+  private async applyEditorCommands(editor: EditorType, _newState: boolean): Promise<void> {
+    const cmd = AI_COMMANDS.toggleSuggestionAI[editor];
+    if (cmd) { await this.safeExecute(cmd); }
+  }
+
+  private async safeExecute(command: string): Promise<boolean> {
+    try { await vscode.commands.executeCommand(command); return true; }
+    catch { return false; }
+  }
+
+  public dispose(): void {
+    this.disposables.forEach(d => d.dispose());
   }
 }
