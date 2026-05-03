@@ -110,7 +110,7 @@
 
 ---
 
-## 🧪 Experimental - 🄽🄴🅆
+## 🧪 Experimental — 🄽🄴🅆
 
 | Command             | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :------------------ | :--------------- | :-------------------- |
