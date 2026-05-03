@@ -9,6 +9,18 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/icons/star.png" width="26.6px" alt="Github Star ⭐️"></a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_FR.md">Français 🇫🇷</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
+</p>
+
 <h2 align="center">Lynx Keymap 75% — <b>Keybinding Reference</b></h2>
 
 > Optimized for **75% keyboards** across VSCode · Cursor · Windsurf · Trae.ai · Kiro & Antigravity.
