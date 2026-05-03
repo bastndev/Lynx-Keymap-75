@@ -17,7 +17,7 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇬🇧</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
 </p>
 
@@ -83,7 +83,7 @@
 | Развернуть / Свернуть панель          | `⌘ + Esc`               | `Ctrl + Esc`                 |
 | Переключить панель                    | `Page Down`             | `Page Down`                  |
 | -                                     | -                       | -                            |
-| **Умное закрытие** — ИИ-чат или Терм. | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |
+| **Умное закрытие** — ИИ-чат или Терм. | `⌘ + CapsLock`         | `Ctrl + CapsLock`            |
 | Создать новую сессию ИИ               | `⌥ + A`                 | `Alt + A`                    |
 | Выбрать модель ИИ                     | `⌥ + S`                 | `Alt + S`                    |
 | Выбрать код для ИИ                    | `⌥ + D`                 | `Alt + D`                    |
@@ -95,7 +95,7 @@
 | Отменить встроенный чат               | `⌥ + Return`            | `Alt + Enter`                |
 | Развернуть / Свернуть вспом. панель   | `⇧ + Esc`               | `Shift + Esc`                |
 
-> **Умное закрытие** (`Ctrl + CapsLock`) работает с учетом контекста:
+> **Умное закрытие** (`Ctrl + CapsLock`) работает с учётом контекста:
 >
 > - Если **терминал** занимает боковую панель → закрывает терминал.
 > - В противном случае → открывает / закрывает **чат с ИИ**.
@@ -118,25 +118,25 @@
 
 ## 🛠️ Настройки и Окно
 
-| Команда               | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
-| :-------------------- | :-------------- | :-------------------- |
-| Открыть настройки (UI)| `⌘ + J`         | `Ctrl + J`            |
-| Настройки (JSON)      | `⌥ + J`         | `Alt + J`             |
-| Выбрать тему          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
-| Перезагрузить окно    | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| Увеличить масштаб     | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| Уменьшить масштаб     | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
-| Предпросмотр Markdown | `Page Up`       | `Page Up`             |
+| Команда                | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
+| :--------------------- | :-------------- | :-------------------- |
+| Открыть настройки (UI) | `⌘ + J`         | `Ctrl + J`            |
+| Настройки (JSON)       | `⌥ + J`         | `Alt + J`             |
+| Выбрать тему           | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
+| Перезагрузить окно     | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
+| Увеличить масштаб      | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
+| Уменьшить масштаб      | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
+| Предпросмотр Markdown  | `Page Up`       | `Page Up`             |
 
 ---
 
 ## 🐛 Отладка
 
-| Команда           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :---------------- | :----------- | :-------------------- |
-| Начать отладку    | `Insert`     | `Insert`              |
-| Перезапустить отл.| `⌥ + Insert` | `Alt + Insert`        |
-| Остановить отладку| `⌘ + Insert` | `Ctrl + Insert`       |
+| Команда            | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :----------------- | :----------- | :-------------------- |
+| Начать отладку     | `Insert`     | `Insert`              |
+| Перезапустить отл. | `⌥ + Insert` | `Alt + Insert`        |
+| Остановить отладку | `⌘ + Insert` | `Ctrl + Insert`       |
 
 ---
 
@@ -168,16 +168,15 @@
 
 ---
 
-## 📦 Установка
+## ➤ Установка
 
 ### Способ 1 — Быстрое открытие
 
-Откройте палитру команд для вашей ОС:
+- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-- 🐧 Linux · 🟦 Windows → `Ctrl + P`
-- 🍎 macOS → `⌘ + P`
-
-Вставьте и нажмите `Enter`:
+Вставьте следующую команду и нажмите `Enter`:
 
 ```
 ext install bastndev.lynx-keymap-75
@@ -191,28 +190,32 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## 🧩 Дополнительные расширения
-
-|                                                                                              Расширение                                                                                              | Название                                                           | Описание                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|                                                 [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                  | [ATM](https://github.com/bastndev/ATM)                         | Универсальный набор инструментов с Error Lens, Git Blame, защитой окружения и снимками кода. |
-|                   [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                    | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Стандартизирует сочетания клавиш во всех редакторах кода. Улучшает рабочий процесс разработки.    |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Шесть профессиональных тем: Dark, Light, Night, Ghibli, Coffee и Kiro — со встроенными иконками.               |
-
----
-
-## 👤 Об авторе
+## ➤ Обо мне
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _Создатель & Сопровождающий_                           |
+|                          _Создатель & Сопровождающий_                      |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx)** — Код, софт и инсайты разработки
-- 🌱 **[Instagram](https://instagram.com/gohitx)** — Превью проектов и обновления
-- 🐦 **[X / Twitter](https://twitter.com/gohitx)** — Вопросы и обсуждения
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : Код, ПО и инсайты по разработке.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`новое`** – Превью проектов & обновления.
+- 🐦 **[X](https://twitter.com/gohitx)** : Вопросы и обсуждения.
+
+<br>
 
 ---
+
+<h2 align="center">
+  Дополнительные расширения 🧩
+</h2>
+
+| ㅤㅤ Расширение                                                                                                                                                                                     | < Название/>                                                   | Описание                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Универсальный набор инструментов 👻, который выводит ваш рабочий процесс на новый уровень с Error Lens, Git Blame, защитой переменных окружения и снимками кода во всех основных редакторах.                        |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Стандартизирует сочетания клавиш во всех редакторах кода, обеспечивая доступ к любой функции через комбинацию клавиш. Значительно улучшает рабочий процесс и опыт разработки.                                      |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Профессиональное расширение с шестью темами: Dark, Light, Night, Ghibli, Coffee и Kiro — со встроенными иконками. Каждая тема оптимизирована для обеспечения более приятного визуального опыта.                    |
+
+<br>
 
 <div align="center">
 

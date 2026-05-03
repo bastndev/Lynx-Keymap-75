@@ -18,7 +18,7 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇬🇧</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
 </p>
 
 <h2 align="center">Lynx Keymap 75% — <b>Tham khảo phím tắt</b></h2>
@@ -48,10 +48,10 @@
 | Lệnh                                  | 🍎 macOS                | 🟦 Windows / 🐧 Linux        |
 | :------------------------------------ | :---------------------- | :--------------------------- |
 | Mở Explorer                           | `⌘ + 1`                 | `Ctrl + 1`                   |
-| Mở Quản lý mã nguồn (Source Control)  | `⌘ + 2`                 | `Ctrl + 2`                   |
+| Mở Quản lý mã nguồn                   | `⌘ + 2`                 | `Ctrl + 2`                   |
 | Mở Tiện ích mở rộng                   | `⌘ + 3`                 | `Ctrl + 3`                   |
 | Mở F1-Chuyển nhanh                    | `⌘ + 4`                 | `Ctrl + 4`                   |
-| Ẩn/Hiện thanh bên (Sidebar)           | `⌘ + Tab`               | `Ctrl + Tab`                 |
+| Ẩn/Hiện thanh bên                     | `⌘ + Tab`               | `Ctrl + Tab`                 |
 | Mở nhanh tập tin                      | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |
 | Đi đến Dòng                           | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |
 | Tập trung vào Nhóm Editor đầu tiên    | `⌥ + Q`                 | `Alt + Q`                    |
@@ -83,7 +83,7 @@
 | Phóng to / Thu nhỏ Bảng điều khiển    | `⌘ + Esc`               | `Ctrl + Esc`                 |
 | Bật/Tắt Bảng điều khiển               | `Page Down`             | `Page Down`                  |
 | -                                     | -                       | -                            |
-| **Đóng Thông minh** — Chat AI hoặc Term| `⌘ + CapsLock`          | `Ctrl + CapsLock`            |
+| **Đóng Thông minh** — Chat AI hoặc Terminal | `⌘ + CapsLock`    | `Ctrl + CapsLock`            |
 | Tạo Phiên bản AI mới                  | `⌥ + A`                 | `Alt + A`                    |
 | Chọn Mô hình AI                       | `⌥ + S`                 | `Alt + S`                    |
 | AI Chọn Mã                            | `⌥ + D`                 | `Alt + D`                    |
@@ -104,15 +104,15 @@
 
 ## 🔀 Git
 
-| Lệnh                       | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------------- | :--------------- | :-------------------- |
-| Chuẩn bị tất cả            | `⌥ + 1`          | `Alt + 1`             |
-| Tạo tin nhắn Commit bằng AI| `⌥ + 2`          | `Alt + 2`             |
-| Bỏ chuẩn bị tất cả         | `⌥ + 3`          | `Alt + 3`             |
-| Commit                     | `⌥ + Return`     | `Alt + Enter`         |
-| Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
-| Xem các thay đổi Git       | `End`            | `End`                 |
-| Mở GitLab                  | `⌘ + Q`          | `Ctrl + Q`            |
+| Lệnh                        | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
+| :-------------------------- | :--------------- | :-------------------- |
+| Chuẩn bị tất cả             | `⌥ + 1`          | `Alt + 1`             |
+| Tạo tin nhắn Commit bằng AI | `⌥ + 2`          | `Alt + 2`             |
+| Bỏ chuẩn bị tất cả          | `⌥ + 3`          | `Alt + 3`             |
+| Commit                      | `⌥ + Return`     | `Alt + Enter`         |
+| Push                        | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
+| Xem các thay đổi Git        | `End`            | `End`                 |
+| Mở GitLab                   | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 
@@ -122,7 +122,7 @@
 | :-------------------- | :-------------- | :-------------------- |
 | Mở Cài đặt (UI)       | `⌘ + J`         | `Ctrl + J`            |
 | Cài đặt (JSON)        | `⌥ + J`         | `Alt + J`             |
-| Chọn Chủ đề (Theme)   | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
+| Chọn Chủ đề           | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
 | Tải lại Cửa sổ        | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
 | Phóng to              | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
 | Thu nhỏ               | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
@@ -130,7 +130,7 @@
 
 ---
 
-## 🐛 Gỡ lỗi (Debugging)
+## 🐛 Gỡ lỗi
 
 | Lệnh              | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :---------------- | :----------- | :-------------------- |
@@ -168,16 +168,15 @@
 
 ---
 
-## 📦 Cài đặt
+## ➤ Cài đặt
 
 ### Phương pháp 1 — Mở Nhanh
 
-Mở bảng lệnh cho hệ điều hành của bạn:
+- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-- 🐧 Linux · 🟦 Windows → `Ctrl + P`
-- 🍎 macOS → `⌘ + P`
-
-Dán và nhấn `Enter`:
+Dán lệnh sau và nhấn `Enter`:
 
 ```
 ext install bastndev.lynx-keymap-75
@@ -187,32 +186,36 @@ ext install bastndev.lynx-keymap-75
 
 1. Mở Tiện ích mở rộng (`Ctrl+Shift+X` / `⌘+Shift+X`)
 2. Tìm kiếm **"Lynx Keymap 75%"**
-3. Nhấp vào **Cài đặt** (Install)
+3. Nhấp vào **Cài đặt**
 
 ---
 
-## 🧩 Các tiện ích bổ sung
-
-|                                                                                              Tiện ích                                                                                              | Tên                                                           | Mô tả                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|                                                 [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                  | [ATM](https://github.com/bastndev/ATM)                         | Bộ công cụ tất cả trong một với Error Lens, Git Blame, Bảo vệ Env và chụp ảnh mã. |
-|                   [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                    | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Tiêu chuẩn hóa các phím tắt trên tất cả các trình soạn thảo mã. Cải thiện quy trình phát triển.    |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Sáu chủ đề chuyên nghiệp: Dark, Light, Night, Ghibli, Coffee & Kiro — có biểu tượng tích hợp.               |
-
----
-
-## 👤 Thông tin tác giả
+## ➤ Về tôi
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _Người tạo & Bảo trì_                           |
+|                          _Người tạo & Bảo trì_                             |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx)** — Thông tin về Mã, phần mềm và phát triển
-- 🌱 **[Instagram](https://instagram.com/gohitx)** — Cập nhật và xem trước các dự án
-- 🐦 **[X / Twitter](https://twitter.com/gohitx)** — Câu hỏi & thảo luận
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : Code, phần mềm và thông tin phát triển.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`mới`** – Xem trước dự án & cập nhật cuộc sống.
+- 🐦 **[X](https://twitter.com/gohitx)** : Câu hỏi và thảo luận.
+
+<br>
 
 ---
+
+<h2 align="center">
+  Các tiện ích bổ sung 🧩
+</h2>
+
+| ㅤㅤ Tiện ích                                                                                                                                                                                       | < Tên/>                                                        | Mô tả                                                                                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Bộ công cụ tất cả trong một 👻 giúp tăng cường quy trình làm việc với các tính năng thiết yếu như Error Lens, Git Blame, bảo vệ Env và chụp ảnh mã trong các trình soạn thảo lớn.                              |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Tiêu chuẩn hóa phím tắt trên tất cả các trình soạn thảo mã, cho phép sử dụng tổ hợp phím để truy cập bất kỳ chức năng nào. Cải thiện đáng kể quy trình làm việc và trải nghiệm phát triển.                    |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Tiện ích chuyên nghiệp với sáu chủ đề: Dark, Light, Night, Ghibli, Coffee và Kiro — có biểu tượng tích hợp. Mỗi chủ đề được tối ưu hóa để mang lại trải nghiệm thị giác dễ chịu hơn.                          |
+
+<br>
 
 <div align="center">
 

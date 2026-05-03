@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇬🇧</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_FR.md">Français 🇫🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
@@ -168,16 +168,15 @@
 
 ---
 
-## 📦 安装
+## ➤ 安装
 
 ### 方法 1 — 快速打开
 
-打开操作系统的命令面板：
+- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-- 🐧 Linux · 🟦 Windows → `Ctrl + P`
-- 🍎 macOS → `⌘ + P`
-
-粘贴并按 `Enter`：
+粘贴以下命令并按 `Enter`：
 
 ```
 ext install bastndev.lynx-keymap-75
@@ -191,28 +190,32 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## 🧩 补充扩展
-
-|                                                                                              扩展                                                                                              | 名称                                                           | 描述                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|                                                 [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                  | [ATM](https://github.com/bastndev/ATM)                         | 包含 Error Lens、Git Blame、Env 保护及代码截图的一体化工具包。 |
-|                   [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                    | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 统一所有代码编辑器的快捷键，改善开发流程和体验。    |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | 包含 Dark, Light, Night, Ghibli, Coffee 及 Kiro 的六款专业主题，集成图标。               |
-
----
-
-## 👤 关于作者
+## ➤ 关于我
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _创建者及维护者_                           |
+|                          _创建者及维护者_                                  |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx)** — 代码、软件和开发见解
-- 🌱 **[Instagram](https://instagram.com/gohitx)** — 项目预览和更新
-- 🐦 **[X / Twitter](https://twitter.com/gohitx)** — 提问与讨论
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : 代码、软件和开发见解。
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`最新`** – 项目预览和生活更新。
+- 🐦 **[X](https://twitter.com/gohitx)** : 提问与讨论。
+
+<br>
 
 ---
+
+<h2 align="center">
+  补充扩展 🧩
+</h2>
+
+| ㅤㅤ 扩展                                                                                                                                                                                           | < 名称/>                                                       | 描述                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | 一款全能工具包 👻，通过 Error Lens、Git Blame、环境变量保护和代码截图等核心功能，全面提升你的工作效率，支持主流编辑器。                                                            |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 统一所有代码编辑器的快捷键，让你通过键盘组合访问任意功能。全面改善开发流程与工作体验。                                                                                            |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | 专业扩展，提供六款主题：Dark、Light、Night、Ghibli、Coffee 和 Kiro——集成图标。每款主题均经过精心优化，带来更舒适的视觉体验。                                                     |
+
+<br>
 
 <div align="center">
 

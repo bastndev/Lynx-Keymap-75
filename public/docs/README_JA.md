@@ -14,7 +14,7 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_FR.md">Français 🇫🇷</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇬🇧</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
@@ -118,15 +118,15 @@
 
 ## 🛠️ 設定とウィンドウ
 
-| コマンド              | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
-| :-------------------- | :-------------- | :-------------------- |
-| 設定を開く (UI)       | `⌘ + J`         | `Ctrl + J`            |
-| 設定を開く (JSON)     | `⌥ + J`         | `Alt + J`             |
-| テーマの選択          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
-| ウィンドウの再読み込み| `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| ズームイン            | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| ズームアウト          | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
-| Markdownのプレビュー  | `Page Up`       | `Page Up`             |
+| コマンド               | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
+| :--------------------- | :-------------- | :-------------------- |
+| 設定を開く (UI)        | `⌘ + J`         | `Ctrl + J`            |
+| 設定を開く (JSON)      | `⌥ + J`         | `Alt + J`             |
+| テーマの選択           | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
+| ウィンドウの再読み込み | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
+| ズームイン             | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
+| ズームアウト           | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
+| Markdownのプレビュー   | `Page Up`       | `Page Up`             |
 
 ---
 
@@ -168,16 +168,15 @@
 
 ---
 
-## 📦 インストール
+## ➤ インストール
 
 ### 方法 1 — クイックオープン
 
-OSのコマンドパレットを開きます:
+- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-- 🐧 Linux · 🟦 Windows → `Ctrl + P`
-- 🍎 macOS → `⌘ + P`
-
-貼り付けて `Enter` を押します:
+以下のコマンドを貼り付けて `Enter` を押します:
 
 ```
 ext install bastndev.lynx-keymap-75
@@ -191,28 +190,32 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## 🧩 補完的な拡張機能
-
-|                                                                                              拡張機能                                                                                              | 名前                                                           | 説明                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|                                                 [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                  | [ATM](https://github.com/bastndev/ATM)                         | Error Lens、Git Blame、Env 保護、コードのスクリーンショットを備えたオールインワン ツールキット。 |
-|                   [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                    | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | すべてのコードエディター間でキーボードショートカットを標準化します。    |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | 6つのプロフェッショナルなテーマ: Dark、Light、Night、Ghibli、Coffee、Kiro。アイコン統合。               |
-
----
-
-## 👤 著者について
+## ➤ 私について
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _クリエイター & メンテナー_                           |
+|                          _クリエイター & メンテナー_                        |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx)** — コード、ソフトウェア、開発の洞察
-- 🌱 **[Instagram](https://instagram.com/gohitx)** — プロジェクトのプレビューと更新
-- 🐦 **[X / Twitter](https://twitter.com/gohitx)** — 質問とディスカッション
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : コード、ソフトウェア、開発の洞察。
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`新着`** – プロジェクト予告・ライフ更新。
+- 🐦 **[X](https://twitter.com/gohitx)** : 質問とディスカッション。
+
+<br>
 
 ---
+
+<h2 align="center">
+  補完的な拡張機能 🧩
+</h2>
+
+| ㅤㅤ 拡張機能                                                                                                                                                                                       | < 名前/>                                                       | 説明                                                                                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | オールインワンのツールキット 👻。Error Lens、Git Blame、Env 保護、コードスクリーンショットなど、主要エディターで開発ワークフローを飛躍的に向上させる必須機能を搭載。                        |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | すべてのコードエディターでキーボードショートカットを標準化し、任意の機能にキー操作でアクセス可能にします。開発ワークフローと体験を大幅に改善します。                                        |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark、Light、Night、Ghibli、Coffee、Kiro の 6 つのテーマを備えたプロフェッショナルな拡張機能。アイコン統合済み。各テーマは快適なビジュアル体験を提供するよう最適化されています。           |
+
+<br>
 
 <div align="center">
 

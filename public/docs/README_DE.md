@@ -12,7 +12,7 @@
 <p align="center">
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇬🇧</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_FR.md">Français 🇫🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
@@ -107,7 +107,7 @@
 | Befehl                     | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :------------------------- | :--------------- | :-------------------- |
 | Alles für Commit vormerken | `⌥ + 1`          | `Alt + 1`             |
-| KI-Commit-Nachricht generieren | `⌥ + 2`          | `Alt + 2`             |
+| KI-Commit-Nachricht generieren | `⌥ + 2`      | `Alt + 2`             |
 | Vormerkung aufheben        | `⌥ + 3`          | `Alt + 3`             |
 | Commit                     | `⌥ + Return`     | `Alt + Enter`         |
 | Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
@@ -118,25 +118,25 @@
 
 ## 🛠️ Einstellungen & Fenster
 
-| Befehl                | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
-| :-------------------- | :-------------- | :-------------------- |
-| Einstellungen öffnen (UI)| `⌘ + J`         | `Ctrl + J`            |
-| Einstellungen (JSON)  | `⌥ + J`         | `Alt + J`             |
-| Design auswählen      | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
-| Fenster neu laden     | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| Vergrößern            | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| Verkleinern           | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
-| Markdown-Vorschau     | `Page Up`       | `Page Up`             |
+| Befehl                    | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
+| :------------------------ | :-------------- | :-------------------- |
+| Einstellungen öffnen (UI) | `⌘ + J`         | `Ctrl + J`            |
+| Einstellungen (JSON)      | `⌥ + J`         | `Alt + J`             |
+| Design auswählen          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
+| Fenster neu laden         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
+| Vergrößern                | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
+| Verkleinern               | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
+| Markdown-Vorschau         | `Page Up`       | `Page Up`             |
 
 ---
 
 ## 🐛 Debugging
 
-| Befehl            | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :---------------- | :----------- | :-------------------- |
-| Debugging starten | `Insert`     | `Insert`              |
+| Befehl                | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :-------------------- | :----------- | :-------------------- |
+| Debugging starten     | `Insert`     | `Insert`              |
 | Debugging neu starten | `⌥ + Insert` | `Alt + Insert`        |
-| Debugging stoppen | `⌘ + Insert` | `Ctrl + Insert`       |
+| Debugging stoppen     | `⌘ + Insert` | `Ctrl + Insert`       |
 
 ---
 
@@ -168,16 +168,15 @@
 
 ---
 
-## 📦 Installation
+## ➤ Installation
 
 ### Methode 1 — Quick Open
 
-Öffne die Befehlspalette für dein Betriebssystem:
+- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-- 🐧 Linux · 🟦 Windows → `Ctrl + P`
-- 🍎 macOS → `⌘ + P`
-
-Einfügen und `Enter` drücken:
+Folgenden Befehl einfügen und `Enter` drücken:
 
 ```
 ext install bastndev.lynx-keymap-75
@@ -191,28 +190,32 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## 🧩 Ergänzende Erweiterungen
-
-|                                                                                              Erweiterung                                                                                              | Name                                                           | Beschreibung                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|                                                 [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                  | [ATM](https://github.com/bastndev/ATM)                         | All-in-one Toolkit mit Error Lens, Git Blame, Env Protection und Code-Screenshots. |
-|                   [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                    | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardisiert Tastaturkürzel über alle Code-Editoren hinweg. Verbessert den Entwicklungs-Workflow.    |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Sechs professionelle Themes: Dark, Light, Night, Ghibli, Coffee & Kiro — mit integrierten Icons.               |
-
----
-
-## 👤 Über den Autor
+## ➤ Über mich
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _Ersteller & Maintainer_                           |
+|                          _Ersteller & Maintainer_                          |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx)** — Code, Software & Entwicklungs-Insights
-- 🌱 **[Instagram](https://instagram.com/gohitx)** — Projektvorschauen & Updates
-- 🐦 **[X / Twitter](https://twitter.com/gohitx)** — Fragen & Diskussionen
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : Code, Software & Entwicklungs-Insights.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`neu`** – Projektvorschauen & Life-Updates.
+- 🐦 **[X](https://twitter.com/gohitx)** : Für Fragen und Diskussionen.
+
+<br>
 
 ---
+
+<h2 align="center">
+  Ergänzende Erweiterungen 🧩
+</h2>
+
+| ㅤㅤ Erweiterung                                                                                                                                                                                    | < Name/>                                                       | Beschreibung                                                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Ein All-in-one Toolkit 👻, das deinen Workflow mit wichtigen Funktionen wie Error Lens, Git Blame, Env Protection und Code-Screenshots in allen gängigen Editoren auf ein neues Level hebt.          |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardisiert Tastaturkürzel in allen Code-Editoren und ermöglicht den Zugriff auf jede Funktion per Tastenkombination. Verbessert den Entwicklungs-Workflow und die Erfahrung nachhaltig.          |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Eine professionelle Erweiterung mit sechs Themes: Dark, Light, Night, Ghibli, Coffee und Kiro — mit integrierten Icons. Jedes Theme ist optimiert, um eine angenehmere visuelle Erfahrung zu bieten.|
+
+<br>
 
 <div align="center">
 

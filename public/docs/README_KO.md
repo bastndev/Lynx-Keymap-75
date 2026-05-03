@@ -15,7 +15,7 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_FR.md">Français 🇫🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇬🇧</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
@@ -168,16 +168,15 @@
 
 ---
 
-## 📦 설치
+## ➤ 설치
 
 ### 방법 1 — 빠른 열기
 
-운영 체제에 맞는 명령 팔레트를 엽니다:
+- <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
+- <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
+- <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-- 🐧 Linux · 🟦 Windows → `Ctrl + P`
-- 🍎 macOS → `⌘ + P`
-
-붙여넣고 `Enter`를 누릅니다:
+다음 명령어를 붙여넣고 `Enter`를 누릅니다:
 
 ```
 ext install bastndev.lynx-keymap-75
@@ -191,28 +190,32 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## 🧩 보완 확장 프로그램
-
-|                                                                                              확장 프로그램                                                                                              | 이름                                                           | 설명                                                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-|                                                 [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                  | [ATM](https://github.com/bastndev/ATM)                         | Error Lens, Git Blame, Env 보호 및 코드 스크린샷이 포함된 올인원 툴킷. |
-|                   [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                    | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 모든 코드 편집기에서 키보드 단축키를 표준화합니다. 개발 워크플로를 개선합니다.    |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | 6가지 전문 테마: Dark, Light, Night, Ghibli, Coffee 및 Kiro — 통합 아이콘 제공.               |
-
----
-
-## 👤 제작자 정보
+## ➤ 나에 대해
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _제작자 및 유지 관리자_                           |
+|                          _제작자 및 유지 관리자_                            |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx)** — 코드, 소프트웨어 및 개발 인사이트
-- 🌱 **[Instagram](https://instagram.com/gohitx)** — 프로젝트 미리보기 및 업데이트
-- 🐦 **[X / Twitter](https://twitter.com/gohitx)** — 질문 및 토론
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : 코드, 소프트웨어 및 개발 인사이트.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`새로운`** – 프로젝트 미리보기 & 업데이트.
+- 🐦 **[X](https://twitter.com/gohitx)** : 질문 및 토론.
+
+<br>
 
 ---
+
+<h2 align="center">
+  보완 확장 프로그램 🧩
+</h2>
+
+| ㅤㅤ 확장 프로그램                                                                                                                                                                                  | < 이름/>                                                       | 설명                                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | 올인원 툴킷 👻으로 Error Lens, Git Blame, Env 보호, 코드 스크린샷 등 핵심 기능을 통해 주요 에디터에서의 워크플로를 크게 향상시킵니다.                                                                       |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 모든 코드 편집기에서 키보드 단축키를 표준화하여 키 조합으로 모든 기능에 접근할 수 있게 합니다. 개발 워크플로와 경험을 크게 개선합니다.                                                                       |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark, Light, Night, Ghibli, Coffee, Kiro 6가지 테마를 제공하는 전문 확장 프로그램 — 통합 아이콘 포함. 각 테마는 더 쾌적한 시각적 경험을 제공하도록 최적화되었습니다.                                        |
+
+<br>
 
 <div align="center">
 
