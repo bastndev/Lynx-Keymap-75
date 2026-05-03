@@ -28,8 +28,40 @@ A comprehensive keymap extension designed specifically for 75% keyboards, provid
 Following semantic versioning principles for consistent and predictable releases.
 
 <br>
-
 <!-- --- -->
+
+---
+## [2.0.1] - 2026-05-04
+
+### Better
+-  README.md multy - language support
+-  CHANGELOG.md multy - repporting
+-  CODE_OF_CONDUCT.md - more simple
+-  CODE_OF_CONDUCT.md - more simple
+---
+## [2.0.1] - 2026-05-04
+
+### Added
+- **AI Orchestrator**: Integrated robust support for multiple editors via terminal with enhanced detection and execution logic.
+- **Multi-Language Support (I18n)**: Introduced internationalization across extension metadata, notifications, and documentation (via `package.nls.*.json` files).
+- **Smart Terminal Keymaps**: Implemented new commands such as *Smart Close* to intelligently toggle between the terminal side panel and AI chat.
+- **OpenCode & ClaudeCode Integration**: Added experimental keybindings and configurations for advanced AI coding workflows.
+
+### Changed
+- **Architecture Overhaul**: Refactored the entire project structure, migrating from JavaScript to TypeScript for better maintainability and type safety.
+- **Build System Engine**: Transitioned to using `bun` as the core runtime and package manager, enabling significantly faster builds and executions.
+- **Rebranding**: Updated extension display name, descriptions, and keywords to reflect its evolution into an AI Orchestrator.
+- **Keybinding Commands**: Renamed and refined terminal toggle commands to seamlessly support both left and right positioning.
+
+### Improved
+- **Terminal Transitions**: Optimized terminal panel toggle logic by executing state updates and settings operations in parallel, providing a latency-free experience.
+- **Code Organization**: Restructured controllers and configuration files into dedicated domain folders (`src/keymaps/ai/` and `src/keymaps/terminal/`).
+- **Documentation**: Overhauled `README.md` layout with multi-language support, decorative headers, screenshots, and an improved experimental features section.
+
+### Fixed
+- **Double-Panel Conflicts**: Eliminated issues where both the Terminal and AI chat would open simultaneously by implementing mutually exclusive visibility control.
+
+---
 
 ## [1.5.1] - 2025-10-04
 

@@ -19,23 +19,36 @@ export class BottomTerminalManager extends BaseTerminalManager {
           const current = context.workspaceState.get<string>(STORAGE_KEYS.PANEL_POSITION);
 
           if (current === PANEL_POSITIONS.BOTTOM) {
-            await restoreOriginalSettings(context);
+            // ── Close path ── restore settings & state in parallel, then close UI
+            await Promise.all([
+              restoreOriginalSettings(context),
+              context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined),
+            ]);
             await vscode.commands.executeCommand('workbench.action.closePanel');
-            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, undefined);
+
           } else {
+            // ── Transition: another panel was open ──────────────────────────────
             if (current !== undefined) {
-              await vscode.commands.executeCommand('workbench.action.closePanel');
               if (current === PANEL_POSITIONS.LEFT) {
-                await restoreOriginalSettings(context);
+                // Close panel + restore settings in parallel, then re-open AI Chat
+                await Promise.all([
+                  vscode.commands.executeCommand('workbench.action.closePanel'),
+                  restoreOriginalSettings(context),
+                ]);
                 await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+              } else {
+                await vscode.commands.executeCommand('workbench.action.closePanel');
               }
             }
 
-            await saveOriginalSettings(context);
-            await applyTerminalSettings(true, true);
+            // ── Open path ── save settings, apply & persist state in parallel
+            await Promise.all([
+              saveOriginalSettings(context),
+              applyTerminalSettings(true, true),
+              context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, PANEL_POSITIONS.BOTTOM),
+            ]);
             await vscode.commands.executeCommand('workbench.action.positionPanelBottom');
             await vscode.commands.executeCommand('workbench.action.terminal.focus');
-            await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION, PANEL_POSITIONS.BOTTOM);
           }
         } catch (error) {
           console.error(`${LOG_PREFIX} Terminal bottom toggle failed:`, error);

@@ -21,6 +21,8 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
 </p>
 
+<br>
+
 <h2 align="center">Lynx Keymap 75% — <b>Tastenkombinations-Referenz</b></h2>
 
 > Optimiert für **75%-Tastaturen** in VSCode · Cursor · Windsurf · Trae.ai · Kiro & Antigravity.
@@ -197,7 +199,7 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                          _Ersteller & Maintainer_                          |
 
-- 🔴 **[Youtube](https://www.youtube.com/@gohitx)** : Code, Software & Entwicklungs-Insights.
+- 🔴 **[Youtube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, Software & Entwicklungs-Insights.
 - 🌱 **[IG](https://instagram.com/gohitx)** : **`neu`** – Projektvorschauen & Life-Updates.
 - 🐦 **[X](https://twitter.com/gohitx)** : Für Fragen und Diskussionen.
 
@@ -211,8 +213,8 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ Erweiterung                                                                                                                                                                                    | < Name/>                                                       | Beschreibung                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardisiert Tastaturkürzel in allen Code-Editoren und bietet sofortigen Zugriff auf jede Funktion mit einer einzigen Tastenkombination — was deinen Workflow und deine Entwicklungserfahrung verbessert. **`Wenn du eine normale Tastatur hast, lade besser diese herunter.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Ein All-in-one Toolkit 👻, das deinen Workflow mit wichtigen Funktionen wie Error Lens, Git Blame, Env Protection und Code-Screenshots in allen gängigen Editoren auf ein neues Level hebt.          |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardisiert Tastaturkürzel in allen Code-Editoren und ermöglicht den Zugriff auf jede Funktion per Tastenkombination. Verbessert den Entwicklungs-Workflow und die Erfahrung nachhaltig.          |
 | [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Eine professionelle Erweiterung mit sechs Themes: Dark, Light, Night, Ghibli, Coffee und Kiro — mit integrierten Icons. Jedes Theme ist optimiert, um eine angenehmere visuelle Erfahrung zu bieten.|
 
 <br>
