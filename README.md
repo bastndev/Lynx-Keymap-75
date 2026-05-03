@@ -110,11 +110,11 @@
 
 ---
 
-## 🧪 Experimental
+## 🧪 Experimental - 🄽🄴🅆
 
-| Command          | 🍎 macOS    | 🟦 Windows / 🐧 Linux |
-| :--------------- | :---------- | :-------------------- |
-| Compare Code 🄽🄴🅆 | `⇧ + ⌥ + \` | `Shift + Alt + \`     |
+| Command             | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
+| :------------------ | :--------------- | :-------------------- |
+| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock`      |
 
 ---
 
