@@ -341,7 +341,7 @@
       {
         "key"    : "alt+capslock",
         "mac"    : "alt+capslock",
-        "command": "lynx-keymap.toggleTerminalLeft"
+        "command": "lynx-keymap.toggleTerminalLeftAndRight"
       },{
         "key"    : "ctrl+capslock",
         "mac"    : "cmd+capslock",
@@ -451,8 +451,8 @@
       },
 
       {
-        "command": "lynx-keymap.toggleTerminalLeft",
-        "title"  : "Toggle Terminal"
+        "command": "lynx-keymap.toggleTerminalLeftAndRight",
+        "title"  : "Toggle Terminal Left and Right"
       },{
         "command": "lynx-keymap.toggleTerminalBottom",
         "title"  : "Toggle Terminal Bottom"

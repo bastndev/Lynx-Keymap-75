@@ -13,7 +13,7 @@ export class TerminalManager extends BaseTerminalManager {
 
   public registerCommands(context: vscode.ExtensionContext): void {
     const toggleCmd = vscode.commands.registerCommand(
-      'lynx-keymap.toggleTerminalLeft',
+      'lynx-keymap.toggleTerminalLeftAndRight',
       async () => {
         try {
           const current = context.workspaceState.get<string>(STORAGE_KEYS.PANEL_POSITION);
