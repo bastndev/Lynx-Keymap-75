@@ -60,7 +60,7 @@
 | Quick Open File                       | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |    ✅     |
 | Go to Line                            | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |    ✅     |
 | Focus First Editor Group              | `⌥ + Q`                 | `Alt + Q`                    |    ✅     |
-| -                                     | -                       | -                            |           |
+| -                                     | -                       | -                            |    N/A    |
 | New File                              | `⌥ + X`                 | `Alt + X`                    |    ✅     |
 | New Folder                            | `⌥ + C`                 | `Alt + C`                    |    ✅     |
 | Toggle Word Wrap                      | `⌥ + Z`                 | `Alt + Z`                    |    ✅     |
@@ -71,13 +71,13 @@
 | Insert Cursor Below                   | `⌘ + ↓`                 | `Ctrl + ↓`                   |    ✅     |
 | Delete Word Left                      | `⌘ + Backspace`         | `Ctrl + Backspace`           |    ✅     |
 | Close Project                         | `⌘ + Delete`            | `Ctrl + Delete`              |    ✅     |
-| -                                     | -                       | -                            |           |
+| -                                     | -                       | -                            |    N/A    |
 | Format Document                       | `⌥ + F`                 | `Alt + F`                    |    ✅     |
 | Format Selection                      | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |    ✅     |
 | Organize Imports                      | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |    ✅     |
 | Comment Line                          | `⌘ + /`                 | `Ctrl + /`                   |    ✅     |
 | Comment Block                         | `⌥ + /`                 | `Alt + /`                    |    ✅     |
-| -                                     | -                       | -                            |           |
+| -                                     | -                       | -                            |    N/A    |
 | Terminal Bottom (toggle)              | `⌥ + E`                 | `Alt + E`                    |    ✅     |
 | Terminal Left/Right (toggle)          | `⌥ + CapsLock`          | `Alt + CapsLock`             |    ✅     |
 | Quick Open Terminal                   | `⌥ + W`                 | `Alt + W`                    |    ✅     |
@@ -87,16 +87,16 @@
 | Terminal — Complete Word              | `⌥ + ,`                 | `Alt + ,`                    |    ✅     |
 | Maximize / Minimize Panel             | `⌘ + Esc`               | `Ctrl + Esc`                 |    ✅     |
 | Toggle Panel                          | `Page Down`             | `Page Down`                  |    ✅     |
-| -                                     | -                       | -                            |           |
+| -                                     | -                       | -                            |    N/A    |
 | **Smart Close** — AI Chat or Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |    ✅     |
 | Create New AI Session                 | `⌥ + A`                 | `Alt + A`                    |    ✅     |
 | Select AI Model                       | `⌥ + S`                 | `Alt + S`                    |    ✅     |
 | AI Select Code                        | `⌥ + D`                 | `Alt + D`                    |    ✅     |
-| -                                     | -                       | -                            |           |
+| -                                     | -                       | -                            |    N/A    |
 | Toggle AI Agent Mode                  | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |    ✅     |
 | Show AI Chat History                  | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |    ✅     |
 | Toggle AI Suggestions                 | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |    ✅     |
-| -                                     | -                       | -                            |           |
+| -                                     | -                       | -                            |    N/A    |
 | Cancel Inline Chat                    | `⌥ + Return`            | `Alt + Enter`                |    ✅     |
 | Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`               | `Shift + Esc`                |    ✅     |
 
