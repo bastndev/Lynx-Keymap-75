@@ -109,39 +109,39 @@
 
 ## 🔀 Git
 
-| Command                    | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------------- | :--------------- | :-------------------- |
-| Stage All                  | `⌥ + 1`          | `Alt + 1`             |
-| Generate AI Commit Message | `⌥ + 2`          | `Alt + 2`             |
-| Unstage All                | `⌥ + 3`          | `Alt + 3`             |
-| Commit                     | `⌥ + Return`     | `Alt + Enter`         |
-| Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
-| View Git Changes           | `End`            | `End`                 |
-| Open GitLab                | `⌘ + Q`          | `Ctrl + Q`            |
+| Command                    | 🍎 macOS         | 🟦 Windows           | 🐧 Linux             |
+| :------------------------- | :--------------- | :------------------- | :------------------- |
+| Stage All                  | `⌥ + 1`          | `Alt + 1`            | `Alt + 1`            |
+| Generate AI Commit Message | `⌥ + 2`          | `Alt + 2`            | `Alt + 2`            |
+| Unstage All                | `⌥ + 3`          | `Alt + 3`            | `Alt + 3`            |
+| Commit                     | `⌥ + Return`     | `Alt + Enter`        | `Alt + Enter`        |
+| Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
+| View Git Changes           | `End`            | `End`                | `End`                |
+| Open GitLab                | `⌘ + Q`          | `Ctrl + Q`           | `Ctrl + Q`           |
 
 ---
 
 ## 🛠️ Settings & Window
 
-| Command               | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
-| :-------------------- | :-------------- | :-------------------- |
-| Open Settings (UI)    | `⌘ + J`         | `Ctrl + J`            |
-| Open Settings (JSON)  | `⌥ + J`         | `Alt + J`             |
-| Select Theme          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
-| Reload Window         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| Zoom In ( 🛞 right )  | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| Zoom Out ( 🛞 left )  | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
-| Show Markdown Preview | `Page Up`       | `Page Up`             |
+| Command               | 🍎 macOS        | 🟦 Windows            | 🐧 Linux              |
+| :-------------------- | :-------------- | :-------------------- | :-------------------- |
+| Open Settings (UI)    | `⌘ + J`         | `Ctrl + J`            | `Ctrl + J`            |
+| Open Settings (JSON)  | `⌥ + J`         | `Alt + J`             | `Alt + J`             |
+| Select Theme          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     | `Shift + Alt + T`     |
+| Reload Window         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     | `Shift + Alt + R`     |
+| Zoom In ( 🛞 right )  | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
+| Zoom Out ( 🛞 left )  | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
+| Show Markdown Preview | `Page Up`       | `Page Up`             | `Page Up`             |
 
 ---
 
 ## 🐛 Debugging
 
-| Command           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :---------------- | :----------- | :-------------------- |
-| Start Debugging   | `Insert`     | `Insert`              |
-| Restart Debugging | `⌥ + Insert` | `Alt + Insert`        |
-| Stop Debugging    | `⌘ + Insert` | `Ctrl + Insert`       |
+| Command           | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
+| :---------------- | :----------- | :-------------- | :-------------- |
+| Start Debugging   | `Insert`     | `Insert`        | `Insert`        |
+| Restart Debugging | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
+| Stop Debugging    | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
 
 ---
 
