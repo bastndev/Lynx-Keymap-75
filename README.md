@@ -170,7 +170,7 @@
 
 ---
 
-## ➤ Installation
+## Installation
 
 ### Method 1 — Quick Open
 
@@ -192,7 +192,7 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## ➤ About Me
+## About Me
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
@@ -211,7 +211,7 @@ ext install bastndev.lynx-keymap-75
   Complementary Extensions 🧩 
 </h2>
 
-| ㅤㅤ Extension                                                                                                                                                                                      | < Name/>                                                       | Description                                                                                                                                                                                                                                       |
+| ㅤㅤ Extension                                                                                                                                                                                      | Name/>                                                         | Description                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardizes keyboard shortcuts across all code editors, giving you instant access to any functionality with a single key combination — boosting your workflow and dev experience. **`If you have a normal keyboard, better download this one.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | An all-in-one toolkit 👻 that supercharges your workflow with essential features like Error Lens, Git Blame, Env Protection, and code screenshots across major editors.                                                                           |
