@@ -34,7 +34,7 @@
 | Command              | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
 | :------------------- | :--------------- | :--------------- | :--------------- |
 | opencode/ClaudeCode  | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
-| -                    | -                | -                |
+| -                    | -                | -                | -                |
 | Wap project Terminal | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
 | Close Terminal       | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
 
