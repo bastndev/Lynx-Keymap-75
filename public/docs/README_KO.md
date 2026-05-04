@@ -25,15 +25,18 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>키바인딩 참조</b></h2>
 
-> VSCode · Cursor · Windsurf · Trae.ai · Kiro & Antigravity에서 **75% 키보드**에 최적화되었습니다.
+> VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio에서 **75% 키보드**에 최적화되었습니다.
 
 ---
 
-## 🧪 실험적 기능 — 🄽🄴🅆
+## 🧪 실험적 기능 — `New`
 
-| 명령어              | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------ | :--------------- | :-------------------- |
-| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock`      |
+| 명령어              | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :------------------ | :--------------- | :--------------- | :--------------- |
+| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
+| -                   | -                | -                | -                |
+| Wap 프로젝트 터미널 | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
+| 터미널 닫기         | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
 
 <details>
 <summary>👁️ 스크린샷 보기</summary>
@@ -47,55 +50,55 @@
 
 <br>
 
-| 명령어                                | 🍎 macOS                | 🟦 Windows / 🐧 Linux        |
-| :------------------------------------ | :---------------------- | :--------------------------- |
-| 탐색기 열기                           | `⌘ + 1`                 | `Ctrl + 1`                   |
-| 소스 제어 열기                        | `⌘ + 2`                 | `Ctrl + 2`                   |
-| 확장 열기                             | `⌘ + 3`                 | `Ctrl + 3`                   |
-| F1-빠른 전환 열기                     | `⌘ + 4`                 | `Ctrl + 4`                   |
-| 사이드바 토글                         | `⌘ + Tab`               | `Ctrl + Tab`                 |
-| 빠른 파일 열기                        | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |
-| 줄로 이동                             | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |
-| 첫 번째 에디터 그룹에 포커스          | `⌥ + Q`                 | `Alt + Q`                    |
-| -                                     | -                       | -                            |
-| 새 파일                               | `⌥ + X`                 | `Alt + X`                    |
-| 새 폴더                               | `⌥ + C`                 | `Alt + C`                    |
-| 자동 줄바꿈 토글                      | `⌥ + Z`                 | `Alt + Z`                    |
-| 줄 선택 범위 확장                     | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |
-| 위로 줄 복사                          | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |
-| 아래로 줄 복사                        | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |
-| 위에 커서 삽입                        | `⌘ + ↑`                 | `Ctrl + ↑`                   |
-| 아래에 커서 삽입                      | `⌘ + ↓`                 | `Ctrl + ↓`                   |
-| 왼쪽 단어 삭제                        | `⌘ + Backspace`         | `Ctrl + Backspace`           |
-| 프로젝트 닫기                         | `⌘ + Delete`            | `Ctrl + Delete`              |
-| -                                     | -                       | -                            |
-| 문서 포맷                             | `⌥ + F`                 | `Alt + F`                    |
-| 선택 영역 포맷                        | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |
-| 가져오기 구성                         | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |
-| 줄 주석 토글                          | `⌘ + /`                 | `Ctrl + /`                   |
-| 블록 주석 토글                        | `⌥ + /`                 | `Alt + /`                    |
-| -                                     | -                       | -                            |
-| 하단 터미널 (토글)                    | `⌥ + E`                 | `Alt + E`                    |
-| 좌우 터미널 (토글)                    | `⌥ + CapsLock`          | `Alt + CapsLock`             |
-| 빠른 터미널 열기                      | `⌥ + W`                 | `Alt + W`                    |
-| 새 터미널                             | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |
-| 터미널 종료                           | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |
-| 터미널 — 줄 지우기                    | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |
-| 터미널 — 단어 자동 완성               | `⌥ + ,`                 | `Alt + ,`                    |
-| 패널 최대화 / 최소화                  | `⌘ + Esc`               | `Ctrl + Esc`                 |
-| 패널 토글                             | `Page Down`             | `Page Down`                  |
-| -                                     | -                       | -                            |
-| **스마트 닫기** — AI 채팅 또는 터미널 | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |
-| 새 AI 세션 만들기                     | `⌥ + A`                 | `Alt + A`                    |
-| AI 모델 선택                          | `⌥ + S`                 | `Alt + S`                    |
-| AI 코드 선택                          | `⌥ + D`                 | `Alt + D`                    |
-| -                                     | -                       | -                            |
-| AI 에이전트 모드 토글                 | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |
-| AI 채팅 기록 보기                     | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |
-| AI 추천 토글                          | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |
-| -                                     | -                       | -                            |
-| 인라인 채팅 취소                      | `⌥ + Return`            | `Alt + Enter`                |
-| 보조 막대 최대화 / 최소화             | `⇧ + Esc`               | `Shift + Esc`                |
+| 명령어                                | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | 지원 |
+| :------------------------------------ | :---------------------- | :--------------------------- | :--: |
+| 탐색기 열기                           | `⌘ + 1`                 | `Ctrl + 1`                   |  ✅  |
+| 소스 제어 열기                        | `⌘ + 2`                 | `Ctrl + 2`                   |  ✅  |
+| 확장 열기                             | `⌘ + 3`                 | `Ctrl + 3`                   |  ✅  |
+| F1-빠른 전환 열기                     | `⌘ + 4`                 | `Ctrl + 4`                   |  ✅  |
+| 사이드바 토글                         | `⌘ + Tab`               | `Ctrl + Tab`                 |  ✅  |
+| 빠른 파일 열기                        | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |  ✅  |
+| 줄로 이동                             | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |  ✅  |
+| 첫 번째 에디터 그룹에 포커스          | `⌥ + Q`                 | `Alt + Q`                    |  ✅  |
+| -                                     | -                       | -                            | N/A  |
+| 새 파일                               | `⌥ + X`                 | `Alt + X`                    |  ✅  |
+| 새 폴더                               | `⌥ + C`                 | `Alt + C`                    |  ✅  |
+| 자동 줄바꿈 토글                      | `⌥ + Z`                 | `Alt + Z`                    |  ✅  |
+| 줄 선택 범위 확장                     | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |  ✅  |
+| 위로 줄 복사                          | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |  ✅  |
+| 아래로 줄 복사                        | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |  ✅  |
+| 위에 커서 삽입                        | `⌘ + ↑`                 | `Ctrl + ↑`                   |  ✅  |
+| 아래에 커서 삽입                      | `⌘ + ↓`                 | `Ctrl + ↓`                   |  ✅  |
+| 왼쪽 단어 삭제                        | `⌘ + Backspace`         | `Ctrl + Backspace`           |  ✅  |
+| 프로젝트 닫기                         | `⌘ + Delete`            | `Ctrl + Delete`              |  ✅  |
+| -                                     | -                       | -                            | N/A  |
+| 문서 포맷                             | `⌥ + F`                 | `Alt + F`                    |  ✅  |
+| 선택 영역 포맷                        | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |  ✅  |
+| 가져오기 구성                         | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |  ✅  |
+| 줄 주석 토글                          | `⌘ + /`                 | `Ctrl + /`                   |  ✅  |
+| 블록 주석 토글                        | `⌥ + /`                 | `Alt + /`                    |  ✅  |
+| -                                     | -                       | -                            | N/A  |
+| 하단 터미널 (토글)                    | `⌥ + E`                 | `Alt + E`                    |  ✅  |
+| 좌우 터미널 (토글)                    | `⌥ + CapsLock`          | `Alt + CapsLock`             |  ✅  |
+| 빠른 터미널 열기                      | `⌥ + W`                 | `Alt + W`                    |  ✅  |
+| 새 터미널                             | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |  ✅  |
+| 터미널 종료                           | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |  ✅  |
+| 터미널 — 줄 지우기                    | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |  ✅  |
+| 터미널 — 단어 자동 완성               | `⌥ + ,`                 | `Alt + ,`                    |  ✅  |
+| 패널 최대화 / 최소화                  | `⌘ + Esc`               | `Ctrl + Esc`                 |  ✅  |
+| 패널 토글                             | `Page Down`             | `Page Down`                  |  ✅  |
+| -                                     | -                       | -                            | N/A  |
+| **스마트 닫기** — AI 채팅 또는 터미널 | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |  ✅  |
+| 새 AI 세션 만들기                     | `⌥ + A`                 | `Alt + A`                    |  ✅  |
+| AI 모델 선택                          | `⌥ + S`                 | `Alt + S`                    |  ✅  |
+| AI 코드 선택                          | `⌥ + D`                 | `Alt + D`                    |  ✅  |
+| -                                     | -                       | -                            | N/A  |
+| AI 에이전트 모드 토글                 | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |  ✅  |
+| AI 채팅 기록 보기                     | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |  ✅  |
+| AI 추천 토글                          | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |  ✅  |
+| -                                     | -                       | -                            | N/A  |
+| 인라인 채팅 취소                      | `⌥ + Return`            | `Alt + Enter`                |  ✅  |
+| 보조 막대 최대화 / 최소화             | `⇧ + Esc`               | `Shift + Esc`                |  ✅  |
 
 > **스마트 닫기** (`Ctrl + CapsLock`)는 컨텍스트를 인식합니다:
 >
@@ -213,9 +216,9 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ 확장 프로그램                                                                                                                                                                                  | < 이름/>                                                       | 설명                                                                                                                                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 모든 코드 편집기에서 키보드 단축키를 표준화하여 단일 키 조합으로 모든 기능에 즉시 접근할 수 있게 해줍니다 — 워크플로와 개발 경험을 향상시킵니다. **`일반 키보드를 사용 중이라면 이것을 다운로드하는 것이 좋습니다.`** |
-| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | 올인원 툴킷 👻으로 Error Lens, Git Blame, Env 보호, 코드 스크린샷 등 핵심 기능을 통해 주요 에디터에서의 워크플로를 크게 향상시킵니다.                                                                                 |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark, Light, Night, Ghibli, Coffee, Kiro 6가지 테마를 제공하는 전문 확장 프로그램 — 통합 아이콘 포함. 각 테마는 더 쾌적한 시각적 경험을 제공하도록 최적화되었습니다.                                                  |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 모든 코드 편집기에서 키보드 단축키를 표준화하여 단일 키 조합으로 모든 기능에 즉시 접근할 수 있게 해줍니다 — 워크플로와 개발 경험을 향상시킵니다. **`일반 키보드를 사용 중이라면 이것을 다운로드하는 것이 좋습니다.`** |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | 올인원 툴킷 👻으로 Error Lens, Git Blame, Env 보호, 코드 스크린샷 등 핵심 기능을 통해 주요 에디터에서의 워크플로를 크게 향상시킵니다.                                                                                 |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark, Light, Night, Ghibli, Coffee, Kiro 6가지 테마를 제공하는 전문 확장 프로그램 — 통합 아이콘 포함. 각 테마는 더 쾌적한 시각적 경험을 제공하도록 최적화되었습니다.                                                  |
 
 <br>
 
