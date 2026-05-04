@@ -31,12 +31,12 @@
 
 ## 🧪 Experimental — `New`
 
-| Command              | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :------------------- | :--------------- | :--------------- | :--------------- |
-| opencode/ClaudeCode  | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
-| -                    | -                | -                | -                |
-| Wap project Terminal | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
-| Close Terminal       | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| Command                  | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :----------------------- | :--------------- | :--------------- | :--------------- |
+| Swap Project Terminal    | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
+| Close Terminal           | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| -                        | -                | -                | -                |
+| Open opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>👁️ View Screenshot</summary>
@@ -49,6 +49,8 @@
 ---
 
 <br>
+
+---
 
 | Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Supported |
 | :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
