@@ -31,12 +31,12 @@
 
 ## 🧪 实验性功能 — `New`
 
-| 命令                 | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :------------------- | :--------------- | :--------------- | :--------------- |
-| opencode/ClaudeCode  | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
-| -                    | -                | -                | -                |
-| Wap 项目终端         | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
-| 关闭终端             | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| 命令                     | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :----------------------- | :--------------- | :--------------- | :--------------- |
+| 交换项目终端             | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
+| 关闭终端                 | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| -                        | -                | -                | -                |
+| 打开 opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>👁️ 查看截图</summary>
@@ -50,55 +50,57 @@
 
 <br>
 
-| 命令                         | 🍎 macOS                | 🟦 Windows / 🐧 Linux        |   支持   |
-| :--------------------------- | :---------------------- | :--------------------------- | :------: |
-| 打开资源管理器               | `⌘ + 1`                 | `Ctrl + 1`                   |    ✅     |
-| 打开源代码管理               | `⌘ + 2`                 | `Ctrl + 2`                   |    ✅     |
-| 打开扩展                     | `⌘ + 3`                 | `Ctrl + 3`                   |    ✅     |
-| 打开 F1-快速切换             | `⌘ + 4`                 | `Ctrl + 4`                   |    ✅     |
-| 切换侧边栏                   | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
-| 快速打开文件                 | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |    ✅     |
-| 转到行                       | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |    ✅     |
-| 聚焦第一个编辑器组           | `⌥ + Q`                 | `Alt + Q`                    |    ✅     |
-| -                            | -                       | -                            |   N/A    |
-| 新建文件                     | `⌥ + X`                 | `Alt + X`                    |    ✅     |
-| 新建文件夹                   | `⌥ + C`                 | `Alt + C`                    |    ✅     |
-| 切换自动换行                 | `⌥ + Z`                 | `Alt + Z`                    |    ✅     |
-| 扩大行选择                   | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |    ✅     |
-| 向上复制行                   | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |    ✅     |
-| 向下复制行                   | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |    ✅     |
-| 在上方插入光标               | `⌘ + ↑`                 | `Ctrl + ↑`                   |    ✅     |
-| 在下方插入光标               | `⌘ + ↓`                 | `Ctrl + ↓`                   |    ✅     |
-| 向左删除单词                 | `⌘ + Backspace`         | `Ctrl + Backspace`           |    ✅     |
-| 关闭项目                     | `⌘ + Delete`            | `Ctrl + Delete`              |    ✅     |
-| -                            | -                       | -                            |   N/A    |
-| 格式化文档                   | `⌥ + F`                 | `Alt + F`                    |    ✅     |
-| 格式化选定内容               | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |    ✅     |
-| 组织导入                     | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |    ✅     |
-| 行注释                       | `⌘ + /`                 | `Ctrl + /`                   |    ✅     |
-| 块注释                       | `⌥ + /`                 | `Alt + /`                    |    ✅     |
-| -                            | -                       | -                            |   N/A    |
-| 底部终端 (切换)              | `⌥ + E`                 | `Alt + E`                    |    ✅     |
-| 左侧/右侧终端 (切换)         | `⌥ + CapsLock`          | `Alt + CapsLock`             |    ✅     |
-| 快速打开终端                 | `⌥ + W`                 | `Alt + W`                    |    ✅     |
-| 新建终端                     | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |    ✅     |
-| 终止终端                     | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
-| 终端 — 清除行                | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |    ✅     |
-| 终端 — 补全单词              | `⌥ + ,`                 | `Alt + ,`                    |    ✅     |
-| 最大化 / 最小化面板          | `⌘ + Esc`               | `Ctrl + Esc`                 |    ✅     |
-| 切换面板                     | `Page Down`             | `Page Down`                  |    ✅     |
-| -                            | -                       | -                            |   N/A    |
-| **智能关闭** — AI 聊天或终端 | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |    ✅     |
-| 创建新 AI 会话               | `⌥ + A`                 | `Alt + A`                    |    ✅     |
-| 选择 AI 模型                 | `⌥ + S`                 | `Alt + S`                    |    ✅     |
-| AI 选择代码                  | `⌥ + D`                 | `Alt + D`                    |    ✅     |
-| -                            | -                       | -                            |   N/A    |
-| 切换 AI 代理模式             | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |    ✅     |
-| 显示 AI 聊天历史             | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |    ✅     |
-| 切换 AI 建议                 | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |    ✅     |
-| -                            | -                       | -                            |   N/A    |
-| 取消内联聊天                 | `⌥ + Return`            | `Alt + Enter`                |    ✅     |
-| 最大化 / 最小化辅助栏        | `⇧ + Esc`               | `Shift + Esc`                |    ✅     |
+---
+
+| 命令                         | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | 支持 |
+| :--------------------------- | :---------------------- | :--------------------------- | :--: |
+| 打开资源管理器               | `⌘ + 1`                 | `Ctrl + 1`                   |  ✅  |
+| 打开源代码管理               | `⌘ + 2`                 | `Ctrl + 2`                   |  ✅  |
+| 打开扩展                     | `⌘ + 3`                 | `Ctrl + 3`                   |  ✅  |
+| 打开 F1-快速切换             | `⌘ + 4`                 | `Ctrl + 4`                   |  ✅  |
+| 切换侧边栏                   | `⌘ + Tab`               | `Ctrl + Tab`                 |  ✅  |
+| 快速打开文件                 | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |  ✅  |
+| 转到行                       | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |  ✅  |
+| 聚焦第一个编辑器组           | `⌥ + Q`                 | `Alt + Q`                    |  ✅  |
+| -                            | -                       | -                            | N/A  |
+| 新建文件                     | `⌥ + X`                 | `Alt + X`                    |  ✅  |
+| 新建文件夹                   | `⌥ + C`                 | `Alt + C`                    |  ✅  |
+| 切换自动换行                 | `⌥ + Z`                 | `Alt + Z`                    |  ✅  |
+| 扩大行选择                   | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |  ✅  |
+| 向上复制行                   | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |  ✅  |
+| 向下复制行                   | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |  ✅  |
+| 在上方插入光标               | `⌘ + ↑`                 | `Ctrl + ↑`                   |  ✅  |
+| 在下方插入光标               | `⌘ + ↓`                 | `Ctrl + ↓`                   |  ✅  |
+| 向左删除单词                 | `⌘ + Backspace`         | `Ctrl + Backspace`           |  ✅  |
+| 关闭项目                     | `⌘ + Delete`            | `Ctrl + Delete`              |  ✅  |
+| -                            | -                       | -                            | N/A  |
+| 格式化文档                   | `⌥ + F`                 | `Alt + F`                    |  ✅  |
+| 格式化选定内容               | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |  ✅  |
+| 组织导入                     | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |  ✅  |
+| 行注释                       | `⌘ + /`                 | `Ctrl + /`                   |  ✅  |
+| 块注释                       | `⌥ + /`                 | `Alt + /`                    |  ✅  |
+| -                            | -                       | -                            | N/A  |
+| 底部终端 (切换)              | `⌥ + E`                 | `Alt + E`                    |  ✅  |
+| 左侧/右侧终端 (切换)         | `⌥ + CapsLock`          | `Alt + CapsLock`             |  ✅  |
+| 快速打开终端                 | `⌥ + W`                 | `Alt + W`                    |  ✅  |
+| 新建终端                     | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |  ✅  |
+| 终止终端                     | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |  ✅  |
+| 终端 — 清除行                | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |  ✅  |
+| 终端 — 补全单词              | `⌥ + ,`                 | `Alt + ,`                    |  ✅  |
+| 最大化 / 最小化面板          | `⌘ + Esc`               | `Ctrl + Esc`                 |  ✅  |
+| 切换面板                     | `Page Down`             | `Page Down`                  |  ✅  |
+| -                            | -                       | -                            | N/A  |
+| **智能关闭** — AI 聊天或终端 | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |  ✅  |
+| 创建新 AI 会话               | `⌥ + A`                 | `Alt + A`                    |  ✅  |
+| 选择 AI 模型                 | `⌥ + S`                 | `Alt + S`                    |  ✅  |
+| AI 选择代码                  | `⌥ + D`                 | `Alt + D`                    |  ✅  |
+| -                            | -                       | -                            | N/A  |
+| 切换 AI 代理模式             | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |  ✅  |
+| 显示 AI 聊天历史             | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |  ✅  |
+| 切换 AI 建议                 | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |  ✅  |
+| -                            | -                       | -                            | N/A  |
+| 取消内联聊天                 | `⌥ + Return`            | `Alt + Enter`                |  ✅  |
+| 最大化 / 最小化辅助栏        | `⇧ + Esc`               | `Shift + Esc`                |  ✅  |
 
 > **智能关闭** (`Ctrl + CapsLock`) 具有上下文感知能力：
 >
@@ -214,8 +216,8 @@ ext install bastndev.lynx-keymap-75
   补充扩展 🧩
 </h2>
 
-| ㅤㅤ 扩展                                                                                                                                                                                           | < 名称/>                                                       | 描述                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| ㅤㅤ 扩展                                                                                                                                                                                                         | < 名称/>                                                       | 描述                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 统一所有代码编辑器的快捷键，通过单一按键组合让你即时访问任意功能 —— 提升你的工作流和开发体验。**`如果你使用的是普通键盘，建议下载这一个。`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | 一款全能工具包 👻，通过 Error Lens、Git Blame、环境变量保护和代码截图等核心功能，全面提升你的工作效率，支持主流编辑器。                      |
 | [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | 专业扩展，提供六款主题：Dark、Light、Night、Ghibli、Coffee 和 Kiro——集成图标。每款主题均经过精心优化，带来更舒适的视觉体验。                 |

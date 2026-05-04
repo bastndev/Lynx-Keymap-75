@@ -31,12 +31,12 @@
 
 ## 🧪 Thử nghiệm — `New`
 
-| Lệnh                 | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :------------------- | :--------------- | :--------------- | :--------------- |
-| opencode/ClaudeCode  | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
-| -                    | -                | -                | -                |
-| Wap dự án Terminal   | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
-| Đóng Terminal        | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| Lệnh                      | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :------------------------ | :--------------- | :--------------- | :--------------- |
+| Chuyển đổi Dự án Terminal | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
+| Đóng Terminal             | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| -                         | -                | -                | -                |
+| Mở opencode/ClaudeCode    | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>👁️ Xem ảnh chụp màn hình</summary>
@@ -49,6 +49,8 @@
 ---
 
 <br>
+
+---
 
 | Lệnh                                        | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Hỗ trợ |
 | :------------------------------------------ | :---------------------- | :--------------------------- | :----: |
@@ -214,8 +216,8 @@ ext install bastndev.lynx-keymap-75
   Các tiện ích bổ sung 🧩
 </h2>
 
-| ㅤㅤ Tiện ích                                                                                                                                                                                       | < Tên/>                                                        | Mô tả                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ㅤㅤ Tiện ích                                                                                                                                                                                                     | < Tên/>                                                        | Mô tả                                                                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Tiêu chuẩn hóa phím tắt trên tất cả các trình soạn thảo mã, giúp bạn truy cập tức thì vào bất kỳ chức năng nào bằng một tổ hợp phím duy nhất — thúc đẩy quy trình làm việc và trải nghiệm phát triển của bạn. **`Nếu bạn có bàn phím bình thường, tốt hơn nên tải cái này.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Bộ công cụ tất cả trong một 👻 giúp tăng cường quy trình làm việc với các tính năng thiết yếu như Error Lens, Git Blame, bảo vệ Env và chụp ảnh mã trong các trình soạn thảo lớn.                                                                                             |
 | [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Tiện ích chuyên nghiệp với sáu chủ đề: Dark, Light, Night, Ghibli, Coffee và Kiro — có biểu tượng tích hợp. Mỗi chủ đề được tối ưu hóa để mang lại trải nghiệm thị giác dễ chịu hơn.                                                                                          |

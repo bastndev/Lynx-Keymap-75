@@ -31,12 +31,12 @@
 
 ## 🧪 Expérimental — `New`
 
-| Commande             | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :------------------- | :--------------- | :--------------- | :--------------- |
-| opencode/ClaudeCode  | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
-| -                    | -                | -                | -                |
-| Wap projet Terminal  | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
-| Fermer le terminal   | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| Commande                   | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :------------------------- | :--------------- | :--------------- | :--------------- |
+| Échanger projet Terminal   | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
+| Fermer le terminal         | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| -                          | -                | -                | -                |
+| Ouvrir opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>👁️ Voir la capture d'écran</summary>
@@ -49,6 +49,8 @@
 ---
 
 <br>
+
+---
 
 | Commande                                | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Pris en charge |
 | :-------------------------------------- | :---------------------- | :--------------------------- | :------------: |
@@ -214,8 +216,8 @@ ext install bastndev.lynx-keymap-75
   Extensions Complémentaires 🧩
 </h2>
 
-| ㅤㅤ Extension                                                                                                                                                                                      | < Nom/>                                                        | Description                                                                                                                                                                                                                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ㅤㅤ Extension                                                                                                                                                                                                    | < Nom/>                                                        | Description                                                                                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardise les raccourcis clavier dans tous les éditeurs de code, vous donnant un accès instantané à n'importe quelle fonctionnalité avec une seule combinaison de touches — boostant votre flux de travail et votre expérience de développement. **`Si vous avez un clavier normal, téléchargez plutôt celui-ci.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Une boîte à outils tout-en-un 👻 qui booste votre workflow avec des fonctionnalités essentielles : Error Lens, Git Blame, protection des variables d'environnement et captures de code dans les éditeurs majeurs.                                                                                                     |
 | [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Une extension professionnelle avec six thèmes : Dark, Light, Night, Ghibli, Coffee et Kiro — avec icônes intégrées. Chaque thème est optimisé pour une expérience visuelle plus agréable.                                                                                                                             |
