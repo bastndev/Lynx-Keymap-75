@@ -129,8 +129,8 @@
 | Open Settings (JSON)  | `⌥ + J`         | `Alt + J`             |
 | Select Theme          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
 | Reload Window         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| Zoom In               | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| Zoom Out              | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
+| Zoom In ( 🛞 right )  | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
+| Zoom Out ( 🛞 left )  | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
 | Show Markdown Preview | `Page Up`       | `Page Up`             |
 
 ---
