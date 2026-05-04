@@ -31,10 +31,11 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
-## [2.0.3] - 2026-05-05
+## [2.0.4] - 2026-05-05
 
 ### Changed
 - **README.md**: Fixed spelling errors.
+- **README.md**: Added new experimental keymap - Images.
 
 ---
 ## [2.0.2] - 2026-05-04

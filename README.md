@@ -29,14 +29,16 @@
 
 ---
 
-## 🧪 Experimental — `New`
+<br>
 
-| Command                  | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :----------------------- | :--------------- | :--------------- | :--------------- |
-| Swap Project Terminal    | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
-| Close Terminal           | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
-| -                        | -                | -                | -                |
-| Open opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
+![Experimental — New](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/img/t-1.webp)
+
+| Command               | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :-------------------- | :--------------- | :--------------- | :--------------- |
+| Swap Project Terminal | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
+| Close Terminal        | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| -                     | -                | -                | -                |
+| opencode/ClaudeCode   | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>👁️ View Screenshot</summary>
@@ -49,8 +51,6 @@
 ---
 
 <br>
-
----
 
 | Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Supported |
 | :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
