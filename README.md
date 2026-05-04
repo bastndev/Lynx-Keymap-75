@@ -29,11 +29,11 @@
 
 ---
 
-## 🧪 Experimental — 🄽🄴🅆
+## 🧪 Experimental — `New`
 
-| Command             | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------ | :--------------- | :-------------------- |
-| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock`      |
+| Command             | 🍎 macOS         | 🟦 Windows       | 🐧 Linux           |
+| :------------------ | :--------------- | :--------------- | :----------------- |
+| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock`   |
 
 <details>
 <summary>👁️ View Screenshot</summary>
