@@ -31,6 +31,18 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
+## [2.0.3] - 2026-05-05
+
+### Changed
+- **README.md**: Fixed spelling errors.
+
+---
+## [2.0.2] - 2026-05-04
+
+### Improved
+- **README.md**: Overhauled documentation with separated Windows/Linux columns, "Supported" status indicators, Open VSX extension links, new experimental commands (Wap project Terminal, Close Terminal), and updated translations across all 9 languages.
+
+---
 ## [2.0.1] - 2026-05-04
 
 ### Better

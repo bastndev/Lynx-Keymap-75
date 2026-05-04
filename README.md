@@ -25,15 +25,18 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>Keybinding Reference</b></h2>
 
-> Optimized for **75% keyboards** across VSCode · Cursor · Windsurf · Trae.ai · Kiro & Antigravity.
+> Optimized for **75% keyboards** across VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
 
 ---
 
-## 🧪 Experimental — 🄽🄴🅆
+## 🧪 Experimental — `New`
 
-| Command             | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------ | :--------------- | :-------------------- |
-| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock`      |
+| Command                  | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :----------------------- | :--------------- | :--------------- | :--------------- |
+| Swap Project Terminal    | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
+| Close Terminal           | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| -                        | -                | -                | -                |
+| Open opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>👁️ View Screenshot</summary>
@@ -47,55 +50,57 @@
 
 <br>
 
-| Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        |
-| :------------------------------------ | :---------------------- | :--------------------------- |
-| Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |
-| Open Source Control                   | `⌘ + 2`                 | `Ctrl + 2`                   |
-| Open Extensions                       | `⌘ + 3`                 | `Ctrl + 3`                   |
-| Open F1-Quick Switch                  | `⌘ + 4`                 | `Ctrl + 4`                   |
-| Toggle Sidebar                        | `⌘ + Tab`               | `Ctrl + Tab`                 |
-| Quick Open File                       | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |
-| Go to Line                            | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |
-| Focus First Editor Group              | `⌥ + Q`                 | `Alt + Q`                    |
-| -                                     | -                       | -                            |
-| New File                              | `⌥ + X`                 | `Alt + X`                    |
-| New Folder                            | `⌥ + C`                 | `Alt + C`                    |
-| Toggle Word Wrap                      | `⌥ + Z`                 | `Alt + Z`                    |
-| Expand Line Selection                 | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |
-| Copy Lines Up                         | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |
-| Copy Lines Down                       | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |
-| Insert Cursor Above                   | `⌘ + ↑`                 | `Ctrl + ↑`                   |
-| Insert Cursor Below                   | `⌘ + ↓`                 | `Ctrl + ↓`                   |
-| Delete Word Left                      | `⌘ + Backspace`         | `Ctrl + Backspace`           |
-| Close Project                         | `⌘ + Delete`            | `Ctrl + Delete`              |
-| -                                     | -                       | -                            |
-| Format Document                       | `⌥ + F`                 | `Alt + F`                    |
-| Format Selection                      | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |
-| Organize Imports                      | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |
-| Comment Line                          | `⌘ + /`                 | `Ctrl + /`                   |
-| Comment Block                         | `⌥ + /`                 | `Alt + /`                    |
-| -                                     | -                       | -                            |
-| Terminal Bottom (toggle)              | `⌥ + E`                 | `Alt + E`                    |
-| Terminal Left/Right (toggle)          | `⌥ + CapsLock`          | `Alt + CapsLock`             |
-| Quick Open Terminal                   | `⌥ + W`                 | `Alt + W`                    |
-| New Terminal                          | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |
-| Kill Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |
-| Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |
-| Terminal — Complete Word              | `⌥ + ,`                 | `Alt + ,`                    |
-| Maximize / Minimize Panel             | `⌘ + Esc`               | `Ctrl + Esc`                 |
-| Toggle Panel                          | `Page Down`             | `Page Down`                  |
-| -                                     | -                       | -                            |
-| **Smart Close** — AI Chat or Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |
-| Create New AI Session                 | `⌥ + A`                 | `Alt + A`                    |
-| Select AI Model                       | `⌥ + S`                 | `Alt + S`                    |
-| AI Select Code                        | `⌥ + D`                 | `Alt + D`                    |
-| -                                     | -                       | -                            |
-| Toggle AI Agent Mode                  | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |
-| Show AI Chat History                  | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |
-| Toggle AI Suggestions                 | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |
-| -                                     | -                       | -                            |
-| Cancel Inline Chat                    | `⌥ + Return`            | `Alt + Enter`                |
-| Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`               | `Shift + Esc`                |
+---
+
+| Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Supported |
+| :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
+| Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |    ✅     |
+| Open Source Control                   | `⌘ + 2`                 | `Ctrl + 2`                   |    ✅     |
+| Open Extensions                       | `⌘ + 3`                 | `Ctrl + 3`                   |    ✅     |
+| Open F1-Quick Switch                  | `⌘ + 4`                 | `Ctrl + 4`                   |    ✅     |
+| Toggle Sidebar                        | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
+| Quick Open File                       | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |    ✅     |
+| Go to Line                            | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |    ✅     |
+| Focus First Editor Group              | `⌥ + Q`                 | `Alt + Q`                    |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| New File                              | `⌥ + X`                 | `Alt + X`                    |    ✅     |
+| New Folder                            | `⌥ + C`                 | `Alt + C`                    |    ✅     |
+| Toggle Word Wrap                      | `⌥ + Z`                 | `Alt + Z`                    |    ✅     |
+| Expand Line Selection                 | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |    ✅     |
+| Copy Lines Up                         | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |    ✅     |
+| Copy Lines Down                       | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |    ✅     |
+| Insert Cursor Above                   | `⌘ + ↑`                 | `Ctrl + ↑`                   |    ✅     |
+| Insert Cursor Below                   | `⌘ + ↓`                 | `Ctrl + ↓`                   |    ✅     |
+| Delete Word Left                      | `⌘ + Backspace`         | `Ctrl + Backspace`           |    ✅     |
+| Close Project                         | `⌘ + Delete`            | `Ctrl + Delete`              |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Format Document                       | `⌥ + F`                 | `Alt + F`                    |    ✅     |
+| Format Selection                      | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |    ✅     |
+| Organize Imports                      | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |    ✅     |
+| Comment Line                          | `⌘ + /`                 | `Ctrl + /`                   |    ✅     |
+| Comment Block                         | `⌥ + /`                 | `Alt + /`                    |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Terminal Bottom (toggle)              | `⌥ + E`                 | `Alt + E`                    |    ✅     |
+| Terminal Left/Right (toggle)          | `⌥ + CapsLock`          | `Alt + CapsLock`             |    ✅     |
+| Quick Open Terminal                   | `⌥ + W`                 | `Alt + W`                    |    ✅     |
+| New Terminal                          | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |    ✅     |
+| Kill Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
+| Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |    ✅     |
+| Terminal — Complete Word              | `⌥ + ,`                 | `Alt + ,`                    |    ✅     |
+| Maximize / Minimize Panel             | `⌘ + Esc`               | `Ctrl + Esc`                 |    ✅     |
+| Toggle Panel                          | `Page Down`             | `Page Down`                  |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| **Smart Close** — AI Chat or Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |    ✅     |
+| Create New AI Session                 | `⌥ + A`                 | `Alt + A`                    |    ✅     |
+| Select AI Model                       | `⌥ + S`                 | `Alt + S`                    |    ✅     |
+| AI Select Code                        | `⌥ + D`                 | `Alt + D`                    |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Toggle AI Agent Mode                  | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |    ✅     |
+| Show AI Chat History                  | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |    ✅     |
+| Toggle AI Suggestions                 | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Cancel Inline Chat                    | `⌥ + Return`            | `Alt + Enter`                |    ✅     |
+| Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`               | `Shift + Esc`                |    ✅     |
 
 > **Smart Close** (`Ctrl + CapsLock`) is context-aware:
 >
@@ -106,39 +111,39 @@
 
 ## 🔀 Git
 
-| Command                    | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------------- | :--------------- | :-------------------- |
-| Stage All                  | `⌥ + 1`          | `Alt + 1`             |
-| Generate AI Commit Message | `⌥ + 2`          | `Alt + 2`             |
-| Unstage All                | `⌥ + 3`          | `Alt + 3`             |
-| Commit                     | `⌥ + Return`     | `Alt + Enter`         |
-| Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
-| View Git Changes           | `End`            | `End`                 |
-| Open GitLab                | `⌘ + Q`          | `Ctrl + Q`            |
+| Command                    | 🍎 macOS         | 🟦 Windows           | 🐧 Linux             |
+| :------------------------- | :--------------- | :------------------- | :------------------- |
+| Stage All                  | `⌥ + 1`          | `Alt + 1`            | `Alt + 1`            |
+| Generate AI Commit Message | `⌥ + 2`          | `Alt + 2`            | `Alt + 2`            |
+| Unstage All                | `⌥ + 3`          | `Alt + 3`            | `Alt + 3`            |
+| Commit                     | `⌥ + Return`     | `Alt + Enter`        | `Alt + Enter`        |
+| Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
+| View Git Changes           | `End`            | `End`                | `End`                |
+| Open GitLab                | `⌘ + Q`          | `Ctrl + Q`           | `Ctrl + Q`           |
 
 ---
 
 ## 🛠️ Settings & Window
 
-| Command               | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
-| :-------------------- | :-------------- | :-------------------- |
-| Open Settings (UI)    | `⌘ + J`         | `Ctrl + J`            |
-| Open Settings (JSON)  | `⌥ + J`         | `Alt + J`             |
-| Select Theme          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
-| Reload Window         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| Zoom In               | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| Zoom Out              | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
-| Show Markdown Preview | `Page Up`       | `Page Up`             |
+| Command               | 🍎 macOS        | 🟦 Windows            | 🐧 Linux              |
+| :-------------------- | :-------------- | :-------------------- | :-------------------- |
+| Open Settings (UI)    | `⌘ + J`         | `Ctrl + J`            | `Ctrl + J`            |
+| Open Settings (JSON)  | `⌥ + J`         | `Alt + J`             | `Alt + J`             |
+| Select Theme          | `⇧ + ⌥ + T`     | `Shift + Alt + T`     | `Shift + Alt + T`     |
+| Reload Window         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     | `Shift + Alt + R`     |
+| Zoom In ( 🛞 right )  | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
+| Zoom Out ( 🛞 left )  | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
+| Show Markdown Preview | `Page Up`       | `Page Up`             | `Page Up`             |
 
 ---
 
 ## 🐛 Debugging
 
-| Command           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :---------------- | :----------- | :-------------------- |
-| Start Debugging   | `Insert`     | `Insert`              |
-| Restart Debugging | `⌥ + Insert` | `Alt + Insert`        |
-| Stop Debugging    | `⌘ + Insert` | `Ctrl + Insert`       |
+| Command           | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
+| :---------------- | :----------- | :-------------- | :-------------- |
+| Start Debugging   | `Insert`     | `Insert`        | `Insert`        |
+| Restart Debugging | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
+| Stop Debugging    | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
 
 ---
 
@@ -170,7 +175,7 @@
 
 ---
 
-## ➤ Installation
+## Installation
 
 ### Method 1 — Quick Open
 
@@ -192,7 +197,7 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## ➤ About Me
+## About Me
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
@@ -211,11 +216,11 @@ ext install bastndev.lynx-keymap-75
   Complementary Extensions 🧩 
 </h2>
 
-| ㅤㅤ Extension                                                                                                                                                                                      | < Name/>                                                       | Description                                                                                                                                                                                                                                       |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](vscode:extension/bastndev.lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardizes keyboard shortcuts across all code editors, giving you instant access to any functionality with a single key combination — boosting your workflow and dev experience. **`If you have a normal keyboard, better download this one.`** |
-| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](vscode:extension/bastndev.atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | An all-in-one toolkit 👻 that supercharges your workflow with essential features like Error Lens, Git Blame, Env Protection, and code screenshots across major editors.                                                                           |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](vscode:extension/bastndev.lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | A professional extension with six available themes: Dark, Light, Night, Ghibli, Coffee, and Kiro—with integrated icons. Each theme is optimized to offer a more pleasant visual experience.                                                       |
+| Extension                                                                                                                                                                                                         | Name/>                                                         | Description                                                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardizes keyboard shortcuts across all code editors, giving you instant access to any functionality with a single key combination — boosting your workflow and dev experience. **`If you have a normal keyboard, better download this one.`** |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | An all-in-one toolkit 👻 that supercharges your workflow with essential features like Error Lens, Git Blame, Env Protection, and code screenshots across major editors.                                                                           |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | A professional extension with six available themes: Dark, Light, Night, Ghibli, Coffee, and Kiro—with integrated icons. Each theme is optimized to offer a more pleasant visual experience.                                                       |
 
 <br>
 
