@@ -29,7 +29,9 @@
 
 ---
 
-## 🧪 Experimental — `New`
+<br>
+
+![Experimental — New](public/github/images/img/t-1.webp)
 
 | Command               | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
 | :-------------------- | :--------------- | :--------------- | :--------------- |
