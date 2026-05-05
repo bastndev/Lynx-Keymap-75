@@ -227,7 +227,7 @@ ext install bastndev.lynx-keymap-75
 <div align="center">
 
 **Tận hưởng 🎉 Lynx Keymap 75% hiện đã được cài đặt!**  
-_Phát hiện lỗi hoặc có phản hồi? [Mở Issue](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_Phát hiện lỗi hoặc có phản hồi? [Mở Issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>Được làm tại 🇵🇪 bởi <a href="https://gohit.xyz">Gohit X</a> · Cấp phép theo <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
 

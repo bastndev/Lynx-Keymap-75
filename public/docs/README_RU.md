@@ -227,7 +227,7 @@ ext install bastndev.lynx-keymap-75
 <div align="center">
 
 **Приятного использования 🎉 Lynx Keymap 75% установлен!**  
-_Нашли ошибку или есть предложения? [Откройте Issue](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_Нашли ошибку или есть предложения? [Откройте Issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>Сделано в 🇵🇪 <a href="https://gohit.xyz">Gohit X</a> · Лицензировано под <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
 
