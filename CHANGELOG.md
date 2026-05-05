@@ -31,6 +31,12 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
+## [2.2.4] - 2026-05-05
+
+### Added
+- **Equalized with Lynx Keymap Pro**: Added new experimental keymap for AI Orchestrator features
+
+---
 ## [2.0.4] - 2026-05-05
 
 ### Changed
