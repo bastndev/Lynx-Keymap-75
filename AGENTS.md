@@ -11,6 +11,8 @@
 
 - **Runtime:** Bun (`bun.lock`).
 - **Build:** esbuild → `src/extension.ts` → `dist/extension.js`.
+- **README Differentiation**: The main `README.md` uses an image for the Experimental section title (`![Experimental — New](...)`), whereas the localized READMEs in `public/docs/` use text headers (e.g., `## 🧪 Funciones Experimentales — Nuevo`). This is intentional to distinguish the primary documentation.
+
 
 ## Actual Structure
 ```
