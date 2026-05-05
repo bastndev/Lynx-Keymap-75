@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 Depuración
+## ▶️ Depuración
 
 | Comando            | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :----------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                          _Creador y Mantenedor_                           |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Código, software e ideas de desarrollo.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`nuevo`** – Avances de proyectos y actualizaciones.
 - 🐦 **[X](https://twitter.com/gohitx)** : Para preguntas y discusiones.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`nuevo`** – Avances de proyectos y actualizaciones.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Código, software e ideas de desarrollo.
 
 <br>
 

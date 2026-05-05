@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 Debugging
+## ▶️ Debugging
 
 | Befehl                | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :-------------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                         _Ersteller & Maintainer_                          |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, Software & Entwicklungs-Insights.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`neu`** – Projektvorschauen & Life-Updates.
 - 🐦 **[X](https://twitter.com/gohitx)** : Für Fragen und Diskussionen.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`neu`** – Projektvorschauen & Life-Updates.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, Software & Entwicklungs-Insights.
 
 <br>
 

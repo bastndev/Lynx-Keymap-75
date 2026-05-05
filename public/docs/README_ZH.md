@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 调试
+## ▶️ 调试
 
 | 命令         | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :----------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                             _创建者及维护者_                              |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : 代码、软件和开发见解。
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`最新`** – 项目预览和生活更新。
 - 🐦 **[X](https://twitter.com/gohitx)** : 提问与讨论。
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`最新`** – 项目预览和生活更新。
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : 代码、软件和开发见解。
 
 <br>
 

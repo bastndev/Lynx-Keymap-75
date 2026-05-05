@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 Débogage
+## ▶️ Débogage
 
 | Commande               | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :--------------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                          _Créateur & Mainteneur_                          |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, logiciels et développement.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`nouveau`** – Aperçus de projets & mises à jour.
 - 🐦 **[X](https://twitter.com/gohitx)** : Pour questions et discussions.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`nouveau`** – Aperçus de projets & mises à jour.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, logiciels et développement.
 
 <br>
 

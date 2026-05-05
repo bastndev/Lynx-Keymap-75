@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 Отладка
+## ▶️ Отладка
 
 | Команда            | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :----------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                       _Создатель & Сопровождающий_                        |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Код, ПО и инсайты по разработке.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`новое`** – Превью проектов & обновления.
 - 🐦 **[X](https://twitter.com/gohitx)** : Вопросы и обсуждения.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`новое`** – Превью проектов & обновления.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Код, ПО и инсайты по разработке.
 
 <br>
 
