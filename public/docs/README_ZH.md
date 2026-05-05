@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 调试
+## ▶️ 调试
 
 | 命令         | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :----------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                             _创建者及维护者_                              |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : 代码、软件和开发见解。
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`最新`** – 项目预览和生活更新。
 - 🐦 **[X](https://twitter.com/gohitx)** : 提问与讨论。
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`最新`** – 项目预览和生活更新。
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : 代码、软件和开发见解。
 
 <br>
 
@@ -218,16 +218,16 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ 扩展                                                                                                                                                                                                         | < 名称/>                                                       | 描述                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 统一所有代码编辑器的快捷键，通过单一按键组合让你即时访问任意功能 —— 提升你的工作流和开发体验。**`如果你使用的是普通键盘，建议下载这一个。`** |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 统一所有代码编辑器的快捷键，通过单一按键组合让你即时访问任意功能 —— 提升你的工作流和开发体验。**`如果你使用的是普通键盘，建议下载这一个。`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | 一款全能工具包 👻，通过 Error Lens、Git Blame、环境变量保护和代码截图等核心功能，全面提升你的工作效率，支持主流编辑器。                      |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | 专业扩展，提供六款主题：Dark、Light、Night、Ghibli、Coffee 和 Kiro——集成图标。每款主题均经过精心优化，带来更舒适的视觉体验。                 |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | 专业扩展，提供六款主题：Dark、Light、Night、Ghibli、Coffee 和 Kiro——集成图标。每款主题均经过精心优化，带来更舒适的视觉体验。                 |
 
 <br>
 
 <div align="center">
 
 **享受编程 🎉 Lynx Keymap 75% 已安装完毕！**  
-_发现错误或有反馈？ [提交 Issue](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_发现错误或有反馈？ [提交 Issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>由 <a href="https://gohit.xyz">Gohit X</a> 在 🇵🇪 制作 · 使用 <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a> 协议许可</sub>
 

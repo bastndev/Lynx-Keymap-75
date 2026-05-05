@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 デバッグ
+## ▶️ デバッグ
 
 | コマンド         | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :--------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                        _クリエイター & メンテナー_                        |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : コード、ソフトウェア、開発の洞察。
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`新着`** – プロジェクト予告・ライフ更新。
 - 🐦 **[X](https://twitter.com/gohitx)** : 質問とディスカッション。
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`新着`** – プロジェクト予告・ライフ更新。
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : コード、ソフトウェア、開発の洞察。
 
 <br>
 
@@ -218,16 +218,16 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ 拡張機能                                                                                                                                                                                                     | < 名前/>                                                       | 説明                                                                                                                                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | すべてのコードエディターでキーボードショートカットを標準化し、単一のキーの組み合わせで任意の機能に瞬時にアクセスできるようにします。ワークフローと開発体験を向上させます。**`通常のキーボードをお持ちの場合は、こちらをダウンロードすることをお勧めします。`** |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | すべてのコードエディターでキーボードショートカットを標準化し、単一のキーの組み合わせで任意の機能に瞬時にアクセスできるようにします。ワークフローと開発体験を向上させます。**`通常のキーボードをお持ちの場合は、こちらをダウンロードすることをお勧めします。`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | オールインワンのツールキット 👻。Error Lens、Git Blame、Env 保護、コードスクリーンショットなど、主要エディターで開発ワークフローを飛躍的に向上させる必須機能を搭載。                                                                                           |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark、Light、Night、Ghibli、Coffee、Kiro の 6 つのテーマを備えたプロフェッショナルな拡張機能。アイコン統合済み。各テーマは快適なビジュアル体験を提供するよう最適化されています。                                                                               |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark、Light、Night、Ghibli、Coffee、Kiro の 6 つのテーマを備えたプロフェッショナルな拡張機能。アイコン統合済み。各テーマは快適なビジュアル体験を提供するよう最適化されています。                                                                               |
 
 <br>
 
 <div align="center">
 
 **🎉 Lynx Keymap 75% のインストールが完了しました！**  
-_バグやフィードバックがありますか？ [Issueを開く](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_バグやフィードバックがありますか？ [Issueを開く](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>🇵🇪で <a href="https://gohit.xyz">Gohit X</a> によって作成されました · ライセンス <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
 

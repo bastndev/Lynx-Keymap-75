@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 Debugging
+## ▶️ Debugging
 
 | Befehl                | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :-------------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                         _Ersteller & Maintainer_                          |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, Software & Entwicklungs-Insights.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`neu`** – Projektvorschauen & Life-Updates.
 - 🐦 **[X](https://twitter.com/gohitx)** : Für Fragen und Diskussionen.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`neu`** – Projektvorschauen & Life-Updates.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, Software & Entwicklungs-Insights.
 
 <br>
 
@@ -218,16 +218,16 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ Erweiterung                                                                                                                                                                                                  | < Name/>                                                       | Beschreibung                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardisiert Tastaturkürzel in allen Code-Editoren und bietet sofortigen Zugriff auf jede Funktion mit einer einzigen Tastenkombination — was deinen Workflow und deine Entwicklungserfahrung verbessert. **`Wenn du eine normale Tastatur hast, lade besser diese herunter.`** |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardisiert Tastaturkürzel in allen Code-Editoren und bietet sofortigen Zugriff auf jede Funktion mit einer einzigen Tastenkombination — was deinen Workflow und deine Entwicklungserfahrung verbessert. **`Wenn du eine normale Tastatur hast, lade besser diese herunter.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Ein All-in-one Toolkit 👻, das deinen Workflow mit wichtigen Funktionen wie Error Lens, Git Blame, Env Protection und Code-Screenshots in allen gängigen Editoren auf ein neues Level hebt.                                                                                       |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Eine professionelle Erweiterung mit sechs Themes: Dark, Light, Night, Ghibli, Coffee und Kiro — mit integrierten Icons. Jedes Theme ist optimiert, um eine angenehmere visuelle Erfahrung zu bieten.                                                                              |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Eine professionelle Erweiterung mit sechs Themes: Dark, Light, Night, Ghibli, Coffee und Kiro — mit integrierten Icons. Jedes Theme ist optimiert, um eine angenehmere visuelle Erfahrung zu bieten.                                                                              |
 
 <br>
 
 <div align="center">
 
 **Viel Spaß 🎉 Lynx Keymap 75% ist jetzt installiert!**  
-_Bug gefunden oder Feedback? [Eröffne ein Issue](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_Bug gefunden oder Feedback? [Eröffne ein Issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>Hergestellt in 🇵🇪 von <a href="https://gohit.xyz">Gohit X</a> · Lizenziert unter <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
 

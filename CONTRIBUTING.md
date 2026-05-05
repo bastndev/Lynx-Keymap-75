@@ -83,7 +83,7 @@ Your PR description should include:
 
 ## Need Help?
 
-- **Bug or idea?** → [Open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues)
+- **Bug or idea?** → [Open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)
 - **Architecture questions?** → [ARCHITECTURE.md](https://github.com/bastndev/Lynx-Keymap-75/blob/main/ARCHITECTURE.md)
 - **Contact** → bastndev@gohit.xyz
 

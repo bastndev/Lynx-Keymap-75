@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 Gỡ lỗi
+## ▶️ Gỡ lỗi
 
 | Lệnh           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                           _Người tạo & Bảo trì_                           |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, phần mềm và thông tin phát triển.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`mới`** – Xem trước dự án & cập nhật cuộc sống.
 - 🐦 **[X](https://twitter.com/gohitx)** : Câu hỏi và thảo luận.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`mới`** – Xem trước dự án & cập nhật cuộc sống.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, phần mềm và thông tin phát triển.
 
 <br>
 
@@ -218,16 +218,16 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ Tiện ích                                                                                                                                                                                                     | < Tên/>                                                        | Mô tả                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Tiêu chuẩn hóa phím tắt trên tất cả các trình soạn thảo mã, giúp bạn truy cập tức thì vào bất kỳ chức năng nào bằng một tổ hợp phím duy nhất — thúc đẩy quy trình làm việc và trải nghiệm phát triển của bạn. **`Nếu bạn có bàn phím bình thường, tốt hơn nên tải cái này.`** |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Tiêu chuẩn hóa phím tắt trên tất cả các trình soạn thảo mã, giúp bạn truy cập tức thì vào bất kỳ chức năng nào bằng một tổ hợp phím duy nhất — thúc đẩy quy trình làm việc và trải nghiệm phát triển của bạn. **`Nếu bạn có bàn phím bình thường, tốt hơn nên tải cái này.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Bộ công cụ tất cả trong một 👻 giúp tăng cường quy trình làm việc với các tính năng thiết yếu như Error Lens, Git Blame, bảo vệ Env và chụp ảnh mã trong các trình soạn thảo lớn.                                                                                             |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Tiện ích chuyên nghiệp với sáu chủ đề: Dark, Light, Night, Ghibli, Coffee và Kiro — có biểu tượng tích hợp. Mỗi chủ đề được tối ưu hóa để mang lại trải nghiệm thị giác dễ chịu hơn.                                                                                          |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Tiện ích chuyên nghiệp với sáu chủ đề: Dark, Light, Night, Ghibli, Coffee và Kiro — có biểu tượng tích hợp. Mỗi chủ đề được tối ưu hóa để mang lại trải nghiệm thị giác dễ chịu hơn.                                                                                          |
 
 <br>
 
 <div align="center">
 
 **Tận hưởng 🎉 Lynx Keymap 75% hiện đã được cài đặt!**  
-_Phát hiện lỗi hoặc có phản hồi? [Mở Issue](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_Phát hiện lỗi hoặc có phản hồi? [Mở Issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>Được làm tại 🇵🇪 bởi <a href="https://gohit.xyz">Gohit X</a> · Cấp phép theo <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
 

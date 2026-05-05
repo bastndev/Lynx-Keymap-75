@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 디버깅
+## ▶️ 디버깅
 
 | 명령어           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :--------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                          _제작자 및 유지 관리자_                          |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : 코드, 소프트웨어 및 개발 인사이트.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`새로운`** – 프로젝트 미리보기 & 업데이트.
 - 🐦 **[X](https://twitter.com/gohitx)** : 질문 및 토론.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`새로운`** – 프로젝트 미리보기 & 업데이트.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : 코드, 소프트웨어 및 개발 인사이트.
 
 <br>
 
@@ -218,16 +218,16 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ 확장 프로그램                                                                                                                                                                                                | < 이름/>                                                       | 설명                                                                                                                                                                                                                  |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 모든 코드 편집기에서 키보드 단축키를 표준화하여 단일 키 조합으로 모든 기능에 즉시 접근할 수 있게 해줍니다 — 워크플로와 개발 경험을 향상시킵니다. **`일반 키보드를 사용 중이라면 이것을 다운로드하는 것이 좋습니다.`** |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | 모든 코드 편집기에서 키보드 단축키를 표준화하여 단일 키 조합으로 모든 기능에 즉시 접근할 수 있게 해줍니다 — 워크플로와 개발 경험을 향상시킵니다. **`일반 키보드를 사용 중이라면 이것을 다운로드하는 것이 좋습니다.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | 올인원 툴킷 👻으로 Error Lens, Git Blame, Env 보호, 코드 스크린샷 등 핵심 기능을 통해 주요 에디터에서의 워크플로를 크게 향상시킵니다.                                                                                 |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark, Light, Night, Ghibli, Coffee, Kiro 6가지 테마를 제공하는 전문 확장 프로그램 — 통합 아이콘 포함. 각 테마는 더 쾌적한 시각적 경험을 제공하도록 최적화되었습니다.                                                  |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Dark, Light, Night, Ghibli, Coffee, Kiro 6가지 테마를 제공하는 전문 확장 프로그램 — 통합 아이콘 포함. 각 테마는 더 쾌적한 시각적 경험을 제공하도록 최적화되었습니다.                                                  |
 
 <br>
 
 <div align="center">
 
 **🎉 Lynx Keymap 75%가 설치되었습니다! 즐겁게 사용하세요!**  
-_버그를 발견하거나 피드백이 있으신가요? [이슈 열기](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_버그를 발견하거나 피드백이 있으신가요? [이슈 열기](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>🇵🇪 페루에서 <a href="https://gohit.xyz">Gohit X</a> 제작 · <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a> 라이선스로 배포됨</sub>
 

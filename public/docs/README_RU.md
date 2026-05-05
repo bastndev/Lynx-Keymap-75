@@ -137,7 +137,7 @@
 
 ---
 
-## 🐛 Отладка
+## ▶️ Отладка
 
 | Команда            | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
 | :----------------- | :----------- | :-------------------- |
@@ -204,9 +204,9 @@ ext install bastndev.lynx-keymap-75
 |                     **[Gohit X](https://gohit.xyz)**                      |
 |                       _Создатель & Сопровождающий_                        |
 
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Код, ПО и инсайты по разработке.
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`новое`** – Превью проектов & обновления.
 - 🐦 **[X](https://twitter.com/gohitx)** : Вопросы и обсуждения.
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`новое`** – Превью проектов & обновления.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Код, ПО и инсайты по разработке.
 
 <br>
 
@@ -218,16 +218,16 @@ ext install bastndev.lynx-keymap-75
 
 | ㅤㅤ Расширение                                                                                                                                                                                                   | < Название/>                                                   | Описание                                                                                                                                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Lynx Keymap Pro](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-Pro/refs/heads/main/assets/images/logo.png)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Стандартизирует сочетания клавиш во всех редакторах кода, обеспечивая мгновенный доступ к любой функции с помощью одной комбинации клавиш — ускоряя ваш рабочий процесс и улучшая опыт разработки. **`Если у вас обычная клавиатура, лучше скачайте этот.`** |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Стандартизирует сочетания клавиш во всех редакторах кода, обеспечивая мгновенный доступ к любой функции с помощью одной комбинации клавиш — ускоряя ваш рабочий процесс и улучшая опыт разработки. **`Если у вас обычная клавиатура, лучше скачайте этот.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Универсальный набор инструментов 👻, который выводит ваш рабочий процесс на новый уровень с Error Lens, Git Blame, защитой переменных окружения и снимками кода во всех основных редакторах.                                                                 |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/0.1.2/1744898058774/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Профессиональное расширение с шестью темами: Dark, Light, Night, Ghibli, Coffee и Kiro — со встроенными иконками. Каждая тема оптимизирована для обеспечения более приятного визуального опыта.                                                              |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Профессиональное расширение с шестью темами: Dark, Light, Night, Ghibli, Coffee и Kiro — со встроенными иконками. Каждая тема оптимизирована для обеспечения более приятного визуального опыта.                                                              |
 
 <br>
 
 <div align="center">
 
 **Приятного использования 🎉 Lynx Keymap 75% установлен!**  
-_Нашли ошибку или есть предложения? [Откройте Issue](https://github.com/bastndev/Lynx-Keymap-75/issues)_
+_Нашли ошибку или есть предложения? [Откройте Issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
 <sub>Сделано в 🇵🇪 <a href="https://gohit.xyz">Gohit X</a> · Лицензировано под <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
 
