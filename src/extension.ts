@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { AICommandsManager, AIToggleManager, BottomTerminalManager, TerminalManager, STORAGE_KEYS, PANEL_POSITIONS } from './keymaps';
+import { promptInstallAtmExtension } from './notifications/whith-buttons';
 
 let aiManager:             AICommandsManager     | undefined;
 let terminalManager:       TerminalManager       | undefined;
@@ -24,6 +25,21 @@ export async function activate(context: vscode.ExtensionContext) {
   await context.workspaceState.update(STORAGE_KEYS.PANEL_POSITION,           undefined);
   await context.globalState.update(STORAGE_KEYS.ORIGINAL_TABS_ENABLED,       undefined);
   await context.globalState.update(STORAGE_KEYS.ORIGINAL_PANEL_SHOW_LABELS,  undefined);
+
+  // Register GitLab panel wrapper command
+  const gitlabPanelCommand = vscode.commands.registerCommand('lynx-keymap.openGitlabPanel', async () => {
+    const atmExtension = vscode.extensions.getExtension('bastndev.atm');
+
+    if (atmExtension) {
+      if (!atmExtension.isActive) {
+        await atmExtension.activate();
+      }
+      vscode.commands.executeCommand('workbench.view.extension.gitlab-panel');
+    } else {
+      promptInstallAtmExtension();
+    }
+  });
+  context.subscriptions.push(gitlabPanelCommand);
 
   // If terminal was on the side, VS Code may restore both panels on startup.
   // Close the auxiliary bar after a short delay to let VS Code finish loading.
