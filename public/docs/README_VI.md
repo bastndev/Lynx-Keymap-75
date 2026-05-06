@@ -121,7 +121,6 @@
 | Commit                      | `⌥ + Return`     | `Alt + Enter`         |
 | Push                        | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | Xem các thay đổi Git        | `End`            | `End`                 |
-| Mở GitLab                   | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 

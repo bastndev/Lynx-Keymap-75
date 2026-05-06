@@ -121,7 +121,6 @@
 | コミット                   | `⌥ + Return`     | `Alt + Enter`         |
 | プッシュ                   | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | Gitの変更を表示            | `End`            | `End`                 |
-| GitLabを開く               | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 

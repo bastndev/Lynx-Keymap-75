@@ -121,7 +121,6 @@
 | 커밋                | `⌥ + Return`     | `Alt + Enter`         |
 | 푸시                | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | Git 변경 사항 보기  | `End`            | `End`                 |
-| GitLab 열기         | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 

@@ -121,7 +121,6 @@
 | Коммит                     | `⌥ + Return`     | `Alt + Enter`         |
 | Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | Просмотр изменений Git     | `End`            | `End`                 |
-| Открыть GitLab             | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 

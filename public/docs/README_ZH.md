@@ -121,7 +121,6 @@
 | 提交             | `⌥ + Return`     | `Alt + Enter`         |
 | 推送             | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | 查看 Git 更改    | `End`            | `End`                 |
-| 打开 GitLab      | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 
