@@ -111,6 +111,8 @@
 
 ## 🔀 Git
 
+> Pour utiliser ces commandes, vous devez d'abord accéder à **Source Control** (car elles ne fonctionnent pas directement) ou appuyer sur le raccourci **_`Ctrl + 2`_**.
+
 | Commande                  | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :------------------------ | :--------------- | :-------------------- |
 | Tout indexer              | `⌥ + 1`          | `Alt + 1`             |

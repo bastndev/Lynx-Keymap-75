@@ -111,6 +111,8 @@
 
 ## 🔀 Git
 
+> Um diese Befehle zu verwenden, müssen Sie zuerst zu **Source Control** (Quellcodeverwaltung) gehen (da sie nicht direkt funktionieren) oder die Tastenkombination **_`Ctrl + 2`_** drücken.
+
 | Befehl                         | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :----------------------------- | :--------------- | :-------------------- |
 | Alles für Commit vormerken     | `⌥ + 1`          | `Alt + 1`             |

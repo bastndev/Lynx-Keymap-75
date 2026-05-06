@@ -111,6 +111,8 @@
 
 ## 🔀 Git
 
+> Para usar esses comandos, primeiro você deve ir para o **Controle de Origem (Source Control)** (pois eles não funcionam diretamente) ou pressionar o atalho **_`Ctrl + 2`_**.
+
 | Comando                     | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :-------------------------- | :--------------- | :-------------------- |
 | Preparar Tudo               | `⌥ + 1`          | `Alt + 1`             |

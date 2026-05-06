@@ -111,6 +111,8 @@
 
 ## 🔀 Git
 
+> Para usar estos comandos, primero debes ir a **Source Control** (ya que no funcionan directamente) o presionar el atajo **_`Ctrl + 2`_**.
+
 | Comando                   | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :------------------------ | :--------------- | :-------------------- |
 | Preparar Todo             | `⌥ + 1`          | `Alt + 1`             |
