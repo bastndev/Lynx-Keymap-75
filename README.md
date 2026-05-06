@@ -57,7 +57,6 @@
 | Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |    ✅     |
 | Open Source Control                   | `⌘ + 2`                 | `Ctrl + 2`                   |    ✅     |
 | Open Extensions                       | `⌘ + 3`                 | `Ctrl + 3`                   |    ✅     |
-| Open F1-Quick Switch                  | `⌘ + 4`                 | `Ctrl + 4`                   |    ✅     |
 | Toggle Sidebar                        | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
 | Quick Open File                       | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |    ✅     |
 | Go to Line                            | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |    ✅     |
