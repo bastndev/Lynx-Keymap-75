@@ -31,6 +31,13 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
+## [2.2.6] - 2026-05-06
+
+### Changed
+- **README.md**: Removed F1-Quick Switch keymap.
+- **README.md**: Added new experimental keymap - Delete Project.
+
+---
 ## [2.2.5] - 2026-05-05
 
 ### Added
