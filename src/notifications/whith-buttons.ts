@@ -1,10 +1,11 @@
 import * as vscode from 'vscode';
+import { getTranslation } from './info';
 
 export async function promptInstallAtmExtension() {
-    const installAction = '📥 Descargar e Instalar ATM';
+    const installAction = getTranslation('ATM.notification.install.action');
 
     const selection = await vscode.window.showInformationMessage(
-        'Para usar el panel de GitLab, necesitas instalar la extensión "ATM" (@gohitx).',
+        getTranslation('ATM.notification.install.required'),
         installAction
     );
 
