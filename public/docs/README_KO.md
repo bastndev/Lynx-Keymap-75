@@ -144,6 +144,7 @@
 | 디버깅 시작      | `Insert`     | `Insert`              |
 | 디버깅 다시 시작 | `⌥ + Insert` | `Alt + Insert`        |
 | 디버깅 중지      | `⌘ + Insert` | `Ctrl + Insert`       |
+| 디버그 콘솔 열기 | `⌥ + B`       | `Alt + B`             |
 
 ---
 

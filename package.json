@@ -79,6 +79,11 @@
         "mac"    : "cmd+return",
         "command": "-github.copilot.generate"
       },
+      {
+        "key"    : "alt+b",
+        "mac"    : "alt+b",
+        "command": "workbench.debug.action.toggleRepl"
+      },
 
 
 

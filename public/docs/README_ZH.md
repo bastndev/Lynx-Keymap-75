@@ -139,11 +139,12 @@
 
 ## ▶️ 调试
 
-| 命令         | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :----------- | :----------- | :-------------------- |
-| 开始调试     | `Insert`     | `Insert`              |
-| 重新启动调试 | `⌥ + Insert` | `Alt + Insert`        |
-| 停止调试     | `⌘ + Insert` | `Ctrl + Insert`       |
+| 命令           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :------------- | :----------- | :-------------------- |
+| 开始调试       | `Insert`     | `Insert`              |
+| 重启调试       | `⌥ + Insert` | `Alt + Insert`        |
+| 停止调试       | `⌘ + Insert` | `Ctrl + Insert`       |
+| 打开调试控制台 | `⌥ + B`      | `Alt + B`             |
 
 ---
 

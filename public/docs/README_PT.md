@@ -139,11 +139,12 @@
 
 ## ▶️ Depuração
 
-| Comando             | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :------------------ | :----------- | :-------------------- |
-| Iniciar Depuração   | `Insert`     | `Insert`              |
-| Reiniciar Depuração | `⌥ + Insert` | `Alt + Insert`        |
-| Parar Depuração     | `⌘ + Insert` | `Ctrl + Insert`       |
+| Comando                    | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :------------------------- | :----------- | :-------------------- |
+| Iniciar Depuração          | `Insert`     | `Insert`              |
+| Reiniciar Depuração        | `⌥ + Insert` | `Alt + Insert`        |
+| Parar Depuração            | `⌘ + Insert` | `Ctrl + Insert`       |
+| Abrir Console de Depuração | `⌥ + B`      | `Alt + B`             |
 
 ---
 

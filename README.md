@@ -141,9 +141,10 @@
 
 | Command           | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
 | :---------------- | :----------- | :-------------- | :-------------- |
-| Start Debugging   | `Insert`     | `Insert`        | `Insert`        |
-| Restart Debugging | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
-| Stop Debugging    | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Start Debugging    | `Insert`     | `Insert`        | `Insert`        |
+| Restart Debugging  | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
+| Stop Debugging     | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Open Debug Console | `⌥ + B`       | `Alt + B`       | `Alt + B`       |
 
 ---
 

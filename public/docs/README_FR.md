@@ -144,6 +144,7 @@
 | Démarrer le débogage   | `Insert`     | `Insert`              |
 | Redémarrer le débogage | `⌥ + Insert` | `Alt + Insert`        |
 | Arrêter le débogage    | `⌘ + Insert` | `Ctrl + Insert`       |
+| Ouvrir la console de débogage | `⌥ + B`       | `Alt + B`       |
 
 ---
 

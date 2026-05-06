@@ -139,11 +139,12 @@
 
 ## ▶️ Gỡ lỗi
 
-| Lệnh           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :------------- | :----------- | :-------------------- |
-| Bắt đầu Gỡ lỗi | `Insert`     | `Insert`              |
-| Khởi động lại  | `⌥ + Insert` | `Alt + Insert`        |
-| Dừng Gỡ lỗi    | `⌘ + Insert` | `Ctrl + Insert`       |
+| Lệnh               | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :----------------- | :----------- | :-------------------- |
+| Bắt đầu Debug      | `Insert`     | `Insert`              |
+| Khởi động lại Debug| `⌥ + Insert` | `Alt + Insert`        |
+| Dừng Debug         | `⌘ + Insert` | `Ctrl + Insert`       |
+| Mở Debug Console   | `⌥ + B`      | `Alt + B`             |
 
 ---
 

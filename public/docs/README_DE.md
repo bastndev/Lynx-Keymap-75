@@ -143,7 +143,8 @@
 | :-------------------- | :----------- | :-------------------- |
 | Debugging starten     | `Insert`     | `Insert`              |
 | Debugging neu starten | `⌥ + Insert` | `Alt + Insert`        |
-| Debugging stoppen     | `⌘ + Insert` | `Ctrl + Insert`       |
+| Debugging beenden     | `⌘ + Insert` | `Ctrl + Insert`       |
+| Debug-Konsole öffnen  | `⌥ + B`      | `Alt + B`             |
 
 ---
 
