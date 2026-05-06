@@ -3,6 +3,7 @@
 ![Lynx Keymap 75%](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/banner.webp)
 
 <p align="center">
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
@@ -12,15 +13,14 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_HI.md">हिन्दी 🇮🇳</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_AR.md">العربية 🇸🇦</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_HI.md">हिन्दी 🇮🇳</a><span>...</span>
 </p>
 
 <br>
 
-<h2 align="center">Lynx Keymap 75% — <b>Keybinding Reference</b></h2>
+<h2 align="center">Lynx Keymap 75% — <b>مرجع اختصارات لوحة المفاتيح</b></h2>
 
-> Optimized for **75% keyboards** across VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
+> مُحسّن لـ **لوحات المفاتيح بنسبة 75%** عبر VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
 
 ---
 
@@ -28,7 +28,7 @@
 
 ![Experimental — New](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/img/t-1.webp)
 
-| Command               | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| الأمر               | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
 | :-------------------- | :--------------- | :--------------- | :--------------- |
 | Swap Project Terminal | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
 | Close Terminal        | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
@@ -47,7 +47,7 @@
 
 <br>
 
-| Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Supported |
+| Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | مدعوم |
 | :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
 | Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |    ✅     |
 | Open Source Control                   | `⌘ + 2`                 | `Ctrl + 2`                   |    ✅     |
@@ -105,7 +105,7 @@
 
 ## 🔀 Git
 
-> To use these commands, you must first go to **Source Control** (as they do not work directly) or press the shortcut **_`Ctrl + 2`_**.
+> لاستخدام هذه الأوامر، يجب عليك أولاً الانتقال إلى **Source Control** (لأنها لا تعمل مباشرة) أو الضغط على الاختصار **_`Ctrl + 2`_**.
 
 | Command                    | 🍎 macOS         | 🟦 Windows           | 🐧 Linux             |
 | :------------------------- | :--------------- | :------------------- | :------------------- |
@@ -118,7 +118,7 @@
 
 ---
 
-## 🛠️ Settings & Window
+## 🛠️ الإعدادات والنافذة
 
 | Command               | 🍎 macOS        | 🟦 Windows            | 🐧 Linux              |
 | :-------------------- | :-------------- | :-------------------- | :-------------------- |
@@ -132,7 +132,7 @@
 
 ---
 
-## ▶️ Debugging
+## ▶️ تصحيح الأخطاء
 
 | Command            | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
 | :----------------- | :----------- | :-------------- | :-------------- |
@@ -143,11 +143,11 @@
 
 ---
 
-## 🧩 Extensions [+]
+## 🧩 الإضافات [+]
 
 | Command     | 🍎 macOS | 🟦 Windows | 🐧 Linux  |
 | :---------- | :------- | :--------- | :-------- |
-| Install ATM | `⌥ + V`  | `Alt + V`  | `Alt + V` |
+| تثبيت ATM | `⌥ + V`  | `Alt + V`  | `Alt + V` |
 
 <br>
 
@@ -177,9 +177,9 @@
 
 ---
 
-## Installation
+## التثبيت
 
-### Method 1 — Quick Open
+### الطريقة 1 — الفتح السريع
 
 - <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
 - <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
@@ -191,7 +191,7 @@ Paste the following command and press `Enter`:
 ext install bastndev.lynx-keymap-75
 ```
 
-### Method 2 — Extensions View
+### الطريقة 2 — عرض الإضافات
 
 1. Open Extensions (`Ctrl+Shift+X` / `⌘+Shift+X`)
 2. Search **"Lynx Keymap 75%"**
@@ -199,12 +199,12 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## About Me
+## عني
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _Creator & Maintainer_                           |
+|                          _المنشئ والمشرف_                           |
 
 - 🐦 **[X](https://twitter.com/gohitx)** : For questions and discussions.
 - 🌱 **[IG](https://instagram.com/gohitx)** : **`new`** – Project previews & life updates.
@@ -228,11 +228,11 @@ ext install bastndev.lynx-keymap-75
 
 <div align="center">
 
-**Enjoy 🎉 Lynx Keymap 75% is now installed!**  
-_Found a bug or have feedback? [Open an issue](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
+**استمتع 🎉 تم تثبيت Lynx Keymap 75% الآن!**  
+_هل وجدت خطأ أو لديك تعليق؟ [افتح مشكلة](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
-<sub>Made in 🇵🇪 by <a href="https://gohit.xyz">Gohit X</a> · Licensed under <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
+<sub>صنع في 🇵🇪 بواسطة <a href="https://gohit.xyz">Gohit X</a> · مرخص بموجب <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
 
 </div>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">العودة إلى الأعلى</a>)</p>

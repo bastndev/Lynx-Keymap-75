@@ -3,13 +3,6 @@
 ![Lynx Keymap 75%](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/banner.webp)
 
 <p align="center">
-  <img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=VERSION" alt="Version">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/downloads-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=2ca562&color=000000&label=Downloads" alt="Downloads">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=Rating" alt="Rating">&nbsp;
-  <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/icons/star.png" width="26.6px" alt="Github Star ⭐️"></a>
-</p>
-
-<p align="center">
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
@@ -18,7 +11,9 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_HI.md">हिन्दी 🇮🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_AR.md">العربية 🇸🇦</a><span>...</span>
 </p>
 
 <br>
