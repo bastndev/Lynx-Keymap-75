@@ -57,7 +57,6 @@
 | Mở Explorer                                 | `⌘ + 1`                 | `Ctrl + 1`                   |   ✅   |
 | Mở Quản lý mã nguồn                         | `⌘ + 2`                 | `Ctrl + 2`                   |   ✅   |
 | Mở Tiện ích mở rộng                         | `⌘ + 3`                 | `Ctrl + 3`                   |   ✅   |
-| Mở F1-Chuyển nhanh                          | `⌘ + 4`                 | `Ctrl + 4`                   |   ✅   |
 | Ẩn/Hiện thanh bên                           | `⌘ + Tab`               | `Ctrl + Tab`                 |   ✅   |
 | Mở nhanh tập tin                            | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |   ✅   |
 | Đi đến Dòng                                 | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |   ✅   |

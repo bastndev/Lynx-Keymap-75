@@ -57,7 +57,6 @@
 | Abrir Explorador                            | `⌘ + 1`                 | `Ctrl + 1`                   |     ✅     |
 | Abrir Controle de Código Fonte              | `⌘ + 2`                 | `Ctrl + 2`                   |     ✅     |
 | Abrir Extensões                             | `⌘ + 3`                 | `Ctrl + 3`                   |     ✅     |
-| Abrir F1-Quick Switch                       | `⌘ + 4`                 | `Ctrl + 4`                   |     ✅     |
 | Alternar Barra Lateral                      | `⌘ + Tab`               | `Ctrl + Tab`                 |     ✅     |
 | Abertura Rápida de Arquivo                  | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |     ✅     |
 | Ir para a Linha                             | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |     ✅     |

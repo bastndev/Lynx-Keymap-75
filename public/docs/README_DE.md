@@ -57,7 +57,6 @@
 | Explorer öffnen                      | `⌘ + 1`                 | `Ctrl + 1`                   |     ✅      |
 | Quellcodeverwaltung öffnen           | `⌘ + 2`                 | `Ctrl + 2`                   |     ✅      |
 | Erweiterungen öffnen                 | `⌘ + 3`                 | `Ctrl + 3`                   |     ✅      |
-| F1-Quick Switch öffnen               | `⌘ + 4`                 | `Ctrl + 4`                   |     ✅      |
 | Seitenleiste umschalten              | `⌘ + Tab`               | `Ctrl + Tab`                 |     ✅      |
 | Datei schnell öffnen                 | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |     ✅      |
 | Gehe zu Zeile                        | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |     ✅      |

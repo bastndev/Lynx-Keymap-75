@@ -57,7 +57,6 @@
 | Ouvrir l'Explorateur                    | `⌘ + 1`                 | `Ctrl + 1`                   |       ✅       |
 | Ouvrir le Contrôle de code source       | `⌘ + 2`                 | `Ctrl + 2`                   |       ✅       |
 | Ouvrir les Extensions                   | `⌘ + 3`                 | `Ctrl + 3`                   |       ✅       |
-| Ouvrir F1-Quick Switch                  | `⌘ + 4`                 | `Ctrl + 4`                   |       ✅       |
 | Basculer la barre latérale              | `⌘ + Tab`               | `Ctrl + Tab`                 |       ✅       |
 | Ouverture rapide de fichier             | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |       ✅       |
 | Aller à la ligne                        | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |       ✅       |
