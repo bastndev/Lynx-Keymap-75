@@ -3,13 +3,6 @@
 ![Lynx Keymap 75%](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/banner.webp)
 
 <p align="center">
-  <img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=VERSION" alt="Version">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/downloads-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=2ca562&color=000000&label=Downloads" alt="Downloads">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=Rating" alt="Rating">&nbsp;
-  <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/icons/star.png" width="26.6px" alt="Github Star ⭐️"></a>
-</p>
-
-<p align="center">
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
@@ -18,7 +11,9 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_JA.md">日本語 🇯🇵</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_HI.md">हिन्दी 🇮🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_AR.md">العربية 🇸🇦</a><span>...</span>
 </p>
 
 <br>
@@ -57,7 +52,6 @@
 | Mở Explorer                                 | `⌘ + 1`                 | `Ctrl + 1`                   |   ✅   |
 | Mở Quản lý mã nguồn                         | `⌘ + 2`                 | `Ctrl + 2`                   |   ✅   |
 | Mở Tiện ích mở rộng                         | `⌘ + 3`                 | `Ctrl + 3`                   |   ✅   |
-| Mở F1-Chuyển nhanh                          | `⌘ + 4`                 | `Ctrl + 4`                   |   ✅   |
 | Ẩn/Hiện thanh bên                           | `⌘ + Tab`               | `Ctrl + Tab`                 |   ✅   |
 | Mở nhanh tập tin                            | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |   ✅   |
 | Đi đến Dòng                                 | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |   ✅   |
@@ -111,6 +105,8 @@
 
 ## 🔀 Git
 
+> Để sử dụng các lệnh này, trước tiên bạn phải đi tới **Source Control** (vì chúng không hoạt động trực tiếp) hoặc nhấn phím tắt **_`Ctrl + 2`_**.
+
 | Lệnh                        | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :-------------------------- | :--------------- | :-------------------- |
 | Chuẩn bị tất cả             | `⌥ + 1`          | `Alt + 1`             |
@@ -119,7 +115,6 @@
 | Commit                      | `⌥ + Return`     | `Alt + Enter`         |
 | Push                        | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | Xem các thay đổi Git        | `End`            | `End`                 |
-| Mở GitLab                   | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 
@@ -139,13 +134,20 @@
 
 ## ▶️ Gỡ lỗi
 
-| Lệnh           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :------------- | :----------- | :-------------------- |
-| Bắt đầu Gỡ lỗi | `Insert`     | `Insert`              |
-| Khởi động lại  | `⌥ + Insert` | `Alt + Insert`        |
-| Dừng Gỡ lỗi    | `⌘ + Insert` | `Ctrl + Insert`       |
+| Lệnh               | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :----------------- | :----------- | :-------------------- |
+| Bắt đầu Debug      | `Insert`     | `Insert`              |
+| Khởi động lại Debug| `⌥ + Insert` | `Alt + Insert`        |
+| Dừng Debug         | `⌘ + Insert` | `Ctrl + Insert`       |
+| Mở Debug Console   | `⌥ + B`      | `Alt + B`             |
 
 ---
+
+## 🧩 Tiện ích mở rộng [+]
+
+| Lệnh         | 🍎 macOS | 🟦 Windows / 🐧 Linux |
+| :----------- | :------- | :-------------------- |
+| Cài đặt ATM  | `⌥ + V`  | `Alt + V`             |
 
 <br>
 

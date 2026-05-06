@@ -3,13 +3,6 @@
 ![Lynx Keymap 75%](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/banner.webp)
 
 <p align="center">
-  <img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=VERSION" alt="Version">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/downloads-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=2ca562&color=000000&label=Downloads" alt="Downloads">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=Rating" alt="Rating">&nbsp;
-  <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/icons/star.png" width="26.6px" alt="Github Star ⭐️"></a>
-</p>
-
-<p align="center">
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_DE.md">Deutsch 🇩🇪</a> |
@@ -18,7 +11,9 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_HI.md">हिन्दी 🇮🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_AR.md">العربية 🇸🇦</a><span>...</span>
 </p>
 
 <br>
@@ -57,7 +52,6 @@
 | 打开资源管理器               | `⌘ + 1`                 | `Ctrl + 1`                   |  ✅  |
 | 打开源代码管理               | `⌘ + 2`                 | `Ctrl + 2`                   |  ✅  |
 | 打开扩展                     | `⌘ + 3`                 | `Ctrl + 3`                   |  ✅  |
-| 打开 F1-快速切换             | `⌘ + 4`                 | `Ctrl + 4`                   |  ✅  |
 | 切换侧边栏                   | `⌘ + Tab`               | `Ctrl + Tab`                 |  ✅  |
 | 快速打开文件                 | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |  ✅  |
 | 转到行                       | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |  ✅  |
@@ -111,6 +105,8 @@
 
 ## 🔀 Git
 
+> 要使用这些命令，必须先转到 **源代码管理 (Source Control)**（因为它们无法直接运行），或者按下快捷键 **_`Ctrl + 2`_**。
+
 | 命令             | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :--------------- | :--------------- | :-------------------- |
 | 暂存所有         | `⌥ + 1`          | `Alt + 1`             |
@@ -119,7 +115,6 @@
 | 提交             | `⌥ + Return`     | `Alt + Enter`         |
 | 推送             | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | 查看 Git 更改    | `End`            | `End`                 |
-| 打开 GitLab      | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 
@@ -139,13 +134,20 @@
 
 ## ▶️ 调试
 
-| 命令         | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :----------- | :----------- | :-------------------- |
-| 开始调试     | `Insert`     | `Insert`              |
-| 重新启动调试 | `⌥ + Insert` | `Alt + Insert`        |
-| 停止调试     | `⌘ + Insert` | `Ctrl + Insert`       |
+| 命令           | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
+| :------------- | :----------- | :-------------------- |
+| 开始调试       | `Insert`     | `Insert`              |
+| 重启调试       | `⌥ + Insert` | `Alt + Insert`        |
+| 停止调试       | `⌘ + Insert` | `Ctrl + Insert`       |
+| 打开调试控制台 | `⌥ + B`      | `Alt + B`             |
 
 ---
+
+## 🧩 扩展 [+]
+
+| 命令     | 🍎 macOS | 🟦 Windows / 🐧 Linux |
+| :------- | :------- | :-------------------- |
+| 安装 ATM | `⌥ + V`  | `Alt + V`             |
 
 <br>
 

@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "%displayName%",
   "description": "%description%",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -82,6 +82,21 @@
 
 
 
+
+
+
+
+
+      {
+        "key": "alt+v",
+        "mac": "alt+v",
+        "command": "lynx-keymap.openGitlabPanel"
+      },
+      {
+        "key"    : "alt+b",
+        "mac"    : "alt+b",
+        "command": "workbench.debug.action.toggleRepl"
+      },
 
 
 
@@ -459,6 +474,9 @@
       },{
         "command": "lynx-keymap.toggleTerminalBottom",
         "title"  : "Toggle Terminal Bottom"
+      },{
+        "command": "lynx-keymap.openGitlabPanel",
+        "title"  : "Open GitLab Panel"
       }
     ]
   },

@@ -3,13 +3,6 @@
 ![Lynx Keymap 75%](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/banner.webp)
 
 <p align="center">
-  <img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=VERSION" alt="Version">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/downloads-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=2ca562&color=000000&label=Downloads" alt="Downloads">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=Rating" alt="Rating">&nbsp;
-  <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/icons/star.png" width="26.6px" alt="Github Star ⭐️"></a>
-</p>
-
-<p align="center">
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
@@ -18,7 +11,9 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_HI.md">हिन्दी 🇮🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_AR.md">العربية 🇸🇦</a><span>...</span>
 </p>
 
 <br>
@@ -57,7 +52,6 @@
 | Explorer öffnen                      | `⌘ + 1`                 | `Ctrl + 1`                   |     ✅      |
 | Quellcodeverwaltung öffnen           | `⌘ + 2`                 | `Ctrl + 2`                   |     ✅      |
 | Erweiterungen öffnen                 | `⌘ + 3`                 | `Ctrl + 3`                   |     ✅      |
-| F1-Quick Switch öffnen               | `⌘ + 4`                 | `Ctrl + 4`                   |     ✅      |
 | Seitenleiste umschalten              | `⌘ + Tab`               | `Ctrl + Tab`                 |     ✅      |
 | Datei schnell öffnen                 | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |     ✅      |
 | Gehe zu Zeile                        | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |     ✅      |
@@ -111,6 +105,8 @@
 
 ## 🔀 Git
 
+> Um diese Befehle zu verwenden, müssen Sie zuerst zu **Source Control** (Quellcodeverwaltung) gehen (da sie nicht direkt funktionieren) oder die Tastenkombination **_`Ctrl + 2`_** drücken.
+
 | Befehl                         | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :----------------------------- | :--------------- | :-------------------- |
 | Alles für Commit vormerken     | `⌥ + 1`          | `Alt + 1`             |
@@ -119,7 +115,6 @@
 | Commit                         | `⌥ + Return`     | `Alt + Enter`         |
 | Push                           | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | Git-Änderungen anzeigen        | `End`            | `End`                 |
-| GitLab öffnen                  | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 
@@ -143,9 +138,16 @@
 | :-------------------- | :----------- | :-------------------- |
 | Debugging starten     | `Insert`     | `Insert`              |
 | Debugging neu starten | `⌥ + Insert` | `Alt + Insert`        |
-| Debugging stoppen     | `⌘ + Insert` | `Ctrl + Insert`       |
+| Debugging beenden     | `⌘ + Insert` | `Ctrl + Insert`       |
+| Debug-Konsole öffnen  | `⌥ + B`      | `Alt + B`             |
 
 ---
+
+## 🧩 Erweiterungen [+]
+
+| Befehl           | 🍎 macOS | 🟦 Windows / 🐧 Linux |
+| :--------------- | :------- | :-------------------- |
+| ATM installieren | `⌥ + V`  | `Alt + V`             |
 
 <br>
 

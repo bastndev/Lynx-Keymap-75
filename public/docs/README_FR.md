@@ -3,13 +3,6 @@
 ![Lynx Keymap 75%](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/banner.webp)
 
 <p align="center">
-  <img src="https://vsmarketplacebadges.dev/version-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=VERSION" alt="Version">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/downloads-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=2ca562&color=000000&label=Downloads" alt="Downloads">&nbsp;
-  <img src="https://vsmarketplacebadges.dev/rating-short/bastndev.lynx-keymap-75.jpg?style=for-the-badge&colorA=eff6fc&colorB=EEEEEE&color=000000&label=Rating" alt="Rating">&nbsp;
-  <a href="https://github.com/bastndev/Lynx-Keymap-75"><img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/icons/star.png" width="26.6px" alt="Github Star ⭐️"></a>
-</p>
-
-<p align="center">
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/README.md">English 🇺🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ES.md">Español 🇪🇸</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_ZH.md">中文 🇨🇳</a> |
@@ -18,7 +11,9 @@
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_KO.md">한국어 🇰🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_PT.md">Português 🇧🇷</a> |
   <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_RU.md">Русский 🇷🇺</a> |
-  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a><span>...</span>
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_VI.md">Tiếng Việt 🇻🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_HI.md">हिन्दी 🇮🇳</a> |
+  <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/public/docs/README_AR.md">العربية 🇸🇦</a><span>...</span>
 </p>
 
 <br>
@@ -57,7 +52,6 @@
 | Ouvrir l'Explorateur                    | `⌘ + 1`                 | `Ctrl + 1`                   |       ✅       |
 | Ouvrir le Contrôle de code source       | `⌘ + 2`                 | `Ctrl + 2`                   |       ✅       |
 | Ouvrir les Extensions                   | `⌘ + 3`                 | `Ctrl + 3`                   |       ✅       |
-| Ouvrir F1-Quick Switch                  | `⌘ + 4`                 | `Ctrl + 4`                   |       ✅       |
 | Basculer la barre latérale              | `⌘ + Tab`               | `Ctrl + Tab`                 |       ✅       |
 | Ouverture rapide de fichier             | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |       ✅       |
 | Aller à la ligne                        | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |       ✅       |
@@ -111,6 +105,8 @@
 
 ## 🔀 Git
 
+> Pour utiliser ces commandes, vous devez d'abord accéder à **Source Control** (car elles ne fonctionnent pas directement) ou appuyer sur le raccourci **_`Ctrl + 2`_**.
+
 | Commande                  | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
 | :------------------------ | :--------------- | :-------------------- |
 | Tout indexer              | `⌥ + 1`          | `Alt + 1`             |
@@ -119,7 +115,6 @@
 | Commit                    | `⌥ + Return`     | `Alt + Enter`         |
 | Push                      | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
 | Voir changements Git      | `End`            | `End`                 |
-| Ouvrir GitLab             | `⌘ + Q`          | `Ctrl + Q`            |
 
 ---
 
@@ -144,8 +139,15 @@
 | Démarrer le débogage   | `Insert`     | `Insert`              |
 | Redémarrer le débogage | `⌥ + Insert` | `Alt + Insert`        |
 | Arrêter le débogage    | `⌘ + Insert` | `Ctrl + Insert`       |
+| Ouvrir la console de débogage | `⌥ + B`       | `Alt + B`       |
 
 ---
+
+## 🧩 Extensions [+]
+
+| Commande      | 🍎 macOS | 🟦 Windows / 🐧 Linux |
+| :------------ | :------- | :-------------------- |
+| Installer ATM | `⌥ + V`  | `Alt + V`             |
 
 <br>
 
