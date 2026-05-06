@@ -148,6 +148,12 @@
 
 ---
 
+## 🧩 Tiện ích mở rộng [+]
+
+| Lệnh         | 🍎 macOS | 🟦 Windows / 🐧 Linux |
+| :----------- | :------- | :-------------------- |
+| Cài đặt ATM  | `⌥ + V`  | `Alt + V`             |
+
 <br>
 
 > [!IMPORTANT]

@@ -139,14 +139,20 @@
 
 ## ▶️ Debugging
 
-| Command           | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
-| :---------------- | :----------- | :-------------- | :-------------- |
+| Command            | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
+| :----------------- | :----------- | :-------------- | :-------------- |
 | Start Debugging    | `Insert`     | `Insert`        | `Insert`        |
 | Restart Debugging  | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
 | Stop Debugging     | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
-| Open Debug Console | `⌥ + B`       | `Alt + B`       | `Alt + B`       |
+| Open Debug Console | `⌥ + B`      | `Alt + B`       | `Alt + B`       |
 
 ---
+
+## 🧩 Extensions [+]
+
+| Command     | 🍎 macOS | 🟦 Windows | 🐧 Linux  |
+| :---------- | :------- | :--------- | :-------- |
+| Install ATM | `⌥ + V`  | `Alt + V`  | `Alt + V` |
 
 <br>
 

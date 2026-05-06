@@ -148,6 +148,12 @@
 
 ---
 
+## 🧩 Extensions [+]
+
+| Commande      | 🍎 macOS | 🟦 Windows / 🐧 Linux |
+| :------------ | :------- | :-------------------- |
+| Installer ATM | `⌥ + V`  | `Alt + V`             |
+
 <br>
 
 > [!IMPORTANT]
