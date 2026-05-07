@@ -31,11 +31,12 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
-## [2.2.6] - 2026-05-06
+## [2.2.7] - 2026-05-07
 
 ### Changed
 - **README.md**: Removed F1-Quick Switch keymap.
 - **README.md**: Added new experimental keymap - Delete Project.
+- **README.md**: Added new experimental keymap - CLI.
 
 ---
 ## [2.2.5] - 2026-05-05
