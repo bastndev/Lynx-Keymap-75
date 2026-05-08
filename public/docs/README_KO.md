@@ -175,6 +175,31 @@
 > ];
 > ```
 
+> [!NOTE]
+>
+> ### 비활성화된 기본 단축키
+>
+> 이 확장 프로그램은 충돌을 방지하기 위해 다음 VS Code 기본 단축키를 의도적으로 비활성화합니다:
+>
+> - **`Ctrl+P` / `⌘+P`** — 빠른 열기 (사용자 정의 단축키와의 충돌을 방지하기 위해 비활성화됨)
+>   - _대안_: 빠른 열기에는 `Shift+Alt+E`를 사용하세요
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (비활성화됨)
+>   - _이유_: 터미널 및 git 커밋 워크플로와 충돌
+>
+> 이러한 단축키가 필요한 경우 `keybindings.json`에서 다시 활성화할 수 있습니다:
+>
+> ```json
+> [
+>   { "key": "ctrl+p", "command": "workbench.action.quickOpen" },
+>   { "key": "ctrl+enter", "command": "github.copilot.generate" }
+> ]
+> ```
+>
+> ### 알려진 제한 사항
+>
+> - **`Alt+CapsLock`**은 일부 Linux 배포판이나 OS 수준에서 CapsLock이 재매핑된 Windows 시스템에서 작동하지 않을 수 있습니다. 이 단축키가 작동하지 않으면 시스템 키보드 설정을 확인하거나 대체 단축키를 사용하세요.
+
+
 ---
 
 ## ➤ 설치

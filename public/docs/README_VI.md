@@ -175,6 +175,31 @@
 > ];
 > ```
 
+> [!NOTE]
+>
+> ### Phím tắt mặc định bị vô hiệu hóa
+>
+> Tiện ích mở rộng này cố ý vô hiệu hóa các phím tắt mặc định sau của VS Code để tránh xung đột:
+>
+> - **`Ctrl+P` / `⌘+P`** — Mở nhanh (bị vô hiệu hóa để tránh xung đột với phím tắt tùy chỉnh)
+>   - _Thay thế_: Sử dụng `Shift+Alt+E` để Mở nhanh
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (bị vô hiệu hóa)
+>   - _Lý do_: Xung đột với quy trình làm việc terminal và git commit
+>
+> Nếu bạn cần các phím tắt này, bạn có thể bật lại chúng trong `keybindings.json`:
+>
+> ```json
+> [
+>   { "key": "ctrl+p", "command": "workbench.action.quickOpen" },
+>   { "key": "ctrl+enter", "command": "github.copilot.generate" }
+> ]
+> ```
+>
+> ### Hạn chế đã biết
+>
+> - **`Alt+CapsLock`** có thể không hoạt động trên một số bản phân phối Linux hoặc hệ thống Windows nơi CapsLock được ánh xạ lại ở cấp độ hệ điều hành. Nếu phím tắt này không hoạt động, hãy kiểm tra cài đặt bàn phím hệ thống của bạn hoặc sử dụng phím tắt thay thế.
+
+
 ---
 
 ## ➤ Cài đặt

@@ -175,6 +175,31 @@
 > ];
 > ```
 
+> [!NOTE]
+>
+> ### 已禁用的默认快捷键
+>
+> 此扩展有意禁用以下 VS Code 默认快捷键以避免冲突：
+>
+> - **`Ctrl+P` / `⌘+P`** — 快速打开（已禁用以防止与自定义快捷键冲突）
+>   - _替代方案_：使用 `Shift+Alt+E` 进行快速打开
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot 生成（已禁用）
+>   - _原因_：与终端和 git 提交工作流冲突
+>
+> 如果您需要这些快捷键，可以在 `keybindings.json` 中重新启用它们：
+>
+> ```json
+> [
+>   { "key": "ctrl+p", "command": "workbench.action.quickOpen" },
+>   { "key": "ctrl+enter", "command": "github.copilot.generate" }
+> ]
+> ```
+>
+> ### 已知限制
+>
+> - **`Alt+CapsLock`** 在某些 Linux 发行版或 Windows 系统上可能无法工作，其中 CapsLock 在操作系统级别被重新映射。如果此快捷键不起作用，请检查您的系统键盘设置或使用替代快捷键。
+
+
 ---
 
 ## ➤ 安装
