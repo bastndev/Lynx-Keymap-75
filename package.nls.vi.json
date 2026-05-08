@@ -5,6 +5,6 @@
   "lynx.notification.ai.enabled": "({0}) Đề xuất AI: ĐÃ BẬT ✅",
   "lynx.notification.ai.disabled": "({0}) Đề xuất AI: ĐÃ TẮT ❌",
 
-  "ATM.notification.install.required": "Để sử dụng bảng điều khiển GitLab, bạn cần cài đặt tiện ích mở rộng \"ATM\" (@gohitx).",
-  "ATM.notification.install.action": "📥 Tải xuống và Cài đặt ATM"
+  "ATM.notification.install.required": "Để sử dụng bảng điều khiển GitLab, bạn cần cài đặt tiện ích mở rộng \"ATM\" bởi(@gohitx).",
+  "ATM.notification.install.action": "📥 Tải xuống ATM ngay"
 }

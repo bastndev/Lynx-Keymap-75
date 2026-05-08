@@ -5,6 +5,6 @@
   "lynx.notification.ai.enabled": "({0}) ИИ-подсказки: ВКЛЮЧЕНЫ ✅",
   "lynx.notification.ai.disabled": "({0}) ИИ-подсказки: ОТКЛЮЧЕНЫ ❌",
 
-  "ATM.notification.install.required": "Для использования панели GitLab необходимо установить расширение \"ATM\" (@gohitx).",
-  "ATM.notification.install.action": "📥 Скачать и установить ATM"
+  "ATM.notification.install.required": "Для использования панели GitLab необходимо установить расширение \"ATM\" от(@gohitx).",
+  "ATM.notification.install.action": "📥 Скачать ATM сейчас"
 }
