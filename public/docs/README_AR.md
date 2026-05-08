@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>مرجع اختصارات لوحة المفاتيح</b></h2>
 
-> مُحسّن لـ **لوحات المفاتيح بنسبة 75%** عبر VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
+> مُحسّن لـ **لوحات المفاتيح بنسبة 75%** عبر VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio.
 
 ---
 

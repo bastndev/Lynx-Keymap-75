@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>Keybinding Reference</b></h2>
 
-> Optimized for **75% keyboards** across VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
+> Optimized for **75% keyboards** across VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio.
 
 ---
 

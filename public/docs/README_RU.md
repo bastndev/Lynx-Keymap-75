@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>Справочник по горячим клавишам</b></h2>
 
-> Оптимизировано для **75% клавиатур** в VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
+> Оптимизировано для **75% клавиатур** в VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio.
 
 ---
 

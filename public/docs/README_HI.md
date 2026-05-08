@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>कीबाइंडिंग संदर्भ</b></h2>
 
-> VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio में **75% कीबोर्ड** के लिए अनुकूलित।
+> VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio में **75% कीबोर्ड** के लिए अनुकूलित।
 
 ---
 

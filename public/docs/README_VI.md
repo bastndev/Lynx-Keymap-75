@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>Tham khảo phím tắt</b></h2>
 
-> Được tối ưu hóa cho **bàn phím 75%** trên VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
+> Được tối ưu hóa cho **bàn phím 75%** trên VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio.
 
 ---
 
