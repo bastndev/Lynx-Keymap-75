@@ -175,6 +175,31 @@
 > ];
 > ```
 
+> [!NOTE]
+>
+> ### Atalhos Padrão Desabilitados
+>
+> Esta extensão desabilita intencionalmente os seguintes atalhos padrão do VS Code para evitar conflitos:
+>
+> - **`Ctrl+P` / `⌘+P`** — Abertura Rápida (desabilitado para evitar conflitos com atalhos personalizados)
+>   - _Alternativa_: Use `Shift+Alt+E` para Abertura Rápida
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (desabilitado)
+>   - _Razão_: Conflitos com fluxos de trabalho de terminal e commit do git
+>
+> Se você precisar desses atalhos, pode reativá-los em seu `keybindings.json`:
+>
+> ```json
+> [
+>   { "key": "ctrl+p", "command": "workbench.action.quickOpen" },
+>   { "key": "ctrl+enter", "command": "github.copilot.generate" }
+> ]
+> ```
+>
+> ### Limitações Conhecidas
+>
+> - **`Alt+CapsLock`** pode não funcionar em algumas distribuições Linux ou sistemas Windows onde o CapsLock é remapeado no nível do sistema operacional. Se este atalho não funcionar, verifique as configurações do teclado do seu sistema ou use atalhos alternativos.
+
+
 ---
 
 ## ➤ Instalação

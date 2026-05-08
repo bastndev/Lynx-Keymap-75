@@ -175,6 +175,31 @@
 > ];
 > ```
 
+> [!NOTE]
+>
+> ### Deaktivierte Standard-Tastenkombinationen
+>
+> Diese Erweiterung deaktiviert absichtlich die folgenden Standard-VS Code-Tastenkombinationen, um Konflikte zu vermeiden:
+>
+> - **`Ctrl+P` / `⌘+P`** — Schnelles Öffnen (deaktiviert, um Konflikte mit benutzerdefinierten Tastenkombinationen zu vermeiden)
+>   - _Alternative_: Verwenden Sie `Shift+Alt+E` für Schnelles Öffnen
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (deaktiviert)
+>   - _Grund_: Konflikte mit Terminal- und Git-Commit-Workflows
+>
+> Wenn Sie diese Tastenkombinationen benötigen, können Sie sie in Ihrer `keybindings.json` wieder aktivieren:
+>
+> ```json
+> [
+>   { "key": "ctrl+p", "command": "workbench.action.quickOpen" },
+>   { "key": "ctrl+enter", "command": "github.copilot.generate" }
+> ]
+> ```
+>
+> ### Bekannte Einschränkungen
+>
+> - **`Alt+CapsLock`** funktioniert möglicherweise nicht auf einigen Linux-Distributionen oder Windows-Systemen, bei denen CapsLock auf Betriebssystemebene neu zugeordnet ist. Wenn diese Tastenkombination nicht funktioniert, überprüfen Sie Ihre Systemtastatureinstellungen oder verwenden Sie alternative Tastenkombinationen.
+
+
 ---
 
 ## ➤ Installation

@@ -175,6 +175,31 @@
 > ];
 > ```
 
+> [!NOTE]
+>
+> ### Raccourcis par Défaut Désactivés
+>
+> Cette extension désactive intentionnellement les raccourcis VS Code par défaut suivants pour éviter les conflits :
+>
+> - **`Ctrl+P` / `⌘+P`** — Ouverture Rapide (désactivé pour éviter les conflits avec les raccourcis personnalisés)
+>   - _Alternative_ : Utilisez `Shift+Alt+E` pour l'Ouverture Rapide
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (désactivé)
+>   - _Raison_ : Conflits avec les flux de travail du terminal et des commits git
+>
+> Si vous avez besoin de ces raccourcis, vous pouvez les réactiver dans votre `keybindings.json` :
+>
+> ```json
+> [
+>   { "key": "ctrl+p", "command": "workbench.action.quickOpen" },
+>   { "key": "ctrl+enter", "command": "github.copilot.generate" }
+> ]
+> ```
+>
+> ### Limitations Connues
+>
+> - **`Alt+CapsLock`** peut ne pas fonctionner sur certaines distributions Linux ou systèmes Windows où CapsLock est remappé au niveau du système d'exploitation. Si ce raccourci ne fonctionne pas, vérifiez les paramètres du clavier de votre système ou utilisez des raccourcis alternatifs.
+
+
 ---
 
 ## ➤ Installation
