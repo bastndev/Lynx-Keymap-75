@@ -6,5 +6,5 @@
   "lynx.notification.ai.disabled": "({0}) AI 추천: 비활성화됨 ❌",
 
   "ATM.notification.install.required": "GitLab 패널을 사용하려면 \"ATM\" 확장 프로그램 by(@gohitx)을 설치해야 합니다。",
-  "ATM.notification.install.action": "📥 지금 ATM 다운로드"
+  "ATM.notification.install.action": "📥 ATM 다운로드"
 }
