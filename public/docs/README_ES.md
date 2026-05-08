@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>Referencia de Atajos de Teclado</b></h2>
 
-> Optimizado para **teclados 75%** en VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio.
+> Optimizado para **teclados 75%** en VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio.
 
 ---
 

@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>快捷键参考</b></h2>
 
-> 专为 **75% 键盘** 优化，支持 VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio。
+> 专为 **75% 键盘** 优化，支持 VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio。
 
 ---
 

@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>キーバインド リファレンス</b></h2>
 
-> VSCode · Cursor · Windsurf · Trae.ai · Kiro · Antigravity & Firebase.studio に対応し、**75%キーボード**に最適化されています。
+> VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio に対応し、**75%キーボード**に最適化されています。
 
 ---
 

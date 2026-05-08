@@ -26,7 +26,7 @@ code .             # press F5 to test your changes live
 <summary><strong>⌨️ New editor support</strong></summary>
 <br>
 
-**Currently supported:** VS Code · Cursor · Windsurf · Trae.ai · Kiro · Firebase Studio
+**Currently supported:** VS Code · Cursor · Windsurf · Trae-ai · Kiro · Firebase Studio
 
 **Files to modify:**
 - `package.json` — keybinding definitions

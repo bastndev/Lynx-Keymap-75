@@ -9,7 +9,7 @@ A comprehensive keymap extension designed specifically for 75% keyboards, provid
 - **VS Code** - Microsoft Visual Studio Code
 - **Cursor** - AI-first code editor
 - **Windsurf** - AI-powered development environment
-- **Trae.ai** - AI coding assistant
+- **Trae-ai** - AI coding assistant
 - **Firebase Studio** - Google's development platform
 - **Kiro** - Modern code editor with AI-powered features
 
@@ -29,6 +29,12 @@ Following semantic versioning principles for consistent and predictable releases
 
 <br>
 <!-- --- -->
+
+---
+## [2.2.8] - 2026-05-08
+
+### Added
+- **Internationalization**: Added support for multiple languages.
 
 ---
 ## [2.2.7] - 2026-05-07
@@ -287,7 +293,7 @@ Following semantic versioning principles for consistent and predictable releases
 
 ### Fixed
 
-- Improved compatibility with Trae.ai interface
+- Improved compatibility with Trae-ai interface
 - Better handling of AI chat interface shortcuts
 
 ---
@@ -326,7 +332,7 @@ Following semantic versioning principles for consistent and predictable releases
 
 ### Initial Release
 
-- **Universal Keymap System**: Consistent shortcuts across VS Code, Cursor, Windsurf, Trae.ai
+- **Universal Keymap System**: Consistent shortcuts across VS Code, Cursor, Windsurf, Trae-ai
 - **75% Keyboard Optimization**: Specially designed for compact keyboard layouts
 - **Core Functionality**:
   - File and folder management shortcuts
