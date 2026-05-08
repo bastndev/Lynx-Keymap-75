@@ -189,6 +189,10 @@
         "key"    : "insert",
         "mac"    : "insert",
         "command": "lynx-keymap.smartDebugStart"
+      },{
+        "key"    : "f5",
+        "mac"    : "f5",
+        "command": "lynx-keymap.smartDebugStart"
       },
 
 
