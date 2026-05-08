@@ -35,8 +35,7 @@ export class BottomTerminalManager extends BaseTerminalManager {
               // If it was LEFT, we might want to re-open AI Chat later or now.
               // But we don't restore settings yet to avoid flicker.
               if (isTransition) {
-                // Fire and forget AI Chat re-opening if it was in side panel
-                vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
+                await vscode.commands.executeCommand('lynx-keymap.openAndCloseAIChat');
               }
             }
 
