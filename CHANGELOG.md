@@ -35,6 +35,7 @@ Following semantic versioning principles for consistent and predictable releases
 
 ### Added
 - **Internationalization**: Added support for multiple languages.
+- **Gitlab**: Added support for multiple languages.
 
 ---
 ## [2.2.7] - 2026-05-07
