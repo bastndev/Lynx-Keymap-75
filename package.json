@@ -188,7 +188,7 @@
       },{
         "key"    : "insert",
         "mac"    : "insert",
-        "command": "workbench.action.debug.start"
+        "command": "lynx-keymap.smartDebugStart"
       },
 
 
@@ -332,7 +332,7 @@
       },{
         "key"    : "ctrl+[Backquote]",
         "mac"    : "cmd+[Backquote]",
-        "command": "workbench.action.terminal.new"
+        "command": "lynx-keymap.smartNewTerminal"
       },
       
       {
@@ -419,7 +419,7 @@
       {
         "key"    : "alt+z",
         "mac"    : "alt+z",
-        "command": "editor.action.toggleWordWrap"
+        "command": "lynx-keymap.toggleWordWrap"
       },
       
       {
@@ -474,6 +474,15 @@
       },{
         "command": "lynx-keymap.toggleTerminalBottom",
         "title"  : "Toggle Terminal Bottom"
+      },{
+        "command": "lynx-keymap.smartNewTerminal",
+        "title"  : "Smart New Terminal"
+      },{
+        "command": "lynx-keymap.toggleWordWrap",
+        "title"  : "Toggle Word Wrap"
+      },{
+        "command": "lynx-keymap.smartDebugStart",
+        "title"  : "Smart Debug Start"
       },{
         "command": "lynx-keymap.openGitlabPanel",
         "title"  : "Open GitLab Panel"

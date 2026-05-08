@@ -1,49 +1,44 @@
 import * as vscode from 'vscode';
-
-/**
- * Shows a simple informational toggle notification.
- * Used by AIToggleManager after toggling AI suggestions.
- */
-
-import * as fs from 'fs';
-import * as path from 'path';
+import { LOG_PREFIX } from '../shared/constants';
 
 let nlsData: Record<string, string> | null = null;
+let nlsLoadError = false;
 
-export function getTranslation(key: string, ...args: string[]): string {
-  if (!nlsData) {
+export async function getTranslation(key: string, ...args: string[]): Promise<string> {
+  if (!nlsData && !nlsLoadError) {
     try {
       const ext = vscode.extensions.getExtension('bastndev.lynx-keymap-75');
       if (ext) {
-        const lang = vscode.env.language;
-        const rootPath = ext.extensionPath;
-        let nlsPath = path.join(rootPath, `package.nls.${lang}.json`);
-        if (!fs.existsSync(nlsPath)) {
-          nlsPath = path.join(rootPath, 'package.nls.json');
+        const lang    = vscode.env.language;
+        const rootUri = ext.extensionUri;
+        let nlsUri    = vscode.Uri.joinPath(rootUri, `package.nls.${lang}.json`);
+
+        try {
+          await vscode.workspace.fs.stat(nlsUri);
+        } catch {
+          nlsUri = vscode.Uri.joinPath(rootUri, 'package.nls.json');
         }
-        const content = fs.readFileSync(nlsPath, 'utf8');
-        nlsData = JSON.parse(content);
+
+        const content = await vscode.workspace.fs.readFile(nlsUri);
+        nlsData = JSON.parse(Buffer.from(content).toString('utf8'));
       }
     } catch (e) {
+      nlsLoadError = true;
       nlsData = {};
+      console.warn(`${LOG_PREFIX} Failed to load translations:`, e);
     }
   }
 
   let text = nlsData?.[key] || key;
-  args.forEach((arg, i) => {
-    text = text.replace(`{${i}}`, arg);
-  });
+  args.forEach((arg, i) => { text = text.replace(`{${i}}`, arg); });
   return text;
 }
 
-// ─── AI Disable and enable notifications ─────────────────────────────────────────────
-export function notifyToggle(editor: string, enabled: boolean): void {
-  const name  = editor.charAt(0).toUpperCase() + editor.slice(1);
-  const message = enabled 
-    ? getTranslation('lynx.notification.ai.enabled', name) 
-    : getTranslation('lynx.notification.ai.disabled', name);
-    
+export async function notifyToggle(editor: string, enabled: boolean): Promise<void> {
+  const name    = editor.charAt(0).toUpperCase() + editor.slice(1);
+  const message = enabled
+    ? await getTranslation('lynx.notification.ai.enabled',  name)
+    : await getTranslation('lynx.notification.ai.disabled', name);
+
   vscode.window.showInformationMessage(message);
 }
-
-// ─── TODO: Add more notifications ────────────────────────────────────────────────────
