@@ -34,7 +34,7 @@
 | opencode/ClaudeCode を開く | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
-<summary>👁️ スクリーンショットを見る</summary>
+<summary>🖼️ スクリーンショットを見る</summary>
 <br>
 
 ![OpenCode / ClaudeCode](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/screenshot/CLI.webp)
