@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import { BaseManager } from '../shared/base-manager';
-import { promptInstallExtension } from '../notifications/install-prompt';
+import { BaseManager } from '../../shared/base-manager';
+import { promptInstallExtension } from '../install-prompt';
 
 interface PanelConfig {
   commandId: string;

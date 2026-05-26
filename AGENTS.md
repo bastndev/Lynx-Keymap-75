@@ -26,7 +26,7 @@ Entry point: `src/extension.ts` — `activate()` instantiates managers and regis
 | `BottomTerminalManager` | `src/keymaps/terminal/bottom-panel.ts` | Handles the bottom terminal toggle. |
 | `WordWrapManager` | `src/wordwrap/manager.ts` | Handles intelligent word-wrap toggling across supported languages. |
 | `DebugManager` | `src/debug/panel.ts` | Anchors panels and starts debugging strictly from bottom terminal layout. |
-| `PanelCommandsManager` | `src/panels/commands.ts` | Registers external panel commands (GitLab, MySkills) with install prompts. |
+| `PanelCommandsManager` | `src/notifications/panels/commands.ts` | Registers external panel commands (GitLab, MySkills) with install prompts. |
 
 ## Key gotchas
 
@@ -63,12 +63,12 @@ src/
     panel.ts                    # Smart debug start logic
   wordwrap/
     manager.ts                  # Word-wrap toggle logic
-  panels/
-    commands.ts                 # External panel commands (GitLab, MySkills)
   notifications/
     i18n.ts                     # Translation loader (getTranslation)
     toggle.ts                   # notifyToggle helper
     install-prompt.ts           # Generic extension install prompt
+    panels/
+      commands.ts               # External panel commands (GitLab, MySkills)
 ```
 
 ## Required External Extensions

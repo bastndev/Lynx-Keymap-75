@@ -5,5 +5,5 @@ export { TerminalManager }          from './terminal/side-panel';
 export { BottomTerminalManager }    from './terminal/bottom-panel';
 export { DebugManager }             from '../debug/panel';
 export { WordWrapManager }          from '../wordwrap/manager';
-export { PanelCommandsManager }     from '../panels/commands';
+export { PanelCommandsManager }     from '../notifications/panels/commands';
 export { recoverSidePanelState }    from './terminal/startup-recovery';

@@ -6,7 +6,7 @@ import { TerminalManager }             from './keymaps/terminal/side-panel';
 import { BottomTerminalManager }       from './keymaps/terminal/bottom-panel';
 import { DebugManager }                from './debug/panel';
 import { WordWrapManager }             from './wordwrap/manager';
-import { PanelCommandsManager }        from './panels/commands';
+import { PanelCommandsManager }        from './notifications/panels/commands';
 import { recoverSidePanelState }       from './keymaps/terminal/startup-recovery';
 
 const managers: Array<{ name: string; ref: vscode.Disposable | undefined }> = [];
