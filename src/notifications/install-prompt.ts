@@ -1,10 +1,14 @@
 import * as vscode from 'vscode';
 import { getTranslation } from './i18n';
 
-export async function promptInstallExtension(extensionId: string): Promise<void> {
-  const installAction = await getTranslation('ATM.notification.install.action');
+export async function promptInstallExtension(
+  extensionId: string,
+  messageKey:  string,
+  actionKey:   string,
+): Promise<void> {
+  const installAction = await getTranslation(actionKey);
   const selection = await vscode.window.showInformationMessage(
-    await getTranslation('ATM.notification.install.required'),
+    await getTranslation(messageKey),
     installAction
   );
 

@@ -6,8 +6,8 @@ import { TerminalManager }             from './keymaps/terminal/side-panel';
 import { BottomTerminalManager }       from './keymaps/terminal/bottom-panel';
 import { DebugManager }                from './debug/panel';
 import { WordWrapManager }             from './wordwrap/manager';
+import { PanelCommandsManager }        from './panels/commands';
 import { recoverSidePanelState }       from './keymaps/terminal/startup-recovery';
-import { promptInstallExtension }      from './notifications/install-prompt';
 
 const managers: Array<{ name: string; ref: vscode.Disposable | undefined }> = [];
 
@@ -19,6 +19,7 @@ export async function activate(context: vscode.ExtensionContext) {
   const bottomTerminalMgr  = new BottomTerminalManager();
   const wordWrapManager    = new WordWrapManager();
   const debugManager       = new DebugManager();
+  const panelCommandsMgr   = new PanelCommandsManager();
 
   managers.push(
     { name: 'aiManager',         ref: aiManager         },
@@ -27,6 +28,7 @@ export async function activate(context: vscode.ExtensionContext) {
     { name: 'bottomTerminalMgr', ref: bottomTerminalMgr },
     { name: 'wordWrapManager',   ref: wordWrapManager   },
     { name: 'debugManager',      ref: debugManager      },
+    { name: 'panelCommandsMgr',  ref: panelCommandsMgr  },
   );
 
   aiManager.registerCommands(context);
@@ -35,31 +37,12 @@ export async function activate(context: vscode.ExtensionContext) {
   bottomTerminalMgr.registerCommands(context);
   wordWrapManager.registerCommands(context);
   debugManager.registerCommands(context);
+  panelCommandsMgr.registerCommands(context);
 
   void aiManager.warmup().catch(error => {
     console.warn(`[lynx-keymap] AI detection warmup failed:`, error);
   });
 
-  // ─── Panel commands (GitLab + MySkills) ────────────────────────────────────
-  const panelCommands: Array<{ cmd: string; extId: string; focusCmd: string }> = [
-    { cmd: 'lynx-keymap.openGitlabPanel',   extId: 'bastndev.atm',       focusCmd: 'workbench.view.extension.gitlab-panel' },
-    { cmd: 'lynx-keymap.openMySkillsPanel',  extId: 'bastndev.my-skills', focusCmd: 'myskills-panel.focus' },
-  ];
-
-  for (const { cmd, extId, focusCmd } of panelCommands) {
-    const disposable = vscode.commands.registerCommand(cmd, async () => {
-      const ext = vscode.extensions.getExtension(extId);
-      if (ext) {
-        if (!ext.isActive) { await ext.activate(); }
-        void vscode.commands.executeCommand(focusCmd);
-      } else {
-        void promptInstallExtension(extId);
-      }
-    });
-    context.subscriptions.push(disposable);
-  }
-
-  // ─── Startup recovery ──────────────────────────────────────────────────────
   await recoverSidePanelState(context);
 }
 
