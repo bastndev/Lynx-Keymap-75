@@ -8,6 +8,6 @@
   "ATM.notification.install.required": "Для использования панели GitLab необходимо установить расширение \"ATM\" от(@gohitx).",
   "ATM.notification.install.action": "📥 Скачать ATM",
 
-  "MySkills.notification.install.required": "Для использования панели Skills необходимо установить расширение \"MySkills\" от(@gohitx).",
+  "MySkills.notification.install.required": "Для использования панели Skills необходимо установить расширение \"My Skills\" от(@gohitx).",
   "MySkills.notification.install.action": "📥 Скачать My Skills"
 }

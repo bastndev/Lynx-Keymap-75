@@ -8,6 +8,6 @@
   "ATM.notification.install.required": "GitLab 패널을 사용하려면 \"ATM\" 확장 프로그램 by(@gohitx)을 설치해야 합니다。",
   "ATM.notification.install.action": "📥 ATM 다운로드",
 
-  "MySkills.notification.install.required": "Skills 패널을 사용하려면 \"MySkills\" 확장 프로그램 by(@gohitx)을 설치해야 합니다.",
+  "MySkills.notification.install.required": "Skills 패널을 사용하려면 \"My Skills\" 확장 프로그램 by(@gohitx)을 설치해야 합니다.",
   "MySkills.notification.install.action": "📥 My Skills 다운로드"
 }
