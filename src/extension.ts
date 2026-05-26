@@ -4,8 +4,8 @@ import { AICommandsManager }           from './keymaps/ai/commands-manager';
 import { AIToggleManager }             from './keymaps/ai/toggle-manager';
 import { TerminalManager }             from './keymaps/terminal/side-panel';
 import { BottomTerminalManager }       from './keymaps/terminal/bottom-panel';
-import { DebugManager }                from './debug/panel';
-import { WordWrapManager }             from './wordwrap/manager';
+import { DebugManager }                from './editor/debug/panel';
+import { WordWrapManager }             from './editor/wordwrap/manager';
 import { PanelCommandsManager }        from './notifications/panels/commands';
 import { recoverSidePanelState }       from './keymaps/terminal/startup-recovery';
 

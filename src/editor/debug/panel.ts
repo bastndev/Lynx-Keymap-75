@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import { STORAGE_KEYS, PANEL_POSITIONS, LOG_PREFIX } from '../shared/constants';
-import { BaseManager } from '../shared/base-manager';
+import { STORAGE_KEYS, PANEL_POSITIONS, LOG_PREFIX } from '../../shared/constants';
+import { BaseManager } from '../../shared/base-manager';
 
 export class DebugManager extends BaseManager {
 

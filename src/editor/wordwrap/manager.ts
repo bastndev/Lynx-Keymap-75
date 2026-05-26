@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import { LOG_PREFIX } from '../shared/constants';
-import { BaseManager } from '../shared/base-manager';
+import { LOG_PREFIX } from '../../shared/constants';
+import { BaseManager } from '../../shared/base-manager';
 
 // Add language IDs here to extend word-wrap toggle support.
 export const WORD_WRAP_LANGUAGES = new Set<string>([
