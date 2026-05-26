@@ -94,6 +94,10 @@
         "key": "alt+v",
         "mac": "alt+v",
         "command": "lynx-keymap.openGitlabPanel"
+      },{
+        "key": "ctrl+4",
+        "mac": "cmd+4",
+        "command": "lynx-keymap.openMySkillsPanel"
       },
       {
         "key"    : "alt+b",
@@ -493,6 +497,9 @@
       },{
         "command": "lynx-keymap.openGitlabPanel",
         "title"  : "Open GitLab Panel"
+      },{
+        "command": "lynx-keymap.openMySkillsPanel",
+        "title"  : "Open My Skills Panel"
       }
     ]
   },

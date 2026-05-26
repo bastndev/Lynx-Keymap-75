@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { AICommandsManager, AIToggleManager, BottomTerminalManager, DebugManager, TerminalManager, WordWrapManager } from './keymaps';
 import { STORAGE_KEYS, PANEL_POSITIONS, LOG_PREFIX } from './shared/constants';
-import { promptInstallAtmExtension } from './notifications/with-buttons';
+import { promptInstallAtmExtension, promptInstallMySkillsExtension } from './notifications/with-buttons';
 
 let aiManager:             AICommandsManager     | undefined;
 let terminalManager:       TerminalManager       | undefined;
@@ -43,6 +43,19 @@ export async function activate(context: vscode.ExtensionContext) {
     }
   });
   context.subscriptions.push(gitlabPanelCommand);
+
+  const mySkillsPanelCommand = vscode.commands.registerCommand('lynx-keymap.openMySkillsPanel', async () => {
+    const mySkillsExtension = vscode.extensions.getExtension('bastndev.my-skills');
+    if (mySkillsExtension) {
+      if (!mySkillsExtension.isActive) {
+        await mySkillsExtension.activate();
+      }
+      void vscode.commands.executeCommand('myskills-panel.focus');
+    } else {
+      void promptInstallMySkillsExtension();
+    }
+  });
+  context.subscriptions.push(mySkillsPanelCommand);
 
   // Read previous position BEFORE resetting — needed for startup cleanup below.
   const prevPosition = context.workspaceState.get<string>(STORAGE_KEYS.PANEL_POSITION);
