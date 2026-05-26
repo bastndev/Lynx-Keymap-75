@@ -11,7 +11,6 @@ export const WORD_WRAP_LANGUAGES = new Set<string>([
 ]);
 
 export class WordWrapManager extends BaseManager {
-  private isWrapOn = false;
 
   registerCommands(context: vscode.ExtensionContext): void {
     const cmd = vscode.commands.registerCommand('lynx-keymap.toggleWordWrap', () =>
@@ -25,24 +24,19 @@ export class WordWrapManager extends BaseManager {
   isLanguageSupported(languageId: string): boolean { return WORD_WRAP_LANGUAGES.has(languageId); }
 
   private async toggleWordWrap(): Promise<void> {
-    this.isWrapOn = !this.isWrapOn;
-    const value   = this.isWrapOn ? 'on' : 'off';
+    const editor = vscode.window.activeTextEditor;
+    if (!editor || !WORD_WRAP_LANGUAGES.has(editor.document.languageId)) { return; }
 
-    const editors = vscode.window.visibleTextEditors.filter(e =>
-      WORD_WRAP_LANGUAGES.has(e.document.languageId)
-    );
-    if (editors.length === 0) { return; }
-
-    const updates = editors.map(editor => {
-      const config = vscode.workspace.getConfiguration('editor', {
-        languageId: editor.document.languageId,
-        uri: editor.document.uri,
-      });
-      return config.update('wordWrap', value, vscode.ConfigurationTarget.Global);
+    const config = vscode.workspace.getConfiguration('editor', {
+      languageId: editor.document.languageId,
+      uri: editor.document.uri,
     });
 
+    const current = config.get<string>('wordWrap', 'off');
+    const next = current === 'on' ? 'off' : 'on';
+
     try {
-      await Promise.all(updates);
+      await config.update('wordWrap', next, vscode.ConfigurationTarget.Global);
     } catch (error) {
       console.error(`${LOG_PREFIX} Failed to toggle word wrap:`, error);
       vscode.window.showErrorMessage(`Word wrap toggle failed: ${error instanceof Error ? error.message : String(error)}`);
