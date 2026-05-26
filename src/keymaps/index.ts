@@ -1,7 +1,9 @@
-export * from './ai/controller';
-export * from './ai/configs';
-export * from './terminal/side-panel';
-export * from './terminal/bottom-panel';
-export * from './terminal/shared';
-export * from './shared/wordwrap';
-export * from './shared/debug/panel';
+export { EditorDetector }           from './ai/detector';
+export { AICommandsManager }        from './ai/commands-manager';
+export { AIToggleManager }          from './ai/toggle-manager';
+export { TerminalManager }          from './terminal/side-panel';
+export { BottomTerminalManager }    from './terminal/bottom-panel';
+export { DebugManager }             from '../debug/panel';
+export { WordWrapManager }          from '../wordwrap/manager';
+export { recoverSidePanelState }    from './terminal/startup-recovery';
+export { promptInstallExtension }   from '../notifications/install-prompt';

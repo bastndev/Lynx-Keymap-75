@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
-import { LOG_PREFIX } from '../../shared/constants';
+import { LOG_PREFIX } from '../shared/constants';
+import { BaseManager } from '../shared/base-manager';
 
 // Add language IDs here to extend word-wrap toggle support.
 export const WORD_WRAP_LANGUAGES = new Set<string>([
@@ -9,16 +10,14 @@ export const WORD_WRAP_LANGUAGES = new Set<string>([
   'sql',      'astro',
 ]);
 
-export class WordWrapManager {
-  private disposables: vscode.Disposable[] = [];
+export class WordWrapManager extends BaseManager {
   private isWrapOn = false;
 
   registerCommands(context: vscode.ExtensionContext): void {
     const cmd = vscode.commands.registerCommand('lynx-keymap.toggleWordWrap', () =>
       this.toggleWordWrap()
     );
-    this.disposables.push(cmd);
-    context.subscriptions.push(cmd);
+    this.register(context, cmd);
   }
 
   addLanguage(languageId: string): void    { WORD_WRAP_LANGUAGES.add(languageId); }
@@ -48,10 +47,5 @@ export class WordWrapManager {
       console.error(`${LOG_PREFIX} Failed to toggle word wrap:`, error);
       vscode.window.showErrorMessage(`Word wrap toggle failed: ${error instanceof Error ? error.message : String(error)}`);
     }
-  }
-
-  dispose(): void {
-    for (const d of this.disposables) { d.dispose(); }
-    this.disposables = [];
   }
 }

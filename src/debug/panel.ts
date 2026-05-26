@@ -1,12 +1,8 @@
 import * as vscode from 'vscode';
-import {
-  STORAGE_KEYS,
-  LOG_PREFIX,
-  PANEL_POSITIONS,
-  BaseTerminalManager,
-} from '../../terminal/shared';
+import { STORAGE_KEYS, PANEL_POSITIONS, LOG_PREFIX } from '../shared/constants';
+import { BaseManager } from '../shared/base-manager';
 
-export class DebugManager extends BaseTerminalManager {
+export class DebugManager extends BaseManager {
 
   public registerCommands(context: vscode.ExtensionContext): void {
 

@@ -19,12 +19,13 @@ Entry point: `src/extension.ts` — `activate()` instantiates managers and regis
 
 | Manager | File | Responsibility |
 |---------|------|----------------|
-| `AICommandsManager` | `src/keymaps/ai/controller.ts` | Detects active editor (Priority: Antigravity → Windsurf → Cursor → Trae → Kiro → Firebase → VSCode) and executes corresponding AI commands. |
-| `AIToggleManager` | `src/keymaps/ai/controller.ts` | Toggles AI suggestions across multiple providers by updating global configurations. |
+| `EditorDetector` | `src/keymaps/ai/detector.ts` | Detects active editor (Priority: Antigravity → Windsurf → Cursor → Trae → Kiro → Firebase → VSCode). Caches result for 5 min. Shared by AI managers. |
+| `AICommandsManager` | `src/keymaps/ai/commands-manager.ts` | Executes AI commands using primary + fallback strategy via `EditorDetector`. |
+| `AIToggleManager` | `src/keymaps/ai/toggle-manager.ts` | Toggles AI suggestions across multiple providers by updating global configurations. |
 | `TerminalManager` | `src/keymaps/terminal/side-panel.ts` | Handles the lateral terminal (Left/Right) including settings persistence. |
 | `BottomTerminalManager` | `src/keymaps/terminal/bottom-panel.ts` | Handles the bottom terminal toggle. |
-| `WordWrapManager` | `src/keymaps/shared/wordwrap.ts` | Handles intelligent word-wrap toggling across supported languages. |
-| `DebugManager` | `src/keymaps/shared/debug/panel.ts` | Anchors panels and starts debugging strictly from bottom terminal layout. |
+| `WordWrapManager` | `src/wordwrap/manager.ts` | Handles intelligent word-wrap toggling across supported languages. |
+| `DebugManager` | `src/debug/panel.ts` | Anchors panels and starts debugging strictly from bottom terminal layout. |
 
 ## Key gotchas
 
@@ -39,25 +40,32 @@ Entry point: `src/extension.ts` — `activate()` instantiates managers and regis
 
 ```
 src/
-  extension.ts              # Entry point
-  keymaps/
-    index.ts                # Main exports
-    ai/
-      controller.ts         # AICommandsManager & AIToggleManager
-      configs.ts            # AI Command maps and editor signatures
-    terminal/
-      side-panel.ts         # Lateral terminal logic
-      bottom-panel.ts       # Bottom terminal logic
-      shared.ts             # Common terminal settings & helpers
-    shared/
-      wordwrap.ts           # Word-wrap toggle logic
-      debug/
-        panel.ts            # Smart debug start logic
-  notifications/
-    info.ts                 # Notification helpers
-    with-buttons.ts         # Actionable notifications
+  extension.ts                  # Entry point (lifecycle only)
   shared/
-    constants.ts            # Constants definitions
+    constants.ts                # LOG_PREFIX, STORAGE_KEYS, PANEL_POSITIONS
+    base-manager.ts             # BaseManager abstract (disposable pattern)
+    commands.ts                 # tryExecuteCommand() shared utility
+  keymaps/
+    index.ts                    # Barrel re-exports
+    ai/
+      configs.ts                # AI Command maps and editor signatures (pure data)
+      detector.ts               # EditorDetector (detection + cache)
+      commands-manager.ts       # AICommandsManager
+      toggle-manager.ts         # AIToggleManager
+    terminal/
+      constants.ts              # TERMINAL_CONFIG, WORKBENCH_CONFIG, LAYOUT_SETTLE_MS
+      settings.ts               # save/apply/restore original settings
+      side-panel.ts             # Lateral terminal logic
+      bottom-panel.ts           # Bottom terminal logic
+      startup-recovery.ts       # Auxiliary bar cleanup on startup
+  debug/
+    panel.ts                    # Smart debug start logic
+  wordwrap/
+    manager.ts                  # Word-wrap toggle logic
+  notifications/
+    i18n.ts                     # Translation loader (getTranslation)
+    toggle.ts                   # notifyToggle helper
+    install-prompt.ts           # Generic extension install prompt
 ```
 
 ## Required External Extensions
