@@ -20,20 +20,18 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>कीबाइंडिंग संदर्भ</b></h2>
 
-> VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio में **75% कीबोर्ड** के लिए अनुकूलित।
+> VS Code · Cursor · Windsurf · Trae AI · Kiro · Antigravity & Firebase Studio में **75% कीबोर्ड** के लिए अनुकूलित।
 
 ---
 
-<br>
+## 🧪 प्रायोगिक — `नया`
 
-![Experimental — New](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/img/t-1.webp)
-
-| कमांड                   | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :---------------------- | :--------------- | :--------------- | :--------------- |
-| प्रोजेक्ट टर्मिनल बदलें | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
-| टर्मिनल बंद करें        | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
-| -                       | -                | -                | -                |
-| opencode/ClaudeCode     | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
+| कमांड | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :-- | :-- | :-- | :-- |
+| SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
+| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| - | - | - | - |
+| OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>🖼️ स्क्रीनशॉट देखें</summary>
@@ -47,113 +45,118 @@
 
 <br>
 
-| कमांड                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | समर्थित |
-| :---------------------------------- | :---------------------- | :--------------------------- | :-----: |
-| एक्सप्लोरर खोलें                    | `⌘ + 1`                 | `Ctrl + 1`                   |   ✅    |
-| सोर्स कंट्रोल खोलें                 | `⌘ + 2`                 | `Ctrl + 2`                   |   ✅    |
-| एक्सटेंशन खोलें                     | `⌘ + 3`                 | `Ctrl + 3`                   |   ✅    |
-| साइडबार टॉगल करें                   | `⌘ + Tab`               | `Ctrl + Tab`                 |   ✅    |
-| फ़ाइल त्वरित खोलें                  | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |   ✅    |
-| लाइन पर जाएं                        | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |   ✅    |
-| पहले एडिटर ग्रुप पर फोकस करें       | `⌥ + Q`                 | `Alt + Q`                    |   ✅    |
-| -                                   | -                       | -                            |   N/A   |
-| नई फ़ाइल                            | `⌥ + X`                 | `Alt + X`                    |   ✅    |
-| नया फ़ोल्डर                         | `⌥ + C`                 | `Alt + C`                    |   ✅    |
-| वर्ड रैप टॉगल करें                  | `⌥ + Z`                 | `Alt + Z`                    |   ✅    |
-| लाइन चयन बढ़ाएं                     | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |   ✅    |
-| लाइनें ऊपर कॉपी करें                | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |   ✅    |
-| लाइनें नीचे कॉपी करें               | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |   ✅    |
-| कर्सर ऊपर डालें                     | `⌘ + ↑`                 | `Ctrl + ↑`                   |   ✅    |
-| कर्सर नीचे डालें                    | `⌘ + ↓`                 | `Ctrl + ↓`                   |   ✅    |
-| बाईं ओर का शब्द हटाएं               | `⌘ + Backspace`         | `Ctrl + Backspace`           |   ✅    |
-| प्रोजेक्ट बंद करें                  | `⌘ + Delete`            | `Ctrl + Delete`              |   ✅    |
-| -                                   | -                       | -                            |   N/A   |
-| दस्तावेज़ फॉर्मेट करें              | `⌥ + F`                 | `Alt + F`                    |   ✅    |
-| चयन फॉर्मेट करें                    | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |   ✅    |
-| इम्पोर्ट व्यवस्थित करें             | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |   ✅    |
-| लाइन कमेंट करें                     | `⌘ + /`                 | `Ctrl + /`                   |   ✅    |
-| ब्लॉक कमेंट करें                    | `⌥ + /`                 | `Alt + /`                    |   ✅    |
-| -                                   | -                       | -                            |   N/A   |
-| टर्मिनल नीचे (टॉगल)                 | `⌥ + E`                 | `Alt + E`                    |   ✅    |
-| टर्मिनल बाएं/दाएं (टॉगल)            | `⌥ + CapsLock`          | `Alt + CapsLock`             |   ✅    |
-| टर्मिनल त्वरित खोलें                | `⌥ + W`                 | `Alt + W`                    |   ✅    |
-| नया टर्मिनल                         | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |   ✅    |
-| टर्मिनल बंद करें (Kill)             | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |   ✅    |
-| टर्मिनल — लाइन साफ करें             | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |   ✅    |
-| टर्मिनल — शब्द पूरा करें            | `⌥ + ,`                 | `Alt + ,`                    |   ✅    |
-| पैनल बड़ा/छोटा करें                 | `⌘ + Esc`               | `Ctrl + Esc`                 |   ✅    |
-| पैनल टॉगल करें                      | `Page Down`             | `Page Down`                  |   ✅    |
-| -                                   | -                       | -                            |   N/A   |
-| **स्मार्ट बंद** — AI चैट या टर्मिनल | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |   ✅    |
-| नया AI सत्र बनाएं                   | `⌥ + A`                 | `Alt + A`                    |   ✅    |
-| AI मॉडल चुनें                       | `⌥ + S`                 | `Alt + S`                    |   ✅    |
-| AI से कोड चुनें                     | `⌥ + D`                 | `Alt + D`                    |   ✅    |
-| -                                   | -                       | -                            |   N/A   |
-| AI एजेंट मोड टॉगल करें              | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |   ✅    |
-| AI चैट इतिहास दिखाएं                | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |   ✅    |
-| AI सुझाव टॉगल करें                  | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |   ✅    |
-| -                                   | -                       | -                            |   N/A   |
-| इनलाइन चैट रद्द करें                | `⌥ + Return`            | `Alt + Enter`                |   ✅    |
-| सहायक बार बड़ा/छोटा करें            | `⇧ + Esc`               | `Shift + Esc`                |   ✅    |
+## ⌨️ सामान्य कीबाइंडिंग 75%
 
-> **स्मार्ट बंद** (`Ctrl + CapsLock`) संदर्भ-आधारित है:
+| कमांड                                 | 🍎 macOS               | 🟦 Windows / 🐧 Linux       | समर्थित |
+| :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
+| Explorer खोलें                         | `⌘ + 1`                | `Ctrl + 1`                  |    ✅     |
+| Source Control खोलें                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
+| SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
+| Extensions खोलें                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
+| Sidebar टॉगल करें                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| फ़ाइल जल्दी खोलें                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
+| लाइन पर जाएँ                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
+| पहले editor group पर focus करें              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| नई फ़ाइल                              | `⌥ + X`                | `Alt + X`                   |    ✅     |
+| नया फ़ोल्डर                            | `⌥ + C`                | `Alt + C`                   |    ✅     |
+| Word Wrap टॉगल करें                      | `⌥ + Z`                | `Alt + Z`                   |    ✅     |
+| लाइन चयन बढ़ाएँ                 | `⇧ + ⌥ + Q`            | `Shift + Alt + Q`           |    ✅     |
+| लाइनें ऊपर कॉपी करें                         | `⇧ + ⌥ + ↑`            | `Shift + Alt + ↑`           |    ✅     |
+| लाइनें नीचे कॉपी करें                       | `⇧ + ⌥ + ↓`            | `Shift + Alt + ↓`           |    ✅     |
+| ऊपर cursor जोड़ें                   | `⌘ + ↑`                | `Ctrl + ↑`                  |    ✅     |
+| नीचे cursor जोड़ें                   | `⌘ + ↓`                | `Ctrl + ↓`                  |    ✅     |
+| बाएँ शब्द हटाएँ                      | `⌘ + Backspace`        | `Ctrl + Backspace`          |    ✅     |
+| Project बंद करें                         | `⌘ + Delete`           | `Ctrl + Delete`             |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Document format करें                       | `⌥ + F`                | `Alt + F`                   |    ✅     |
+| Selection format करें                      | `⌘ + ⌥ + F`            | `Ctrl + Alt + F`            |    ✅     |
+| Imports व्यवस्थित करें                      | `⇧ + ⌥ + F`            | `Shift + Alt + F`           |    ✅     |
+| Line comment करें                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
+| Block comment करें                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Terminal Bottom (toggle)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal Left/Right (toggle)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
+| Quick Open Terminal                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
+| Panel maximize / minimize करें             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
+| Terminal बंद करें                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
+| Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
+| Terminal — Complete Word              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
+| Panel टॉगल करें                          | `Page Down`            | `Page Down`                 |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| **Smart Close** — AI Chat या Terminal | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| Create New AI Session                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
+| Select AI Model                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
+| AI Select Code                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Toggle AI Agent Mode                  | `⇧ + ⌥ + A`            | `Shift + Alt + A`           |    ✅     |
+| Show AI Chat History                  | `⇧ + ⌥ + S`            | `Shift + Alt + S`           |    ✅     |
+| Toggle AI Suggestions                 | `⇧ + ⌥ + D`            | `Shift + Alt + D`           |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Cancel Inline Chat                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
+| Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
+
+> **Smart Close** (`Ctrl + CapsLock`) संदर्भ के अनुसार काम करता है:
 >
-> - यदि **टर्मिनल** साइड पैनल में है → टर्मिनल बंद करता है।
-> - अन्यथा → **AI चैट** खोलता / बंद करता है।
+> - यदि **terminal** साइड पैनल में है → terminal बंद करता है।
+> - अन्यथा → **AI Chat** खोलता/बंद करता है।
 
 ---
 
 ## 🔀 Git
 
-> इन कमांड का उपयोग करने के लिए, आपको पहले **Source Control** पर जाना होगा (क्योंकि वे सीधे काम नहीं करते हैं) या शॉर्टकट **_`Ctrl + 2`_** दबाना होगा।
+> To use these commands, you must first go to **Source Control** (as they do not work directly) or press the shortcut **_`Ctrl + 2`_**.
 
-| कमांड                 | 🍎 macOS         | 🟦 Windows           | 🐧 Linux             |
-| :-------------------- | :--------------- | :------------------- | :------------------- |
-| सभी स्टेज करें        | `⌥ + 1`          | `Alt + 1`            | `Alt + 1`            |
-| AI Commit संदेश बनाएं | `⌥ + 2`          | `Alt + 2`            | `Alt + 2`            |
-| सभी अनस्टेज करें      | `⌥ + 3`          | `Alt + 3`            | `Alt + 3`            |
-| Commit करें           | `⌥ + Return`     | `Alt + Enter`        | `Alt + Enter`        |
-| Push करें             | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Git बदलाव देखें       | `End`            | `End`                | `End`                |
+| कमांड | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :------------------------- | :---------------------- | :------------------------------- | :------------------------------- |
+| सब stage करें | `⌥ + 1` | `Alt + 1` | `Alt + 1` |
+| AI commit message बनाएँ | `⌥ + 2` | `Alt + 2` | `Alt + 2` |
+| सब unstage करें | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
+| Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
+| Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
+| Git बदलाव देखें | `End` | `End` | `End` |
+| Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
 
 ## 🛠️ सेटिंग्स और विंडो
 
-| कमांड                    | 🍎 macOS        | 🟦 Windows            | 🐧 Linux              |
-| :----------------------- | :-------------- | :-------------------- | :-------------------- |
-| सेटिंग्स खोलें (UI)      | `⌘ + J`         | `Ctrl + J`            | `Ctrl + J`            |
-| सेटिंग्स खोलें (JSON)    | `⌥ + J`         | `Alt + J`             | `Alt + J`             |
-| थीम चुनें                | `⇧ + ⌥ + T`     | `Shift + Alt + T`     | `Shift + Alt + T`     |
-| विंडो पुनः लोड करें      | `⇧ + ⌥ + R`     | `Shift + Alt + R`     | `Shift + Alt + R`     |
-| ज़ूम इन ( 🛞 दाएं )      | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
-| ज़ूम आउट ( 🛞 बाएं )     | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Markdown प्रीव्यू दिखाएं | `Page Up`       | `Page Up`             | `Page Up`             |
+| कमांड | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :------------------------- | :---------------------- | :------------------------------- | :------------------------------- |
+| Settings खोलें (UI) | `⌘ + J` | `Ctrl + J` | `Ctrl + J` |
+| Settings खोलें (JSON) | `⌥ + J` | `Alt + J` | `Alt + J` |
+| Theme चुनें | `⇧ + ⌥ + T` | `Shift + Alt + T` | `Shift + Alt + T` |
+| Window reload करें | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
+| Zoom In ( 🛞 right ) | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
+| Zoom Out ( 🛞 left ) | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
+| Markdown preview दिखाएँ | `Page Up` | `Page Up` | `Page Up` |
 
 ---
 
 ## ▶️ डिबगिंग
 
-| कमांड                  | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
-| :--------------------- | :----------- | :-------------- | :-------------- |
-| डिबगिंग शुरू करें      | `Insert`     | `Insert`        | `Insert`        |
-| डिबगिंग पुनः शुरू करें | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
-| डिबगिंग रोकें          | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
-| डिबग कंसोल खोलें       | `⌥ + B`      | `Alt + B`       | `Alt + B`       |
+| कमांड | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :------------------------- | :---------------------- | :------------------------------- | :------------------------------- |
+| Debugging शुरू करें | `Insert` | `Insert` | `Insert` |
+| Debugging restart करें | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
+| Debugging रोकें | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
 
 ---
 
-## 🧩 एक्सटेंशन [+]
+## 🧩 Terminal [+]
 
-| कमांड            | 🍎 macOS | 🟦 Windows | 🐧 Linux  |
-| :--------------- | :------- | :--------- | :-------- |
-| ATM इंस्टॉल करें | `⌥ + V`  | `Alt + V`  | `Alt + V` |
+| कमांड | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :-- | :-- | :-- | :-- |
+| Project terminal बदलें | `Alt + Q - W` | `Alt + Q - W` | `Alt + Q - W` |
+| Terminal बंद करें | `Alt + Q - E` | `Alt + Q - E` | `Alt + Q - E` |
+| Smart New Terminal | <code>⌘ + ⇧ + `</code> | <code>Ctrl + Shift + `</code> | <code>Ctrl + Shift + `</code> |
+| Terminal बंद करें | <code>⌘ + ⌥ + `</code> | <code>Ctrl + Alt + `</code> | <code>Ctrl + Alt + `</code> |
 
 <br>
 
 > [!IMPORTANT]
 >
-> **`Backquote` = ( ` )** सभी कीबोर्ड लेआउट को सपोर्ट करता है 🌎
+> **`Backquote` = ( ` )** supports all keyboard layouts 🌎
 >
 > ```ts
 > exports.BACKTICK_EQUIVALENTS = [
@@ -171,22 +174,22 @@
 >   { Backquote: "´" }, // Portuguese (Latin America)
 >   { Backquote: "₺" }, // Turkish
 >   { Backquote: "₤" }, // Italian
->   { Backquote: "" }, // और भी...
+>   { Backquote: "" }, // And MORE...
 > ];
 > ```
 
 > [!NOTE]
 >
-> ### अक्षम डिफ़ॉल्ट शॉर्टकट
+> ### Disabled Default Shortcuts
 >
-> यह एक्सटेंशन जानबूझकर निम्नलिखित डिफ़ॉल्ट VS Code शॉर्टकट को अक्षम करता है ताकि विरोध से बचा जा सके:
+> This extension intentionally disables the following default VS Code shortcuts to avoid conflicts:
 >
-> - **`Ctrl+P` / `⌘+P`** — Quick Open (कस्टम शॉर्टकट के साथ विरोध से बचने के लिए अक्षम)
->   - _विकल्प_: Quick Open के लिए `Shift+Alt+E` का उपयोग करें
-> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (अक्षम)
->   - _कारण_: टर्मिनल और git commit वर्कफ़्लो के साथ विरोध
+> - **`Ctrl+P` / `⌘+P`** — Quick Open (disabled to prevent conflicts with custom shortcuts)
+>   - _Alternative_: Use `Shift+Alt+E` for Quick Open
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (disabled)
+>   - _Reason_: Conflicts with terminal and git commit workflows
 >
-> यदि आपको इन शॉर्टकट की आवश्यकता है, तो आप उन्हें अपने `keybindings.json` में फिर से सक्षम कर सकते हैं:
+> If you need these shortcuts, you can re-enable them in your `keybindings.json`:
 >
 > ```json
 > [
@@ -195,26 +198,33 @@
 > ]
 > ```
 >
-> ### ज्ञात सीमाएं
+> ### Known Limitations
 >
-> - **`Alt+CapsLock`** कुछ Linux वितरणों या Windows सिस्टम पर काम नहीं कर सकता है जहां CapsLock को OS स्तर पर पुनः मैप किया गया है। यदि यह शॉर्टकट काम नहीं करता है, तो अपने सिस्टम कीबोर्ड सेटिंग्स की जांच करें या वैकल्पिक शॉर्टकट का उपयोग करें।
+> - **`Alt+CapsLock`** may not work on some Linux distributions or Windows systems where CapsLock is remapped at the OS level. If this shortcut doesn't work, check your system keyboard settings or use alternative shortcuts.
+
 <br>
 
 ---
 
-## स्थापना
+## इंस्टॉलेशन
 
-### तरीका 1 — त्वरित ओपन
+### तरीका 1 — Quick Open
 
 - <img src="https://www.kernel.org/theme/images/logos/favicon.png" width=16 height=16/> Linux `Ctrl+P`
 - <img src="https://developer.apple.com/favicon.ico" width=16 height=16/> macOS `⌘P`
 - <img src="https://www.microsoft.com/favicon.ico" width=16 height=16/> Windows `Ctrl+P`
 
-निम्नलिखित कमांड पेस्ट करें और `Enter` दबाएं:### तरीका 2 — एक्सटेंशन व्यू
+Paste the following command and press `Enter`:
 
-1. एक्सटेंशन खोलें (`Ctrl+Shift+X` / `⌘+Shift+X`)
-2. **"Lynx Keymap 75%"** खोजें
-3. **इंस्टॉल करें** पर क्लिक करें
+```
+ext install bastndev.lynx-keymap-75
+```
+
+### तरीका 2 — Extensions View
+
+1. Extensions खोलें (`Ctrl+Shift+X` / `⌘+Shift+X`)
+2. Search **"Lynx Keymap 75%"**
+3. Click **Install**
 
 ---
 
@@ -223,11 +233,11 @@
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
 |                     **[Gohit X](https://gohit.xyz)**                      |
-|                          _निर्माता और अनुरक्षक_                           |
+|                          _निर्माता और मेंटेनर_                           |
 
-- 🐦 **[X](https://twitter.com/gohitx)** : प्रश्नों और चर्चाओं के लिए।
-- 🌱 **[IG](https://instagram.com/gohitx)** : **`नया`** – प्रोजेक्ट प्रीव्यू और जीवन अपडेट।
-- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : कोड, सॉफ्टवेयर और विकास की जानकारी।
+- 🐦 **[X](https://twitter.com/gohitx)** : प्रश्नों और चर्चा के लिए।
+- 🌱 **[IG](https://instagram.com/gohitx)** : **`नया`** – प्रोजेक्ट previews और updates.
+- 🔴 **[YouTube](https://www.youtube.com/@gohitx?sub_confirmation=1)** : Code, software और development insights.
 
 <br>
 
@@ -237,21 +247,22 @@
   पूरक एक्सटेंशन 🧩
 </h2>
 
-| एक्सटेंशन                                                                                                                                                                                                            | नाम                                                            | विवरण                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap) | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | सभी कोड एडिटर में कीबोर्ड शॉर्टकट को एकीकृत करता है, एक ही कुंजी संयोजन से किसी भी फ़ंक्शन तक तुरंत पहुंच देता है। **`यदि आपके पास सामान्य कीबोर्ड है, तो यही डाउनलोड करें।`** |
-| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                     | [ATM](https://github.com/bastndev/ATM)                         | एक सर्वसमावेशी टूलकिट 👻 जो Error Lens, Git Blame, Env सुरक्षा और कोड स्क्रीनशॉट जैसी आवश्यक सुविधाओं के साथ आपके वर्कफ़्लो को बेहतर बनाता है।                                 |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme)    | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | एक पेशेवर एक्सटेंशन जिसमें छह थीम हैं: Dark, Light, Night, Ghibli, Coffee और Kiro — एकीकृत आइकन के साथ। प्रत्येक थीम एक बेहतर दृश्य अनुभव के लिए अनुकूलित है।                  |
+| एक्सटेंशन | नाम | विवरण |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![My Skills](https://open-vsx.org/api/bastndev/my-skills/latest/file/icon.png)](https://open-vsx.org/extension/bastndev/my-skills) | [My Skills](https://github.com/bastndev/My-Skills) | अपने प्रोजेक्ट के लिए पुन: उपयोग योग्य AI निर्देश बनाएं, इंस्टॉल करें और प्रबंधित करें, ताकि आपका coding assistant आपकी शैली, नियम और workflow पहले से जान सके। |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm) | [ATM](https://github.com/bastndev/ATM) | एक all-in-one toolkit 👻 जो Error Lens, Git Blame, Env Protection और code screenshots से workflow बेहतर करता है। |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap) | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | सभी code editors में shortcuts को standardize करता है और एक key combination से तुरंत access देता है। **`अगर आपके पास normal keyboard है, तो यह version बेहतर है।`** |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme) | छह themes वाला professional extension: Dark, Light, Night, Ghibli, Coffee और Kiro, integrated icons के साथ। |
 
 <br>
 
 <div align="center">
 
-**आनंद लें 🎉 Lynx Keymap 75% अब इंस्टॉल हो गया है!**  
-_बग मिला या फीडबैक है? [एक इश्यू खोलें](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
+**Enjoy 🎉 (Lynx Keymap 75%) is now installed!**  
+_Bug मिला या feedback है? [Issue खोलें](https://github.com/bastndev/Lynx-Keymap-75/issues/new)_
 
-<sub>🇵🇪 में बनाया गया द्वारा <a href="https://gohit.xyz">Gohit X</a> · के तहत लाइसेंस प्राप्त <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a></sub>
+<sub>🇵🇪 में <a href="https://gohit.xyz">Gohit X</a> द्वारा बनाया गया · <a href="https://github.com/bastndev/Lynx-Keymap-75/blob/main/LICENSE">`MIT`</a> लाइसेंस</sub>
 
 </div>
 
-<p align="right">(<a href="#readme-top">वापस ऊपर</a>)</p>
+<p align="right">(<a href="#readme-top">ऊपर वापस</a>)</p>
