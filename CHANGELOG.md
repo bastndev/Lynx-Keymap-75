@@ -31,7 +31,8 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
-## [2.4.1] - 2026-05-26
+## [2.4.2] - 2026-05-27
+- **Add**: F1 CLI Hub.
 - **Bug**: Update version store.
 
 ---
