@@ -80,11 +80,10 @@
 | Terminal Bottom (toggle)              | `⌥ + E`                 | `Alt + E`                    |    ✅     |
 | Terminal Left/Right (toggle)          | `⌥ + CapsLock`          | `Alt + CapsLock`             |    ✅     |
 | Quick Open Terminal                   | `⌥ + W`                 | `Alt + W`                    |    ✅     |
-| New Terminal                          | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |    ✅     |
+| Maximize / Minimize Panel             | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |    ✅     |
 | Kill Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |    ✅     |
 | Terminal — Complete Word              | `⌘ + ,`                 | `Ctrl + ,`                   |    ✅     |
-| Maximize / Minimize Panel             | `⌘ + Backquote]`        | `Ctrl + Backquote]`          |    ✅     |
 | Toggle Panel                          | `Page Down`             | `Page Down`                  |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
 | **Smart Close** — AI Chat or Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |    ✅     |
@@ -153,7 +152,7 @@
 | Swap Project Terminal | `Alt + Q - W`            | `Alt + Q - W`                 | `Alt + Q - W`                 |
 | Close Terminal        | `Alt + Q - E`            | `Alt + Q - E`                 | `Alt + Q - E`                 |
 | Smart New Terminal    | <code>⌘ + ⇧ + `</code>   | <code>Ctrl + Shift + `</code> | <code>Ctrl + Shift + `</code> |
-| Smart close Terminal  | <code>⌘ + Alt + `</code> | <code>Ctrl + Alt + `</code>   | <code>Ctrl + Alt + `</code>   |
+| Kill Terminal        | <code>⌘ + Alt + `</code> | <code>Ctrl + Alt + `</code>   | <code>Ctrl + Alt + `</code>   |
 
 <br>
 
