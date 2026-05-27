@@ -96,11 +96,10 @@
         "key"    : "alt+b",
         "mac"    : "alt+b",
         "command": "lynx-keymap.openGitlabPanel"
-      },
-      {
-        "key"    : "alt+b",
-        "mac"    : "alt+b",
-        "command": "workbench.debug.action.toggleRepl"
+      },{
+        "key"    : "ctrl+3",
+        "mac"    : "cmd+3",
+        "command": "lynx-keymap.openMySkillsPanel"
       },
 
 
@@ -443,10 +442,6 @@
         "key"    : "ctrl+4",
         "mac"    : "cmd+4",
         "command": "workbench.view.extensions"
-      },{
-        "key"    : "ctrl+3",
-        "mac"    : "cmd+3",
-        "command": "lynx-keymap.openMySkillsPanel"
       },{
         "key"    : "ctrl+2",
         "mac"    : "cmd+2",
