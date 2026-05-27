@@ -53,7 +53,8 @@
 | :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
 | Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |    ✅     |
 | Open Source Control                   | `⌘ + 2`                 | `Ctrl + 2`                   |    ✅     |
-| Open Extensions                       | `⌘ + 3`                 | `Ctrl + 3`                   |    ✅     |
+| SKILLS                                | `Cmd + 3 `              | `Ctrl + 3`                   |    ✅     |
+| Open Extensions                       | `⌘ + 4`                 | `Ctrl + 4`                   |    ✅     |
 | Toggle Sidebar                        | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
 | Quick Open File                       | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |    ✅     |
 | Go to Line                            | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |    ✅     |
@@ -82,8 +83,8 @@
 | New Terminal                          | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |    ✅     |
 | Kill Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |    ✅     |
-| Terminal — Complete Word              | `⌥ + ,`                 | `Alt + ,`                    |    ✅     |
-| Maximize / Minimize Panel             | `⌘ + Esc`               | `Ctrl + Esc`                 |    ✅     |
+| Terminal — Complete Word              | `⌘ + ,`                 | `Ctrl + ,`                   |    ✅     |
+| Maximize / Minimize Panel             | `⌘ + Backquote]`        | `Ctrl + Backquote]`          |    ✅     |
 | Toggle Panel                          | `Page Down`             | `Page Down`                  |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
 | **Smart Close** — AI Chat or Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |    ✅     |
@@ -109,14 +110,15 @@
 
 > To use these commands, you must first go to **Source Control** (as they do not work directly) or press the shortcut **_`Ctrl + 2`_**.
 
-| Command                    | 🍎 macOS         | 🟦 Windows           | 🐧 Linux             |
-| :------------------------- | :--------------- | :------------------- | :------------------- |
-| Stage All                  | `⌥ + 1`          | `Alt + 1`            | `Alt + 1`            |
-| Generate AI Commit Message | `⌥ + 2`          | `Alt + 2`            | `Alt + 2`            |
-| Unstage All                | `⌥ + 3`          | `Alt + 3`            | `Alt + 3`            |
-| Commit                     | `⌥ + Return`     | `Alt + Enter`        | `Alt + Enter`        |
-| Push                       | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| View Git Changes           | `End`            | `End`                | `End`                |
+| Command                    | 🍎 macOS                | 🟦 Windows                       | 🐧 Linux                         |
+| :------------------------- | :---------------------- | :------------------------------- | :------------------------------- |
+| Stage All                  | `⌥ + 1`                 | `Alt + 1`                        | `Alt + 1`                        |
+| Generate AI Commit Message | `⌥ + 2`                 | `Alt + 2`                        | `Alt + 2`                        |
+| Unstage All                | `⌥ + 3`                 | `Alt + 3`                        | `Alt + 3`                        |
+| Commit                     | `⌥ + Return`            | `Alt + Enter`                    | `Alt + Enter`                    |
+| Push                       | `⌘ + ⌥ + Return`        | `Ctrl + Alt + Enter`             | `Ctrl + Alt + Enter`             |
+| View Git Changes           | `End`                   | `End`                            | `End`                            |
+| Git Reset Hard HEAD        | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
 
@@ -136,23 +138,22 @@
 
 ## ▶️ Debugging
 
-| Command               | 🍎 macOS      | 🟦 Windows      | 🐧 Linux        |
-| :-------------------- | :------------ | :-------------- | :-------------- |
-| Start Debugging       | `Insert`      | `Insert`        | `Insert`        |
-| Restart Debugging     | `⌥ + Insert`  | `Alt + Insert`  | `Alt + Insert`  |
-| Stop Debugging        | `⌘ + Insert`  | `Ctrl + Insert` | `Ctrl + Insert` |
-| Open Debug Console    | `⌥ + B`       | `Alt + B`       | `Alt + B`       |
-| -                     | -             | -               | -               |
-| Swap Project Terminal | `Alt + Q - W` | `Alt + Q - W`   | `Alt + Q - W`   |
-| Close Terminal        | `Alt + Q - E` | `Alt + Q - E`   | `Alt + Q - E`   |
+| Command           | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
+| :---------------- | :----------- | :-------------- | :-------------- |
+| Start Debugging   | `Insert`     | `Insert`        | `Insert`        |
+| Restart Debugging | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
+| Stop Debugging    | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
 
 ---
 
-## 🧩 Extensions [+]
+## 🧩 Terminal [+]
 
-| Command     | 🍎 macOS | 🟦 Windows | 🐧 Linux  |
-| :---------- | :------- | :--------- | :-------- |
-| Install ATM | `⌥ + V`  | `Alt + V`  | `Alt + V` |
+| Command               | 🍎 macOS                 | 🟦 Windows                    | 🐧 Linux                      |
+| :-------------------- | :----------------------- | :---------------------------- | :---------------------------- |
+| Swap Project Terminal | `Alt + Q - W`            | `Alt + Q - W`                 | `Alt + Q - W`                 |
+| Close Terminal        | `Alt + Q - E`            | `Alt + Q - E`                 | `Alt + Q - E`                 |
+| Smart New Terminal    | <code>⌘ + ⇧ + `</code>   | <code>Ctrl + Shift + `</code> | <code>Ctrl + Shift + `</code> |
+| Smart close Terminal  | <code>⌘ + Alt + `</code> | <code>Ctrl + Alt + `</code>   | <code>Ctrl + Alt + `</code>   |
 
 <br>
 
