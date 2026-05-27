@@ -325,8 +325,8 @@
       
       
       {
-        "key"    : "ctrl+escape",
-        "mac"    : "cmd+escape",
+        "key"    : "ctrl+[Backquote]",
+        "mac"    : "cmd+[Backquote]",
         "command": "workbench.action.toggleMaximizedPanel"
       },
       {
@@ -342,8 +342,8 @@
         "mac"    : "cmd+alt+[Backquote]",
         "command": "workbench.action.terminal.kill"
       },{
-        "key"    : "ctrl+[Backquote]",
-        "mac"    : "cmd+[Backquote]",
+        "key"    : "ctrl+shift+[Backquote]",
+        "mac"    : "cmd+shift+[Backquote]",
         "command": "lynx-keymap.smartNewTerminal"
       },
       
