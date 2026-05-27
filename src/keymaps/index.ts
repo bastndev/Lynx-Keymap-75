@@ -3,6 +3,7 @@ export { AICommandsManager }        from './ai/commands-manager';
 export { AIToggleManager }          from './ai/toggle-manager';
 export { TerminalManager }          from './terminal/side-panel';
 export { BottomTerminalManager }    from './terminal/bottom-panel';
+export { GitResetManager }          from './git/reset-manager';
 export { DebugManager }             from '../editor/debug/panel';
 export { WordWrapManager }          from '../editor/wordwrap/manager';
 export { PanelCommandsManager }     from '../notifications/panels/commands';

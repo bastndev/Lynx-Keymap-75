@@ -4,6 +4,7 @@ import { AICommandsManager }           from './keymaps/ai/commands-manager';
 import { AIToggleManager }             from './keymaps/ai/toggle-manager';
 import { TerminalManager }             from './keymaps/terminal/side-panel';
 import { BottomTerminalManager }       from './keymaps/terminal/bottom-panel';
+import { GitResetManager }             from './keymaps/git/reset-manager';
 import { DebugManager }                from './editor/debug/panel';
 import { WordWrapManager }             from './editor/wordwrap/manager';
 import { PanelCommandsManager }        from './notifications/panels/commands';
@@ -17,6 +18,7 @@ export async function activate(context: vscode.ExtensionContext) {
   const aiToggleManager    = new AIToggleManager(detector);
   const terminalManager    = new TerminalManager();
   const bottomTerminalMgr  = new BottomTerminalManager();
+  const gitResetManager    = new GitResetManager();
   const wordWrapManager    = new WordWrapManager();
   const debugManager       = new DebugManager();
   const panelCommandsMgr   = new PanelCommandsManager();
@@ -26,6 +28,7 @@ export async function activate(context: vscode.ExtensionContext) {
     { name: 'aiToggleManager',   ref: aiToggleManager   },
     { name: 'terminalManager',   ref: terminalManager   },
     { name: 'bottomTerminalMgr', ref: bottomTerminalMgr },
+    { name: 'gitResetManager',   ref: gitResetManager   },
     { name: 'wordWrapManager',   ref: wordWrapManager   },
     { name: 'debugManager',      ref: debugManager      },
     { name: 'panelCommandsMgr',  ref: panelCommandsMgr  },
@@ -35,6 +38,7 @@ export async function activate(context: vscode.ExtensionContext) {
   aiToggleManager.registerCommands(context);
   terminalManager.registerCommands(context);
   bottomTerminalMgr.registerCommands(context);
+  gitResetManager.registerCommands(context);
   wordWrapManager.registerCommands(context);
   debugManager.registerCommands(context);
   panelCommandsMgr.registerCommands(context);

@@ -390,6 +390,10 @@
         "command": "git.push",
         "when"   : "scmProvider == git"
       },{
+        "key"    : "ctrl+shift+alt+backspace",
+        "mac"    : "cmd+shift+alt+backspace",
+        "command": "lynx-keymap.gitResetHardHead"
+      },{
         "key"    : "alt+enter",
         "mac"    : "alt+return",
         "command": "git.commit",
@@ -616,6 +620,11 @@
       {
         "command": "lynx-keymap.generateAICommit",
         "title"  : "Generate AI Commit Message"
+      },
+
+      {
+        "command": "lynx-keymap.gitResetHardHead",
+        "title"  : "Git: Reset Hard HEAD"
       },
 
       {
