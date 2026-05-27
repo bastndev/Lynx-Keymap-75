@@ -31,6 +31,10 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
+## [2.4.1] - 2026-05-26
+- **Bug**: Update version store.
+
+---
 ## [2.4.0] - 2026-05-26
 
 ### Fixed
