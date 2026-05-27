@@ -136,12 +136,15 @@
 
 ## ▶️ Debugging
 
-| Command            | 🍎 macOS     | 🟦 Windows      | 🐧 Linux        |
-| :----------------- | :----------- | :-------------- | :-------------- |
-| Start Debugging    | `Insert`     | `Insert`        | `Insert`        |
-| Restart Debugging  | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
-| Stop Debugging     | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
-| Open Debug Console | `⌥ + B`      | `Alt + B`       | `Alt + B`       |
+| Command               | 🍎 macOS      | 🟦 Windows      | 🐧 Linux        |
+| :-------------------- | :------------ | :-------------- | :-------------- |
+| Start Debugging       | `Insert`      | `Insert`        | `Insert`        |
+| Restart Debugging     | `⌥ + Insert`  | `Alt + Insert`  | `Alt + Insert`  |
+| Stop Debugging        | `⌘ + Insert`  | `Ctrl + Insert` | `Ctrl + Insert` |
+| Open Debug Console    | `⌥ + B`       | `Alt + B`       | `Alt + B`       |
+| -                     | -             | -               | -               |
+| Swap Project Terminal | `Alt + Q - W` | `Alt + Q - W`   | `Alt + Q - W`   |
+| Close Terminal        | `Alt + Q - E` | `Alt + Q - E`   | `Alt + Q - E`   |
 
 ---
 
