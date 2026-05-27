@@ -31,7 +31,7 @@
 | Command             | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
 | :------------------ | :--------------- | :--------------- | :--------------- |
 | SKILLS              | `Cmd + 3 `       | `Ctrl + 3`       | `Ctrl + 3`       |
-| Close Terminal      | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
+| GitLab              | `Alt + B`        | `Alt + B`        | `Alt + B`        |
 | -                   | -                | -                | -                |
 | opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
