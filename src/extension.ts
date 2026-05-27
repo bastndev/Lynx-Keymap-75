@@ -4,7 +4,7 @@ import { AICommandsManager }           from './keymaps/ai/commands-manager';
 import { AIToggleManager }             from './keymaps/ai/toggle-manager';
 import { TerminalManager }             from './keymaps/terminal/side-panel';
 import { BottomTerminalManager }       from './keymaps/terminal/bottom-panel';
-import { GitResetManager }             from './keymaps/git/reset-manager';
+import { GitResetManager }             from './editor/git/reset-manager';
 import { DebugManager }                from './editor/debug/panel';
 import { WordWrapManager }             from './editor/wordwrap/manager';
 import { PanelCommandsManager }        from './notifications/panels/commands';
