@@ -20,18 +20,18 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>Referencia de Atajos de Teclado</b></h2>
 
-> Optimizado para **teclados 75%** en VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio.
+> Optimizado para **teclados 75%** en VS Code · Cursor · Windsurf · Trae AI · Kiro · Antigravity & Firebase Studio.
 
 ---
 
-## 🧪 Experimental — `New`
+## 🧪 Experimental — `Nuevo`
 
-| Comando                        | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :----------------------------- | :--------------- | :--------------- | :--------------- |
-| Intercambiar Proyecto Terminal | `Alt + Q - W`    | `Alt + Q - W`    | `Alt + Q - W`    |
-| Cerrar Terminal                | `Alt + Q - E`    | `Alt + Q - E`    | `Alt + Q - E`    |
-| -                              | -                | -                | -                |
-| Abrir opencode/ClaudeCode      | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
+| Comando | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :-- | :-- | :-- | :-- |
+| SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
+| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| - | - | - | - |
+| OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>🖼️ Ver Captura de Pantalla</summary>
@@ -45,61 +45,61 @@
 
 <br>
 
----
+## ⌨️ Atajos Generales 75%
 
-| Comando                                | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Compatible |
-| :------------------------------------- | :---------------------- | :--------------------------- | :--------: |
-| Abrir Explorador                       | `⌘ + 1`                 | `Ctrl + 1`                   |     ✅     |
-| Abrir Control de Código Fuente         | `⌘ + 2`                 | `Ctrl + 2`                   |     ✅     |
-| Abrir Extensiones                      | `⌘ + 3`                 | `Ctrl + 3`                   |     ✅     |
-| Alternar Barra Lateral                 | `⌘ + Tab`               | `Ctrl + Tab`                 |     ✅     |
-| Abrir Archivo Rápidamente              | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |     ✅     |
-| Ir a Línea                             | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |     ✅     |
-| Enfocar Primer Grupo de Editores       | `⌥ + Q`                 | `Alt + Q`                    |     ✅     |
-| -                                      | -                       | -                            |    N/A     |
-| Nuevo Archivo                          | `⌥ + X`                 | `Alt + X`                    |     ✅     |
-| Nueva Carpeta                          | `⌥ + C`                 | `Alt + C`                    |     ✅     |
-| Alternar Ajuste de Línea               | `⌥ + Z`                 | `Alt + Z`                    |     ✅     |
-| Expandir Selección de Línea            | `⇧ + ⌥ + Q`             | `Shift + Alt + Q`            |     ✅     |
-| Copiar Líneas Arriba                   | `⇧ + ⌥ + ↑`             | `Shift + Alt + ↑`            |     ✅     |
-| Copiar Líneas Abajo                    | `⇧ + ⌥ + ↓`             | `Shift + Alt + ↓`            |     ✅     |
-| Insertar Cursor Arriba                 | `⌘ + ↑`                 | `Ctrl + ↑`                   |     ✅     |
-| Insertar Cursor Abajo                  | `⌘ + ↓`                 | `Ctrl + ↓`                   |     ✅     |
-| Borrar Palabra a la Izquierda          | `⌘ + Backspace`         | `Ctrl + Backspace`           |     ✅     |
-| Cerrar Proyecto                        | `⌘ + Delete`            | `Ctrl + Delete`              |     ✅     |
-| -                                      | -                       | -                            |    N/A     |
-| Formatear Documento                    | `⌥ + F`                 | `Alt + F`                    |     ✅     |
-| Formatear Selección                    | `⌘ + ⌥ + F`             | `Ctrl + Alt + F`             |     ✅     |
-| Organizar Importaciones                | `⇧ + ⌥ + F`             | `Shift + Alt + F`            |     ✅     |
-| Comentar Línea                         | `⌘ + /`                 | `Ctrl + /`                   |     ✅     |
-| Comentar Bloque                        | `⌥ + /`                 | `Alt + /`                    |     ✅     |
-| -                                      | -                       | -                            |    N/A     |
-| Terminal Inferior (alternar)           | `⌥ + E`                 | `Alt + E`                    |     ✅     |
-| Terminal Izquierda/Derecha (alternar)  | `⌥ + CapsLock`          | `Alt + CapsLock`             |     ✅     |
-| Apertura Rápida de Terminal            | `⌥ + W`                 | `Alt + W`                    |     ✅     |
-| Nueva Terminal                         | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |     ✅     |
-| Matar Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |     ✅     |
-| Terminal — Limpiar Línea               | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |     ✅     |
-| Terminal — Completar Palabra           | `⌥ + ,`                 | `Alt + ,`                    |     ✅     |
-| Maximizar / Minimizar Panel            | `⌘ + Esc`               | `Ctrl + Esc`                 |     ✅     |
-| Alternar Panel                         | `Page Down`             | `Page Down`                  |     ✅     |
-| -                                      | -                       | -                            |    N/A     |
-| **Cierre Inteligente** — IA o Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |     ✅     |
-| Crear Nueva Sesión IA                  | `⌥ + A`                 | `Alt + A`                    |     ✅     |
-| Seleccionar Modelo IA                  | `⌥ + S`                 | `Alt + S`                    |     ✅     |
-| IA: Seleccionar Código                 | `⌥ + D`                 | `Alt + D`                    |     ✅     |
-| -                                      | -                       | -                            |    N/A     |
-| Alternar Modo Agente IA                | `⇧ + ⌥ + A`             | `Shift + Alt + A`            |     ✅     |
-| Mostrar Historial Chat IA              | `⇧ + ⌥ + S`             | `Shift + Alt + S`            |     ✅     |
-| Alternar Sugerencias IA                | `⇧ + ⌥ + D`             | `Shift + Alt + D`            |     ✅     |
-| -                                      | -                       | -                            |    N/A     |
-| Cancelar Chat Integrado                | `⌥ + Return`            | `Alt + Enter`                |     ✅     |
-| Maximizar / Minimizar Barra Auxiliar   | `⇧ + Esc`               | `Shift + Esc`                |     ✅     |
+| Comando                               | 🍎 macOS               | 🟦 Windows / 🐧 Linux       | Compatible |
+| :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
+| Abrir Explorador                      | `⌘ + 1`                | `Ctrl + 1`                  |    ✅     |
+| Abrir Control de Código Fuente        | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
+| SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
+| Abrir Extensiones                     | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
+| Alternar Barra Lateral                | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| Abrir Archivo Rápidamente             | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
+| Ir a Línea                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
+| Enfocar Primer Grupo de Editores      | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Nuevo Archivo                         | `⌥ + X`                | `Alt + X`                   |    ✅     |
+| Nueva Carpeta                         | `⌥ + C`                | `Alt + C`                   |    ✅     |
+| Alternar Ajuste de Línea              | `⌥ + Z`                | `Alt + Z`                   |    ✅     |
+| Expandir Selección de Línea           | `⇧ + ⌥ + Q`            | `Shift + Alt + Q`           |    ✅     |
+| Copiar Líneas Arriba                  | `⇧ + ⌥ + ↑`            | `Shift + Alt + ↑`           |    ✅     |
+| Copiar Líneas Abajo                   | `⇧ + ⌥ + ↓`            | `Shift + Alt + ↓`           |    ✅     |
+| Insertar Cursor Arriba                | `⌘ + ↑`                | `Ctrl + ↑`                  |    ✅     |
+| Insertar Cursor Abajo                 | `⌘ + ↓`                | `Ctrl + ↓`                  |    ✅     |
+| Borrar Palabra a la Izquierda         | `⌘ + Backspace`        | `Ctrl + Backspace`          |    ✅     |
+| Cerrar Proyecto                       | `⌘ + Delete`           | `Ctrl + Delete`             |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Formatear Documento                   | `⌥ + F`                | `Alt + F`                   |    ✅     |
+| Formatear Selección                   | `⌘ + ⌥ + F`            | `Ctrl + Alt + F`            |    ✅     |
+| Organizar Importaciones               | `⇧ + ⌥ + F`            | `Shift + Alt + F`           |    ✅     |
+| Comentar Línea                        | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
+| Comentar Bloque                       | `⌥ + /`                | `Alt + /`                   |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Terminal Inferior (alternar)          | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal Izquierda/Derecha (alternar) | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
+| Apertura Rápida de Terminal           | `⌥ + W`                | `Alt + W`                   |    ✅     |
+| Maximizar / Minimizar Panel           | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
+| Matar Terminal                        | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
+| Terminal — Limpiar Línea              | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
+| Terminal — Completar Palabra          | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
+| Alternar Panel                        | `Page Down`            | `Page Down`                 |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| **Cierre Inteligente** — Chat IA o Terminal | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| Crear Nueva Sesión IA                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
+| Seleccionar Modelo IA                 | `⌥ + S`                | `Alt + S`                   |    ✅     |
+| IA: Seleccionar Código                | `⌥ + D`                | `Alt + D`                   |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Alternar Modo Agente IA               | `⇧ + ⌥ + A`            | `Shift + Alt + A`           |    ✅     |
+| Mostrar Historial Chat IA             | `⇧ + ⌥ + S`            | `Shift + Alt + S`           |    ✅     |
+| Alternar Sugerencias IA               | `⇧ + ⌥ + D`            | `Shift + Alt + D`           |    ✅     |
+| -                                     | -                       | -                            |    N/A    |
+| Cancelar Chat Integrado               | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
+| Maximizar / Minimizar Barra Auxiliar  | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
 > **Cierre Inteligente** (`Ctrl + CapsLock`) es consciente del contexto:
 >
 > - Si la **terminal** ocupa el panel lateral → cierra la terminal.
-> - De lo contrario → abre / cierra el **Chat IA**.
+> - De lo contrario → abre/cierra el **Chat IA**.
 
 ---
 
@@ -107,47 +107,50 @@
 
 > Para usar estos comandos, primero debes ir a **Source Control** (ya que no funcionan directamente) o presionar el atajo **_`Ctrl + 2`_**.
 
-| Comando                   | 🍎 macOS         | 🟦 Windows / 🐧 Linux |
-| :------------------------ | :--------------- | :-------------------- |
-| Preparar Todo             | `⌥ + 1`          | `Alt + 1`             |
-| Generar Mensaje de Commit | `⌥ + 2`          | `Alt + 2`             |
-| Despreparar Todo          | `⌥ + 3`          | `Alt + 3`             |
-| Commit                    | `⌥ + Return`     | `Alt + Enter`         |
-| Push                      | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter`  |
-| Ver Cambios en Git        | `End`            | `End`                 |
+| Comando | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :------------------------- | :---------------------- | :------------------------------- | :------------------------------- |
+| Preparar Todo | `⌥ + 1` | `Alt + 1` | `Alt + 1` |
+| Generar Mensaje de Commit | `⌥ + 2` | `Alt + 2` | `Alt + 2` |
+| Despreparar Todo | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
+| Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
+| Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
+| Ver Cambios en Git | `End` | `End` | `End` |
+| Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
 
 ## 🛠️ Configuración y Ventana
 
-| Comando                  | 🍎 macOS        | 🟦 Windows / 🐧 Linux |
-| :----------------------- | :-------------- | :-------------------- |
-| Abrir Configuración (UI) | `⌘ + J`         | `Ctrl + J`            |
-| Abrir Config. (JSON)     | `⌥ + J`         | `Alt + J`             |
-| Seleccionar Tema         | `⇧ + ⌥ + T`     | `Shift + Alt + T`     |
-| Recargar Ventana         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     |
-| Acercar (Zoom In)        | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` |
-| Alejar (Zoom Out)        | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` |
-| Mostrar Vista Previa MD  | `Page Up`       | `Page Up`             |
+| Comando | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :------------------------- | :---------------------- | :------------------------------- | :------------------------------- |
+| Abrir Configuración (UI) | `⌘ + J` | `Ctrl + J` | `Ctrl + J` |
+| Abrir Config. (JSON) | `⌥ + J` | `Alt + J` | `Alt + J` |
+| Seleccionar Tema | `⇧ + ⌥ + T` | `Shift + Alt + T` | `Shift + Alt + T` |
+| Recargar Ventana | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
+| Acercar (Zoom In) | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
+| Alejar (Zoom Out) | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
+| Mostrar Vista Previa MD | `Page Up` | `Page Up` | `Page Up` |
 
 ---
 
 ## ▶️ Depuración
 
-| Comando                     | 🍎 macOS     | 🟦 Windows / 🐧 Linux |
-| :-------------------------- | :----------- | :-------------------- |
-| Iniciar Depuración          | `Insert`     | `Insert`              |
-| Reiniciar Depuración        | `⌥ + Insert` | `Alt + Insert`        |
-| Detener Depuración          | `⌘ + Insert` | `Ctrl + Insert`       |
-| Abrir Consola de Depuración | `⌥ + B`      | `Alt + B`             |
+| Comando | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :------------------------- | :---------------------- | :------------------------------- | :------------------------------- |
+| Iniciar Depuración | `Insert` | `Insert` | `Insert` |
+| Reiniciar Depuración | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
+| Detener Depuración | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
 
 ---
 
-## 🧩 Extensiones [+]
+## 🧩 Terminal [+]
 
-| Comando      | 🍎 macOS | 🟦 Windows / 🐧 Linux |
-| :----------- | :------- | :-------------------- |
-| Instalar ATM | `⌥ + V`  | `Alt + V`             |
+| Comando | 🍎 macOS | 🟦 Windows | 🐧 Linux |
+| :-- | :-- | :-- | :-- |
+| Intercambiar Proyecto Terminal | `Alt + Q - W` | `Alt + Q - W` | `Alt + Q - W` |
+| Cerrar Terminal | `Alt + Q - E` | `Alt + Q - E` | `Alt + Q - E` |
+| Smart New Terminal | <code>⌘ + ⇧ + `</code> | <code>Ctrl + Shift + `</code> | <code>Ctrl + Shift + `</code> |
+| Matar Terminal | <code>⌘ + ⌥ + `</code> | <code>Ctrl + Alt + `</code> | <code>Ctrl + Alt + `</code> |
 
 <br>
 
@@ -182,11 +185,11 @@
 > Esta extensión deshabilita intencionalmente los siguientes atajos predeterminados de VS Code para evitar conflictos:
 >
 > - **`Ctrl+P` / `⌘+P`** — Apertura Rápida (deshabilitado para evitar conflictos con atajos personalizados)
->   - _Alternativa_: Use `Shift+Alt+E` para Apertura Rápida
-> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (deshabilitado)
->   - _Razón_: Conflictos con flujos de trabajo de terminal y commit de git
+>   - _Alternativa_: Usa `Shift+Alt+E` para Apertura Rápida
+> - **`Ctrl+Enter` / `⌘+Enter`** — GitHub Copilot Generate (disabled)
+>   - _Reason_: Conflictos con flujos de trabajo de terminal y commit de git
 >
-> Si necesita estos atajos, puede volver a habilitarlos en su `keybindings.json`:
+> Si necesitas estos atajos, puedes volver a habilitarlos en tu `keybindings.json`:
 >
 > ```json
 > [
@@ -197,12 +200,13 @@
 >
 > ### Limitaciones Conocidas
 >
-> - **`Alt+CapsLock`** puede no funcionar en algunas distribuciones de Linux o sistemas Windows donde CapsLock está remapeado a nivel del sistema operativo. Si este atajo no funciona, verifique la configuración del teclado de su sistema o use atajos alternativos.
+> - **`Alt+CapsLock`** puede no funcionar en algunas distribuciones de Linux o sistemas Windows donde CapsLock está remapeado a nivel del sistema operativo. Si este atajo no funciona, verifica la configuración del teclado de tu sistema o usa atajos alternativos.
+
 <br>
 
 ---
 
-## ➤ Instalación
+## Instalación
 
 ### Método 1 — Apertura Rápida
 
@@ -224,7 +228,7 @@ ext install bastndev.lynx-keymap-75
 
 ---
 
-## ➤ Sobre Mí
+## Sobre Mí
 
 | [![gohitx](https://github.com/gohitx.png?size=100)](https://gohit.xyz/me) |
 | :-----------------------------------------------------------------------: |
@@ -243,11 +247,12 @@ ext install bastndev.lynx-keymap-75
   Extensiones Complementarias 🧩
 </h2>
 
-| ㅤㅤ Extensión                                                                                                                                                                                                    | < Nombre/>                                                     | Descripción                                                                                                                                                                                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap)                                      | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Estandariza los atajos de teclado en todos los editores de código, dándote acceso instantáneo a cualquier funcionalidad con una sola combinación de teclas — impulsando tu flujo de trabajo y experiencia de desarrollo. **`Si tienes un teclado normal, mejor descarga este.`** |
-| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                  | [ATM](https://github.com/bastndev/ATM)                         | Un kit todo en uno 👻 que potencia tu flujo de trabajo con funciones esenciales: Error Lens, Git Blame, protección de variables de entorno y capturas de pantalla de código en los principales editores.                                                                         |
-| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme)       | Extensión profesional con seis temas disponibles: Dark, Light, Night, Ghibli, Coffee y Kiro — con iconos integrados. Cada tema está optimizado para ofrecer una experiencia visual más agradable.                                                                                |
+| Extensión | Nombre | Descripción |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![My Skills](https://open-vsx.org/api/bastndev/my-skills/latest/file/icon.png)](https://open-vsx.org/extension/bastndev/my-skills) | [My Skills](https://github.com/bastndev/My-Skills) | Crea, instala y gestiona instrucciones de IA reutilizables para tus proyectos, para que tu asistente de código ya conozca tu estilo, reglas y flujo de trabajo. |
+| [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm) | [ATM](https://github.com/bastndev/ATM) | Un kit todo en uno 👻 que potencia tu flujo de trabajo con funciones esenciales como Error Lens, Git Blame, protección de variables de entorno y capturas de código en los principales editores. |
+| [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap) | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Estandariza los atajos de teclado en todos los editores de código, dándote acceso instantáneo a cualquier función con una sola combinación de teclas. **`Si tienes un teclado normal, mejor descarga este.`** |
+| [![Lynx Theme Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-theme/5.0.1/1777191854738/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-theme) | [Lynx Theme Pro](https://github.com/bastndev/Lynx-Theme) | Extensión profesional con seis temas: Dark, Light, Night, Ghibli, Coffee y Kiro, con iconos integrados. Cada tema está optimizado para una experiencia visual más agradable. |
 
 <br>
 
