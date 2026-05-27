@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { getTranslation } from './i18n';
+import { LOG_PREFIX } from '../shared/constants';
 
 export async function promptInstallExtension(
   extensionId: string,
@@ -13,6 +14,11 @@ export async function promptInstallExtension(
   );
 
   if (selection === installAction) {
-    void vscode.commands.executeCommand('workbench.extensions.installExtension', extensionId);
+    try {
+      await vscode.commands.executeCommand('workbench.extensions.installExtension', extensionId);
+    } catch (error) {
+      console.error(`${LOG_PREFIX} Failed to install extension "${extensionId}":`, error);
+      vscode.window.showErrorMessage(`Extension install failed: ${error instanceof Error ? error.message : String(error)}`);
+    }
   }
 }

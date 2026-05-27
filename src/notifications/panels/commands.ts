@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { BaseManager } from '../../shared/base-manager';
+import { LOG_PREFIX } from '../../shared/constants';
 import { promptInstallExtension } from '../install-prompt';
 
 interface PanelConfig {
@@ -32,12 +33,17 @@ export class PanelCommandsManager extends BaseManager {
   public registerCommands(context: vscode.ExtensionContext): void {
     for (const panel of PANEL_CONFIGS) {
       const disposable = vscode.commands.registerCommand(panel.commandId, async () => {
-        const ext = vscode.extensions.getExtension(panel.extensionId);
-        if (ext) {
-          if (!ext.isActive) { await ext.activate(); }
-          void vscode.commands.executeCommand(panel.focusCommand);
-        } else {
-          void promptInstallExtension(panel.extensionId, panel.messageKey, panel.actionKey);
+        try {
+          const ext = vscode.extensions.getExtension(panel.extensionId);
+          if (ext) {
+            if (!ext.isActive) { await ext.activate(); }
+            await vscode.commands.executeCommand(panel.focusCommand);
+          } else {
+            await promptInstallExtension(panel.extensionId, panel.messageKey, panel.actionKey);
+          }
+        } catch (error) {
+          console.error(`${LOG_PREFIX} Failed to open panel "${panel.commandId}":`, error);
+          vscode.window.showErrorMessage(`Panel command failed: ${error instanceof Error ? error.message : String(error)}`);
         }
       });
       this.register(context, disposable);

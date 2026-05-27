@@ -1,19 +1,10 @@
 import * as vscode from 'vscode';
-import { AI_COMMANDS, KEYMAP_CONFIG, ActionKey, EditorType } from './configs';
+import { AI_COMMANDS, KEYMAP_CONFIG, ActionKey } from './configs';
 import { EditorDetector } from './detector';
+import { AI_DETECTION_ORDER, shouldTryFallbackEditor } from './rules';
 import { LOG_PREFIX } from '../../shared/constants';
 import { BaseManager } from '../../shared/base-manager';
 import { tryExecuteCommand } from '../../shared/commands';
-
-const DETECTION_ORDER: EditorType[] = [
-  EditorType.ANTIGRAVITY,
-  EditorType.WINDSURF,
-  EditorType.CURSOR,
-  EditorType.TRAE_AI,
-  EditorType.KIRO,
-  EditorType.FIREBASE,
-  EditorType.VSCODE,
-];
 
 export class AICommandsManager extends BaseManager {
   constructor(private readonly detector: EditorDetector) {
@@ -27,10 +18,6 @@ export class AICommandsManager extends BaseManager {
       })
     );
     this.register(context, ...disposables);
-  }
-
-  public async warmup(): Promise<EditorType> {
-    return this.detector.warmup();
   }
 
   public resetDetection(): void {
@@ -50,10 +37,15 @@ export class AICommandsManager extends BaseManager {
       this.detector.reset();
     }
 
-    for (const fallbackEditor of DETECTION_ORDER) {
-      if (fallbackEditor === editor) { continue; }
+    for (const fallbackEditor of AI_DETECTION_ORDER) {
       const cmd = commandMap[fallbackEditor];
       if (!cmd) { continue; }
+
+      const fallbackAvailable = await this.detector.isAvailable(fallbackEditor);
+      if (!shouldTryFallbackEditor(editor, fallbackEditor, fallbackAvailable)) {
+        continue;
+      }
+
       const ok = await tryExecuteCommand(cmd);
       if (ok) { return; }
     }

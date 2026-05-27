@@ -36,7 +36,7 @@ export class WordWrapManager extends BaseManager {
     const next = current === 'on' ? 'off' : 'on';
 
     try {
-      await config.update('wordWrap', next, vscode.ConfigurationTarget.Global);
+      await config.update('wordWrap', next, vscode.ConfigurationTarget.Global, true);
     } catch (error) {
       console.error(`${LOG_PREFIX} Failed to toggle word wrap:`, error);
       vscode.window.showErrorMessage(`Word wrap toggle failed: ${error instanceof Error ? error.message : String(error)}`);
