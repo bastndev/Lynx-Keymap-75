@@ -20,7 +20,7 @@
 
 <h2 align="center">Lynx Keymap 75% — <b>Keybinding Reference</b></h2>
 
-> Optimized for **75% keyboards** across VSCode · Cursor · Windsurf · Trae-ai · Kiro · Antigravity & Firebase.studio.
+> Optimized for **75% keyboards** across VS Code · Cursor · Windsurf · Trae AI · Kiro · Antigravity & Firebase Studio.
 
 ---
 
@@ -28,12 +28,12 @@
 
 ![Experimental — New](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/img/t-1.webp)
 
-| Command             | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
-| :------------------ | :--------------- | :--------------- | :--------------- |
-| SKILLS              | `Cmd + 3 `       | `Ctrl + 3`       | `Ctrl + 3`       |
-| GitLab              | `Alt + B`        | `Alt + B`        | `Alt + B`        |
-| -                   | -                | -                | -                |
-| opencode/ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
+| Command               | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
+| :-------------------- | :--------------- | :--------------- | :--------------- |
+| SKILLS                | `⌘ + 3`          | `Ctrl + 3`       | `Ctrl + 3`       |
+| GitLab                | `Alt + B`        | `Alt + B`        | `Alt + B`        |
+| -                     | -                | -                | -                |
+| OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
 <details>
 <summary>🖼️ View Screenshot</summary>
@@ -53,7 +53,7 @@
 | :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
 | Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |    ✅     |
 | Open Source Control                   | `⌘ + 2`                 | `Ctrl + 2`                   |    ✅     |
-| SKILLS                                | `Cmd + 3 `              | `Ctrl + 3`                   |    ✅     |
+| SKILLS                                | `⌘ + 3`                 | `Ctrl + 3`                   |    ✅     |
 | Open Extensions                       | `⌘ + 4`                 | `Ctrl + 4`                   |    ✅     |
 | Toggle Sidebar                        | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
 | Quick Open File                       | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |    ✅     |
@@ -101,7 +101,7 @@
 > **Smart Close** (`Ctrl + CapsLock`) is context-aware:
 >
 > - If the **terminal** is occupying the side panel → closes the terminal.
-> - Otherwise → opens / closes the **AI Chat**.
+> - Otherwise → opens/closes the **AI Chat**.
 
 ---
 
@@ -152,7 +152,7 @@
 | Swap Project Terminal | `Alt + Q - W`            | `Alt + Q - W`                 | `Alt + Q - W`                 |
 | Close Terminal        | `Alt + Q - E`            | `Alt + Q - E`                 | `Alt + Q - E`                 |
 | Smart New Terminal    | <code>⌘ + ⇧ + `</code>   | <code>Ctrl + Shift + `</code> | <code>Ctrl + Shift + `</code> |
-| Kill Terminal        | <code>⌘ + Alt + `</code> | <code>Ctrl + Alt + `</code>   | <code>Ctrl + Alt + `</code>   |
+| Kill Terminal         | <code>⌘ + ⌥ + `</code>   | <code>Ctrl + Alt + `</code>   | <code>Ctrl + Alt + `</code>   |
 
 <br>
 
@@ -249,7 +249,7 @@ ext install bastndev.lynx-keymap-75
   Complementary Extensions 🧩 
 </h2>
 
-| Extension                                                                                                                                                                                                            | Name/>                                                         | Description                                                                                                                                                                                                                                       |
+| Extension                                                                                                                                                                                                            | Name                                                           | Description                                                                                                                                                                                                                                       |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Lynx Keymap Pro](https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.2.4/1777954360451/Microsoft.VisualStudio.Services.Icons.Default)](https://open-vsx.org/extension/bastndev/lynx-keymap) | [Lynx Keymap Pro](https://github.com/bastndev/Lynx-Keymap-Pro) | Standardizes keyboard shortcuts across all code editors, giving you instant access to any functionality with a single key combination — boosting your workflow and dev experience. **`If you have a normal keyboard, better download this one.`** |
 | [![ATM](https://open-vsx.org/api/bastndev/atm/1.9.4/file/icon.png)](https://open-vsx.org/extension/bastndev/atm)                                                                                                     | [ATM](https://github.com/bastndev/ATM)                         | An all-in-one toolkit 👻 that supercharges your workflow with essential features like Error Lens, Git Blame, Env Protection, and code screenshots across major editors.                                                                           |
