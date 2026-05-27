@@ -66,11 +66,15 @@
         "mac"    : "cmd+p",
         "command": "-workbench.action.quickOpen"
       },{
-        "key"    : "alt+,", 
-        "mac"    : "alt+,",
+        "key"    : "ctrl+,",
+        "mac"    : "cmd+,",
+        "command": "-workbench.action.openAntigravitySettings"
+      },{
+        "key"    : "ctrl+,", 
+        "mac"    : "cmd+,",
         "command": "workbench.action.terminal.sendSequence",
         "args"   : {"text": "\u001b[C"},
-        "when"   : "terminalFocus && !terminalSuggestWidgetVisible"
+        "when"   : "terminalFocus"
       },{
         "key"    : "ctrl+alt+backspace",
         "mac"    : "cmd+alt+backspace",
@@ -237,10 +241,6 @@
         "key"    : "ctrl+j",
         "mac"    : "cmd+j",
         "command": "workbench.action.openSettings"
-      },{
-        "key"    : "ctrl+,",
-        "mac"    : "cmd+,",
-        "command": ""
       },{
         "key"    : "alt+j",
         "mac"    : "alt+j",
