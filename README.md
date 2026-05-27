@@ -47,6 +47,8 @@
 
 <br>
 
+## ⌨️ General Keybindings 75%
+
 | Command                               | 🍎 macOS                | 🟦 Windows / 🐧 Linux        | Supported |
 | :------------------------------------ | :---------------------- | :--------------------------- | :-------: |
 | Open Explorer                         | `⌘ + 1`                 | `Ctrl + 1`                   |    ✅     |
