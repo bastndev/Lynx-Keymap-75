@@ -33,12 +33,3 @@ export async function getTranslation(key: string, ...args: string[]): Promise<st
   args.forEach((arg, i) => { text = text.replace(`{${i}}`, arg); });
   return text;
 }
-
-export async function notifyToggle(editor: string, enabled: boolean): Promise<void> {
-  const name    = editor.charAt(0).toUpperCase() + editor.slice(1);
-  const message = enabled
-    ? await getTranslation('lynx.notification.ai.enabled',  name)
-    : await getTranslation('lynx.notification.ai.disabled', name);
-
-  vscode.window.showInformationMessage(message);
-}
