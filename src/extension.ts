@@ -43,10 +43,6 @@ export async function activate(context: vscode.ExtensionContext) {
   debugManager.registerCommands(context);
   panelCommandsMgr.registerCommands(context);
 
-  void aiManager.warmup().catch(error => {
-    console.warn(`[lynx-keymap] AI detection warmup failed:`, error);
-  });
-
   await recoverSidePanelState(context);
 }
 

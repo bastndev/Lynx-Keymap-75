@@ -1,63 +1,69 @@
 import * as vscode from 'vscode';
-import { EDITOR_SIGNATURES, EditorType } from './configs';
+import { EditorType } from './configs';
+import { findEditorFromCommands, hasEditorSignature, isDetectionCacheFresh } from './rules';
 import { LOG_PREFIX } from '../../shared/constants';
 
-// Most-specific forks first; plain VSCode is the final fallback.
-const DETECTION_ORDER: EditorType[] = [
-  EditorType.ANTIGRAVITY,
-  EditorType.WINDSURF,
-  EditorType.CURSOR,
-  EditorType.TRAE_AI,
-  EditorType.KIRO,
-  EditorType.FIREBASE,
-  EditorType.VSCODE,
-];
-
 export class EditorDetector {
-  private detectedEditor: EditorType | null    = null;
-  private allCommandsCache: Set<string> | null = null;
-  private cacheTimestamp: number               = 0;
-  private readonly CACHE_EXPIRY               = 5 * 60 * 1000; // 5 min
+  private detectedEditor: EditorType | null       = null;
+  private detectedEditorTimestamp: number         = 0;
+  private allCommandsCache: Set<string> | null    = null;
+  private allCommandsCacheTimestamp: number       = 0;
+  private readonly CACHE_EXPIRY                  = 5 * 60 * 1000; // 5 min
 
   public async detect(): Promise<EditorType> {
-    if (this.detectedEditor) { return this.detectedEditor; }
-
-    const allCommands = await this.getAllCommands();
-
-    for (const editor of DETECTION_ORDER) {
-      const signatures = EDITOR_SIGNATURES[editor];
-      if (signatures.some(sig => allCommands.has(sig))) {
-        this.detectedEditor = editor;
-        return editor;
-      }
+    const now = Date.now();
+    if (isDetectionCacheFresh(
+      this.detectedEditor,
+      this.detectedEditorTimestamp,
+      now,
+      this.CACHE_EXPIRY,
+    )) {
+      return this.detectedEditor;
     }
 
-    this.detectedEditor = EditorType.VSCODE;
+    const allCommands = await this.getAllCommands();
+    const detectedEditor = findEditorFromCommands(allCommands);
+    if (detectedEditor) {
+      return this.setDetectedEditor(detectedEditor);
+    }
+
     console.warn(`${LOG_PREFIX} Editor not detected, defaulting to VSCode`);
-    return this.detectedEditor;
+    return this.setDetectedEditor(EditorType.VSCODE);
   }
 
   public reset(): void {
-    this.detectedEditor   = null;
-    this.allCommandsCache = null;
+    this.detectedEditor            = null;
+    this.detectedEditorTimestamp   = 0;
+    this.allCommandsCache          = null;
+    this.allCommandsCacheTimestamp = 0;
   }
 
-  public async warmup(): Promise<EditorType> {
-    return this.detect();
+  public async isAvailable(editor: EditorType): Promise<boolean> {
+    const allCommands = await this.getAllCommands();
+    return hasEditorSignature(editor, allCommands);
   }
 
   private async getAllCommands(): Promise<Set<string>> {
     const now = Date.now();
-    if (this.allCommandsCache && now - this.cacheTimestamp < this.CACHE_EXPIRY) {
+    if (
+      this.allCommandsCache &&
+      now - this.allCommandsCacheTimestamp < this.CACHE_EXPIRY
+    ) {
       return this.allCommandsCache;
     }
     try {
-      this.allCommandsCache = new Set(await vscode.commands.getCommands(true));
-      this.cacheTimestamp   = now;
+      this.allCommandsCache          = new Set(await vscode.commands.getCommands(true));
+      this.allCommandsCacheTimestamp = now;
       return this.allCommandsCache;
     } catch (error) {
       console.error(`${LOG_PREFIX} Failed to get commands:`, error);
       return this.allCommandsCache ?? new Set();
     }
+  }
+
+  private setDetectedEditor(editor: EditorType): EditorType {
+    this.detectedEditor          = editor;
+    this.detectedEditorTimestamp = Date.now();
+    return editor;
   }
 }
