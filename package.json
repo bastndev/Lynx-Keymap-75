@@ -70,12 +70,6 @@
         "mac"    : "cmd+,",
         "command": "-workbench.action.openAntigravitySettings"
       },{
-        "key"    : "ctrl+,", 
-        "mac"    : "cmd+,",
-        "command": "workbench.action.terminal.sendSequence",
-        "args"   : {"text": "\u001b[C"},
-        "when"   : "terminalFocus"
-      },{
         "key"    : "ctrl+alt+backspace",
         "mac"    : "cmd+alt+backspace",
         "command": "workbench.action.terminal.sendSequence",
@@ -85,6 +79,10 @@
         "key"    : "ctrl+enter",
         "mac"    : "cmd+return",
         "command": "-github.copilot.generate"
+      },{
+        "key"    : "alt+b",
+        "mac"    : "alt+b",
+        "command": "-workbench.debug.action.toggleRepl"
       },
 
 
@@ -95,8 +93,8 @@
 
 
       {
-        "key": "alt+v",
-        "mac": "alt+v",
+        "key"    : "alt+b",
+        "mac"    : "alt+b",
         "command": "lynx-keymap.openGitlabPanel"
       },
       {
@@ -241,7 +239,15 @@
         "key"    : "ctrl+j",
         "mac"    : "cmd+j",
         "command": "workbench.action.openSettings"
-      },{
+      },
+      {
+        "key"    : "ctrl+,", 
+        "mac"    : "cmd+,",
+        "command": "workbench.action.terminal.sendSequence",
+        "args"   : {"text": "\u001b[C"},
+        "when"   : "terminalFocus"
+      },
+      {
         "key"    : "alt+j",
         "mac"    : "alt+j",
         "command": "workbench.action.openSettingsJson"
