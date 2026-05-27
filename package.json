@@ -341,7 +341,7 @@
         "key"    : "ctrl+alt+[Backquote]",
         "mac"    : "cmd+alt+[Backquote]",
         "command": "workbench.action.terminal.kill"
-      },      {
+      },{
         "key"    : "ctrl+shift+[Backquote]",
         "mac"    : "cmd+shift+[Backquote]",
         "command": "lynx-keymap.smartNewTerminal"
