@@ -1,14 +1,12 @@
 import * as vscode from 'vscode';
-import {
-  STORAGE_KEYS,
-  LOG_PREFIX,
-  PANEL_POSITIONS,
-  BaseTerminalManager,
-} from '../../terminal/shared';
+import { STORAGE_KEYS, PANEL_POSITIONS, LOG_PREFIX } from '../../shared/constants';
+import { BaseManager } from '../../shared/base-manager';
 
-export class DebugManager extends BaseTerminalManager {
+export class DebugManager extends BaseManager {
 
   public registerCommands(context: vscode.ExtensionContext): void {
+    // ─── Prevent Debug View from stealing sidebar focus on first session ──────
+    void this.setDebugViewBehavior();
 
     // ─── Smart Debug Start ────────────────────────────────────────────────────
     // alt+p / F5 — anchors the main panel to bottom before starting debug
@@ -33,5 +31,14 @@ export class DebugManager extends BaseTerminalManager {
     );
 
     this.register(context, smartDebugStartCmd);
+  }
+
+  private async setDebugViewBehavior(): Promise<void> {
+    try {
+      const config = vscode.workspace.getConfiguration('debug');
+      await config.update('openDebug', 'neverOnFirstSession', vscode.ConfigurationTarget.Global);
+    } catch (error) {
+      console.error(`${LOG_PREFIX} Failed to set debug.openDebug:`, error);
+    }
   }
 }

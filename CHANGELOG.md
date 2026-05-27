@@ -31,6 +31,16 @@ Following semantic versioning principles for consistent and predictable releases
 <!-- --- -->
 
 ---
+## [2.4.0] - 2026-05-26
+
+### Fixed
+- **Better Architecture**: new architecture in `src/`.
+- **Change**: new keyboard shortcuts.
+- **Add**: Now support to Skills = My Skills.
+- **Better**: README.md and Update other language.
+
+
+---
 ## [2.3.1] - 2026-05-11
 
 ### Fixed
