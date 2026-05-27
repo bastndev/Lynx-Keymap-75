@@ -2,7 +2,7 @@
   "name": "lynx-keymap-75",
   "displayName": "%displayName%",
   "description": "%description%",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "publisher": "bastndev",
   "license": "MIT",
   "engines": {
@@ -66,11 +66,9 @@
         "mac"    : "cmd+p",
         "command": "-workbench.action.quickOpen"
       },{
-        "key"    : "alt+,", 
-        "mac"    : "alt+,",
-        "command": "workbench.action.terminal.sendSequence",
-        "args"   : {"text": "\u001b[C"},
-        "when"   : "terminalFocus && !terminalSuggestWidgetVisible"
+        "key"    : "ctrl+,",
+        "mac"    : "cmd+,",
+        "command": "-workbench.action.openAntigravitySettings"
       },{
         "key"    : "ctrl+alt+backspace",
         "mac"    : "cmd+alt+backspace",
@@ -81,6 +79,10 @@
         "key"    : "ctrl+enter",
         "mac"    : "cmd+return",
         "command": "-github.copilot.generate"
+      },{
+        "key"    : "alt+b",
+        "mac"    : "alt+b",
+        "command": "-workbench.debug.action.toggleRepl"
       },
 
 
@@ -91,8 +93,8 @@
 
 
       {
-        "key": "alt+v",
-        "mac": "alt+v",
+        "key"    : "alt+b",
+        "mac"    : "alt+b",
         "command": "lynx-keymap.openGitlabPanel"
       },
       {
@@ -237,11 +239,15 @@
         "key"    : "ctrl+j",
         "mac"    : "cmd+j",
         "command": "workbench.action.openSettings"
-      },{
-        "key"    : "ctrl+,",
+      },
+      {
+        "key"    : "ctrl+,", 
         "mac"    : "cmd+,",
-        "command": ""
-      },{
+        "command": "workbench.action.terminal.sendSequence",
+        "args"   : {"text": "\u001b[C"},
+        "when"   : "terminalFocus"
+      },
+      {
         "key"    : "alt+j",
         "mac"    : "alt+j",
         "command": "workbench.action.openSettingsJson"
