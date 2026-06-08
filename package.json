@@ -167,8 +167,8 @@
 
 
       {
-        "key"    : "pagedown",
-        "mac"    : "pagedown",
+        "key"    : "ctrl+capslock",
+        "mac"    : "ctrl+capslock",
         "command": "workbench.action.togglePanel"
       },{
         "key"    : "pageup",
@@ -373,12 +373,12 @@
         "mac"    : "alt+capslock",
         "command": "lynx-keymap.toggleTerminalLeftAndRight"
       },{
-        "key"    : "ctrl+capslock",
-        "mac"    : "cmd+capslock",
-        "command": "lynx-keymap.openAndCloseAIChatAndTerminal"
-      },{
         "key"    : "ctrl+tab",
         "mac"    : "cmd+tab",
+        "command": "lynx-keymap.openAndCloseAIChatAndTerminal"
+      },{
+        "key"    : "ctrl+shift+tab",
+        "mac"    : "cmd+shift+tab",
         "command": "workbench.action.toggleSidebarVisibility"
       },
       
