@@ -19,14 +19,17 @@
 <br>
 
 <h2 align="center">Lynx Keymap 75% — <b>Keybinding Reference</b></h2>
+<div align="center">
 
 > Optimized for **75% keyboards** across VS Code · Cursor · Windsurf · Trae AI · Kiro · Antigravity & Firebase Studio.
+
+</div>
 
 ---
 
 <br>
 
-![Experimental — New](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/img/t-1.webp)
+![Experimental — New](https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/main/public/github/images/img/t-3.webp)
 
 | Command               | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
 | :-------------------- | :--------------- | :--------------- | :--------------- |
