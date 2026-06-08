@@ -55,7 +55,7 @@
 | Open Source Control                   | `⌘ + 2`                 | `Ctrl + 2`                   |    ✅     |
 | SKILLS                                | `⌘ + 3`                 | `Ctrl + 3`                   |    ✅     |
 | Open Extensions                       | `⌘ + 4`                 | `Ctrl + 4`                   |    ✅     |
-| Toggle Sidebar                        | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
+| Toggle Sidebar                        | `⇧ + ⌘ + Tab`           | `Ctrl + Shift + Tab`         |    ✅     |
 | Quick Open File                       | `⇧ + ⌥ + E`             | `Shift + Alt + E`            |    ✅     |
 | Go to Line                            | `⇧ + ⌥ + W`             | `Shift + Alt + W`            |    ✅     |
 | Focus First Editor Group              | `⌥ + Q`                 | `Alt + Q`                    |    ✅     |
@@ -84,9 +84,9 @@
 | Kill Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |    ✅     |
 | Terminal — Complete Word              | `⌘ + ,`                 | `Ctrl + ,`                   |    ✅     |
-| Toggle Panel                          | `Page Down`             | `Page Down`                  |    ✅     |
+| Toggle Panel                          | `Ctrl + CapsLock`       | `Ctrl + CapsLock`            |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **Smart Close** — AI Chat or Terminal | `⌘ + CapsLock`          | `Ctrl + CapsLock`            |    ✅     |
+| **Smart Close** — AI Chat or Terminal | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
 | Create New AI Session                 | `⌥ + A`                 | `Alt + A`                    |    ✅     |
 | Select AI Model                       | `⌥ + S`                 | `Alt + S`                    |    ✅     |
 | AI Select Code                        | `⌥ + D`                 | `Alt + D`                    |    ✅     |
@@ -98,7 +98,7 @@
 | Cancel Inline Chat                    | `⌥ + Return`            | `Alt + Enter`                |    ✅     |
 | Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`               | `Shift + Esc`                |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) is context-aware:
+> **Smart Close** (`Ctrl + Tab`) is context-aware:
 >
 > - If the **terminal** is occupying the side panel → closes the terminal.
 > - Otherwise → opens/closes the **AI Chat**.
