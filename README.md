@@ -80,14 +80,14 @@
 | Comment Line                          | `⌘ + /`                 | `Ctrl + /`                   |    ✅     |
 | Comment Block                         | `⌥ + /`                 | `Alt + /`                    |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| Terminal Bottom (toggle)              | `⌥ + E`                 | `Alt + E`                    |    ✅     |
+| Terminal Bottom (toggle)              | `Ctrl + CapsLock`       | `Ctrl + CapsLock`            |    ✅     |
 | Terminal Left/Right (toggle)          | `⌥ + CapsLock`          | `Alt + CapsLock`             |    ✅     |
 | Quick Open Terminal                   | `⌥ + W`                 | `Alt + W`                    |    ✅     |
 | Maximize / Minimize Panel             | <code>⌘ + \`</code>     | <code>Ctrl + \`</code>       |    ✅     |
 | Kill Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`     | `Ctrl + Alt + Backspace`     |    ✅     |
 | Terminal — Complete Word              | `⌘ + ,`                 | `Ctrl + ,`                   |    ✅     |
-| Toggle Panel                          | `Ctrl + CapsLock`       | `Ctrl + CapsLock`            |    ✅     |
+| Toggle Panel                          | `⌥ + E`                 | `Alt + E`                    |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
 | **Smart Close** — AI Chat or Terminal | `⌘ + Tab`               | `Ctrl + Tab`                 |    ✅     |
 | Create New AI Session                 | `⌥ + A`                 | `Alt + A`                    |    ✅     |
