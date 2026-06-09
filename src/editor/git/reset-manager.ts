@@ -37,9 +37,9 @@ export class GitResetManager extends BaseManager {
           const raw = stdout.trim();
           let message = 'git reset --hard HEAD completed.';
 
-          const headMatch = raw.match(/HEAD is now at ([0-9a-f]{4,40})/i);
+          const headMatch = raw.match(/HEAD is now at ([0-9a-fA-F]{4,40})/);
           if (headMatch) {
-            message = `HEAD is now at ${headMatch[1]}`;
+            message = `HEAD is now at ${headMatch[1]} ♻️`;
           } else if (raw) {
             // Fallback: first line, hard truncated so notification stays short
             message = raw.split('\n')[0].slice(0, 60);
