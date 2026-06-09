@@ -167,8 +167,8 @@
 
 
       {
-        "key"    : "ctrl+capslock",
-        "mac"    : "ctrl+capslock",
+        "key"    : "alt+e",
+        "mac"    : "alt+e",
         "command": "workbench.action.togglePanel"
       },{
         "key"    : "pageup",
@@ -348,8 +348,8 @@
       },
       
       {
-        "key"    : "alt+e",
-        "mac"    : "alt+e",
+        "key"    : "ctrl+capslock",
+        "mac"    : "ctrl+capslock",
         "command": "lynx-keymap.toggleTerminalBottom"
       },{
         "key"    : "alt+w",
