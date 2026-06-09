@@ -29,7 +29,7 @@
 | Команда | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | Открыть управление исходным кодом                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | Открыть расширения                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| Переключить боковую панель                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| Переключить боковую панель                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | Быстро открыть файл                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | Перейти к строке                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | Фокус на первой группе редакторов              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | Закомментировать строку                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | Закомментировать блок                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| Terminal Bottom (toggle)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal Bottom (toggle)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | Terminal Left/Right (toggle)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | Quick Open Terminal                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | Развернуть / свернуть панель             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | Завершить терминал                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | Terminal — Complete Word              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| Переключить панель                          | `Page Down`            | `Page Down`                 |    ✅     |
+| Переключить панель                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **Smart Close** — AI Chat или терминал | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **Smart Close** — AI Chat или терминал | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | Create New AI Session                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | Select AI Model                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | AI Select Code                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | Cancel Inline Chat                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) учитывает контекст:
+> **Smart Close** (`Ctrl + Tab`) учитывает контекст:
 >
 > - Если **терминал** занимает боковую панель → закрывает терминал.
 > - Иначе → открывает/закрывает **AI Chat**.
@@ -114,7 +114,7 @@
 | Убрать всё из индекса | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Показать изменения Git | `End` | `End` | `End` |
+| Показать изменения Git | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | Перезагрузить окно | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | Zoom In ( 🛞 right ) | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | Zoom Out ( 🛞 left ) | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Показать предпросмотр Markdown | `Page Up` | `Page Up` | `Page Up` |
+| Показать предпросмотр Markdown | `Page Down` | `Page Down` | `Page Down` |
+| Закрыть окно       | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | Запустить отладку | `Insert` | `Insert` | `Insert` |
 | Перезапустить отладку | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | Остановить отладку | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Консоль отладки | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

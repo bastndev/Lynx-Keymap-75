@@ -29,7 +29,7 @@
 | Lệnh | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | Mở Source Control                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | Mở Extensions                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| Bật/tắt Sidebar                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| Bật/tắt Sidebar                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | Mở nhanh tệp                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | Đi tới dòng                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | Tập trung nhóm editor đầu tiên              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | Bình luận dòng                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | Bình luận khối                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| Terminal Bottom (toggle)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal Bottom (toggle)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | Terminal Left/Right (toggle)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | Quick Open Terminal                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | Phóng to / thu nhỏ panel             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | Dừng terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | Terminal — Complete Word              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| Bật/tắt panel                          | `Page Down`            | `Page Down`                 |    ✅     |
+| Bật/tắt panel                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **Smart Close** — AI Chat hoặc Terminal | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **Smart Close** — AI Chat hoặc Terminal | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | Create New AI Session                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | Select AI Model                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | AI Select Code                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | Cancel Inline Chat                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) nhận biết ngữ cảnh:
+> **Smart Close** (`Ctrl + Tab`) nhận biết ngữ cảnh:
 >
 > - Nếu **terminal** đang chiếm panel bên → đóng terminal.
 > - Ngược lại → mở/đóng **AI Chat**.
@@ -114,7 +114,7 @@
 | Unstage tất cả | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Xem thay đổi Git | `End` | `End` | `End` |
+| Xem thay đổi Git | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | Tải lại cửa sổ | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | Zoom In ( 🛞 right ) | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | Zoom Out ( 🛞 left ) | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Xem trước Markdown | `Page Up` | `Page Up` | `Page Up` |
+| Xem trước Markdown | `Page Down` | `Page Down` | `Page Down` |
+| Thoát cửa sổ    | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | Bắt đầu debug | `Insert` | `Insert` | `Insert` |
 | Khởi động lại debug | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | Dừng debug | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Console debug | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

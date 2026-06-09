@@ -29,7 +29,7 @@
 | 命令 | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | 打开源代码管理                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | 打开扩展                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| 切换侧边栏                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| 切换侧边栏                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | 快速打开文件                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | 转到行                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | 聚焦第一个编辑器组              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | 行注释                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | 块注释                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| 底部终端 (切换)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| 底部终端 (切换)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | 左侧/右侧终端 (切换)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | 快速打开终端                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | 最大化 / 最小化面板             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | 终止终端                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | 终端 — 清除行                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | 终端 — 补全单词              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| 切换面板                          | `Page Down`            | `Page Down`                 |    ✅     |
+| 切换面板                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **智能关闭** — AI 聊天或终端 | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **智能关闭** — AI 聊天或终端 | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | 创建新 AI 会话                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | 选择 AI 模型                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | AI 选择代码                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | 取消内联聊天                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | 最大化 / 最小化辅助栏     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) 会根据上下文工作:
+> **智能关闭** (`Ctrl + Tab`) 会根据上下文工作:
 >
 > - 如果**终端**占用侧边面板 → 关闭终端。
 > - 否则 → 打开/关闭 **AI Chat**。
@@ -114,7 +114,7 @@
 | 取消暂存所有 | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| 查看 Git 更改 | `End` | `End` | `End` |
+| 查看 Git 更改 | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | 重新加载窗口 | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | 放大 | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | 缩小 | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| 显示 Markdown 预览 | `Page Up` | `Page Up` | `Page Up` |
+| 显示 Markdown 预览 | `Page Down` | `Page Down` | `Page Down` |
+| 退出窗口            | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | 开始调试 | `Insert` | `Insert` | `Insert` |
 | 重启调试 | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | 停止调试 | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| 调试控制台 | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

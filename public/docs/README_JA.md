@@ -29,7 +29,7 @@
 | コマンド | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | ソース管理を開く                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | 拡張機能を開く                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| サイドバーの表示切り替え                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| サイドバーの表示切り替え                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | ファイルのクイックオープン                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | 指定行へ移動                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | 最初のエディターグループにフォーカス              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | 行コメントの切り替え                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | ブロックコメントの切り替え                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| 下部ターミナル (切り替え)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| 下部ターミナル (切り替え)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | 左右ターミナル (切り替え)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | ターミナルをすばやく開く                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | パネルの最大化 / 最小化             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | ターミナルの終了                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | ターミナル — 行のクリア                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | ターミナル — 単語の補完              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| パネルの表示切り替え                          | `Page Down`            | `Page Down`                 |    ✅     |
+| パネルの表示切り替え                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **スマートクローズ** — AI Chat またはターミナル | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **スマートクローズ** — AI Chat またはターミナル | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | 新しいAIセッションの作成                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | AIモデルの選択                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | AIによるコード選択                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | インラインチャットのキャンセル                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | 補助バーの最大化 / 最小化     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) は状況に応じて動作します:
+> **スマートクローズ** (`Ctrl + Tab`) は状況に応じて動作します:
 >
 > - **ターミナル**がサイドパネルを占有している場合 → ターミナルを閉じます。
 > - それ以外 → **AI Chat** を開く/閉じる。
@@ -114,7 +114,7 @@
 | すべてステージ解除 | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Gitの変更を表示 | `End` | `End` | `End` |
+| Gitの変更を表示 | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | ウィンドウの再読み込み | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | ズームイン | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | ズームアウト | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Markdownのプレビュー | `Page Up` | `Page Up` | `Page Up` |
+| Markdownのプレビュー | `Page Down` | `Page Down` | `Page Down` |
+| ウィンドウを閉じる    | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | デバッグの開始 | `Insert` | `Insert` | `Insert` |
 | デバッグの再起動 | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | デバッグの停止 | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| デバッグコンソール | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

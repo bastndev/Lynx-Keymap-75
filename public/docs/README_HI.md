@@ -29,7 +29,7 @@
 | कमांड | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | Source Control खोलें                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | Extensions खोलें                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| Sidebar टॉगल करें                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| Sidebar टॉगल करें                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | फ़ाइल जल्दी खोलें                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | लाइन पर जाएँ                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | पहले editor group पर focus करें              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | Line comment करें                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | Block comment करें                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| Terminal Bottom (toggle)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal Bottom (toggle)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | Terminal Left/Right (toggle)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | Quick Open Terminal                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | Panel maximize / minimize करें             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | Terminal बंद करें                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | Terminal — Complete Word              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| Panel टॉगल करें                          | `Page Down`            | `Page Down`                 |    ✅     |
+| Panel टॉगल करें                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **Smart Close** — AI Chat या Terminal | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **Smart Close** — AI Chat या Terminal | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | Create New AI Session                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | Select AI Model                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | AI Select Code                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | Cancel Inline Chat                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) संदर्भ के अनुसार काम करता है:
+> **Smart Close** (`Ctrl + Tab`) संदर्भ के अनुसार काम करता है:
 >
 > - यदि **terminal** साइड पैनल में है → terminal बंद करता है।
 > - अन्यथा → **AI Chat** खोलता/बंद करता है।
@@ -114,7 +114,7 @@
 | सब unstage करें | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Git बदलाव देखें | `End` | `End` | `End` |
+| Git बदलाव देखें | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | Window reload करें | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | Zoom In ( 🛞 right ) | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | Zoom Out ( 🛞 left ) | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Markdown preview दिखाएँ | `Page Up` | `Page Up` | `Page Up` |
+| Markdown preview दिखाएँ | `Page Down` | `Page Down` | `Page Down` |
+| Window बंद करें   | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | Debugging शुरू करें | `Insert` | `Insert` | `Insert` |
 | Debugging restart करें | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | Debugging रोकें | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Debug Console | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

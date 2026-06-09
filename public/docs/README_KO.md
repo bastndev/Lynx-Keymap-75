@@ -29,7 +29,7 @@
 | 명령 | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | 소스 제어 열기                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | 확장 열기                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| 사이드바 토글                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| 사이드바 토글                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | 빠른 파일 열기                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | 줄로 이동                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | 첫 번째 에디터 그룹에 포커스              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | 줄 주석 토글                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | 블록 주석 토글                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| 하단 터미널 (토글)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| 하단 터미널 (토글)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | 좌우 터미널 (토글)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | 빠른 터미널 열기                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | 패널 최대화 / 최소화             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | 터미널 종료                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | 터미널 — 줄 지우기                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | 터미널 — 단어 자동 완성              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| 패널 토글                          | `Page Down`            | `Page Down`                 |    ✅     |
+| 패널 토글                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **스마트 닫기** — AI 채팅 또는 터미널 | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **스마트 닫기** — AI 채팅 또는 터미널 | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | 새 AI 세션 만들기                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | AI 모델 선택                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | AI 코드 선택                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | 인라인 채팅 취소                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | 보조 막대 최대화 / 최소화     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) 는 상황을 인식합니다:
+> **스마트 닫기** (`Ctrl + Tab`) 는 상황을 인식합니다:
 >
 > - **터미널**이 사이드 패널을 차지하면 → 터미널을 닫습니다.
 > - 그 외에는 → **AI Chat**을 열거나 닫습니다.
@@ -114,7 +114,7 @@
 | 모두 스테이지 해제 | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Git 변경 사항 보기 | `End` | `End` | `End` |
+| Git 변경 사항 보기 | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | 창 다시 로드 | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | 확대 | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | 축소 | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| 마크다운 미리보기 | `Page Up` | `Page Up` | `Page Up` |
+| 마크다운 미리보기 | `Page Down` | `Page Down` | `Page Down` |
+| 창 닫기           | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | 디버깅 시작 | `Insert` | `Insert` | `Insert` |
 | 디버깅 다시 시작 | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | 디버깅 중지 | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| 디버그 콘솔 | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

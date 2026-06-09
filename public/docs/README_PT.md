@@ -29,7 +29,7 @@
 | Comando | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | Abrir Controle de Código-Fonte                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | Abrir Extensões                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| Alternar Barra Lateral                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| Alternar Barra Lateral                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | Abertura Rápida de Arquivo                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | Ir para Linha                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | Focar Primeiro Grupo de Editores              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | Comentar Linha                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | Comentar Bloco                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| Terminal Inferior (alternar)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal Inferior (alternar)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | Terminal Esquerda/Direita (alternar)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | Abertura Rápida do Terminal                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | Maximizar / Minimizar Painel             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | Encerrar Terminal                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Limpar Linha                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | Terminal — Completar Palavra              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| Alternar Painel                          | `Page Down`            | `Page Down`                 |    ✅     |
+| Alternar Painel                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **Fechamento Inteligente** — Chat IA ou Terminal | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **Fechamento Inteligente** — Chat IA ou Terminal | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | Criar Nova Sessão IA                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | Selecionar Modelo IA                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | IA: Selecionar Código                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | Cancelar Chat Integrado                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | Maximizar / Minimizar Barra Auxiliar     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) é sensível ao contexto:
+> **Fechamento Inteligente** (`Ctrl + Tab`) é sensível ao contexto:
 >
 > - Se o **terminal** ocupa o painel lateral → fecha o terminal.
 > - Caso contrário → abre/fecha o **Chat IA**.
@@ -114,7 +114,7 @@
 | Remover Tudo do Stage | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Ver Alterações Git | `End` | `End` | `End` |
+| Ver Alterações Git | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | Recarregar Janela | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | Aumentar Zoom | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | Diminuir Zoom | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Mostrar Prévia Markdown | `Page Up` | `Page Up` | `Page Up` |
+| Mostrar Prévia Markdown | `Page Down` | `Page Down` | `Page Down` |
+| Sair da Janela          | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | Iniciar Depuração | `Insert` | `Insert` | `Insert` |
 | Reiniciar Depuração | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | Parar Depuração | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Console de Depuração | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

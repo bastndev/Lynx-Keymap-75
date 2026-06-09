@@ -29,7 +29,7 @@
 | Befehl | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | Quellcodeverwaltung öffnen            | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | Erweiterungen öffnen                  | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| Seitenleiste umschalten               | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| Seitenleiste umschalten               | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | Datei schnell öffnen                  | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | Gehe zu Zeile                         | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | Erste Editor-Gruppe fokussieren       | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | Zeile kommentieren                    | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | Block kommentieren                    | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| Terminal unten (umschalten)           | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal unten (umschalten)           | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | Terminal links/rechts (umschalten)    | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | Terminal schnell öffnen               | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | Panel maximieren / minimieren         | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | Terminal beenden                      | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Zeile löschen              | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | Terminal — Wort vervollständigen      | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| Panel umschalten                      | `Page Down`            | `Page Down`                 |    ✅     |
+| Panel umschalten                      | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **Smart Close** — KI-Chat oder Terminal | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **Smart Close** — KI-Chat oder Terminal | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | Neue KI-Sitzung erstellen             | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | KI-Modell auswählen                   | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | KI-Code auswählen                     | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | Inline-Chat abbrechen                 | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | Hilfsleiste maximieren / minimieren   | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) ist kontextsensitiv:
+> **Smart Close** (`Ctrl + Tab`) ist kontextsensitiv:
 >
 > - Wenn das **Terminal** die Seitenleiste belegt → schließt das Terminal.
 > - Andernfalls → öffnet/schließt den **KI-Chat**.
@@ -114,7 +114,7 @@
 | Alles unstagen | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| Git-Änderungen anzeigen | `End` | `End` | `End` |
+| Git-Änderungen anzeigen | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | Fenster neu laden | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | Vergrößern | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | Verkleinern | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Markdown-Vorschau anzeigen | `Page Up` | `Page Up` | `Page Up` |
+| Markdown-Vorschau anzeigen | `Page Down` | `Page Down` | `Page Down` |
+| Fenster schließen          | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | Debugging starten | `Insert` | `Insert` | `Insert` |
 | Debugging neu starten | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | Debugging beenden | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Debug-Konsole | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 

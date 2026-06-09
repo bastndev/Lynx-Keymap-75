@@ -29,7 +29,7 @@
 | الأمر | 🍎 macOS | 🟦 Windows | 🐧 Linux |
 | :-- | :-- | :-- | :-- |
 | SKILLS | `⌘ + 3` | `Ctrl + 3` | `Ctrl + 3` |
-| GitLab | `Alt + B` | `Alt + B` | `Alt + B` |
+| GitLab | `Ctrl + E` | `Ctrl + E` | `Ctrl + E` |
 | - | - | - | - |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -53,7 +53,7 @@
 | فتح Source Control                   | `⌘ + 2`                | `Ctrl + 2`                  |    ✅     |
 | SKILLS                                | `⌘ + 3`                | `Ctrl + 3`                  |    ✅     |
 | فتح الإضافات                       | `⌘ + 4`                | `Ctrl + 4`                  |    ✅     |
-| تبديل الشريط الجانبي                        | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
+| تبديل الشريط الجانبي                        | `⇧ + ⌘ + Tab`          | `Ctrl + Shift + Tab`        |    ✅     |
 | فتح ملف بسرعة                       | `⇧ + ⌥ + E`            | `Shift + Alt + E`           |    ✅     |
 | الانتقال إلى سطر                            | `⇧ + ⌥ + W`            | `Shift + Alt + W`           |    ✅     |
 | تركيز أول مجموعة محررات              | `⌥ + Q`                | `Alt + Q`                   |    ✅     |
@@ -75,16 +75,16 @@
 | تعليق السطر                          | `⌘ + /`                | `Ctrl + /`                  |    ✅     |
 | تعليق الكتلة                         | `⌥ + /`                | `Alt + /`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| Terminal Bottom (toggle)              | `⌥ + E`                | `Alt + E`                   |    ✅     |
+| Terminal Bottom (toggle)              | `Ctrl + CapsLock`      | `Ctrl + CapsLock`           |    ✅     |
 | Terminal Left/Right (toggle)          | `⌥ + CapsLock`         | `Alt + CapsLock`            |    ✅     |
 | Quick Open Terminal                   | `⌥ + W`                | `Alt + W`                   |    ✅     |
 | تكبير / تصغير اللوحة             | <code>⌘ + \`</code>    | <code>Ctrl + \`</code>      |    ✅     |
 | إنهاء الطرفية                         | <code>⌘ + ⌥ + \`</code> | <code>Ctrl + Alt + \`</code> |    ✅     |
 | Terminal — Clear Line                 | `⌘ + ⌥ + Backspace`    | `Ctrl + Alt + Backspace`    |    ✅     |
 | Terminal — Complete Word              | `⌘ + ,`                | `Ctrl + ,`                  |    ✅     |
-| تبديل اللوحة                          | `Page Down`            | `Page Down`                 |    ✅     |
+| تبديل اللوحة                          | `⌥ + E`                | `Alt + E`                   |    ✅     |
 | -                                     | -                       | -                            |    N/A    |
-| **Smart Close** — AI Chat أو الطرفية | `⌘ + CapsLock`         | `Ctrl + CapsLock`           |    ✅     |
+| **Smart Close** — AI Chat أو الطرفية | `⌘ + Tab`              | `Ctrl + Tab`                |    ✅     |
 | Create New AI Session                 | `⌥ + A`                | `Alt + A`                   |    ✅     |
 | Select AI Model                       | `⌥ + S`                | `Alt + S`                   |    ✅     |
 | AI Select Code                        | `⌥ + D`                | `Alt + D`                   |    ✅     |
@@ -96,7 +96,7 @@
 | Cancel Inline Chat                    | `⌥ + Return`           | `Alt + Enter`               |    ✅     |
 | Maximize / Minimize Auxiliary Bar     | `⇧ + Esc`              | `Shift + Esc`               |    ✅     |
 
-> **Smart Close** (`Ctrl + CapsLock`) يعتمد على السياق:
+> **Smart Close** (`Ctrl + Tab`) يعتمد على السياق:
 >
 > - إذا كان **الطرفية** تشغل اللوحة الجانبية → يغلق الطرفية.
 > - وإلا → يفتح/يغلق **AI Chat**.
@@ -114,7 +114,7 @@
 | Unstage للكل | `⌥ + 3` | `Alt + 3` | `Alt + 3` |
 | Commit | `⌥ + Return` | `Alt + Enter` | `Alt + Enter` |
 | Push | `⌘ + ⌥ + Return` | `Ctrl + Alt + Enter` | `Ctrl + Alt + Enter` |
-| عرض تغييرات Git | `End` | `End` | `End` |
+| عرض تغييرات Git | `Page Up` | `Page Up` | `Page Up` |
 | Git Reset Hard HEAD | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -129,7 +129,8 @@
 | إعادة تحميل النافذة | `⇧ + ⌥ + R` | `Shift + Alt + R` | `Shift + Alt + R` |
 | Zoom In ( 🛞 right ) | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | Zoom Out ( 🛞 left ) | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| عرض معاينة Markdown | `Page Up` | `Page Up` | `Page Up` |
+| عرض معاينة Markdown | `Page Down` | `Page Down` | `Page Down` |
+| إغلاق النافذة       | `End`       | `End`        | `End`        |
 
 ---
 
@@ -140,6 +141,7 @@
 | بدء التصحيح | `Insert` | `Insert` | `Insert` |
 | إعادة تشغيل التصحيح | `⌥ + Insert` | `Alt + Insert` | `Alt + Insert` |
 | إيقاف التصحيح | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| وحدة تحكم التصحيح | `Ctrl + Q` | `Ctrl + Q` | `Ctrl + Q` |
 
 ---
 
