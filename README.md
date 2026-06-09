@@ -119,7 +119,7 @@
 | Unstage All                | `⌥ + 3`                 | `Alt + 3`                        | `Alt + 3`                        |
 | Commit                     | `⌥ + Return`            | `Alt + Enter`                    | `Alt + Enter`                    |
 | Push                       | `⌘ + ⌥ + Return`        | `Ctrl + Alt + Enter`             | `Ctrl + Alt + Enter`             |
-| View Git Changes           | `End`                   | `End`                            | `End`                            |
+| View Git Changes           | `Page Up`               | `Page Up`                        | `Page Up`                        |
 | Git Reset Hard HEAD        | `⌘ + ⇧ + ⌥ + Backspace` | `Ctrl + Shift + Alt + Backspace` | `Ctrl + Shift + Alt + Backspace` |
 
 ---
@@ -134,7 +134,8 @@
 | Reload Window         | `⇧ + ⌥ + R`     | `Shift + Alt + R`     | `Shift + Alt + R`     |
 | Zoom In ( 🛞 right )  | `⇧ + ⌥ + Vol +` | `Shift + Alt + Vol +` | `Shift + Alt + Vol +` |
 | Zoom Out ( 🛞 left )  | `⇧ + ⌥ + Vol -` | `Shift + Alt + Vol -` | `Shift + Alt + Vol -` |
-| Show Markdown Preview | `Page Up`       | `Page Up`             | `Page Up`             |
+| Show Markdown Preview | `Page Down`     | `Page Down`           | `Page Down`           |
+| Quit Window           | `End`           | `End`                 | `End`                 |
 
 ---
 
