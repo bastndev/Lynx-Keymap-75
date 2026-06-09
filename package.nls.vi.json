@@ -5,9 +5,9 @@
   "lynx.notification.ai.enabled": "({0}) Đề xuất AI: ĐÃ BẬT ✅",
   "lynx.notification.ai.disabled": "({0}) Đề xuất AI: ĐÃ TẮT ❌",
 
-  "ATM.notification.install.required": "Để sử dụng bảng điều khiển GitLab, bạn cần cài đặt tiện ích mở rộng \"ATM\" bởi(@gohitx).",
+  "ATM.notification.install.required": "Để sử dụng bảng điều khiển GitLab, bạn cần cài đặt tiện ích mở rộng \"ATM\" bởi (@gohitx).",
   "ATM.notification.install.action": "📥 Tải xuống ATM",
 
-  "MySkills.notification.install.required": "Để sử dụng bảng điều khiển Skills, bạn cần cài đặt tiện ích mở rộng \"My Skills\" bởi(@gohitx).",
+  "MySkills.notification.install.required": "Để sử dụng bảng điều khiển Skills, bạn cần cài đặt tiện ích mở rộng \"My Skills\" bởi (@gohitx).",
   "MySkills.notification.install.action": "📥 Tải xuống My Skills"
 }
