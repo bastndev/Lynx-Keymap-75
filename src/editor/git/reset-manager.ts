@@ -6,6 +6,10 @@ import { LOG_PREFIX } from '../../shared/constants';
 
 const execFileAsync = promisify(execFile);
 
+const GIT_HASH_DOTS = '~~~~~~~~~~~~~~~~~';
+
+const formatGitHash = (hash: string): string => `${GIT_HASH_DOTS} (${hash})`;
+
 export class GitResetManager extends BaseManager {
 
   public registerCommands(context: vscode.ExtensionContext): void {
@@ -39,10 +43,14 @@ export class GitResetManager extends BaseManager {
 
           const headMatch = raw.match(/HEAD is now at ([0-9a-fA-F]{4,40})/);
           if (headMatch) {
-            message = `HEAD is now at ${headMatch[1]} ♻️`;
+            message = `HEAD is now at ${formatGitHash(headMatch[1])} ♻️`;
           } else if (raw) {
             // Fallback: first line, hard truncated so notification stays short
-            message = raw.split('\n')[0].slice(0, 60);
+            const line = raw.split('\n')[0].slice(0, 60);
+            const hashInLine = line.match(/([0-9a-fA-F]{4,40})/);
+            message = hashInLine
+              ? line.replace(hashInLine[0], formatGitHash(hashInLine[0]))
+              : line;
           }
 
           vscode.window.showInformationMessage(message);
