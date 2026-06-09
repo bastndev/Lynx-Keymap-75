@@ -34,7 +34,7 @@
 | Command               | 🍎 macOS         | 🟦 Windows       | 🐧 Linux         |
 | :-------------------- | :--------------- | :--------------- | :--------------- |
 | SKILLS                | `⌘ + 3`          | `Ctrl + 3`       | `Ctrl + 3`       |
-| GitLab                | `Alt + B`        | `Alt + B`        | `Alt + B`        |
+| GitLab                | `Ctrl + E`       | `Ctrl + E`       | `Ctrl + E`       |
 | -                     | -                | -                | -                |
 | OpenCode / ClaudeCode | `Alt + CapsLock` | `Alt + CapsLock` | `Alt + CapsLock` |
 
@@ -146,6 +146,7 @@
 | Start Debugging   | `Insert`     | `Insert`        | `Insert`        |
 | Restart Debugging | `⌥ + Insert` | `Alt + Insert`  | `Alt + Insert`  |
 | Stop Debugging    | `⌘ + Insert` | `Ctrl + Insert` | `Ctrl + Insert` |
+| Debug Console     | `Ctrl + Q`   | `Ctrl + Q`      | `Ctrl + Q`      |
 
 ---
 
