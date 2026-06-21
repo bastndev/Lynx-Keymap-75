@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://bastndev.gallerycdn.vsassets.io/extensions/bastndev/lynx-keymap/2.4.2/1779902338585/Microsoft.VisualStudio.Services.Icons.Default" alt="Lynx Keymap Pro" width="128"/>
+<img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/archived/public/banner2.webp" alt="Lynx Keymap Pro" width=""/>
 </div>
 
 ---
