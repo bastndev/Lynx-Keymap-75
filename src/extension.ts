@@ -1,43 +1,49 @@
 import * as vscode from 'vscode';
 
-export async function activate(context: vscode.ExtensionContext) {
+export async function activate(_context: vscode.ExtensionContext) {
     const newExtensionId = 'bastndev.lynx-keymap';
     const oldExtensionId = 'bastndev.lynx-keymap-75';
 
-    const checkAndPromptUninstall = async () => {
+    const newExtension = vscode.extensions.getExtension(newExtensionId);
+
+    if (!newExtension) {
+        // Automatically install the new extension with a progress notification
+        void vscode.window.withProgress({
+            location: vscode.ProgressLocation.Notification,
+            title: "Updating to Lynx Keymap Pro...",
+            cancellable: false
+        }, async () => {
+            try {
+                // Programmatically install the new extension
+                await vscode.commands.executeCommand('workbench.extensions.installExtension', newExtensionId);
+                
+                // Prompt user to uninstall this old extension
+                const selection = await vscode.window.showInformationMessage(
+                    '✅ Lynx Keymap Pro has been installed automatically. Please uninstall this old version (Lynx Keymap 75) to avoid conflicts.',
+                    'Uninstall old version'
+                );
+                
+                if (selection === 'Uninstall old version') {
+                    await vscode.commands.executeCommand('workbench.extensions.uninstallExtension', oldExtensionId);
+                }
+            } catch {
+                // If installation fails, provide a fallback to install manually
+                void vscode.window.showErrorMessage('Error automatically installing Lynx Keymap Pro. Please install it manually.', 'View Extension').then(res => {
+                    if (res === 'View Extension') {
+                        void vscode.env.openExternal(vscode.Uri.parse(`vscode:extension/${newExtensionId}`));
+                    }
+                });
+            }
+        });
+    } else {
+        // New extension is already installed, just prompt to uninstall the old one
         const selection = await vscode.window.showWarningMessage(
-            '✅ Lynx Keymap Pro is now installed. Please uninstall this old version (Lynx Keymap 75) to avoid shortcut conflicts.',
+            '⚠️ Lynx Keymap Pro is already installed. Please uninstall this old version (Lynx Keymap 75) to avoid shortcut conflicts.',
             'Uninstall Lynx Keymap 75'
         );
 
         if (selection === 'Uninstall Lynx Keymap 75') {
             await vscode.commands.executeCommand('workbench.extensions.uninstallExtension', oldExtensionId);
         }
-    };
-
-    if (!vscode.extensions.getExtension(newExtensionId)) {
-        // The new extension is not installed.
-        // Ask the user to install it manually.
-        void vscode.window.showInformationMessage(
-            '⚠️ Lynx Keymap 75 has moved! Please install the new "Lynx Keymap Pro" extension to continue getting updates.',
-            'Install Lynx Keymap Pro'
-        ).then(selection => {
-            if (selection === 'Install Lynx Keymap Pro') {
-                void vscode.env.openExternal(vscode.Uri.parse(`vscode:extension/${newExtensionId}`));
-            }
-        });
-
-        // Listen for when they actually install it
-        const disposable = vscode.extensions.onDidChange(() => {
-            if (vscode.extensions.getExtension(newExtensionId)) {
-                disposable.dispose(); // Stop listening
-                void checkAndPromptUninstall();
-            }
-        });
-
-        context.subscriptions.push(disposable);
-    } else {
-        // The new extension is already installed, just prompt to uninstall the old one
-        await checkAndPromptUninstall();
     }
 }
