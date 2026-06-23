@@ -2,6 +2,11 @@
 <img src="https://raw.githubusercontent.com/bastndev/Lynx-Keymap-75/refs/heads/archived/public/banner2.webp" alt="Lynx Keymap Pro" width=""/>
 </div>
 
+<br>
+<br>
+
+> ⚠️ **Please uninstall (`Lynx Keymap 75%...`) and install [Lynx Keymap Pro](https://open-vsx.org/extension/bastndev/lynx-keymap).**
+
 ---
 
 ## 🇺🇸 English
