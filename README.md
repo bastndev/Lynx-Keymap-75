@@ -5,7 +5,11 @@
 <br>
 <br>
 
-> ⚠️ **Please uninstall (`Lynx Keymap 75%...`) and install [Lynx Keymap Pro](https://open-vsx.org/extension/bastndev/lynx-keymap).**
+<div align="center">
+
+> ⚠️ **Uninstall (`Lynx Keymap 75%...`) and install [Lynx Keymap Pro](https://open-vsx.org/extension/bastndev/lynx-keymap).**
+
+</div>
 
 ---
 
